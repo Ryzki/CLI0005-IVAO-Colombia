@@ -2,7 +2,8 @@ a,
 #home-slider .caption h1 span, 
 #twitter-carousel .item span, 
 #footer .footer-bottom, 
-#single-portfolio .close-folio-item:hover, 
+#single-portfolio .close-folio-item:hover,
+#single-controladores .close-control-item:hover,  
 .single-table.featured .btn.btn-primary, 
 .contact-info ul li a:hover, 
 #footer .footer-bottom a  {
@@ -33,7 +34,9 @@ a:hover, a:focus {
 .caption .btn-start:hover, 
 .left-control:hover, 
 .right-control:hover, 
-.folio-overview a:hover {
+.folio-overview a:hover
+.control-overview a:hover
+ {
   background-color:#028fcc;
 }
 

@@ -121,7 +121,7 @@ jQuery(function($) {
 
 
 // Controladores Single View
-	$('#controladores').on('click','.folio-read-more',function(event){
+	$('#controladores').on('click','.control-read-more',function(event){
 		event.preventDefault();
 		var link = $(this).data('single_url');
 		var full_url = '#controladores-single-wrap',
@@ -138,7 +138,7 @@ jQuery(function($) {
 	});
 
 	// Close Controladores Single View
-	$('#controladores-single-wrap').on('click', '.close-folio-item',function(event) {
+	$('#controladores-single-wrap').on('click', '.close-control-item',function(event) {
 		event.preventDefault();
 		var full_url = '#controladores',
 		parts = full_url.split("#"),
