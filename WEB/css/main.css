@@ -89,10 +89,22 @@ a {
 }
 
 a:focus, 
-a:hover {
+a:hover
+ {
   text-decoration: none;
-  outline: none
-}
+  outline: none;
+  }
+  
+  a:link 
+  {
+    color: none;
+  }
+  
+  a:visited
+   {
+    color: white;
+   }
+
 
 section {
   padding: 90px 0;
