@@ -1,5 +1,11 @@
 @import url('demo.css');
 
+body
+{
+    background: url(../images/Fondo2.jpg) no-repeat fixed center center silver ;
+    background-size: 100% 65%;
+}
+
 .mi-slider {
 	position: relative;
 	margin-top: 30px;
