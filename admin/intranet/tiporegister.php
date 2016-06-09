@@ -33,7 +33,7 @@
 			
 <script>
 alert('Agregado sactisfactoriamente.');
-window.location = './?page=cargos_staff';
+window.location = '?page=cargos_staff';
 </script>
 			
 
