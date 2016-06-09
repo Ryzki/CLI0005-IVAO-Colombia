@@ -1,7 +1,0 @@
-Options +FollowSymlinks
-RewriteEngine On
-
-#RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^([a-z0-9]+)$  index.php?s=$1 [QSA,NC,L]
-
