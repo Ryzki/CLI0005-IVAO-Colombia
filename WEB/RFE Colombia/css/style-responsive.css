@@ -1,0 +1,160 @@
+/* 
+    Document   : style-responsive
+    Created on : 02-Apr-2013, 14:36:13
+    Author     : Aslam
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* Large desktop */
+@media (min-width: 1200px) { 
+
+
+}
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) { 
+    .navbar-fixed-top{margin-bottom: 0px;}
+
+    h2{
+        font-size: 30px;
+        line-height: 30px;
+    }
+    .support-icon{font-size: 50px;}
+
+
+    .navbar-fixed-top{
+        position: fixed;
+        margin-left: 0;
+        margin-right: 0;
+        z-index: 9999;
+
+    }
+    .navbar-fixed-top .navbar-inner{
+        background: rgba(46,46,46,0.7);
+
+    }
+
+    .navbar .nav > li > a{
+        padding: 10px;
+
+    }
+    .nav-collapse .dropdown-menu{
+        background-color: #383838;
+        margin: 0;
+        padding-bottom: 5px;
+
+    }
+    .btn{height: 44px;}
+    header{padding-top: 50px;}
+     #navigation .nav.page li.active:after{display: none;}
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+    header{
+
+        margin-left: -20px;
+        margin-right: -20px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .home h1{font-size: 50px;}
+    .home{padding: 0px;}
+    #footer {
+        margin-left: -20px;
+        margin-right: -20px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+
+    .navbar-fixed-top{
+        position: fixed;
+        margin-left: 0;
+        margin-right: 0;
+        z-index: 9999;
+
+    }
+    .navbar-fixed-top .navbar-inner{
+        background: rgba(46,46,46,0.7);
+
+    }
+
+    .navbar .nav > li > a{
+        padding: 10px;
+
+    }
+    .nav-collapse .dropdown-menu{
+        background-color: #383838;
+        margin: 0;
+    }
+    
+     section{
+
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+    .container{padding-left: 20px; padding-right: 20px;}
+      .support-icon{
+
+        font-size: 70px;
+        display: block;
+        padding: 30px 10px 30px 0;
+        float: left;
+        line-height: 80px;
+    }
+ header{padding-top: 75px;}
+ 
+ #navigation .nav.page li.active:after{display: none;}
+ .navbar .brand{padding: 10px;}
+}
+
+
+@media (max-width: 570px) {
+     #navigation .nav.page li.active:after{display: none;}
+    .carousel-control.left {
+        left: 0;
+    }
+    .carousel-control.right {
+        right: 0;
+    }
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) { 
+     #navigation .nav.page li.active:after{display: none;}
+    ul.slides{padding-top: 20px;}
+    .flexslider li h1{font-size: 40px;}
+
+    .flexslider li h1 i{font-size: 2em;}
+
+    .support-icon{
+
+        font-size: 70px;
+        display: block;
+        padding: 30px 10px 30px 0;
+        float: left;
+        line-height: 80px;
+    }
+    h2{font-size: 36px;}
+    #testimonials-background h1, #support-banner h1, #features-banner h1,#contact-background h1 {
+        font-size: 45px;
+    }
+    section{
+
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+
+    .container{padding-left: 20px; padding-right: 20px;}
+
+
+    #home-arrow{bottom: 50px;}
+
+    .navbar img{width: 200px; height: auto;}
+    header{padding-top: 75px;}
+    .navbar .brand{padding: 10px;}
+}
+
+iframe, object, embed{max-width: 100%;}
