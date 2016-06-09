@@ -18,9 +18,16 @@
                         </div>
                         <div class="panel-body">
                             <div class="row">
+<<<<<<< HEAD
+							<div class="col-md-6">
+                                
+                                    <h3>IVAO AERO</h3>
+                                    <form role="form" action="./?page=register" method="post">
+=======
                                 
                                     <h3>IVAO AERO</h3>
                                     <form role="form" action="./register.php" method="post">
+>>>>>>> 4f8c7e758ee2498710c616ea0d5a7be0de78850e
                                         <div class="form-group">
                                             <label>Nombres</label>
                                             <input class="form-control" name="nombres" />
@@ -84,14 +91,22 @@
 										
 										
 								
+<<<<<<< HEAD
+                                        <button type="submit" class="btn btn-default">Registrar Staff</button>
+=======
                                         <button type="submit" class="btn btn-default">Submit Button</button>
+>>>>>>> 4f8c7e758ee2498710c616ea0d5a7be0de78850e
 
                                     </form>
                                   
 
                                  
                                 
+<<<<<<< HEAD
+                                </div>
+=======
                                 
+>>>>>>> 4f8c7e758ee2498710c616ea0d5a7be0de78850e
                             </div>
                         </div>
                     </div>

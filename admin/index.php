@@ -35,6 +35,19 @@
 	<!-- END LOGO -->
 	<!-- BEGIN LOGIN -->
 	<div class="content">
+<<<<<<< HEAD
+	
+		<!-- BEGIN LOGIN FORM -->
+		<form class="form-vertical login-form" action="./intranet/login.php" method="post">
+			<h3 class="form-title"><font color="black">Login to your account</font></h3>
+			<div class="alert alert-error hide">
+				<button class="close" data-dismiss="alert"></button>
+				<span><font color="black">Enter any username and password.</font></span>
+			</div>
+			<div class="control-group">
+				<!--ie8, ie9 does not support html5 placeholder, so we just show field title for that-->
+				<label class="control-label visible-ie8 visible-ie9"><font color="black">Email</font></label>
+=======
 	<font color="black">
 		<!-- BEGIN LOGIN FORM -->
 		<form class="form-vertical login-form" action="./intranet/login.php" method="post">
@@ -46,6 +59,7 @@
 			<div class="control-group">
 				<!--ie8, ie9 does not support html5 placeholder, so we just show field title for that-->
 				<label class="control-label visible-ie8 visible-ie9">Email</label>
+>>>>>>> 4f8c7e758ee2498710c616ea0d5a7be0de78850e
 				<div class="controls">
 					<div class="input-icon left">
 						<i class="icon-user"></i>
@@ -54,7 +68,11 @@
 				</div>
 			</div>
 			<div class="control-group">
+<<<<<<< HEAD
+				<label class="control-label visible-ie8 visible-ie9"><font color="black">Password</font></label>
+=======
 				<label class="control-label visible-ie8 visible-ie9">Password</label>
+>>>>>>> 4f8c7e758ee2498710c616ea0d5a7be0de78850e
 				<div class="controls">
 					<div class="input-icon left">
 						<i class="icon-lock"></i>
@@ -63,18 +81,28 @@
 				</div>
 			</div>
 			<div class="form-actions">
+<<<<<<< HEAD
+=======
 				<label class="checkbox">
 				<input type="checkbox" name="remember" value="1"/> Remember me
 				</label>
+>>>>>>> 4f8c7e758ee2498710c616ea0d5a7be0de78850e
 				<button type="submit" class="btn blue pull-right">
 				Login <i class="m-icon-swapright m-icon-white"></i>
 				</button>            
 			</div>
 			<div class="forget-password">
+<<<<<<< HEAD
+				<h4><font color="black">Forgot your password ?</font></h4>
+				<p>
+					<font color="black">no worries, click <a href="javascript:;"  id="forget-password">here</a>
+					to reset your password.</font>
+=======
 				<h4>Forgot your password ?</h4>
 				<p>
 					no worries, click <a href="javascript:;"  id="forget-password">here</a>
 					to reset your password.
+>>>>>>> 4f8c7e758ee2498710c616ea0d5a7be0de78850e
 				</p>
 			</div>
 			
@@ -82,8 +110,13 @@
 		<!-- END LOGIN FORM -->        
 		<!-- BEGIN FORGOT PASSWORD FORM -->
 		<form class="form-vertical forget-form" action="./intranet/password_reset.php" method="post">
+<<<<<<< HEAD
+			<h3 ><font color="black">Forget Password ?</font></h3>
+			<p><font color="black">Enter your e-mail address below to reset your password.</font></p>
+=======
 			<h3 >Forget Password ?</h3>
 			<p>Enter your e-mail address below to reset your password.</p>
+>>>>>>> 4f8c7e758ee2498710c616ea0d5a7be0de78850e
 			<div class="control-group">
 				<div class="controls">
 					<div class="input-icon left">
@@ -94,10 +127,17 @@
 			</div>
 			<div class="form-actions">
 				<button type="button" id="back-btn" class="btn">
+<<<<<<< HEAD
+				<i class="m-icon-swapleft"></i> <font color="black">Back</font>
+				</button>
+				<button type="submit" class="btn blue pull-right">
+				<font color="black">Submit </font><i class="m-icon-swapright m-icon-white"></i>
+=======
 				<i class="m-icon-swapleft"></i> Back
 				</button>
 				<button type="submit" class="btn blue pull-right">
 				Submit <i class="m-icon-swapright m-icon-white"></i>
+>>>>>>> 4f8c7e758ee2498710c616ea0d5a7be0de78850e
 				</button>            
 			</div>
 		</form>
@@ -105,7 +145,11 @@
 		<!-- BEGIN REGISTRATION FORM -->
 	
 		<!-- END REGISTRATION FORM -->
+<<<<<<< HEAD
+	
+=======
 		</font>
+>>>>>>> 4f8c7e758ee2498710c616ea0d5a7be0de78850e
 	</div>
 	<!-- END LOGIN -->
 	<!-- BEGIN COPYRIGHT -->
