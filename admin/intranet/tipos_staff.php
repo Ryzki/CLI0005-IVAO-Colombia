@@ -18,13 +18,9 @@
                         </div>
                         <div class="panel-body">
                             <div class="row">
-<<<<<<< HEAD
                                 <div class="col-md-6">
-=======
-                                
->>>>>>> 4f8c7e758ee2498710c616ea0d5a7be0de78850e
                                     <h3>IVAO AERO</h3>
-                                    <form role="form" action="./register_staff.php" method="post">
+                                    <form role="form" action="./?page=register_staff" method="post">
                                         <div class="form-group">
                                             <label>Nombre Posicion</label>
                                             <input class="form-control" name="callsign" />
@@ -210,21 +206,13 @@
 										
 										
 								
-<<<<<<< HEAD
                                         <button type="submit" class="btn btn-default">Añadir Tipo Staff</button>
-=======
-                                        <button type="submit" class="btn btn-default">Submit Button</button>
->>>>>>> 4f8c7e758ee2498710c616ea0d5a7be0de78850e
 
                                     </form>
                                   
 
                                  
-<<<<<<< HEAD
                                 </div>
-=======
-                                
->>>>>>> 4f8c7e758ee2498710c616ea0d5a7be0de78850e
                                 
                             </div>
                         </div>

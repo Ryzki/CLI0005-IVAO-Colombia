@@ -61,11 +61,8 @@ include('./db_login.php');
 			$email = $row['email'];
 			
 			$id = $row['id'];
-<<<<<<< HEAD
 			
 			$last_visit_date = $row['last_visit_date'];
-=======
->>>>>>> 4f8c7e758ee2498710c616ea0d5a7be0de78850e
 
 	}
 
@@ -83,11 +80,7 @@ include('./db_login.php');
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<<<<<<< HEAD
-     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-=======
       <meta charset="utf-8" />
->>>>>>> 4f8c7e758ee2498710c616ea0d5a7be0de78850e
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>IVAO Colombia | Staff Admin</title>
 	<!-- BOOTSTRAP STYLES-->
@@ -98,10 +91,7 @@ include('./db_login.php');
     <link href="assets/js/morris/morris-0.4.3.min.css" rel="stylesheet" />
         <!-- CUSTOM STYLES-->
     <link href="assets/css/custom.css" rel="stylesheet" />
-<<<<<<< HEAD
 	<link rel="shortcut icon" href="../../img/favicon.png" />
-=======
->>>>>>> 4f8c7e758ee2498710c616ea0d5a7be0de78850e
      <!-- GOOGLE FONTS-->
    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
 </head>
@@ -120,18 +110,13 @@ include('./db_login.php');
   <div style="color: white;
 padding: 15px 50px 5px 50px;
 float: right;
-<<<<<<< HEAD
 font-size: 16px;"> Last access : <?php echo $last_visit_date; ?> &nbsp; <a href="#" class="btn btn-danger square-btn-adjust">Logout</a> </div>
-=======
-font-size: 16px;"> Last access : <?php echo $ip; ?> &nbsp; <a href="#" class="btn btn-danger square-btn-adjust">Logout</a> </div>
->>>>>>> 4f8c7e758ee2498710c616ea0d5a7be0de78850e
         </nav>   
            <!-- /. NAV TOP  -->
                 <nav class="navbar-default navbar-side" role="navigation">
             <div class="sidebar-collapse">
                 <ul class="nav" id="main-menu">
 				<li class="text-center">
-<<<<<<< HEAD
                     <img src="https://www.ivao.aero/data/images/staff/<?php echo $vid_ivao; ?>.jpg" class="user-image img-responsive"/>
 					</li>
 				
@@ -159,11 +144,6 @@ font-size: 16px;"> Last access : <?php echo $ip; ?> &nbsp; <a href="#" class="bt
 					  
 					  
 					  
-=======
-                    <img src="assets/img/find_user.png" class="user-image img-responsive"/>
-					</li>
-				
->>>>>>> 4f8c7e758ee2498710c616ea0d5a7be0de78850e
 					
                     <li>
                         <a class="active-menu"  href="index.html"><i class="fa fa-dashboard fa-3x"></i> Dashboard</a>
@@ -229,13 +209,8 @@ font-size: 16px;"> Last access : <?php echo $ip; ?> &nbsp; <a href="#" class="bt
             <div id="page-inner">
                 <div class="row">
                     <div class="col-md-12">
-<<<<<<< HEAD
                      <h2>IVAO Colombia Dashboard</h2>   
                         <h5>Bienvenido <?php echo $nombres . ' ' . $apellidos; ?> , Encantado de verte de nuevo. </h5>
-=======
-                     <h2>Admin Dashboard</h2>   
-                        <h5>Welcome Jhon Deo , Love to see you back. </h5>
->>>>>>> 4f8c7e758ee2498710c616ea0d5a7be0de78850e
                     </div>
                 </div>              
                  <!-- /. ROW  -->

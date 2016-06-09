@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 <?php
 header('Content-Type: text/html; charset=ISO-8859-1');
@@ -7,23 +6,6 @@ header('Content-Type: text/html; charset=ISO-8859-1');
 	$nombresa = $_POST['nombres'];
 	$apellidosa = $_POST['apellidos'];
 	$emailss = $_POST['email'];
-=======
-<?php
-	/**
-	 * @Project: Virtual Airlines Manager (VAM)
-	 * @Author: Alejandro Garcia
-	 * @Web http://virtualairlinesmanager.net
-	 * Copyright (c) 2013 - 2015 Alejandro Garcia
-	 * VAM is licenced under the following license:
-	 *   Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)
-	 *   View license.txt in the root, or visit http://creativecommons.org/licenses/by-nc-sa/4.0/
-	 */
-?>
-<?php
-	$nombres = $_POST['nombres'];
-	$apellidos = $_POST['apellidos'];
-	$email = $_POST['email'];
->>>>>>> 4f8c7e758ee2498710c616ea0d5a7be0de78850e
 	$pass = $_POST['password'];
 	$posicion = $_POST['pst'];
 	$ivao = $_POST['ivao'];
@@ -47,11 +29,7 @@ header('Content-Type: text/html; charset=ISO-8859-1');
 		if ($existentuser > 0) 
 		{
 ?>
-<<<<<<< HEAD
 			 <div id="page-wrapper" >
-=======
-			<div class="container">
->>>>>>> 4f8c7e758ee2498710c616ea0d5a7be0de78850e
 				
 						<h1>ERROR</h1>
 						<hr>
@@ -68,18 +46,13 @@ header('Content-Type: text/html; charset=ISO-8859-1');
 				$encryptpassword = md5($pass);
 				echo '<br>';
 				$sql1 = "insert into staff (nombres,apellidos,vid_ivao,email,staff_ivao,password)
-<<<<<<< HEAD
                     values ('$nombresa','$apellidosa','$ivao','$emailss','$posicion','$encryptpassword');";
-=======
-                    values ('$nombres','$apellidos','$ivao','$email','$posicion','$encryptpassword');";
->>>>>>> 4f8c7e758ee2498710c616ea0d5a7be0de78850e
 				if (!$result = $db->query($sql1)) {
 					die('There was an error running the query [' . $db->error . ']');
 				}
 			}
 			// Send mail to the pilot
 			
-<<<<<<< HEAD
 
 
 
@@ -224,36 +197,6 @@ mail($para, $titulo, $mensaje, $cabeceras);
 						<hr>
 						<br>
 						<div class="alert alert-success" role="alert">Nosotros hemos enviado el mensaje de registro efectivamente.</div>
-=======
-			$para      = $email;
-$titulo    = 'Registro Staff IVAO CO';
-$mensaje   = 'Buen día usted ha sido registrado exitosamente en Staff IVAO CO Admon
-
-===============================
-
-Sus datos son:
-
-Username: ' . $email . '
-Password: ' . $pass . '
-
-==============================
-
-Mensaje enviado automaticamente.
-
-Saludos IVAO Colombia.
-';
-$cabeceras = 'From: co-wm@ivao.aero' . "\r\n" .
-    'Reply-To: co-wm@ivao.aero' . "\r\n" .
-    'X-Mailer: PHP/' . phpversion();
-
-mail($para, $titulo, $mensaje, $cabeceras);
-?>
-			<div class="container">
-						<h1>Register Successful</h1>
-						<hr>
-						<br>
-						<div class="alert alert-success" role="alert">We have sent a message to your email! Check right now!.</div>
->>>>>>> 4f8c7e758ee2498710c616ea0d5a7be0de78850e
 					
 			</div>
 <?php

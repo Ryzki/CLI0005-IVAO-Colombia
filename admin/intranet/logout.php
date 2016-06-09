@@ -15,9 +15,5 @@
 	unset($_SESSION["id"]);
 	unset($_SESSION["user"]);
 	session_destroy();
-<<<<<<< HEAD
-	echo '<META HTTP-EQUIV="Refresh" CONTENT="0; URL=./">'
-=======
 	echo '<META HTTP-EQUIV="Refresh" CONTENT="0; URL=../">'
->>>>>>> 4f8c7e758ee2498710c616ea0d5a7be0de78850e
 ?>
