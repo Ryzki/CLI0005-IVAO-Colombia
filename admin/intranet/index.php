@@ -120,7 +120,9 @@ font-size: 16px;"> Last access : <?php echo $last_visit_date; ?> &nbsp; <a href=
                     <img src="https://www.ivao.aero/data/images/staff/<?php echo $vid_ivao; ?>.jpg" class="user-image img-responsive"/>
 					</li>
 				
-				
+				<li>
+                        <a class="active-menu"  href="./?page=divisioninfo"><i class="fa fa-dashboard fa-3x"></i> Información de la División</a>
+                    </li>
 				
 				 <li>
                         <a href="#"><i class="fa fa-sitemap fa-3x"></i> Staff IVAO<span class="fa arrow"></span></a>
@@ -142,59 +144,27 @@ font-size: 16px;"> Last access : <?php echo $last_visit_date; ?> &nbsp; <a href=
                       </li>  
 					  
 					  
-					  
-					  
-					
-                    <li>
-                        <a class="active-menu"  href="index.html"><i class="fa fa-dashboard fa-3x"></i> Dashboard</a>
+					  <li>
+                        <a  href="./?page=eventos"><i class="fa fa-desktop fa-3x"></i> Eventos</a>
                     </li>
+					  
+					 <li>
+                        <a  href="./?page=noticias"><i class="fa fa-desktop fa-3x"></i> Noticias</a>
+                    </li>
+                    
                      <li>
-                        <a  href="ui.html"><i class="fa fa-desktop fa-3x"></i> UI Elements</a>
+                        <a  href="./?page=notams"><i class="fa fa-desktop fa-3x"></i> Notams</a>
                     </li>
-                    <li>
-                        <a  href="tab-panel.html"><i class="fa fa-qrcode fa-3x"></i> Tabs & Panels</a>
-                    </li>
+					</li>
 						   <li  >
-                        <a   href="chart.html"><i class="fa fa-bar-chart-o fa-3x"></i> Morris Charts</a>
-                    </li>	
-                      <li  >
-                        <a  href="table.html"><i class="fa fa-table fa-3x"></i> Table Examples</a>
+                        <a   href="chart.html"><i class="fa fa-bar-chart-o fa-3x"></i> Examenes</a>
                     </li>
-                    <li  >
-                        <a  href="form.html"><i class="fa fa-edit fa-3x"></i> Forms </a>
-                    </li>				
-					
-					                   
+				
                     <li>
-                        <a href="#"><i class="fa fa-sitemap fa-3x"></i> Multi-Level Dropdown<span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li>
-                                <a href="#">Second Level Link</a>
-                            </li>
-                            <li>
-                                <a href="#">Second Level Link</a>
-                            </li>
-                            <li>
-                                <a href="#">Second Level Link<span class="fa arrow"></span></a>
-                                <ul class="nav nav-third-level">
-                                    <li>
-                                        <a href="#">Third Level Link</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Third Level Link</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Third Level Link</a>
-                                    </li>
-
-                                </ul>
-                               
-                            </li>
-                        </ul>
-                      </li>  
-                  <li  >
-                        <a  href="blank.html"><i class="fa fa-square-o fa-3x"></i> Blank Page</a>
-                    </li>	
+                        <a  href="tab-panel.html"><i class="fa fa-qrcode fa-3x"></i> Aerolineas Virtuales</a>
+                    	
+                      <li/>
+						
                 </ul>
                
             </div>
