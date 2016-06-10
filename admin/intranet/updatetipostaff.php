@@ -70,7 +70,7 @@ include('./db_login.php');
                             <div class="row">
                                 <div class="col-md-6">
                                     <h3>IVAO AERO</h3>
-                                    <form role="form" action="?page=grupoactualizado" method="post">
+                                    <form role="form" action="?page=tipostaffactualizado" method="post">
                                         <div class="form-group">
                                             <label>Nombre Tipo Staff</label>
                                             <input class="form-control" name="callsign" value="<?php echo $callsign; ?>"/>
