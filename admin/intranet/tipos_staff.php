@@ -269,7 +269,7 @@
 	 $tips = $row2['typestaff'];
 
 
-$sql23 = "SELECT * FROM ranks where id='$tips'";
+$sql23 = "SELECT * FROM typestaff where id='$tips'";
 
 	if (!$result23 = $db->query($sql23)) {
 
@@ -291,8 +291,8 @@ $sql23 = "SELECT * FROM ranks where id='$tips'";
 	<td>' . $nombrespot . '</td>
 	<td><img border="0" src="https://www.ivao.aero/data/images/badge/' . $row2['posicion'] .'.gif"><img border="0" src="https://www.ivao.aero/data/images/badge/CO.gif"></td>
 	
-	<td><form  action="?page=updategrupo&id=' . $identi . '"  method="post"><button class="btn btn-default"><i class="fa fa-refresh"></i> Actualizar</button></form></td>
-	<td><form  action="?page=deletegrupo&id=' . $identi . '"  method="post"><button class="btn btn-danger"><i class="fa fa-pencil"></i> Borrar</button></form></td>
+	<td><form  action="?page=updatetipostaff&id=' . $identi . '"  method="post"><button class="btn btn-default"><i class="fa fa-refresh"></i> Actualizar</button></form></td>
+	<td><form  action="?page=deletetipostaff&id=' . $identi . '"  method="post"><button class="btn btn-danger"><i class="fa fa-pencil"></i> Borrar</button></form></td>
   </tr>';
 
 
