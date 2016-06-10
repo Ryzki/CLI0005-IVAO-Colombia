@@ -18,7 +18,25 @@ include('./db_login.php');
 	}
 	while ($row3 = $result3->fetch_assoc()) {
 		$idgrupo= $row3["id"];
-        $nombregrupo= $row3["nombre"];
+        $callsign= $row3["callsign"];
+		$emailee= $row3["email"];
+		$posicione= $row3["posicion"];
+		
+		$typestaff= $row3["typestaff"];
+		
+		
+			$sql35 ="select * from typestaff where id=$typestaff";
+
+	if (!$result35 = $db->query($sql35)) {
+		die('There was an error running the query [' . $db->error . ']');
+	}
+	while ($row35 = $result35->fetch_assoc()) {
+		
+		$pca = $row35["nombre"];
+	}
+		
+		
+		
 		
 		
 		
@@ -55,21 +73,21 @@ include('./db_login.php');
                                     <form role="form" action="?page=grupoactualizado" method="post">
                                         <div class="form-group">
                                             <label>Nombre Tipo Staff</label>
-                                            <input class="form-control" name="nombre" value="<?php echo $nombregrupo; ?>"/>
+                                            <input class="form-control" name="callsign" value="<?php echo $callsign; ?>"/>
                                         </div>
 										
 										 <div class="form-group">
                                             <label>Email Staff</label>
-                                            <input class="form-control" name="nombre" value="<?php echo $nombregrupo; ?>"/>
+                                            <input class="form-control" name="emailee" value="<?php echo $emailee; ?>"/>
                                         </div>
 
 										 <div class="form-group">
                                             <label>Posición Staff</label>
-                                            <input class="form-control" name="nombre" value="<?php echo $nombregrupo; ?>"/>
+                                            <input class="form-control" name="posicione" value="<?php echo $posicione; ?>"/>
                                         </div>
 										
 											<div class="form-group">
-                                            <label>Tipo Staff: </label>
+                                            <label>Tipo Staff: <?php echo $pca; ?></label>
 										<select name="pst">
 										<?php
 										
@@ -107,7 +125,7 @@ include('./db_login.php');
 										<input type="hidden" class="form-control" name="id" value="<?php echo $idgrupo; ?>"/>
 									
 								
-                                        <button type="submit" class="btn btn-default">Actualizar Grupo Staff</button>
+                                        <button type="submit" class="btn btn-default">Actualizar Tipo Staff</button>
 
                                     </form>
                                   
