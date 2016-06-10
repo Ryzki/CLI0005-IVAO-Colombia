@@ -79,7 +79,7 @@
 			
 			echo' <tr>
 	<td>' . $nombrestaff . '</td>
-	<td><form  action="?page=updategrupo&id=' . $identi . '"  method="post"><button class="btn btn-default"><i class="fa fa-pencil"></i> Actualizar</button></form></td>
+	<td><form  action="?page=updategrupo&id=' . $identi . '"  method="post"><button class="btn btn-default"><i class="fa fa-refresh"></i> Actualizar</button></form></td>
 	<td><form  action="?page=deletegrupo&id=' . $identi . '"  method="post"><button class="btn btn-danger"><i class="fa fa-pencil"></i> Borrar</button></form></td>
   </tr>';
 
