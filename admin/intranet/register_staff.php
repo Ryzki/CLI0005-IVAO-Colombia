@@ -36,7 +36,7 @@
 			
 <script>
 alert('Agregado sactisfactoriamente.');
-window.location = './';
+window.location = './?page=tipos_staff';
 </script>
 			
 

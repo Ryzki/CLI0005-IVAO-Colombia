@@ -20,7 +20,7 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <h3>IVAO AERO</h3>
-                                    <form role="form" action="./register_staff.php" method="post">
+                                    <form role="form" action="./?page=register_staff" method="post">
                                         <div class="form-group">
                                             <label>Nombre Posicion</label>
                                             <input class="form-control" name="callsign" />
