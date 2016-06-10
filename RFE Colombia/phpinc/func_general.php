@@ -16,7 +16,7 @@ Variables: Definition for IVAO connection.
 define('cookie_name', 'rfe_token');
 define('login_url', 'http://login.ivao.aero/index.php');
 define('api_url', 'http://login.ivao.aero/api.php');
-define('url', 'http://www.ivaous.org/main/events/rfe/');
+define('url', 'http://www.ivaocol.com.co/RFE Colombia/');
 
 /*========================================================================
  Function: airlinename
