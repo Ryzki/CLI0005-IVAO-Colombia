@@ -27,15 +27,15 @@
                                         </div>
 										<div class="form-group">
                                             <label>Hora Inicio</label>
-                                            <input class="form-control" name="horauno" />:<input class="form-control" name="minutouno" />
+											<input type="time" name="horauno">
                                         </div>
 										<div class="form-group">
                                             <label>Hora Finalización</label>
-                                            <input class="form-control" name="horados" />:<input class="form-control" name="minutodos" />
+											<input type="time" name="horados">
                                         </div>
                                           <div class="form-group">
                                             <label>Fecha Evento</label>
-                                            <input class="form-control" name="nombre" />
+											<input type="date" name="fecha">
                                         </div>
 										<div class="form-group">
                                             <label>Imagen Evento</label>
@@ -43,7 +43,7 @@
 										
                                         </div>
 										
-										 <input type="hidden" class="form-control" name="id" />
+										 <input type="hidden" class="form-control" name="id" value="<?php echo $id; ?>"/>
 								
                                         <button type="submit" class="btn btn-default">Añadir Evento</button>
 
@@ -71,14 +71,14 @@
 								
 <thead>
   <tr>
-    <th>Nombre Grupo</th><th>Actualizar</th><th>Eliminar</th>
+    <th>Nombre Evento</th><th>Fecha</th><th>Horario</th><th>Información</th><th>Imagen</th><th>Actualizar</th><th>Eliminar</th>
   </tr>
 </thead>
 <tbody>
 <?php
 
 
-	$sql2 = "SELECT * FROM typestaff ";
+	$sql2 = "SELECT * FROM eventos ";
 
 	if (!$result2 = $db->query($sql2)) {
 
@@ -90,12 +90,15 @@
 
 		    $identi = $row2['id'];
 
-			$nombrestaff = $row2['nombre'];
+			
 			
 			echo' <tr>
-	<td>' . $nombrestaff . '</td>
-	<td><form  action="?page=updategrupo&id=' . $identi . '"  method="post"><button class="btn btn-default"><i class="fa fa-refresh"></i> Actualizar</button></form></td>
-	<td><form  action="?page=deletegrupo&id=' . $identi . '"  method="post"><button class="btn btn-danger"><i class="fa fa-pencil"></i> Borrar</button></form></td>
+	<td>' . $row2['nombre'] . '</td>
+	<td>' . $row2['fecha'] . '</td>
+	<td>' . $row2['hora_inicio'] . ' a ' . $row2['hora_fin'] . '</td>
+	<td>' . $row2['imagen'] . '</td>
+	<td><form  action="?page=updateevento&id=' . $identi . '"  method="post"><button class="btn btn-default"><i class="fa fa-refresh"></i> Actualizar</button></form></td>
+	<td><form  action="?page=deleteevento&id=' . $identi . '"  method="post"><button class="btn btn-danger"><i class="fa fa-pencil"></i> Borrar</button></form></td>
   </tr>';
 
 
