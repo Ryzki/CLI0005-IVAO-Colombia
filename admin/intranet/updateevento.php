@@ -82,16 +82,6 @@ include('./db_login.php');
                                             <label>Información Evento</label>
 											<textarea name="info"><?php echo $informacion; ?></textarea>
                                         </div>
-										<div class="form-group">
-                                            <label>Imagen Evento</label>
-                                           
-<input name="image_file"  type="file">
-
-<br>
-<hr>
-
-										
-                                        </div>
 										
 										 <input type="hidden" class="form-control" name="id" value="<?php echo $id; ?>"/>
 								

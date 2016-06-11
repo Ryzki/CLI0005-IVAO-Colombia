@@ -1,48 +1,25 @@
 
 <?php
 	
+			
+		
+		
+		
+
 	        $ides = $_POST['id'];
 			$callsign = $_POST['nombre'];
 			$horauno = $_POST['horauno'];
 			$horados = $_POST['horados'];
 			$fecha = $_POST['fecha'];
-			
-			
 			$info = $_POST['info'];
+	
 			
-		
-			
+				
 		include('./db_login.php');
 		$db = new mysqli($db_host , $db_username , $db_password , $db_database);
 		if ($db->connect_errno > 0) {
 			die('Unable to connect to database [' . $db->connect_error . ']');
 		}
-		
-
-		$sql2 = "SELECT * FROM eventos where id='$ides'";
-
-	if (!$result2 = $db->query($sql2)) {
-
-		die('There was an error running the query  [' . $db->error . ']');
-
-	}
-
-	while ($row2 = $result2->fetch_assoc()) {
-		$imagen = $row2['imagen'];
-	}	
-	
-	
-			
-			
-	
-			
-			
-			$target_path = "./uploads/";
-$target_path = $target_path . basename($_FILES['image_file']['name']); 
-
-$image_file = $_FILES['image_file']['name'];
-
-if ($image_file == "") {
 	
 	
 			$sql11 = "UPDATE eventos set nombre='$callsign', hora_inicio='$horauno', hora_fin='$horados', fecha='$fecha', informacion='$info' where id='$ides'";
@@ -52,34 +29,6 @@ if ($image_file == "") {
 		}
 		
 	
-} else 
-	
-	{
-		
-		
-		
-	
-		
-	unlink('./uploads/' . $imagen);	
-		
-
-if(move_uploaded_file($_FILES['image_file']['tmp_name'], $target_path)) { 
-echo "El archivo ". basename($_FILES['image_file']['name']). " ha sido subido";
-$nombresss = $_FILES['image_file']['name'];
-} else{
-echo "Ha ocurrido un error, trate de nuevo!";
-}
-
-
-
-$sql118 = "UPDATE eventos set nombre='$callsign', hora_inicio='$horauno', hora_fin='$horados', fecha='$fecha', informacion='$info', imagen='$nombresss' where id='$ides'";
-
-		if (!$result118 = $db->query($sql118)) {
-			die('There was an error running the query [' . $db->error . ']');
-		}
-
-}
-			
 		
 		
 		
