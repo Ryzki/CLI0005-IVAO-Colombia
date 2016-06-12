@@ -470,37 +470,6 @@ $d=($d?$d:GMdate("Y-m-d"));
 
 
 
-	// ATC
-//echo '<h3>' . $lng['atcingb'] . '</h3>';
-if (count($controllers) != 0) {
-    $capicao = '';
-  //  echo '<table width="100%">';
-    foreach ($controllers as $controller) {
-if (substr_count($controller[0],'_') == 1) {
-          list ($apicao, $position) = explode('_', $controller[0]);
-        } else {
-          list ($apicao, $position1, $position2) = explode('_', $controller[0]);
-          $position = $position2 . ' (' . $position1 .')';
-        }
-
-        if ($apicao != $capicao) {
-            $capicao = $apicao;
-          //  echo '<tr><td colspan="2"><strong>' . $apicao . ' - ' . $airports[$apicao] . '</td></tr>';
-        }
-        
-        // Realname
-        $realname = remove_accents(ucwords($controller[2]));
-        
-        // Level
-        $level = $ctrlevel[$controller[16]];
-        
-       // echo '<tr><td width="60"><a href="http://www.ivao.ca/flighttrack.php?cs='. $controller[0] .'" onClick="MM_openBrWindow(\'http://www.ivao.ca/flighttrack.php?cs='. $controller[0] .'\',\'\',\'scrollbars=yes,resizable=yes,width=700,height=600\');return false" target="_blank">&nbsp;&nbsp;' . $position . '</a></td><td><a href="http://www.ivao.aero/members/person/details.asp?id=' . $controller[1] . '" onClick="MM_openBrWindow(\'http://www.ivao.aero/members/person/details.asp?id=' . $controller[1] . '\',\'\',\'scrollbars=yes,resizable=yes,width=800,height=600\');return false" target="_blank" title="<b>' . $realname . '</b><br>">' . $controller[1] . '</a>&nbsp;(' . $level . ')</td></tr>';
-    }
-  //  echo '</table>';
-} else {
-
-   // echo '<p style="margin-bottom: 20px; margin-left: 10px; color: gray;"><i>' . $lng['noatcingb'] . '</i></p>';
-}
 
 
 
@@ -634,8 +603,44 @@ echo '<div class="trafficlistnettotal">' . sprintf($lng['totalonline'], $control
                     
                     <div class="col-md-3 col-sm-12 col-xs-12">
                         <div class="panel back-dash">
-                               <i class="fa fa-dashboard fa-3x"></i><strong> &nbsp; SPEED</strong>
-                             <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing sit ametsit amet elit ftr. Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                               <i class="fa fa-dashboard fa-3x"></i><strong> &nbsp; ATC Online</strong>
+                             <p class="text-muted">
+							 <?php
+							 
+							 
+	// ATC
+//echo '<h3>' . $lng['atcingb'] . '</h3>';
+if (count($controllers) != 0) {
+    $capicao = '';
+    echo '<table width="100%">';
+    foreach ($controllers as $controller) {
+if (substr_count($controller[0],'_') == 1) {
+          list ($apicao, $position) = explode('_', $controller[0]);
+        } else {
+          list ($apicao, $position1, $position2) = explode('_', $controller[0]);
+          $position = $position2 . ' (' . $position1 .')';
+        }
+
+        if ($apicao != $capicao) {
+            $capicao = $apicao;
+           echo '<tr><td colspan="2"><strong>' . $apicao . ' - ' . $airports[$apicao] . '</td></tr>';
+        }
+        
+        // Realname
+        $realname = remove_accents(ucwords($controller[2]));
+        
+        // Level
+        $level = $ctrlevel[$controller[16]];
+        
+        echo '<tr><td colspan="2"><a href="#" onClick="MM_openBrWindow(\'#'. $controller[0] .'\',\'\',\'scrollbars=yes,resizable=yes,width=700,height=600\');return false" target="_blank">&nbsp;&nbsp;<font color="red">' . $position . '</font></a></td><td><a href="http://www.ivao.aero/members/person/details.asp?id=' . $controller[1] . '" onClick="MM_openBrWindow(\'http://www.ivao.aero/members/person/details.asp?id=' . $controller[1] . '\',\'\',\'scrollbars=yes,resizable=yes,width=800,height=600\');return false" target="_blank" title="' . $realname . '"><font color="red">' . $controller[1] . '</font></a>&nbsp;(' . $level . ')</td></tr>';
+    }
+   echo '</table>';
+} else {
+
+    echo '<p style="margin-bottom: 20px; margin-left: 10px; color: gray;"><i>' . $lng['noatcingb'] . '</i></p>';
+}
+
+							 ?></p>
                         </div>
                        
                     </div>
