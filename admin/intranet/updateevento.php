@@ -58,7 +58,7 @@ include('./db_login.php');
                             <div class="row">
                                 <div class="col-md-6">
                                     <h3>IVAO AERO</h3>
-                                    <form role="form" action="?page=eventosactualizado" method="post">
+                                    <form  enctype="multipart/form-data" action="?page=eventosactualizado" method="post">
                                         
 										
 						

@@ -629,4 +629,5 @@ font-size: 16px;"> Last access : <?php echo $last_visit_date; ?> &nbsp; <a href=
    
 </body>
 </html>
-<?php	} ?>
+
+	<?php } ?>
