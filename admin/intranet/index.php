@@ -649,24 +649,69 @@ if (substr_count($controller[0],'_') == 1) {
           <div class="main-temp-back">
             <div class="panel-body">
               <div class="row">
-                <div class="col-xs-6"> <i class="fa fa-cloud fa-3x"></i> Newyork City </div>
-                <div class="col-xs-6">
-                  <div class="text-temp"> 10° </div>
-                </div>
-              </div>
+                <div class="col-xs-6"> <i class="fa fa-desktop"></i> <b>Info División</b> </div>
+               <br>
+				
+<?php
+include('./db_login.php');
+	$id = $_GET['id'];
+	
+	$db = new mysqli($db_host , $db_username , $db_password , $db_database);
+	$db->set_charset("utf8");
+	
+	if ($db->connect_errno > 0) {
+		die('Unable to connect to database [' . $db->connect_error . ']');
+	}
+
+	
+	$sql3 ="select * from infodivision where id=1";
+
+	if (!$result3 = $db->query($sql3)) {
+		die('There was an error running the query [' . $db->error . ']');
+	}
+	while ($row3 = $result3->fetch_assoc()) {
+		$members= $row3["members"];
+        $pilots= $row3["pilots"];
+		$atc= $row3["atc"];
+		$puesto= $row3["atc"];
+	
+	}
+	
+
+		
+
+	?>
+	 
+	
+	  <form role="form" action="?page=grupoactualizado" method="post">
+                                        <div class="form-group">
+                                            <label>Miembros Activos</label>
+                                            <input class="form-control" name="members" value="<?php echo $members; ?>"/>
+                                        </div>
+										<div class="form-group">
+                                            <label>Pilotos</label>
+                                            <input class="form-control" name="pca" value="<?php echo $pilots; ?>"/>
+                                        </div>
+										<div class="form-group">
+                                            <label>Controladores</label>
+                                            <input class="form-control" name="atc" value="<?php echo $atc; ?>"/>
+                                        </div>
+								<div class="form-group">
+                                            <label>Puesto IVAO</label>
+                                            <input class="form-control" name="spot" value="<?php echo $puesto; ?>"/>
+                                        </div>
+                                        <button type="submit" class="btn btn-default">Actualizar Info</button>
+
+                                    </form>
+                                  
+					 
+								  
+             </div>
             </div>
           </div>
           
         </div>
-                     <div class="panel panel-back noti-box">
-                <span class="icon-box bg-color-green set-icon">
-                    <i class="fa fa-desktop"></i>
-                </span>
-                <div class="text-box" >
-                    <p class="main-text">Display</p>
-                    <p class="text-muted">Looking Good</p>
-                </div>
-             </div>
+                   
 			
     </div>
                         
