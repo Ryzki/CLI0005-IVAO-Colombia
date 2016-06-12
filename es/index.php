@@ -113,7 +113,9 @@
   
   <!-- ------------------------- Menu --------------------------- -->
   
-  
+  <?php
+	if (!isset($_GET["page"]) || trim($_GET["page"]) == "") {
+		?>
   <!-- ------------------------- IVAO Colombia --------------------------- -->
   
   <section id="services">
@@ -861,7 +863,15 @@
 		  
 		  include('./db_login.php');
 		  
-		  
+		  	$db = new mysqli($db_host , $db_username , $db_password , $db_database);
+
+	$db->set_charset("utf8");
+
+	if ($db->connect_errno > 0) {
+
+		die('Unable to connect to database [' . $db->connect_error . ']');
+
+	}
 		  
 	$sql2 = "SELECT * FROM eventos ";
 
@@ -876,6 +886,13 @@
 	while ($row2 = $result2->fetch_assoc()) {
 	
 	$i++;
+	
+	$año = substr ($row2['fecha'], 0,4);
+	$mes = substr ($row2['fecha'], 5,2);
+	$dia = substr ($row2['fecha'], 8,2);
+	$fechass = $año .''.$mes.''.$dia;
+	$hoy = date("Ymd");  
+	if($fechass == $hoy) {
 	
 	?>
 	
@@ -894,7 +911,7 @@
               </div>
               <div class="social-icons">
                 <ul>
-                  <li><a class="facebook" href="event-news.html"><i class="fa fa-chevron-right"></i></a></li>
+                  <li><a class="facebook" href="?page=infoevent&id=<?php echo $row2['id']; ?>"><i class="fa fa-chevron-right"></i></a></li>
                   <!--
                   <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
                   <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
@@ -910,13 +927,13 @@
 	
 	<?
 	
-	
+	}
 	}
 	
 	
 	if ($i==0)
 	{
-	<div class="alert alert-danger" role="alert">No estamos recibiendo nuevos registros en este momento. Si usted ha sido invitado a unirse a nosotros, ingrese su código de invitación abajo.</div>
+	echo '<div class="alert alert-danger" role="alert">No hay Eventos disponibles aún.</div>';
 	
 	 
 	} 
@@ -2240,14 +2257,33 @@
         </div>
       </div>
     </div>
+	
+	
+			<?php
+	}
+	if (!isset($_GET["page"]) || trim($_GET["page"]) == "") {
+	} else {
+		$Existe = file_exists($_GET["page"] . ".php");
+		if ($Existe == true) {
+			include($_GET["page"] . ".php");
+		} else {
+			echo "Page Not Found";
+		}
+	}
+	
+	
+
+?>
+
+
     <div class="footer-bottom">
       <div class="container">
         <div class="row">
           <div class="col-sm-6">
-            <p>&copy; IVAO Colombia 2016.</p>
+            <p>&copy; IVAO Colombia <?php echo date('Y'); ?>.</p>
           </div>
           <div class="col-sm-6">
-            <p class="pull-right">Diseño WEB <a href="#">Andres Giraldo</a></p>
+            <p class="pull-right">Diseño Web <a href="#">Andres Giraldo</a>  &  Sistematización <a href="#">Andres Zapata</a></p>
           </div>
         </div>
       </div>
