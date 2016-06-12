@@ -121,7 +121,7 @@ font-size: 16px;"> Last access : <?php echo $last_visit_date; ?> &nbsp; <a href=
 					</li>
 				
 				<li>
-                        <a class="active-menu"  href="./?page=divisioninfo"><i class="fa fa-dashboard fa-3x"></i> Información de la División</a>
+                        <a class="active-menu"  href="./"><i class="fa fa-dashboard fa-3x"></i> Información de la División</a>
                     </li>
 				
 				 <li>
@@ -149,19 +149,16 @@ font-size: 16px;"> Last access : <?php echo $last_visit_date; ?> &nbsp; <a href=
                     </li>
 					  
 					 <li>
-                        <a  href="./?page=noticias"><i class="fa fa-desktop fa-3x"></i> Noticias</a>
+                        <a  href="./?page=noticias"><i class="fa fa-desktop fa-3x"></i> Examenes</a>
                     </li>
                     
                      <li>
                         <a  href="./?page=notams"><i class="fa fa-desktop fa-3x"></i> Notams</a>
                     </li>
-					</li>
-						   <li  >
-                        <a   href="chart.html"><i class="fa fa-bar-chart-o fa-3x"></i> Examenes</a>
-                    </li>
+				
 				
                     <li>
-                        <a  href="tab-panel.html"><i class="fa fa-qrcode fa-3x"></i> Aerolineas Virtuales</a>
+                        <a  href="./?page=airlines"><i class="fa fa-qrcode fa-3x"></i> Aerolineas Virtuales</a>
                     	
                       <li/>
 						
