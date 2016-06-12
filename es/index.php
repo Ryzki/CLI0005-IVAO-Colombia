@@ -892,7 +892,7 @@
 	$dia = substr ($row2['fecha'], 8,2);
 	$fechass = $año .''.$mes.''.$dia;
 	$hoy = date("Ymd");  
-	if($fechass == $hoy) {
+	if($fechass > $hoy) {
 	
 	?>
 	
