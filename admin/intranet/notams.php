@@ -20,7 +20,7 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <h3>IVAO AERO</h3>
-                                    <form enctype="multipart/form-data"  action="./?page=addnoticia" method="post" >
+                                    <form enctype="multipart/form-data"  action="./?page=addnotam" method="post" >
                                         <div class="form-group">
                                             <label>Titulo NOTAM</label>
                                             <input class="form-control" name="nombre" />

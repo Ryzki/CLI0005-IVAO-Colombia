@@ -2230,7 +2230,22 @@
   <!-- -------------------------- CONTACTAR ----------------------------- -->
   
   
-  
+  		<?php
+	}
+	if (!isset($_GET["page"]) || trim($_GET["page"]) == "") {
+	} else {
+		$Existe = file_exists($_GET["page"] . ".php");
+		if ($Existe == true) {
+			include($_GET["page"] . ".php");
+		} else {
+			echo "Page Not Found";
+		}
+	}
+	
+	
+
+?>
+
   
   <footer id="footer">
     <div class="footer-top wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
@@ -2259,22 +2274,7 @@
     </div>
 	
 	
-			<?php
-	}
-	if (!isset($_GET["page"]) || trim($_GET["page"]) == "") {
-	} else {
-		$Existe = file_exists($_GET["page"] . ".php");
-		if ($Existe == true) {
-			include($_GET["page"] . ".php");
-		} else {
-			echo "Page Not Found";
-		}
-	}
 	
-	
-
-?>
-
 
     <div class="footer-bottom">
       <div class="container">
