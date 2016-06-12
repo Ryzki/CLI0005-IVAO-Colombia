@@ -281,12 +281,11 @@ The primary objective of IVAO ™ is to provide the community simulation flight 
 
 		<!-- Language selection -->
 		<p class="lang">
-			<a href="./en/" class="active">EN</a><span> | </span>
-			<a href="./es/">ES</a>
+			<a href="./admin/" class="active">Admin</a><span>
 		</p>
 
 		<!-- Copyright -->
-		<p class="copyright">©IVAO CO 2015</p>
+		<p class="copyright">©IVAO CO <?php echo date('Y'); ?></p>
 
 
 	<!-- ///////////////////\\\\\\\\\\\\\\\\\\\ -->
