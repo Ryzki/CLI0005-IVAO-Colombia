@@ -67,7 +67,7 @@ include('./db_login.php');
 	}
 
 
-	}
+	
 	
 
 
@@ -606,6 +606,9 @@ font-size: 16px;"> Last access : <?php echo $last_visit_date; ?> &nbsp; <a href=
 			echo "Page Not Found";
 		}
 	}
+	
+	
+
 ?>
          <!-- /. PAGE WRAPPER  -->
         </div>
@@ -626,3 +629,4 @@ font-size: 16px;"> Last access : <?php echo $last_visit_date; ?> &nbsp; <a href=
    
 </body>
 </html>
+<?php	} ?>
