@@ -27,7 +27,7 @@
                                         </div>
 										 <div class="form-group">
                                             <label>Información NOTAM</label>
-                                            <input class="form-control" name="persona" />
+											<textarea name="persona"></textarea>
                                         </div>
 										
 										
@@ -81,7 +81,7 @@ $identis = $row2['staff'];
 			
 				$sql28 = "SELECT * FROM staff where id='$identis'";
 
-	if (!$result8 = $db->query($sql28)) {
+	if (!$result28 = $db->query($sql28)) {
 
 		die('There was an error running the query  [' . $db->error . ']');
 
