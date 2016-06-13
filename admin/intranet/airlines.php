@@ -44,19 +44,19 @@
                                         </div>
 										 <div class="form-group">
                                             <label>ICAO Aerolínea</label>
-											<input type="form-control" name="icao">
+											<input type="form-control" name="icao"/>
                                         </div>
 										<div class="form-group">
                                             <label>IATA Aerolínea</label>
-											<input type="form-control" name="iata">
+											<input type="form-control" name="iata"/>
                                         </div>
 										<div class="form-group">
                                             <label>Radio Aerolínea</label>
-											<input type="form-control" name="radio">
+											<input type="form-control" name="radio"/>
                                         </div>
 										<div class="form-group">
                                             <label>CEO Aerolínea</label>
-											<input type="form-control" name="ceo">
+											<input type="form-control" name="ceo"/>
                                         </div>
 										<div class="form-group">
                                             <label>URL Web</label>
