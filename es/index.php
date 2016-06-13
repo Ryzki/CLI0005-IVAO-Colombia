@@ -27,7 +27,21 @@
 </head><!--/head-->
 
 <body>
+ <?php
+		  
+		  include('./db_login.php');
+		  
+		  	$db = new mysqli($db_host , $db_username , $db_password , $db_database);
 
+	$db->set_charset("utf8");
+
+	if ($db->connect_errno > 0) {
+
+		die('Unable to connect to database [' . $db->connect_error . ']');
+
+	}
+	
+	?>
   <!--.preloader-->
   <div class="preloader"> <i class="fa fa-circle-o-notch fa-spin"></i></div>
   <!--/.preloader-->
@@ -40,7 +54,7 @@
             <h1 class="animated fadeInLeftBig">Bienvenido a IVAO <span>Colombia</span></h1>
             <p class="animated fadeInRightBig">La mayor red de pilotos y controladores virtuales</p>
             <a data-scroll class="btn btn-start animated fadeInUpBig" href="../index.html">Atras</a>
-            <a data-scroll class="btn btn-start animated fadeInUpBig" href="#services">Continuar</a>
+            <a data-scroll class="btn btn-start animated fadeInUpBig" href="./#services">Continuar</a>
           </div>
         </div>
         <div class="item" style="background-image: url(images/slider/2.jpg)">
@@ -48,7 +62,7 @@
             <h1 class="animated fadeInLeftBig"><span>5</span> Aerolineas Virtuales</h1>
             <p class="animated fadeInRightBig">Coljet - SAPCO - COLSTAR - FACV - Latin Skies</p>
             <a data-scroll class="btn btn-start animated fadeInUpBig" href="../index.html">Atras</a>
-            <a data-scroll class="btn btn-start animated fadeInUpBig" href="#services">Continuar</a>
+            <a data-scroll class="btn btn-start animated fadeInUpBig" href="./#services">Continuar</a>
           </div>
         </div>
         <div class="item" style="background-image: url(images/slider/3.jpg)">
@@ -56,7 +70,7 @@
             <h1 class="animated fadeInLeftBig">Prepararete<span> Virtualmente</span></h1>
             <p class="animated fadeInRightBig">Como Piloto - Controlador Aereo</p>
             <a data-scroll class="btn btn-start animated fadeInUpBig" href="../index.html">Atras</a>
-            <a data-scroll class="btn btn-start animated fadeInUpBig" href="#services">Continuar</a>
+            <a data-scroll class="btn btn-start animated fadeInUpBig" href="./#services">Continuar</a>
           </div>
         </div>
       </div>
@@ -81,7 +95,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.html">
+          <a class="navbar-brand" href="./">
             <h1><img class="img-responsive" src="images/logo.png" alt="logo"></h1>
           </a>                    
         </div>
@@ -94,16 +108,16 @@
        
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav navbar-right">                 
-            <li class="scroll active"><a href="#home">Inicio</a></li>
-            <li class="scroll"><a href="#services">IVAO COL</a></li> 
-            <li class="scroll"><a href="#portfolio">Pilotos</a></li>
-            <li class="scroll"><a href="#controladores">Controladores</a></li>
-            <li class="scroll"><a href="#atc-ss">ATC-SS</a></li>
-            <li class="scroll"><a href="#team">Eventos</a></li>
-            <li class="scroll"><a href="#features">Recursos</a></li>
-            <li class="scroll"><a href="#pricing">On Line</a></li>
-            <li class="scroll"><a href="#blog">A&E Virtuales</a></li>
-            <li class="scroll"><a href="#contact">Contactenos</a></li>       
+            <li class="scroll active"><a href="./#home">Inicio</a></li>
+            <li class="scroll"><a href="./#services">IVAO COL</a></li> 
+            <li class="scroll"><a href="./#portfolio">Pilotos</a></li>
+            <li class="scroll"><a href="./#controladores">Controladores</a></li>
+            <li class="scroll"><a href="./#atc-ss">ATC-SS</a></li>
+            <li class="scroll"><a href="./#team">Eventos</a></li>
+            <li class="scroll"><a href="./#features">Recursos</a></li>
+            <li class="scroll"><a href="./#pricing">On Line</a></li>
+            <li class="scroll"><a href="./#blog">A&E Virtuales</a></li>
+            <li class="scroll"><a href="./#contact">Contactenos</a></li>       
           </ul>
         </div>
       </div>
@@ -859,19 +873,7 @@
         <div class="row">
             
           
-          <?php
-		  
-		  include('./db_login.php');
-		  
-		  	$db = new mysqli($db_host , $db_username , $db_password , $db_database);
-
-	$db->set_charset("utf8");
-
-	if ($db->connect_errno > 0) {
-
-		die('Unable to connect to database [' . $db->connect_error . ']');
-
-	}
+         <?
 		  
 	$sql2 = "SELECT * FROM eventos ";
 
@@ -892,7 +894,7 @@
 	$dia = substr ($row2['fecha'], 8,2);
 	$fechass = $año .''.$mes.''.$dia;
 	$hoy = date("Ymd");  
-	if($fechass > $hoy) {
+	if($fechass >= $hoy) {
 	
 	?>
 	
@@ -969,7 +971,31 @@
       <div class="team-members">
         <div class="row">
             
-          
+                
+         <?
+		  
+	$sql23 = "SELECT * FROM eventos ";
+
+	if (!$result23 = $db->query($sql23)) {
+
+		die('There was an error running the query  [' . $db->error . ']');
+
+	}
+	
+	$ipp=0;
+
+	while ($row23 = $result23->fetch_assoc()) {
+	
+	$ipp++;
+	
+	$año = substr ($row23['fecha'], 0,4);
+	$mes = substr ($row23['fecha'], 5,2);
+	$dia = substr ($row23['fecha'], 8,2);
+	$fechass = $año .''.$mes.''.$dia;
+	$hoy = date("Ymd");  
+	if($fechass >= $hoy) {
+	
+	?>
           
           
           
@@ -977,19 +1003,19 @@
           <div class="col-sm-3">
             <div class="team-member wow flipInY" data-wow-duration="1000ms" data-wow-delay="300ms">
               <div class="member-image">
-                <img class="img-responsive" src="images/event-news/news/160412-1.jpg" alt="">
+                <img class="img-responsive" src="?page=infoexamen&id=<?php echo $row23['id']; ?>" alt="">
               </div>
               <div class="member-info">
-                <h3>Examen Aerodrome Controller</h3>
-                <h4>Examinado: Miguel Arias</h4>
-                <p>Fecha: 12 de Abril 2016</p>
-                <p>Hora: 19:00 HLC - 00:00 UTC</p>
-                <p>Lugar: SKCL_TWR - Alfonso Bonilla Aragon Torre</p>
+                <h3><?php echo $row23['nombre_examen']; ?></h3>
+                <h4>Examinado: <?php echo $row23['usuario']; ?></h4>
+                <p>Fecha: <?php echo $row23['fecha']; ?></p>
+                <p>Hora: <?php echo $row23['hora_inicio']; ?> HLC - <?php echo $row23['hora_utcinicio']; ?> UTC</p>
+                <p>Lugar: <?php echo $row23['lugar']; ?></p>
                 <p>Acompañalo</p>
               </div>
               <div class="social-icons">
                 <ul>
-                  <li><a class="facebook" href="event-news.html"><i class="fa fa-chevron-right"></i></a></li>
+                  <li><a class="facebook" href="?page=infoexamen&id=<?php echo $row23['id']; ?>"><i class="fa fa-chevron-right"></i></a></li>
                   <!--
                   <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
                   <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
@@ -1000,90 +1026,27 @@
               </div>
             </div>
           </div>
+		  
+		  
+		  
+	<?php  
+	
+	}
+	}
+	
+	
+	if ($ipp==0)
+	{
+	echo '<div class="alert alert-danger" role="alert">No hay Noticias o Examenes disponibles aún.</div>';
+	
+	 
+	} 
+		  
+		  
+		  ?>
+         
           
-          <div class="col-sm-3">
-            <div class="team-member wow flipInY" data-wow-duration="1000ms" data-wow-delay="300ms">
-              <div class="member-image">
-                <img class="img-responsive" src="images/event-news/news/160411-2.jpg" alt="">
-              </div>
-              <div class="member-info">
-                <h3>Examen Aerodrome Controller</h3>
-                <h4>Examinado: Santiago Martinez Mejia</h4>
-                <p>Fecha: 11 de Abril 2016</p>
-                <p>Hora: 19:00 HLC - 00:00 UTC</p>
-                <p>Lugar: SKCL_TWR - Alfonso Bonilla Aragon Torre</p>
-                <p>Acompañalo</p>
-              </div>
-              <div class="social-icons">
-                <ul>
-                  <li><a class="facebook" href="event-news.html"><i class="fa fa-chevron-right"></i></a></li>
-                  <!--
-                  <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-                  <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
-                  <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
-                  <li><a class="rss" href="#"><i class="fa fa-rss"></i></a></li>
-                  -->
-                </ul>
-              </div>
-            </div>
-          </div>
-          
-          <div class="col-sm-3">
-            <div class="team-member wow flipInY" data-wow-duration="1000ms" data-wow-delay="500ms">
-              <div class="member-image">
-                <img class="img-responsive" src="images/event-news/news/160411-1.png" alt="">
-              </div>
-              <div class="member-info">
-                <h3>Examen Aerodrome Controller</h3>
-                <h4>Examinado: David Bonilla</h4>
-                <p>Fecha: 11 de Abril 2016</p>
-                <p>Hora: 17:00 HLC - 22:00 UTC</p>
-                <p>Lugar: SKRG_TWR - Jose Maria Cordova Torre</p>
-                <p>Acompañalo</p>
-              </div>
-              <div class="social-icons">
-                <ul>
-                  <li><a class="facebook" href="event-news.html"><i class="fa fa-chevron-right"></i></a></li>
-                  <!--
-                  <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
-                  <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-                  <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
-                  <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
-                  <li><a class="rss" href="#"><i class="fa fa-rss"></i></a></li>
-                  -->
-                </ul>
-              </div>
-            </div>
-          </div>
-          
-          <div class="col-sm-3">
-            <div class="team-member wow flipInY" data-wow-duration="1000ms" data-wow-delay="800ms">
-              <div class="member-image">
-                <img class="img-responsive" src="images/event-news/news/160410-1.jpg" alt="">
-              </div>
-              <div class="member-info">
-                <h3>Examen Aerodrome Controller</h3>
-                <h4>Examinado: Miguel Restrepo</h4>
-                <p>Fecha: 10 de Abril 2016</p>
-                <p>Hora: 19:00 HLC - 00:00 UTC</p>
-                <p>Lugar: SKRG_TWR - Jose Maria Cordova Torre</p>
-                <p>Acompañalo</p>
-              </div>
-              <div class="social-icons">
-                <ul>
-                  <li><a class="facebook" href="event-news.html"><i class="fa fa-chevron-right"></i></a></li>
-                  <!--
-                  <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
-                  <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-                  <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
-                  <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
-                  <li><a class="rss" href="#"><i class="fa fa-rss"></i></a></li>
-                  -->
-                </ul>
-              </div>
-            </div>
-          </div>
-          
+        
           
           
         </div>

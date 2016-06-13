@@ -1,0 +1,1 @@
+<?php$ch = 'https://www.ivao.aero/members/person/country.asp?Id=CO';$s_searchFor = 'div[class=col-md-8 col-md-offset-2]';$file_contents = curl_exec($ch); //get the page contentspreg_match($s_searchFor, $file_contents, $matches); //match the element$file_contents = $matches[0]; //set the file_contents var to the matched elements?>

@@ -72,7 +72,7 @@
 	<td>' . $row2['ip_first'] . '</td>
 	<td>' . $row2['last_visit_date'] . ' (' . $row2['last_ip'] . ')</td>
 	<td>' . $row2['email'] . '</td>
-	<td>' . $callsign_name . '  <img border="0" src="https://www.ivao.aero/data/images/badge/' . $spot .'.gif"><img border="0" src="https://www.ivao.aero/data/images/badge/CO.gif"></td>
+	<td>' . $callsign_name . ' <br> <img border="0" src="https://www.ivao.aero/data/images/badge/' . $spot .'.gif"><img border="0" src="https://www.ivao.aero/data/images/badge/CO.gif"></td>
 	
 	
 	<td><form  action="?page=deletestaff&id=' . $identi . '"  method="post"><button class="btn btn-danger"><i class="fa fa-pencil"></i> Borrar</button></form></td>
