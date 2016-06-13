@@ -27,21 +27,6 @@
 </head><!--/head-->
 
 <body>
- <?php
-		  
-		  include('./db_login.php');
-		  
-		  	$db = new mysqli($db_host , $db_username , $db_password , $db_database);
-
-	$db->set_charset("utf8");
-
-	if ($db->connect_errno > 0) {
-
-		die('Unable to connect to database [' . $db->connect_error . ']');
-
-	}
-	
-	?>
   <!--.preloader-->
   <div class="preloader"> <i class="fa fa-circle-o-notch fa-spin"></i></div>
   <!--/.preloader-->
@@ -875,6 +860,18 @@
           
          <?
 		  
+		  include('./db_login.php');
+		  
+		  	$db = new mysqli($db_host , $db_username , $db_password , $db_database);
+
+	$db->set_charset("utf8");
+
+	if ($db->connect_errno > 0) {
+
+		die('Unable to connect to database [' . $db->connect_error . ']');
+
+	}
+	
 	$sql2 = "SELECT * FROM eventos ";
 
 	if (!$result2 = $db->query($sql2)) {
@@ -887,7 +884,7 @@
 
 	while ($row2 = $result2->fetch_assoc()) {
 	
-	$i++;
+	
 	
 	$año = substr ($row2['fecha'], 0,4);
 	$mes = substr ($row2['fecha'], 5,2);
@@ -895,7 +892,7 @@
 	$fechass = $año .''.$mes.''.$dia;
 	$hoy = date("Ymd");  
 	if($fechass >= $hoy) {
-	
+	$i++;
 	?>
 	
 	
@@ -903,7 +900,7 @@
 	 <div class="col-sm-3">
             <div class="team-member wow flipInY" data-wow-duration="1000ms" data-wow-delay="300ms">
               <div class="member-image">
-                <img class="img-responsive" src="?page=infoevent&id=<?php echo $row2['id']; ?>" alt="">
+                <img class="img-responsive" src="../admin/intranet/uploads/<?php echo $row2['imagen']; ?>" alt="">
               </div>
               <div class="member-info">
                 <h3><?php echo $row2['nombre']; ?></h3>
@@ -929,7 +926,7 @@
 	
 	<?
 	
-	}
+	} 
 	}
 	
 	
@@ -973,8 +970,20 @@
             
                 
          <?
+		 
+		 include('./db_login.php');
 		  
-	$sql23 = "SELECT * FROM eventos ";
+		  	$db = new mysqli($db_host , $db_username , $db_password , $db_database);
+
+	$db->set_charset("utf8");
+
+	if ($db->connect_errno > 0) {
+
+		die('Unable to connect to database [' . $db->connect_error . ']');
+
+	}
+		  
+	$sql23 = "SELECT * FROM noticias ";
 
 	if (!$result23 = $db->query($sql23)) {
 
@@ -986,7 +995,6 @@
 
 	while ($row23 = $result23->fetch_assoc()) {
 	
-	$ipp++;
 	
 	$año = substr ($row23['fecha'], 0,4);
 	$mes = substr ($row23['fecha'], 5,2);
@@ -994,6 +1002,7 @@
 	$fechass = $año .''.$mes.''.$dia;
 	$hoy = date("Ymd");  
 	if($fechass >= $hoy) {
+	$ipp++;
 	
 	?>
           
@@ -1003,7 +1012,7 @@
           <div class="col-sm-3">
             <div class="team-member wow flipInY" data-wow-duration="1000ms" data-wow-delay="300ms">
               <div class="member-image">
-                <img class="img-responsive" src="?page=infoexamen&id=<?php echo $row23['id']; ?>" alt="">
+                <img class="img-responsive" src="../admin/intranet/uploads/<?php echo $row23['imagen']; ?>" alt="">
               </div>
               <div class="member-info">
                 <h3><?php echo $row23['nombre_examen']; ?></h3>

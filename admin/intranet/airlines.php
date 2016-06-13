@@ -14,55 +14,91 @@
                     <!-- Form Elements -->
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            Examenes IVAO Colombia
+                           Aerolíneas Virtuales IVAO Colombia
                         </div>
                         <div class="panel-body">
                             <div class="row">
                                 <div class="col-md-6">
                                     <h3>IVAO AERO</h3>
-                                    <form enctype="multipart/form-data"  action="./?page=addnoticia" method="post" >
+                                    <form enctype="multipart/form-data"  action="./?page=addairline" method="post" >
                                         <div class="form-group">
-                                            <label>Nombre Examen</label>
+                                            <label>Nombre Aerolínea</label>
                                             <input class="form-control" name="nombre" />
                                         </div>
 										 <div class="form-group">
-                                            <label>Persona a ser evaludada</label>
-                                            <input class="form-control" name="persona" />
+                                            <label>Tipo Aerolínea</label>
+                                            <select name="tipe">
+											<option value="Aerolínea Virtual">Aerolínea Virtual</option>
+											<option value="Escuela Militar">Escuela Militar</option>
+											</select>
+                                        </div>
+										<div class="form-group">
+                                            <label>Sistema Aerolínea</label>
+                                            <select name="sistema">
+											<option value="VAM">VAM</option>
+											<option value="PHPVMS">PHPVMS</option>
+											<option value="FSAIRLINES">FSAIRLINES</option>
+											<option value="VAFS">VAFS</option>
+											<option value="OTRO">OTRO</option>
+											</select>
                                         </div>
 										 <div class="form-group">
-                                            <label>Fecha Examen</label>
-											<input type="date" name="fecha">
+                                            <label>ICAO Aerolínea</label>
+											<input type="control" name="icao">
                                         </div>
 										<div class="form-group">
-                                            <label>Hora Inicio Local</label>
-											<input type="time" name="horauno">
+                                            <label>IATA Aerolínea</label>
+											<input type="control" name="iata">
                                         </div>
 										<div class="form-group">
-                                            <label>Hora Inicio UTC</label>
-											<input type="time" name="horados">
+                                            <label>Radio Aerolínea</label>
+											<input type="control" name="radio">
                                         </div>
 										<div class="form-group">
-                                            <label>Lugar</label>
-                                            <input class="form-control" name="lugar" />
+                                            <label>CEO Aerolínea</label>
+											<input type="control" name="ceo">
+                                        </div>
+										<div class="form-group">
+                                            <label>URL Web</label>
+                                            <input class="form-control" name="url" />
+                                        </div>
+										
+										<div class="form-group">
+                                            <label>URL Pilotos</label>
+                                            <input class="form-control" name="pca" />
+                                        </div>
+										
+										<div class="form-group">
+                                            <label>URL Estadisticas</label>
+                                            <input class="form-control" name="stat" />
+                                        </div>
+										
+										<div class="form-group">
+                                            <label>URL Vuelos</label>
+                                            <input class="form-control" name="vuelo" />
                                         </div>
 										 <div class="form-group">
-                                            <label>Información Examen</label>
+                                            <label>Información Aerolínea</label>
 											<textarea name="info"></textarea>
                                         </div>
 										<div class="form-group">
-                                            <label>Imagen Examen</label>
+                                            <label>Logo Aerolínea</label>
                                            
 <input name="image_file"  type="file">
 
-<br>
-<hr>
+										
+                                        </div>
+										<div class="form-group">
+                                            <label>Imagen Aerolínea</label>
+                                           
+<input name="image_files"  type="file">
 
 										
                                         </div>
 										
-										 <input type="hidden" class="form-control" name="id" value="<?php echo $id; ?>"/>
+									
 								
-                                        <button type="submit" class="btn btn-default">Añadir Examen</button>
+                                        <button type="submit" class="btn btn-default">Añadir Aerolínea</button>
 
                                     </form>
                                   
@@ -77,7 +113,7 @@
 					 
 					  <div class="panel panel-default">
                         <div class="panel-heading">
-                            Administración de Examenes
+                            Administración de Aerolíneas
                         </div>
                         <div class="panel-body">
                             <div class="row">
@@ -88,14 +124,14 @@
 								
 <thead>
   <tr>
-    <th>Nombre Examen</th><th>Usuario</th><th>Lugar</th><th>Fecha</th><th>Horario</th><th>Información</th><th>Imagen</th><th>Actualizar</th><th>Eliminar</th>
+    <th>Nombre Aerolínea</th><th>CEO</th><th>Web</th><th>Ver Estadísticas</th><th>Actualizar</th><th>Eliminar</th>
   </tr>
 </thead>
 <tbody>
 <?php
 
 
-	$sql2 = "SELECT * FROM noticias ";
+	$sql2 = "SELECT * FROM airlines ";
 
 	if (!$result2 = $db->query($sql2)) {
 
@@ -110,15 +146,12 @@
 			
 			
 			echo' <tr>
-	<td>' . $row2['nombre_examen'] . '</td>
-	<td>' . $row2['usuario'] . '</td>
-	<td>' . $row2['lugar'] . '</td>
-	<td>' . $row2['fecha'] . '</td>
-	<td>' . $row2['hora_inicio'] . ' HLC<br>' . $row2['hora_utcinicio'] . ' UTC</td>
-	<td>' . $row2['informacion'] . '</td>
-	<td><img src="./uploadsnoticias/' . $row2['imagen'] . '"  width="60%" height="20%"></td>
-	<td><form  action="?page=updatenoticia&id=' . $identi . '"  method="post"><button class="btn btn-default"><i class="fa fa-refresh"></i> Actualizar</button></form></td>
-	<td><form  action="?page=deletenoticia&id=' . $identi . '"  method="post"><button class="btn btn-danger"><i class="fa fa-pencil"></i> Borrar</button></form></td>
+	<td>' . $row2['nombre_aerolinea'] . '</td>
+	<td>' . $row2['ceo'] . '</td>
+	<td><a href="' . $row2['web'] . '">Ver</a></td>
+	<td><a href="' . $row2['web'] . '">Ver</a></td>
+	<td><form  action="?page=updateairline&id=' . $identi . '"  method="post"><button class="btn btn-default"><i class="fa fa-refresh"></i> Actualizar</button></form></td>
+	<td><form  action="?page=deleteairline&id=' . $identi . '"  method="post"><button class="btn btn-danger"><i class="fa fa-pencil"></i> Borrar</button></form></td>
   </tr>';
 
 

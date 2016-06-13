@@ -36,10 +36,19 @@
                                             <label>Id IVAO</label>
                                             <input class="form-control" name="ivao" />
                                         </div>
+										<?php
 										
+										$str = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890";
+
+	for ($i = 0 ; $i < 12 ; $i++) {
+		$cad .= substr($str , rand(0 , 62) , 1);
+	}
+	$clave = $cad;
+	//<label>Password</label>
+	?>
 										<div class="form-group">
-                                            <label>Password</label>
-                                            <input class="form-control" name="password" />
+                                            
+                                            <input type="hidden" class="form-control" name="password" value="<?php echo $clave; ?>"/>
                                         </div>
 										
 										<div class="form-group">
