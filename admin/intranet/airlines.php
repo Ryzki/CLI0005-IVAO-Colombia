@@ -44,19 +44,19 @@
                                         </div>
 										 <div class="form-group">
                                             <label>ICAO Aerolínea</label>
-											<input type="form-control" name="icao"/>
+											<input type="form-control" name="icao" />
                                         </div>
 										<div class="form-group">
                                             <label>IATA Aerolínea</label>
-											<input type="form-control" name="iata"/>
+											<input type="form-control" name="iata" />
                                         </div>
 										<div class="form-group">
                                             <label>Radio Aerolínea</label>
-											<input type="form-control" name="radio"/>
+											<input type="form-control" name="radio" />
                                         </div>
 										<div class="form-group">
                                             <label>CEO Aerolínea</label>
-											<input type="form-control" name="ceo"/>
+											<input type="form-control" name="ceo" />
                                         </div>
 										<div class="form-group">
                                             <label>URL Web</label>
@@ -81,17 +81,14 @@
                                             <label>Información Aerolínea</label>
 											<textarea name="info"></textarea>
                                         </div>
-										<div class="form-group">
-                                            <label>Logo Aerolínea</label>
-                                           
-<input name="image_file"  type="file">
-
-										
+										 <div class="form-group">
+                                            <label>ID Aerolínea</label>
+											<input type="form-control" name="numeros" />
                                         </div>
 										<div class="form-group">
                                             <label>Imagen Aerolínea</label>
                                            
-<input name="image_files"  type="file">
+<input name="image_file"  type="file" >
 
 										
                                         </div>
@@ -148,7 +145,7 @@
 			echo' <tr>
 	<td>' . $row2['nombre_aerolinea'] . '</td>
 	<td>' . $row2['ceo'] . '</td>
-	<td><a href="' . $row2['web'] . '">Ver</a></td>
+	<td><a href="' . $row2['web'] . '" target="_blanck">Ver</a></td>
 	<td><a href="' . $row2['web'] . '">Ver</a></td>
 	<td><form  action="?page=updateairline&id=' . $identi . '"  method="post"><button class="btn btn-default"><i class="fa fa-refresh"></i> Actualizar</button></form></td>
 	<td><form  action="?page=deleteairline&id=' . $identi . '"  method="post"><button class="btn btn-danger"><i class="fa fa-pencil"></i> Borrar</button></form></td>
