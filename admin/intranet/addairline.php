@@ -3,7 +3,7 @@
 			$db->set_charset("utf8");
 			if ($db->connect_errno > 0) {
 				die('Unable to connect to database [' . $db->connect_error . ']');
-			}						$sql1 = "insert into airlines (numeros,imagen_va,nombre_aerolinea,icao_aerolinea,iata_aerolinea,ceo,informacion,url_pilotos,url_estadistica,url_horas_mes,sistema,web,tipo_aerolinea)                    values ('$numeros','$nombresss','$nombresa','$icao','$iata','$ceo','$info','$pca','$stat','$vuelo','$sistema','$url','$tipe');";				if (!$result = $db->query($sql1)) {					die('There was an error running the query [' . $db->error . ']');				}			
+			}						$sql1 = "insert into airlines (numeros,imagen_va,nombre_aerolinea,icao_aerolinea,iata_aerolinea,ceo,informacion,url_pilotos,url_estadistica,url_horas_mes,sistema,web,tipo_aerolinea,radio)                    values ('$numeros','$nombresss','$nombresa','$icao','$iata','$ceo','$info','$pca','$stat','$vuelo','$sistema','$url','$tipe','$radio');";				if (!$result = $db->query($sql1)) {					die('There was an error running the query [' . $db->error . ']');				}			
 		
 ?>
 <script>alert('Información agregada satisfactoriamente.');window.location = './?page=airlines';</script>

@@ -121,7 +121,7 @@
 								
 <thead>
   <tr>
-    <th>Nombre Aerolínea</th><th>CEO</th><th>Web</th><th>Ver Estadísticas</th><th>Actualizar</th><th>Eliminar</th>
+    <th>Nombre Aerolínea</th><th>CEO</th><th>Web</th><th>Ver Estadísticas | Información</th><th>Actualizar</th><th>Eliminar</th>
   </tr>
 </thead>
 <tbody>
@@ -146,7 +146,7 @@
 	<td>' . $row2['nombre_aerolinea'] . '</td>
 	<td>' . $row2['ceo'] . '</td>
 	<td><a href="' . $row2['web'] . '" target="_blanck">Ver</a></td>
-	<td><a href="' . $row2['web'] . '">Ver</a></td>
+	<td><a href="?page=statsairline&id=' . $row2['id'] . '">Ver</a></td>
 	<td><form  action="?page=updateairline&id=' . $identi . '"  method="post"><button class="btn btn-default"><i class="fa fa-refresh"></i> Actualizar</button></form></td>
 	<td><form  action="?page=deleteairline&id=' . $identi . '"  method="post"><button class="btn btn-danger"><i class="fa fa-pencil"></i> Borrar</button></form></td>
   </tr>';
