@@ -31,6 +31,7 @@ include('./db_login.php');
 	    $tipo_aerolinea= $row3["tipo_aerolinea"];
 	    $numeros= $row3["numeros"];
 	    $radio= $row3["radio"];
+		 $vas= $row3["imagen_va"];
 	}
 	
 
@@ -54,101 +55,91 @@ include('./db_login.php');
                     <!-- Form Elements -->
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            Actualización de Aerolinea
+                            Información Aerolínea
                         </div>
                         <div class="panel-body">
                             <div class="row">
+							
+								<center><img src="https://www.ivao.aero/data/images/airline/<?php echo $numeros; ?>.jpg"/></center>
+								<hr>
+								<center><img src="./imagenair/<?php echo $vas; ?>" width="700" height="300"/></center>
+								<hr>
                                 <div class="col-md-6">
-                                    <h3>IVAO AERO</h3>
-                                
-									
-									
-									
-									
-									  <form enctype="multipart/form-data"  action="./?page=airlineactualizada" method="post" >
+								<br>
+                                   
+								<hr>
+								
                                         <div class="form-group">
                                             <label>Nombre Aerolínea</label>
-                                            <input class="form-control" name="nombre" value="<?php echo $nombre_aerolinea; ?>"/>
-											<input type="hidden" name="id" value="<?php echo $callsign; ?>"/>
+                                            <input class="form-control" name="nombre" value="<?php echo $nombre_aerolinea; ?>" readonly="readonly"/>
+										
                                         </div>
 										 <div class="form-group">
-                                            <label>Tipo Aerolínea: <?php echo $tipo_aerolinea; ?></label>
-                                            <select name="tipe">
-											<option value="Aerolinea Virtual">Aerolínea Virtual</option>
-											<option value="Escuela Militar">Escuela Militar</option>
-											</select>
+                                            <label>Tipo Aerolínea</label>
+                                           <input type="form-control" name="icaossa" value="<?php echo $tipo_aerolinea; ?>" readonly="readonly" />
+											
                                         </div>
 										<div class="form-group">
-                                            <label>Sistema Aerolínea: <?php echo $sistema; ?></label>
-                                            <select name="sistema">
-											<option value="VAM">VAM</option>
-											<option value="PHPVMS">PHPVMS</option>
-											<option value="FSAIRLINES">FSAIRLINES</option>
-											<option value="VAFS">VAFS</option>
-											<option value="OTRO">OTRO</option>
-											</select>
+                                            <label>Sistema Aerolínea</label>
+                                            <input type="form-control" name="icaoss" value="<?php echo $sistema; ?>"/ readonly="readonly" >
+											
                                         </div>
 										 <div class="form-group">
                                             <label>ICAO Aerolínea</label>
-											<input type="form-control" name="icao" value="<?php echo $icao_aerolinea; ?>"/>
+											<input type="form-control" name="icao" value="<?php echo $icao_aerolinea; ?>" readonly="readonly" />
                                         </div>
 										<div class="form-group">
                                             <label>IATA Aerolínea</label>
-											<input type="form-control" name="iata" value="<?php echo $iata_aerolinea; ?>"/>
+											<input type="form-control" name="iata" value="<?php echo $iata_aerolinea; ?>" readonly="readonly" />
                                         </div>
 										<div class="form-group">
                                             <label>Radio Aerolínea</label>
-											<input type="form-control" name="radio" value="<?php echo $radio; ?>"/>
+											<input type="form-control" name="radio" value="<?php echo $radio; ?>" readonly="readonly" />
                                         </div>
 										<div class="form-group">
                                             <label>CEO Aerolínea</label>
-											<input type="form-control" name="ceo" value="<?php echo $ceo; ?>"/>
+											<input type="form-control" name="ceo" value="<?php echo $ceo; ?>" readonly="readonly" />
                                         </div>
 										<div class="form-group">
-                                            <label>URL Web</label>
-                                            <input class="form-control" name="url" value="<?php echo $web; ?>"/>
-                                        </div>
-										
-										<div class="form-group">
-                                            <label>URL Pilotos</label>
-                                            <input class="form-control" name="pca" value="<?php echo $url_pilotos; ?>"/>
-                                        </div>
-										
-										<div class="form-group">
-                                            <label>URL Estadisticas</label>
-                                            <input class="form-control" name="stat" value="<?php echo $url_estadistica; ?>"/>
-                                        </div>
-										
-										<div class="form-group">
-                                            <label>URL Vuelos</label>
-                                            <input class="form-control" name="vuelo" value="<?php echo $url_hora_mes; ?>"/>
+                                            <label>URL Web <a href="<?php echo $web; ?>">Ver.</a></label>
+                                            <input class="form-control" name="url" value="<?php echo $web; ?>" readonly="readonly" />
                                         </div>
 										 <div class="form-group">
                                             <label>Información Aerolínea</label>
-											<textarea name="info"><?php echo $informacion; ?></textarea>
-                                        </div>
-										 <div class="form-group">
-                                            <label>ID Aerolínea</label>
-											<input type="form-control" name="numeros" value="<?php echo $numeros; ?>"/>
-                                        </div>
-										<div class="form-group">
-                                            <label>Imagen Aerolínea</label>
-                                           
-<input name="image_file"  type="file" >
-
-										
+											<textarea name="info" readonly="readonly" ><?php echo $informacion; ?></textarea>
                                         </div>
 										
-									
-								
-                                        <button type="submit" class="btn btn-default">Aerolínea Actualizada</button>
-
-                                    </form>
-                                  
 
                                  
                                 </div>
-                                
+								
+								
+								
+								 <div class="col-md-10">
+								<br>
+								<br>
+								<hr>
+								<h1>Pilotos de <?php echo $nombre_aerolinea; ?></h1>
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								<br>
+								<h1>Estadísticas de <?php echo $nombre_aerolinea; ?></h1>
+								
+								
+								
+								
+								
+								<br>
+								<h1>Vuelos de <?php echo $nombre_aerolinea; ?></h1>
+                               
+ </div>							   
                             </div>
                         </div>
                     </div>
