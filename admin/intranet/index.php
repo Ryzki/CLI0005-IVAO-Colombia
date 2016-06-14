@@ -63,6 +63,30 @@ include('./db_login.php');
 			$id = $row['id'];
 			
 			$last_visit_date = $row['last_visit_date'];
+			
+			
+			
+			$sql555 = "SELECT * FROM ranks where id='$staff_ivao'";
+
+	if (!$result555 = $db->query($sql555)) {
+
+		die('There was an error running the query  [' . $db->error . ']');
+
+	}
+
+	while ($row555 = $result555->fetch_assoc()) {
+		$cargol = $row555['callsign'];	
+		$posl = $row555['posicion'];	
+		$email_ivao = $row555['email'];		
+	}	
+			
+			
+			
+			
+			
+			
+			
+			
 
 	}
 
@@ -123,6 +147,9 @@ font-size: 16px;"> Last access : <?php echo $last_visit_date; ?> &nbsp; <a href=
 				<li>
                         <a class="active-menu"  href="./"><i class="fa fa-dashboard fa-3x"></i> Información de la División</a>
                     </li>
+					<li  >
+                        <a  href="?page=myprofile"><i class="fa fa-edit fa-3x"></i> Mi Perfil </a>
+                    </li>
 				
 				 <li>
                         <a href="#"><i class="fa fa-sitemap fa-3x"></i> Staff IVAO<span class="fa arrow"></span></a>
@@ -161,6 +188,11 @@ font-size: 16px;"> Last access : <?php echo $last_visit_date; ?> &nbsp; <a href=
                         <a  href="./?page=airlines"><i class="fa fa-qrcode fa-3x"></i> Aerolineas Virtuales</a>
                     	
                       <li/>
+					  
+					   <li  >
+                        <a  href="./?page=training"><i class="fa fa-table fa-3x"></i> Centro de Entrenamiento</a>
+                    </li>
+
 						
                 </ul>
                

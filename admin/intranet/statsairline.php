@@ -34,6 +34,36 @@ include('./db_login.php');
 		 $vas= $row3["imagen_va"];
 	}
 	
+	
+	$ruta_img = "https://www.ivao.aero/data/images/airline/" . $numeros . ".jpg"; // 
+	$ruta_imgs = "https://www.ivao.aero/data/images/airline/" . $numeros . ".png"; // 
+	$ruta_imgss = "https://www.ivao.aero/data/images/airline/" . $numeros . ".gif"; // 
+	
+	
+	
+
+    if(getimagesize($ruta_img)){
+    $iaa = ".jpg";
+ 
+    }
+
+    if(getimagesize($ruta_imgs)){
+    $iaa = ".png";
+ 
+    }
+	
+	    if(getimagesize($ruta_imgss)){
+    $iaa = ".gif";
+ 
+    }
+
+
+  
+	
+	
+
+	
+	
 
 		
 
@@ -60,7 +90,7 @@ include('./db_login.php');
                         <div class="panel-body">
                             <div class="row">
 							
-								<center><img src="https://www.ivao.aero/data/images/airline/<?php echo $numeros; ?>.jpg"/></center>
+								<center><img src="https://www.ivao.aero/data/images/airline/<?php echo $numeros; ?><?php echo $iaa; ?>"/></center>
 								<hr>
 								<center><img src="./imagenair/<?php echo $vas; ?>" width="700" height="300"/></center>
 								<hr>
@@ -76,29 +106,29 @@ include('./db_login.php');
                                         </div>
 										 <div class="form-group">
                                             <label>Tipo Aerolínea</label>
-                                           <input type="form-control" name="icaossa" value="<?php echo $tipo_aerolinea; ?>" readonly="readonly" />
+                                           <input class="form-control" name="icaossa" value="<?php echo $tipo_aerolinea; ?>" readonly="readonly" />
 											
                                         </div>
 										<div class="form-group">
                                             <label>Sistema Aerolínea</label>
-                                            <input type="form-control" name="icaoss" value="<?php echo $sistema; ?>"/ readonly="readonly" >
+                                            <input class="form-control" name="icaoss" value="<?php echo $sistema; ?>"/ readonly="readonly" >
 											
                                         </div>
 										 <div class="form-group">
                                             <label>ICAO Aerolínea</label>
-											<input type="form-control" name="icao" value="<?php echo $icao_aerolinea; ?>" readonly="readonly" />
+											<input class="form-control" name="icao" value="<?php echo $icao_aerolinea; ?>" readonly="readonly" />
                                         </div>
 										<div class="form-group">
                                             <label>IATA Aerolínea</label>
-											<input type="form-control" name="iata" value="<?php echo $iata_aerolinea; ?>" readonly="readonly" />
+											<input class="form-control" name="iata" value="<?php echo $iata_aerolinea; ?>" readonly="readonly" />
                                         </div>
 										<div class="form-group">
                                             <label>Radio Aerolínea</label>
-											<input type="form-control" name="radio" value="<?php echo $radio; ?>" readonly="readonly" />
+											<input class="form-control" name="radio" value="<?php echo $radio; ?>" readonly="readonly" />
                                         </div>
 										<div class="form-group">
                                             <label>CEO Aerolínea</label>
-											<input type="form-control" name="ceo" value="<?php echo $ceo; ?>" readonly="readonly" />
+											<input class="form-control" name="ceo" value="<?php echo $ceo; ?>" readonly="readonly" />
                                         </div>
 										<div class="form-group">
                                             <label>URL Web <a href="<?php echo $web; ?>">Ver.</a></label>
