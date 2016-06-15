@@ -152,7 +152,69 @@ include('./db_login.php');
 								<h1>Pilotos de <?php echo $nombre_aerolinea; ?></h1>
 								
 								
+										<?php 
 								
+							if	($sistema=="VAM") {
+								
+$filecontentsa = file_get_contents($url_pilotos);
+//$filecontents = file_get_contents('whazzup.txt'); //Testing file
+$rows = split(PHP_EOL, $filecontentsa);
+
+
+echo '<table id="table_list"  class="table table-hover" width="100%">
+																	
+                                        <thead>
+                                            <tr>
+												<th><b>Callsign</b></th>
+												<th><b>Nombre</b></th>
+												<th><b>Horas</b></th>
+												<th><b>IVAO</b></th>
+                                            </tr>
+											
+                                        </thead>
+										<thead>
+										<tr>
+										</tr>
+										</thead>
+										 <tbody>';
+				  
+foreach ($rows as $row) {
+
+
+	$fieldsa = split(":", $row);
+	
+if($fieldsa[0]!=""){
+$horariosa = $fieldsa[2];
+
+$sumasa= round($horariosa  , 2);
+$segundosa = $sumasa*3600;
+
+
+
+
+$horasa = floor($segundosa/3600);
+$minutosa = floor(($segundosa-($horasa*3600))/60);
+$segundosa = $segundosa-($horasa*3600)-($minutosa*60);
+$totalaa= $horasa.' h '.$minutosa.' m ';
+
+				  
+				  echo '<tr>';
+				   echo '<td>' . $fieldsa[1]  . '</td>';
+				    echo '<td>' . utf8_encode($fieldsa[0])  . '</td>';
+				  echo '<td>' . $totalaa  . '</td>';
+				  echo '<td><a href="http://www.ivao.aero/members/person/details.asp?ID=' . $fieldsa[3]  . '">' . $fieldsa[3]  . '</a></td>';
+				  
+				  echo '</tr>';
+}
+
+}
+
+
+				echo '</tbody>
+				</table>';
+							}
+
+?>	
 								
 								
 								
