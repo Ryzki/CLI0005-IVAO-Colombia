@@ -92,7 +92,7 @@ include('./db_login.php');
 							
 								<center><img src="https://www.ivao.aero/data/images/airline/<?php echo $numeros; ?><?php echo $iaa; ?>"/></center>
 								<hr>
-								<center><img src="./imagenair/<?php echo $vas; ?>" width="700" height="300"/></center>
+								<center><img src="./imagenair/<?php echo $vas; ?>" width="700" height="400"/></center>
 								<hr>
                                 <div class="col-md-6">
 								<br>
@@ -163,7 +163,66 @@ include('./db_login.php');
 								<h1>Estadísticas de <?php echo $nombre_aerolinea; ?></h1>
 								
 								
+								<?php 
 								
+							if	($sistema=="VAM") {
+								
+$filecontents = file_get_contents($url_estadistica);
+//$filecontents = file_get_contents('whazzup.txt'); //Testing file
+
+
+
+	$fields = split(":", $filecontents);
+	
+
+$horarios = $fields[2];
+
+$sumas= round($horarios  , 2);
+$segundos = $sumas*3600;
+
+
+
+
+$horas = floor($segundos/3600);
+$minutos = floor(($segundos-($horas*3600))/60);
+$segundos = $segundos-($horas*3600)-($minutos*60);
+$total= $horas.' h '.$minutos.' m ';
+
+				  
+				  echo '<table class="table table-striped" width="100%">
+				  <tbody><tr>
+					<td valign="top" width="20%" bgcolor="grey"><strong>Pilots:</strong></td>
+					<td valign="top" width="30%">' . $fields[0] . '</td>
+					<td valign="top" width="20%" bgcolor="grey"><strong>Passengers:</strong></td>
+					<td valign="top" width="30%" >' . $fields[1] . '</td>
+				  </tr>
+				  <tr>
+					<td><strong>Hours:</strong></td>
+					<td>' . $total . '</td>
+					<td><strong>Fuel Burned:</strong></td>
+					<td>' . $fields[3] . '</td>
+				  </tr>
+				  <tr>
+					<td><strong>Flights:</strong></td>
+					<td>' . $fields[4] . '</td>
+					<td><strong>Schedules:</strong></td>
+					<td>' . $fields[7] . '</td>
+				  </tr>
+				  <tr>
+					<td><strong>Distance:</strong></td>
+					 <td>' . $fields[5] . '</td>
+					<td><strong>Aircraft:</strong></td>
+					<td>+' . $fields[6] . '</td>   
+				  </tr>
+				</tbody>
+				</table>';
+
+
+}
+
+
+
+?>
 								
 								
 								<br>
