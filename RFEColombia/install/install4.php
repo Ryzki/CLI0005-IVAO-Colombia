@@ -4,12 +4,12 @@ $alerts  = false;
 $infos   = false;
 
 // Attempting Connection
-$host        = $_POST['host'];
-$rfedatabase = $_POST['rfedatabase'];
-$navdatabase = $_POST['navdatabase'];
-$login_db    = $_POST['login_db'];
-$pass_db     = $_POST['pass_db'];
-$port        = $_POST['port'];
+$host        = $_POST["host"];
+$rfedatabase = $_POST["rfedatabase"];
+$navdatabase = $_POST["navdatabase"];
+$login_db    = $_POST["login_db"];
+$pass_db     = $_POST["pass_db"];
+$port        = $_POST["port"];
 
 if(!($sqlconn=@mysql_connect("$host:$port",$login_db,$pass_db))) {
 	$errormsg .= '<div class="alert alert-error" style="width: 145%; margin: 0px 0px 5px -22px;"><h4>It wasn\'t possible to connect to MySQL server. Please, check the configurations.</h4></div>';
@@ -87,18 +87,18 @@ if(!($con=@mysql_select_db($navdatabase,$sqlconn))) {
 <p>Data added.</p>
 
 <?php	
-	$inifile = fopen('../phpinc/data.ini.php', 'w');
-	fwrite($inifile, ';<?php\r\n');
-	fwrite($inifile, ';die ();\r\n');
-	fwrite($inifile, ';/*\r\n');
-	fwrite($inifile, 'host        = '.$host.'\r\n');
-	fwrite($inifile, 'rfedatabase = '.$rfedatabase.'\r\n');
-	fwrite($inifile, 'navdatabase = '.$navdatabase.'\r\n');
-	fwrite($inifile, 'login_db    = '.$login_db.'\r\n');
-	fwrite($inifile, 'pass_db     = '.$pass_db.'\r\n');
-	fwrite($inifile, 'port        = '.$port.'\r\n');
-	fwrite($inifile, ';*/\r\n');
-	fwrite($inifile, ';?>');
+	$inifile = fopen("../phpinc/data.ini.php", "w");
+	fwrite($inifile, ";<?php\r\n");
+	fwrite($inifile, ";die ();\r\n");
+	fwrite($inifile, ";/*\r\n");
+	fwrite($inifile, "host        = ".$host."\r\n");
+	fwrite($inifile, "rfedatabase = ".$rfedatabase."\r\n");
+	fwrite($inifile, "navdatabase = ".$navdatabase."\r\n");
+	fwrite($inifile, "login_db    = ".$login_db."\r\n");
+	fwrite($inifile, "pass_db     = ".$pass_db."\r\n");
+	fwrite($inifile, "port        = ".$port."\r\n");
+	fwrite($inifile, ";*/\r\n");
+	fwrite($inifile, ";?>");
 	fclose($inifile);
 ?>
 
