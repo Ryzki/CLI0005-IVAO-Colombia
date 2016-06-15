@@ -1875,20 +1875,61 @@
 
 	}
 		  
-	$sql237 = "SELECT * FROM airlines ";
+	$sql2377 = "SELECT * FROM airlines ";
 
-	if (!$result237 = $db->query($sql237)) {
+	if (!$result2377 = $db->query($sql2377)) {
 
 		die('There was an error running the query  [' . $db->error . ']');
 
 	}
 	
-	$ippii=0;
 
-	while ($row237 = $result237->fetch_assoc()) {
+
+	while ($row2377 = $result2377->fetch_assoc()) {
+	
+	$nombre_aerolinea= $row2377["nombre_aerolinea"];
+        $callsign= $row2377["id"];
+		$icao_aerolinea= $row2377["icao_aerolinea"];
+		$iata_aerolinea= $row2377["iata_aerolinea"];
+		$ceo= $row2377["ceo"];
+		$informacion= $row2377["informacion"];
+	    $url_pilotos= $row2377["url_pilotos"];
+		$url_estadistica= $row2377["url_estadistica"];
+		$url_hora_mes= $row2377["url_hora_mes"];
+		$sistema= $row2377["sistema"];
+	    $web= $row2377["web"];
+	    $tipo_aerolinea= $row2377["tipo_aerolinea"];
+	    $numeros= $row2377["numeros"];
+	    $radio= $row2377["radio"];
+		 $vas= $row2377["imagen_va"];
+		 
+		 
+		 
+		 	$ruta_img = "https://www.ivao.aero/data/images/airline/" . $numeros . ".jpg"; // 
+	$ruta_imgs = "https://www.ivao.aero/data/images/airline/" . $numeros . ".png"; // 
+	$ruta_imgss = "https://www.ivao.aero/data/images/airline/" . $numeros . ".gif"; // 
 	
 	
-	$ippii++;
+	
+
+    if(getimagesize($ruta_img)){
+    $iaa = ".jpg";
+ 
+    }
+
+    if(getimagesize($ruta_imgs)){
+    $iaa = ".png";
+ 
+    }
+	
+	    if(getimagesize($ruta_imgss)){
+    $iaa = ".gif";
+ 
+    }
+
+
+  
+
 	
 	?>
           
@@ -1903,10 +1944,10 @@
                 </ol>
                 <div class="carousel-inner">
                   <div class="item active">
-                    <img class="img-responsive" src="images/aerolineas/Coljet.gif" alt="">
+                    <img class="img-responsive" src="https://www.ivao.aero/data/images/airline/<?php echo $numeros; ?><?php echo $iaa; ?>" alt="">
                   </div>
                   <div class="item">
-                    <img class="img-responsive" src="images/aerolineas/Coljet_2.jpg" alt="">
+                    <img class="img-responsive" src="../admin/intranet/imagenair/<?php echo $vas; ?>" alt="" width="398" height="224">
                   </div>
                   <!--
                   <div class="item">
@@ -1923,17 +1964,28 @@
               <div class="post-meta">
               </div>
               <div class="post-icon">
-                <a target="_blanck" href="http://www.coljet.com.co"><i class="fa fa-globe"></i></a>
+                <a target="_blanck" href="<?php echo $web; ?>"><i class="fa fa-globe"></i></a>
               </div>
             </div>
             <div class="entry-header">
-              <span><i class="fa fa-home"></i> COLJET </span>
+              <span><i class="fa fa-home"></i> <?php echo $nombre_aerolinea; ?></span>
               <br>
-              <span><i class="fa fa-plane"></i> Aerolínea Civil</span> 
+              <span><i class="fa fa-plane"></i> <?php echo $tipo_aerolinea; ?></span> 
             </div>
             <div class="entry-content">
-              <span><i class="fa fa-globe"></i> Web: www.coljet.com.co</span>
+              <span><i class="fa fa-globe"></i> Web: <?php echo $web; ?></span>
             </div>
+			 <div class="social-icons">
+                <ul>
+                  <li><a class="facebook" href="?page=infoairlines&id=<?php echo  $callsign; ?>"><i class="fa fa-chevron-right"></i></a></li>
+                  <!--
+                  <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                  <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+                  <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+                  <li><a class="rss" href="#"><i class="fa fa-rss"></i></a></li>
+                  -->
+                </ul>
+              </div>
           </div>
           
 		  
@@ -1941,228 +1993,9 @@
 		  }
 	?>
           
-          
-          
-          <div class="col-sm-4 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="600ms">
-            <div class="post-thumb">
-              <div id="post-carousel"  class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
-                  <li data-target="#post-carousel" data-slide-to="0" class="active"></li>
-                  <li data-target="#post-carousel" data-slide-to="1"></li>
-                  <li data-target="#post-carousel" data-slide-to="2"></li>
-                </ol>
-                <div class="carousel-inner">
-                  <div class="item active">
-                    <a href="#"><img class="img-responsive" src="images/aerolineas/SAPCO.gif" alt=""></a>
-                  </div>
-                  <div class="item">
-                    <a href="#"><img class="img-responsive" src="images/aerolineas/SAPCO_2.jpg" alt=""></a>
-                  </div>
-                  <!--
-                  <div class="item">
-                    <a href="#"><img class="img-responsive" src="images/blog/3.jpg" alt=""></a>
-                  </div>
-                  -->
-                </div>                               
-                <!--
-                <a class="blog-left-control" href="#post-carousel" role="button" data-slide="prev"><i class="fa fa-angle-left"></i></a>
-                <a class="blog-right-control" href="#post-carousel" role="button" data-slide="next"><i class="fa fa-angle-right"></i></a>
-                -->
-              </div>
-              <br>   
-              <div class="post-meta">
-              </div>
-              <div class="post-icon">
-                <a target="_blanck" href="http://www.sapco-va.com"><i class="fa fa-globe"></i></a>
-              </div>
-            </div>
-            <div class="entry-header">
-              <span><i class="fa fa-home"></i> SAPCO </span>
-              <br>
-              <span><i class="fa fa-plane"></i> Aerolínea Civil</span> 
-            </div>
-            <div class="entry-content">
-              <span><i class="fa fa-globe"></i> Web: www.sapco-va.com</span>
-            </div>
-          </div>
-          
-          
-          
-          <div class="col-sm-4 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="600ms">
-            <div class="post-thumb">
-              <div id="post-carousel"  class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
-                  <li data-target="#post-carousel" data-slide-to="0" class="active"></li>
-                  <li data-target="#post-carousel" data-slide-to="1"></li>
-                  <li data-target="#post-carousel" data-slide-to="2"></li>
-                </ol>
-                <div class="carousel-inner">
-                  <div class="item active">
-                    <a href="#"><img class="img-responsive" src="images/aerolineas/COLSTAR.png" alt=""></a>
-                  </div>
-                  <!--
-                  <div class="item">
-                    <a href="#"><img class="img-responsive" src="images/blog/1.jpg" alt=""></a>
-                  </div>
-                  <div class="item">
-                    <a href="#"><img class="img-responsive" src="images/blog/3.jpg" alt=""></a>
-                  </div>
-                  -->
-                </div>                               
-                <!--
-                <a class="blog-left-control" href="#post-carousel" role="button" data-slide="prev"><i class="fa fa-angle-left"></i></a>
-                <a class="blog-right-control" href="#post-carousel" role="button" data-slide="next"><i class="fa fa-angle-right"></i></a>
-                -->
-              </div>
-              <br>   
-              <div class="post-meta">
-              </div>
-              <div class="post-icon">
-                <a target="_blanck" href="http://www.colstarva.com.co"><i class="fa fa-globe"></i></a>
-              </div>
-            </div>
-            <div class="entry-header">
-              <span><i class="fa fa-home"></i> COLSTAR </span>
-              <br>
-              <span><i class="fa fa-plane"></i> Aerolínea Civil</span> 
-            </div>
-            <div class="entry-content">
-              <span><i class="fa fa-globe"></i> Web: www.colstarva.com.co</span>
-            </div>
-          </div>
-          
-          
-         
-         <!--
-          <div class="col-sm-4 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="800ms">
-            <div class="post-thumb">
-              <a href="#"><img class="img-responsive" src="images/blog/3.jpg" alt=""></a>
-              <div class="post-meta">
-                <span><i class="fa fa-comments-o"></i> 3 Comments</span>
-                <span><i class="fa fa-heart"></i> 0 Likes</span> 
-              </div>
-              <div class="post-icon">
-                <i class="fa fa-video-camera"></i>
-              </div>
-            </div>
-            <div class="entry-header">
-              <h3><a href="#">SAPCO</a></h3>
-              <span class="date">June 26, 2014 - </span>
-              <span class="cetagory">in <strong>Photography</strong></span>
-            </div>
-            <div class="entry-content">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-            </div>
-          </div>                    
-          
-          -->
         
-          <div class="col-sm-4 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="600ms">
-            <div class="post-thumb">
-              <div id="post-carousel"  class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
-                  <li data-target="#post-carousel" data-slide-to="0" class="active"></li>
-                  <li data-target="#post-carousel" data-slide-to="1"></li>
-                  <li data-target="#post-carousel" data-slide-to="2"></li>
-                </ol>
-                <div class="carousel-inner">
-                  <div class="item active">
-                    <a href="#"><img class="img-responsive" src="images/aerolineas/FACV.png" alt=""></a>
-                  </div>
-                  <div class="item">
-                    <a href="#"><img class="img-responsive" src="images/aerolineas/FACV_2.png" alt=""></a>
-                  </div>
-                  <div class="item">
-                    <a href="#"><img class="img-responsive" src="images/aerolineas/FACV_3.jpg" alt=""></a>
-                  </div>
-                   <div class="item">
-                    <a href="#"><img class="img-responsive" src="images/aerolineas/FACV_4.jpg" alt=""></a>
-                  </div>
-                   <div class="item">
-                    <a href="#"><img class="img-responsive" src="images/aerolineas/FACV_5.jpg" alt=""></a>
-                  </div>
-                   <div class="item">
-                    <a href="#"><img class="img-responsive" src="images/aerolineas/FACV_6.jpg" alt=""></a>
-                  </div>
-                  <div class="item">
-                    <a href="#"><img class="img-responsive" src="images/aerolineas/FACV_7.jpg" alt=""></a>
-                  </div>
-                  <div class="item">
-                    <a href="#"><img class="img-responsive" src="images/aerolineas/FACV_8.jpg" alt=""></a>
-                  </div>
-                  <div class="item">
-                    <a href="#"><img class="img-responsive" src="images/aerolineas/FACV_9.jpg" alt=""></a>
-                  </div>
-                  
-                </div>                               
-                <!--
-                <a class="blog-left-control" href="#post-carousel" role="button" data-slide="prev"><i class="fa fa-angle-left"></i></a>
-                <a class="blog-right-control" href="#post-carousel" role="button" data-slide="next"><i class="fa fa-angle-right"></i></a>
-                -->
-              </div>
-              <br>   
-              <div class="post-meta">
-              </div>
-              <div class="post-icon">
-                <a target="_blanck" href="http://www.facv.com.co"><i class="fa fa-globe"></i></a>
-              </div>
-            </div>
-            <div class="entry-header">
-              <span><i class="fa fa-home"></i> FACV </span>
-              <br>
-              <span><i class="fa fa-fighter-jet"></i> Escuela Militar</span> 
-            </div>
-            <div class="entry-content">
-              <span><i class="fa fa-globe"></i> Web: www.facv.com.co</span>
-            </div>
-          </div>
           
-          
-          
-          <div class="col-sm-4 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="600ms">
-            <div class="post-thumb">
-              <div id="post-carousel"  class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
-                  <li data-target="#post-carousel" data-slide-to="0" class="active"></li>
-                  <li data-target="#post-carousel" data-slide-to="1"></li>
-                  <li data-target="#post-carousel" data-slide-to="2"></li>
-                </ol>
-                <div class="carousel-inner">
-                  <div class="item active">
-                    <a href="#"><img class="img-responsive" src="images/aerolineas/Latin Skies.gif" alt=""></a>
-                  </div>
-                  <div class="item">
-                    <a href="#"><img class="img-responsive" src="images/aerolineas/Latin Skies_2.jpg" alt=""></a>
-                  </div>
-                  <!--
-                  <div class="item">
-                    <a href="#"><img class="img-responsive" src="images/blog/3.jpg" alt=""></a>
-                  </div>
-                  -->
-                </div>                               
-                <!--
-                <a class="blog-left-control" href="#post-carousel" role="button" data-slide="prev"><i class="fa fa-angle-left"></i></a>
-                <a class="blog-right-control" href="#post-carousel" role="button" data-slide="next"><i class="fa fa-angle-right"></i></a>
-                -->
-              </div>
-              <br>   
-              <div class="post-meta">
-              </div>
-              <div class="post-icon">
-                <a target="_blanck" href="http://www.latinskies-va.tk"><i class="fa fa-globe"></i></a>
-              </div>
-            </div>
-            <div class="entry-header">
-              <span><i class="fa fa-home"></i> LATIN SKIES </span>
-              <br>
-              <span><i class="fa fa-plane"></i> Aerolínea Civil</span> 
-            </div>
-            <div class="entry-content">
-              <span><i class="fa fa-globe"></i> Web: www.latinskies-va.tk</span>
-            </div>
-          </div>
-        
-        
+       
         
         </div>
         
