@@ -4,7 +4,8 @@
 			
 		
 		
-		
+	
+	$vuelo = $_POST['vueloa'];	
 $ides = $_POST['id'];
 	      $nombresa = $_POST['nombre'];
 	$tipe = $_POST['tipe'];
@@ -16,7 +17,6 @@ $ides = $_POST['id'];
 	$url = $_POST['url'];
 	$pca = $_POST['pca'];
 	$stat = $_POST['stat'];
-	$vuelo = $_POST['vuelo'];
 	$info = $_POST['info'];
 	$numeros = $_POST['numeros'];
 			

@@ -25,7 +25,7 @@ include('./db_login.php');
 		$informacion= $row3["informacion"];
 	    $url_pilotos= $row3["url_pilotos"];
 		$url_estadistica= $row3["url_estadistica"];
-		$url_hora_mes= $row3["url_hora_mes"];
+		$url_horas_mes= $row3["url_horas_mes"];
 		$sistema= $row3["sistema"];
 	    $web= $row3["web"];
 	    $tipo_aerolinea= $row3["tipo_aerolinea"];
@@ -121,7 +121,7 @@ include('./db_login.php');
 										
 										<div class="form-group">
                                             <label>URL Vuelos</label>
-                                            <input class="form-control" name="vuelo" value="<?php echo $url_hora_mes; ?>"/>
+                                            <input class="form-control" name="vueloa" value="<?php echo $url_horas_mes; ?>"/>
                                         </div>
 										 <div class="form-group">
                                             <label>Información Aerolínea</label>

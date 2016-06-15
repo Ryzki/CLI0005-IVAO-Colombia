@@ -25,7 +25,7 @@ include('./db_login.php');
 		$informacion= $row3["informacion"];
 	    $url_pilotos= $row3["url_pilotos"];
 		$url_estadistica= $row3["url_estadistica"];
-		$url_hora_mes= $row3["url_hora_mes"];
+		$url_hora_mes= $row3["url_horas_mes"];
 		$sistema= $row3["sistema"];
 	    $web= $row3["web"];
 	    $tipo_aerolinea= $row3["tipo_aerolinea"];
@@ -145,7 +145,7 @@ include('./db_login.php');
 								
 								
 								
-								 <div class="col-md-10">
+								 <div class="col-md-12">
 								<br>
 								<br>
 								<hr>
@@ -212,6 +212,9 @@ $totalaa= $horasa.' h '.$minutosa.' m ';
 
 				echo '</tbody>
 				</table>';
+							} else {
+								
+								    echo '<div class="alert alert-danger" role="alert">No hay información disponible.</div>';      
 							}
 
 ?>	
@@ -230,7 +233,6 @@ $totalaa= $horasa.' h '.$minutosa.' m ';
 							if	($sistema=="VAM") {
 								
 $filecontents = file_get_contents($url_estadistica);
-//$filecontents = file_get_contents('whazzup.txt'); //Testing file
 
 
 
@@ -253,34 +255,38 @@ $total= $horas.' h '.$minutos.' m ';
 				  
 				  echo '<table class="table table-striped" width="100%">
 				  <tbody><tr>
-					<td valign="top" width="20%" bgcolor="grey"><strong>Pilots:</strong></td>
+					<td valign="top" width="20%" bgcolor="grey"><strong>Pilotos:</strong></td>
 					<td valign="top" width="30%">' . $fields[0] . '</td>
-					<td valign="top" width="20%" bgcolor="grey"><strong>Passengers:</strong></td>
+					<td valign="top" width="20%" bgcolor="grey"><strong>Pasajeros:</strong></td>
 					<td valign="top" width="30%" >' . $fields[1] . '</td>
 				  </tr>
 				  <tr>
-					<td><strong>Hours:</strong></td>
+					<td><strong>Horas:</strong></td>
 					<td>' . $total . '</td>
-					<td><strong>Fuel Burned:</strong></td>
+					<td><strong>Combustible Usado:</strong></td>
 					<td>' . $fields[3] . '</td>
 				  </tr>
 				  <tr>
-					<td><strong>Flights:</strong></td>
+					<td><strong>Vuelos:</strong></td>
 					<td>' . $fields[4] . '</td>
-					<td><strong>Schedules:</strong></td>
+					<td><strong>Rutas:</strong></td>
 					<td>' . $fields[7] . '</td>
 				  </tr>
 				  <tr>
-					<td><strong>Distance:</strong></td>
+					<td><strong>Distancia:</strong></td>
 					 <td>' . $fields[5] . '</td>
-					<td><strong>Aircraft:</strong></td>
+					<td><strong>Aeronaves:</strong></td>
 					<td>+' . $fields[6] . '</td>   
 				  </tr>
 				</tbody>
 				</table>';
 
 
-}
+} else {
+								
+								    echo '<div class="alert alert-danger" role="alert">No hay información disponible.</div>';      
+							}
+
 
 
 
@@ -289,6 +295,95 @@ $total= $horas.' h '.$minutos.' m ';
 								
 								<br>
 								<h1>Vuelos de <?php echo $nombre_aerolinea; ?></h1>
+								
+								
+								<?php 
+								
+							if	($sistema=="VAM") {
+								
+$filecontentsas = file_get_contents($url_hora_mes);
+//$filecontents = file_get_contents('whazzup.txt'); //Testing file
+$rowse = split(PHP_EOL, $filecontentsas);
+
+
+echo '<table id="table_list"  class="table table-hover" width="100%">
+																	
+                                        <thead>
+                                            <tr>
+												<th><b>Callsign</b></th>
+												<th><b>Nombre</b></th>
+												<th><b>Origen</b></th>
+												<th><b>Destino</b></th>
+												<th><b>Fecha</b></th>
+												<th><b>Duracion</b></th>
+                                            </tr>
+											
+                                        </thead>
+										<thead>
+										<tr>
+										</tr>
+										</thead>
+										 <tbody>';
+				  $sumares = 0;
+foreach ($rowse as $rowe) {
+
+
+	$fieldsae = split(":", $rowe);
+	
+if($fieldsae[0]!=""){
+
+$horariosp = substr($fieldsae[7],0);
+
+$sumasp= round($horariosp  , 2);
+$segundosp = $sumasp*3600;
+
+
+
+
+$horasp = floor($segundosp/3600);
+$minutosp = floor(($segundosp-($horasp*3600))/60);
+$segundosp = $segundosp-($horasp*3600)-($minutosp*60);
+$totalp= $horasp.' h '.$minutosp.' m ';
+				  
+				  echo '<tr>';
+				   echo '<td>' . $fieldsae[1]  . '</td>';
+				    echo '<td>' . utf8_encode($fieldsae[0])  . '</td>';
+					echo '<td>' . $fieldsae[2]  . '</td>';
+					echo '<td>' . $fieldsae[3]  . '</td>';
+					echo '<td>' . $fieldsae[4]  . ':' . $fieldsae[5] . ':' . $fieldsae[6] . '' . substr($fieldsae[7],0,0) . '</td>';
+				  echo '<td>' .  $totalp  . '</td>';
+				  
+				  echo '</tr>';
+				  
+				  $sumares = $sumares+substr($fieldsae[7],0);
+}
+
+}
+
+
+$sumaspe= round($sumares  , 2);
+$segundospe = $sumaspe*3600;
+
+
+
+
+$horaspe = floor($segundospe/3600);
+$minutospe = floor(($segundospe-($horaspe*3600))/60);
+$segundospe = $segundospe-($horaspe*3600)-($minutospe*60);
+$totalpe= $horaspe.' h '.$minutospe.' m ';
+
+ echo '<div class="alert alert-success" role="alert">Hay ' . $totalpe . ' horas realizadas este mes, por esta aerolinea.</div>';
+ 
+				echo '</tbody>
+				</table>';
+							} else {
+								
+								    echo '<div class="alert alert-danger" role="alert">No hay información disponible.</div>';      
+							}
+
+?>	
+					
+					
                                
  </div>							   
                             </div>
