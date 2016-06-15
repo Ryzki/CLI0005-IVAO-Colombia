@@ -1358,7 +1358,7 @@
           <div class="col-sm-8 col-sm-offset-2">
             <div class="twitter-icon text-center">
               <i class="fa fa-users"></i>
-              <h3>CEOS & STAFF</h3>
+              <h3>STAFF</h3>
               <h5>Agradecimientos a:</h5>
             </div>
             <br>
@@ -1820,39 +1820,77 @@
   
   <section id="blog">
     <div class="container">
-      
+         <?
+		 
+		 include('./db_login.php');
+		  
+		  	$db = new mysqli($db_host , $db_username , $db_password , $db_database);
+
+	$db->set_charset("utf8");
+
+	if ($db->connect_errno > 0) {
+
+		die('Unable to connect to database [' . $db->connect_error . ']');
+
+	}
+		  
+	$sql237 = "SELECT * FROM airlines ";
+
+	if (!$result237 = $db->query($sql237)) {
+
+		die('There was an error running the query  [' . $db->error . ']');
+
+	}
+	
+	$ippii=0;
+
+	while ($row237 = $result237->fetch_assoc()) {
+	
+	
+	$ippii++;
+	
+	}
+	?>
       <div class="row">
         <div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="300ms">
-          <h2>Aerolíneas y Escuelas Virtuales de Colombia</h2>
-          <p>Has parte de alguna de las 5 Aerolíneas o Escuelas Virtuales que tiene la división de IVAO Colombia.</p>
+          <h2>Aerolíneas Virtuales de Colombia</h2>
+          <p>Has parte de alguna de las <?php echo $ippii; ?> Aerolíneas Virtuales que tiene la división de IVAO Colombia.</p>
         </div>
       </div>
       
       <div class="blog-posts">
         <div class="row">
           
-          <!--
-          <div class="col-sm-4 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="400ms">
-            <div class="post-thumb">
-              <a href="#"><img class="img-responsive" src="images/blog/1.jpg" alt=""></a> 
-              <div class="post-meta">
-                <span><i class="fa fa-comments-o"></i> 3 Comments</span>
-                <span><i class="fa fa-heart"></i> 0 Likes</span> 
-              </div>
-              <div class="post-icon">
-                <i class="fa fa-pencil"></i>
-              </div>
-            </div>
-            <div class="entry-header">
-              <h3><a href="#">COLJET</a></h3>
-              <span class="date">June 26, 2014</span>
-              <span class="cetagory"><strong>WEB: </strong> www.coljet.com.co</span>
-            </div>
-            <div class="entry-content">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-            </div>
-          </div>
-          -->
+          <?
+		 
+		 include('./db_login.php');
+		  
+		  	$db = new mysqli($db_host , $db_username , $db_password , $db_database);
+
+	$db->set_charset("utf8");
+
+	if ($db->connect_errno > 0) {
+
+		die('Unable to connect to database [' . $db->connect_error . ']');
+
+	}
+		  
+	$sql237 = "SELECT * FROM airlines ";
+
+	if (!$result237 = $db->query($sql237)) {
+
+		die('There was an error running the query  [' . $db->error . ']');
+
+	}
+	
+	$ippii=0;
+
+	while ($row237 = $result237->fetch_assoc()) {
+	
+	
+	$ippii++;
+	
+	?>
           
           
           <div class="col-sm-4 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="600ms">
@@ -1898,6 +1936,10 @@
             </div>
           </div>
           
+		  
+		  <?php
+		  }
+	?>
           
           
           
