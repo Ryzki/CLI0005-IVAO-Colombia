@@ -1834,7 +1834,7 @@
 
 	}
 		  
-	$sql237 = "SELECT * FROM airlines ";
+	$sql237 = "SELECT * FROM airlines order by nombre_aerolinea asc";
 
 	if (!$result237 = $db->query($sql237)) {
 
