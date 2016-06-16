@@ -189,9 +189,27 @@ font-size: 16px;"> Last access : <?php echo $last_visit_date; ?> &nbsp; <a href=
                     	
                       <li/>
 					  
-					   <li  >
-                        <a  href="./?page=training"><i class="fa fa-table fa-3x"></i> Centro de Entrenamiento</a>
-                    </li>
+					  
+					
+					 <li>
+                        <a href="#"><i class="fa fa-table fa-3x"></i> Centro de Entrenamiento<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="?page=ranksatc">Rangos ATC</a>
+                            </li>
+                            <li>
+                                <a href="?page=rankspca">Rangos Pilotos</a>
+                            </li>
+							<li>
+                                <a href="?page=materialatc">Material para ATC</a>
+                            </li>
+							<li>
+                                <a href="?page=materialpca">Material para Pilotos</a>
+                            </li>
+							
+                        </ul>
+                      </li>  
+					  
 
 						
                 </ul>
