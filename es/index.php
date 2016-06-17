@@ -144,8 +144,8 @@
             <li class="scroll"><a href="./#atc-ss">ATC-SS</a></li>
             <li class="scroll"><a href="./#team">Eventos</a></li>
             <li class="scroll"><a href="./#features">Recursos</a></li>
-            <li class="scroll"><a href="./#pricing">On Line</a></li>
-            <li class="scroll"><a href="./#blog">A&E Virtuales</a></li>
+            <li class="scroll"><a href="./#pricing">Online</a></li>
+            <li class="scroll"><a href="./#blog">Aerolineas VA</a></li>
             <li class="scroll"><a href="./#contact">Contactenos</a></li>       
           </ul>
         </div>
@@ -1487,14 +1487,28 @@ $tiposs = $rowsst['nombre'];
 		
 	}
 	
+	
+	$ruta_img = "https://www.ivao.aero/data/images/staff/" . $rowss['vid_ivao'] . ".jpg"; // 
+	
+	
+
+    if(getimagesize($ruta_img)){
+    $iaap = $ruta_img;
+ 
+    } else {
+		$iaap = "https://www.ivao.aero/data/images/staff/000000.gif";
+		
+	}
+	
+	
 	if($staffss==1){
 		?>
                 <div class="item active wow fadeIn" data-wow-duration="1000ms" data-wow-delay="300ms">
                   <div>
                     <p><?php echo $tiposs; ?> </p>
-                    <img class="item" src="https://www.ivao.aero/data/images/staff/<?php echo $rowss['vid_ivao']; ?>.jpg" alt=""> 
-                    <img src="images/team/<?php echo $spots; ?>.gif" alt="" BORDER=0 hspace= 0>
-                    <img src="images/team/CO.gif" alt="" BORDER=0 hspace= 0><br>
+                    <img class="item" src="<?php echo $iaap; ?>" alt=""> 
+					 <td align="center" rowspan="1"><img border="0" src="https://www.ivao.aero/data/images/badge/<?php echo $spots; ?>.gif"><img border="0" src="images/team/CO.gif"></td>
+<br>
                   </div>
                   <br>
                   <p><?php echo $rowss['nombres'] . ' ' . $rowss['apellidos']; ?> - <span>CO<?php echo $spots; ?> -  <?php echo $namess; ?></span></p>
@@ -1506,9 +1520,10 @@ $tiposs = $rowsst['nombre'];
 		<div class="item" data-wow-duration="1000ms" data-wow-delay="300ms">
                   <div>
                     <p><?php echo $tiposs; ?> </p>
-                    <img class="item" src="https://www.ivao.aero/data/images/staff/<?php echo $rowss['vid_ivao']; ?>.jpg" alt=""> 
-                    <img src="images/team/<?php echo $spots; ?>.gif" alt="" BORDER=0 hspace= 0>
-                    <img src="images/team/CO.gif" alt="" BORDER=0 hspace= 0><br>
+                    <img class="item" src="<?php echo $iaap; ?>" alt=""> 
+                   
+					<td align="center" rowspan="1"><img border="0" src="https://www.ivao.aero/data/images/badge/<?php echo $spots; ?>.gif"><img border="0" src="images/team/CO.gif"></td>
+<br>
                   </div>
                   <br>
                   <p><?php echo $rowss['nombres'] . ' ' . $rowss['apellidos']; ?> - <span>CO<?php echo $spots; ?> -  <?php echo $namess; ?></span></p>

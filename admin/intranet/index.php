@@ -78,15 +78,15 @@ include('./db_login.php');
 		$cargol = $row555['callsign'];	
 		$posl = $row555['posicion'];	
 		$email_ivao = $row555['email'];		
+		$idaa = $row555['typestaff'];
 	}	
+	
+	
+	
+	
+	
 			
-			
-			
-			
-			
-			
-			
-			
+	
 
 	}
 
@@ -144,6 +144,8 @@ font-size: 16px;"> Last access : <?php echo $last_visit_date; ?> &nbsp; <a href=
                     <img src="https://www.ivao.aero/data/images/staff/<?php echo $vid_ivao; ?>.jpg" class="user-image img-responsive"/>
 					</li>
 				
+				
+				<?php if ($idaa==1 || $idaa== 7) { ?>
 				<li>
                         <a class="active-menu"  href="./"><i class="fa fa-dashboard fa-3x"></i> Información de la División</a>
                     </li>
@@ -209,7 +211,91 @@ font-size: 16px;"> Last access : <?php echo $last_visit_date; ?> &nbsp; <a href=
 							
                         </ul>
                       </li>  
+				<? } else {
+					
+					?>
+						<li>
+                        <a class="active-menu"  href="./"><i class="fa fa-dashboard fa-3x"></i> Información de la División</a>
+                    </li>
+					<li  >
+                        <a  href="?page=myprofile"><i class="fa fa-edit fa-3x"></i> Mi Perfil </a>
+                    </li>
+				
+			
 					  
+					  
+					  <li>
+                        <a  href="./?page=eventos"><i class="fa fa-desktop fa-3x"></i> Eventos</a>
+                    </li>
+					  
+					 <li>
+                        <a  href="./?page=noticias"><i class="fa fa-desktop fa-3x"></i> Examenes</a>
+                    </li>
+                    
+                     <li>
+                        <a  href="./?page=notams"><i class="fa fa-desktop fa-3x"></i> Notams</a>
+                    </li>
+				
+				
+                    <li>
+                        <a  href="./?page=airlines"><i class="fa fa-qrcode fa-3x"></i> Aerolineas Virtuales</a>
+                    	
+                      <li/>
+					  
+					  
+					
+					 <li>
+                        <a href="#"><i class="fa fa-table fa-3x"></i> Centro de Entrenamiento<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="?page=ranksatc">Rangos ATC</a>
+                            </li>
+                            <li>
+                                <a href="?page=rankspca">Rangos Pilotos</a>
+                            </li>
+							<li>
+                                <a href="?page=materialatc">Material para ATC</a>
+                            </li>
+							<li>
+                                <a href="?page=materialpca">Material para Pilotos</a>
+                            </li>
+							
+                        </ul>
+                      </li>  
+					
+					
+					
+					
+					
+				<?php	
+					
+				}
+				
+				
+				
+				?>
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+		
+				
+				
+				
+				
+				
+				
+				
+				
+				
 
 						
                 </ul>
