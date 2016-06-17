@@ -42,14 +42,57 @@
             <a data-scroll class="btn btn-start animated fadeInUpBig" href="./#services">Continuar</a>
           </div>
         </div>
-        <div class="item" style="background-image: url(images/slider/2.jpg)">
+		
+		
+		 <?
+		 
+		 include('./db_login.php');
+		  
+		  	$db = new mysqli($db_host , $db_username , $db_password , $db_database);
+
+	$db->set_charset("utf8");
+
+	if ($db->connect_errno > 0) {
+
+		die('Unable to connect to database [' . $db->connect_error . ']');
+
+	}
+		  
+	$sql2377a = "SELECT * FROM airlines order by id asc";
+
+	if (!$result2377a = $db->query($sql2377a)) {
+
+		die('There was an error running the query  [' . $db->error . ']');
+
+	}
+	
+
+
+	while ($row2377a = $result2377a->fetch_assoc()) {
+	
+
+		 
+		 
+
+
+  
+
+	
+	?>
+	
+	
+	 <div class="item" style="background-image: url(../admin/intranet/imagenair/<?php echo $row2377a["imagen_va"]; ?>)">
           <div class="caption">
-            <h1 class="animated fadeInLeftBig"><span>5</span> Aerolineas Virtuales</h1>
-            <p class="animated fadeInRightBig">Coljet - SAPCO - COLSTAR - FACV - Latin Skies</p>
-            <a data-scroll class="btn btn-start animated fadeInUpBig" href="../index.html">Atras</a>
-            <a data-scroll class="btn btn-start animated fadeInUpBig" href="./#services">Continuar</a>
+            <h1 class="animated fadeInLeftBig">Aerolínea <span> <?php echo $row2377a["nombre_aerolinea"]; ?></span></h1>
+            <p class="animated fadeInRightBig">Certificada por IVAO World</p>
+            <a data-scroll class="btn btn-start animated fadeInUpBig" href="./">Atras</a>
+            <a data-scroll class="btn btn-start animated fadeInUpBig" href="<?php echo $row2377a["web"]; ?>">Ver</a>
           </div>
         </div>
+	
+	<?php } ?>
+	
+	
         <div class="item" style="background-image: url(images/slider/3.jpg)">
           <div class="caption">
             <h1 class="animated fadeInLeftBig">Prepararete<span> Virtualmente</span></h1>
@@ -58,6 +101,7 @@
             <a data-scroll class="btn btn-start animated fadeInUpBig" href="./#services">Continuar</a>
           </div>
         </div>
+		
       </div>
       <a class="left-control" href="#home-slider" data-slide="prev"><i class="fa fa-angle-left"></i></a>
       <a class="right-control" href="#home-slider" data-slide="next"><i class="fa fa-angle-right"></i></a>
@@ -1370,7 +1414,7 @@
                 
                 <!-- DIVISION HQ -->
                 
-               <div class="item active wow fadeIn" data-wow-duration="1000ms" data-wow-delay="300ms">
+              <!--  <div class="item active wow fadeIn" data-wow-duration="1000ms" data-wow-delay="300ms">
                  <div>
                     <p>DIVISION HQ </p>
                     <img class="item" src="images/team/Foto.jpg" alt=""> 
@@ -1380,426 +1424,107 @@
                   <br>
                   <p>Andres Hurtado - <span>CO-DIR - Colombia Director </span></p>
                   <p> <a href="#"> <span> Email : </span> co-dir@ivao.aero</a></p>
-                </div>
+                </div>-->
                 
-                <div class="item" data-wow-duration="1000ms" data-wow-delay="300ms">
+				
+				 <?
+		 
+		 include('./db_login.php');
+		  
+		  	$db = new mysqli($db_host , $db_username , $db_password , $db_database);
+
+	$db->set_charset("utf8");
+
+	if ($db->connect_errno > 0) {
+
+		die('Unable to connect to database [' . $db->connect_error . ']');
+
+	}
+		  
+	$staff = "SELECT * FROM staff order by id asc ";
+
+	if (!$resultstaff = $db->query($staff)) {
+
+		die('There was an error running the query  [' . $db->error . ']');
+
+	}
+	
+$staffss = 0;
+
+	while ($rowss = $resultstaff->fetch_assoc()) {
+		
+		
+		$staff_ivao = $rowss['staff_ivao'];
+		
+		$ranks = "SELECT * FROM ranks where id='$staff_ivao' ";
+
+	if (!$resultranks = $db->query($ranks)) {
+
+		die('There was an error running the query  [' . $db->error . ']');
+
+	}
+	
+	$staffss++;
+
+	while ($rowssa = $resultranks->fetch_assoc()) {
+		$spots = $rowssa['posicion'];
+		$namess = $rowssa['callsign'];
+		$idaa = $rowssa['typestaff'];
+		
+		$tipes = "SELECT * FROM typestaff where id='$idaa' ";
+
+	if (!$resulta = $db->query($tipes)) {
+
+		die('There was an error running the query  [' . $db->error . ']');
+
+	}
+		
+	while ($rowsst = $resulta->fetch_assoc()) {
+$tiposs = $rowsst['nombre'];
+	}	
+		
+		
+		
+	}
+	
+	if($staffss==1){
+		?>
+                <div class="item active wow fadeIn" data-wow-duration="1000ms" data-wow-delay="300ms">
                   <div>
-                    <p>DIVISION HQ </p>
-                    <img class="item" src="images/team/Foto.jpg" alt=""> 
-                    <img src="images/team/-ADIR.gif" alt="" BORDER=0 hspace= 0>
+                    <p><?php echo $tiposs; ?> </p>
+                    <img class="item" src="https://www.ivao.aero/data/images/staff/<?php echo $rowss['vid_ivao']; ?>.jpg" alt=""> 
+                    <img src="images/team/<?php echo $spots; ?>.gif" alt="" BORDER=0 hspace= 0>
                     <img src="images/team/CO.gif" alt="" BORDER=0 hspace= 0><br>
                   </div>
                   <br>
-                  <p>Vacante - <span>Vacante </span></p>
-                  <p> <a href="#"> <span> Email : </span> Vacante</a></p>
+                  <p><?php echo $rowss['nombres'] . ' ' . $rowss['apellidos']; ?> - <span>CO<?php echo $spots; ?> -  <?php echo $namess; ?></span></p>
+                  <p> <a href="mailto:<?php echo $rowss['email']; ?>"> <span> Email : </span> <?php echo $rowss['email']; ?></a></p>
                 </div>
-               
-                
-                
-                
-                <!-- OPERATIONS COORDINATORS -->
-                
-                <div class="item" data-wow-duration="1000ms" data-wow-delay="300ms">
+	<?php
+	} else {
+		?>
+		<div class="item" data-wow-duration="1000ms" data-wow-delay="300ms">
                   <div>
-                    <p>OPERATIONS COORDINATORS </p>
-                    <img class="item" src="images/team/Foto.jpg" alt=""> 
-                    <img src="images/team/-SOC.gif" alt="" BORDER=0 hspace= 0>
+                    <p><?php echo $tiposs; ?> </p>
+                    <img class="item" src="https://www.ivao.aero/data/images/staff/<?php echo $rowss['vid_ivao']; ?>.jpg" alt=""> 
+                    <img src="images/team/<?php echo $spots; ?>.gif" alt="" BORDER=0 hspace= 0>
                     <img src="images/team/CO.gif" alt="" BORDER=0 hspace= 0><br>
                   </div>
                   <br>
-                  <p>Harol Torres - <span>CO-SOC - Special Operations Coordinator </span></p>
-                  <p> <a href="#"> <span> Email : </span> co-soc@ivao.aero</a></p>
+                  <p><?php echo $rowss['nombres'] . ' ' . $rowss['apellidos']; ?> - <span>CO<?php echo $spots; ?> -  <?php echo $namess; ?></span></p>
+                  <p> <a href="mailto:<?php echo $rowss['email']; ?>"> <span> Email : </span> <?php echo $rowss['email']; ?></a></p>
                 </div>
-                
-                <div class="item" data-wow-duration="1000ms" data-wow-delay="300ms">
-                  <div>
-                    <p>OPERATIONS COORDINATORS </p>
-                    <img class="item" src="images/team/Foto.jpg" alt=""> 
-                    <img src="images/team/-SOAC.gif" alt="" BORDER=0 hspace= 0>
-                    <img src="images/team/CO.gif" alt="" BORDER=0 hspace= 0><br>
-                  </div>
-                  <br>
-                  <p>Miguel Angel Arias Diaz - <span>CO-SOAC - Special Operations Assistant Coordinator </span></p>
-                  <p> <a href="#"> <span> Email : </span> co-soac@ivao.aero</a></p>
-                </div>
-                
-               <div class="item" data-wow-duration="1000ms" data-wow-delay="300ms">
-                  <div>
-                    <p>OPERATIONS COORDINATORS </p>
-                    <img class="item" src="images/team/Foto.jpg" alt=""> 
-                    <img src="images/team/-FOC.gif" alt="" BORDER=0 hspace= 0>
-                    <img src="images/team/CO.gif" alt="" BORDER=0 hspace= 0><br>
-                  </div>
-                  <br>
-                  <p>Sergio Otalora - <span>CO-FOC - Flight Operations Coordinator </span></p>
-                  <p> <a href="#"> <span> Email : </span> co-foc@ivao.aero</a></p>
-                </div>
-                
-                <div class="item" data-wow-duration="1000ms" data-wow-delay="300ms">
-                  <div>
-                    <p>OPERATIONS COORDINATORS </p>
-                    <img class="item" src="images/team/Foto.jpg" alt=""> 
-                    <img src="images/team/-FOAC.gif" alt="" BORDER=0 hspace= 0>
-                    <img src="images/team/CO.gif" alt="" BORDER=0 hspace= 0><br>
-                  </div>
-                  <br>
-                  <p>Andres Peinado - <span>CO-FOAC - Flight Operations Assistant Coordinator </span></p>
-                  <p> <a href="#"> <span> Email : </span> co-foac@ivao.aero</a></p>
-                </div>
-                
-                <div class="item" data-wow-duration="1000ms" data-wow-delay="300ms">
-                  <div>
-                    <p>OPERATIONS COORDINATORS </p>
-                    <img class="item" src="images/team/Foto.jpg" alt=""> 
-                    <img src="images/team/-AOC.gif" alt="" BORDER=0 hspace= 0>
-                    <img src="images/team/CO.gif" alt="" BORDER=0 hspace= 0><br>
-                  </div>
-                  <br>
-                  <p>Federico Montanez - <span>CO-AOC - ATC Operations Coordinator </span></p>
-                  <p> <a href="#"> <span> Email : </span> co-aoc@ivao.aero</a></p>
-                </div>
-                
-                <div class="item" data-wow-duration="1000ms" data-wow-delay="300ms">
-                  <div>
-                    <p>OPERATIONS COORDINATORS </p>
-                    <img class="item" src="images/team/Foto.jpg" alt=""> 
-                    <img src="images/team/-AOAC.gif" alt="" BORDER=0 hspace= 0>
-                    <img src="images/team/CO.gif" alt="" BORDER=0 hspace= 0><br>
-                  </div>
-                  <br>
-                  <p>Nicolas Ernesto Guttmann Lopez - <span>CO-AOAC - ATC Operations Assistant Coordinator </span></p>
-                  <p> <a href="#"> <span> Email : </span> co-aoac@ivao.aero</a></p>
-                </div>
+		
+		<?
+	}
+	
+	
+	}
+	?>
                 
                 
-                
-                <!-- TRAINING COORDINATORS -->
-                
-                <div class="item" data-wow-duration="1000ms" data-wow-delay="300ms">
-                  <div>
-                    <p>TRAINING COORDINATORS </p>
-                    <img class="item" src="images/team/Foto.jpg" alt=""> 
-                    <img src="images/team/-TC.gif" alt="" BORDER=0 hspace= 0>
-                    <img src="images/team/CO.gif" alt="" BORDER=0 hspace= 0><br>
-                  </div>
-                  <br>
-                  <p>Nicolas Del Castillo - <span>CO-TC - Training Coordinator </span></p>
-                  <p> <a href="#"> <span> Email : </span> co-tc@ivao.aero</a></p>
-                </div>
-                
-               
-                <div class="item" data-wow-duration="1000ms" data-wow-delay="300ms">
-                  <div>
-                    <p>TRAINING COORDINATORS </p>
-                    <img class="item" src="images/team/Foto.jpg" alt=""> 
-                    <img src="images/team/-TAC.gif" alt="" BORDER=0 hspace= 0>
-                    <img src="images/team/CO.gif" alt="" BORDER=0 hspace= 0><br>
-                  </div>
-                  <br>
-                  <p>Santiago Espitia Ramirez - <span>CO-TAC - Training Assistant Coordinator </span></p>
-                  <p> <a href="#"> <span> Email : </span> co-tac@ivao.aero</a></p>
-                </div>
-                
-                <div class="item" data-wow-duration="1000ms" data-wow-delay="300ms">
-                  <div>
-                    <p>TRAINING COORDINATORS </p>
-                    <img class="item" src="images/team/Foto.jpg" alt=""> 
-                    <img src="images/team/-TA1.gif" alt="" BORDER=0 hspace= 0>
-                    <img src="images/team/CO.gif" alt="" BORDER=0 hspace= 0><br>
-                  </div>
-                  <br>
-                  <p>Esteban Villegas - <span>CO-TA1 - Division Training Advisor 1 </span></p>
-                  <p> <a href="#"> <span> Email : </span> co-ta1@ivao.aero</a></p>
-                </div>
-                
-                <div class="item" data-wow-duration="1000ms" data-wow-delay="300ms">
-                  <div>
-                    <p>TRAINING COORDINATORS </p>
-                    <img class="item" src="images/team/Foto.jpg" alt=""> 
-                    <img src="images/team/-TA2.gif" alt="" BORDER=0 hspace= 0>
-                    <img src="images/team/CO.gif" alt="" BORDER=0 hspace= 0><br>
-                  </div>
-                  <br>
-                  <p>Julian Ramirez Arango - <span>CO-TA2 - Division Training Advisor 2 </span></p>
-                  <p> <a href="#"> <span> Email : </span> co-ta2@ivao.aero</a></p>
-                </div>
-                
-                <div class="item" data-wow-duration="1000ms" data-wow-delay="300ms">
-                  <div>
-                    <p>TRAINING COORDINATORS </p>
-                    <img class="item" src="images/team/Foto.jpg" alt=""> 
-                    <img src="images/team/-TA3.gif" alt="" BORDER=0 hspace= 0>
-                    <img src="images/team/CO.gif" alt="" BORDER=0 hspace= 0><br>
-                  </div>
-                  <br>
-                  <p>Manuel Giraldo - <span>CO-TA3 - Division Training Advisor 3 </span></p>
-                  <p> <a href="#"> <span> Email : </span> co-ta3@ivao.aero</a></p>
-                </div>
-                
-                <div class="item" data-wow-duration="1000ms" data-wow-delay="300ms">
-                  <div>
-                    <p>TRAINING COORDINATORS </p>
-                    <img class="item" src="images/team/Foto.jpg" alt=""> 
-                    <img src="images/team/-TA4.gif" alt="" BORDER=0 hspace= 0>
-                    <img src="images/team/CO.gif" alt="" BORDER=0 hspace= 0><br>
-                  </div>
-                  <br>
-                  <p>Andre Felipe Arenas - <span>CO-TA4 - Division Training Advisor 4 </span></p>
-                  <p> <a href="#"> <span> Email : </span> co-ta4@ivao.aero</a></p>
-                </div>
-                
-                <div class="item" data-wow-duration="1000ms" data-wow-delay="300ms">
-                  <div>
-                    <p>TRAINING COORDINATORS </p>
-                    <img class="item" src="images/team/Foto.jpg" alt=""> 
-                    <img src="images/team/-TA5.gif" alt="" BORDER=0 hspace= 0>
-                    <img src="images/team/CO.gif" alt="" BORDER=0 hspace= 0><br>
-                  </div>
-                  <br>
-                  <p>Esteban Mejia - <span>CO-TA5 - Division Training Advisor 5 </span></p>
-                  <p> <a href="#"> <span> Email : </span> co-ta5@ivao.aero</a></p>
-                </div>
-                
-                <div class="item" data-wow-duration="1000ms" data-wow-delay="300ms">
-                  <div>
-                    <p>TRAINING COORDINATORS </p>
-                    <img class="item" src="images/team/Foto.jpg" alt=""> 
-                    <img src="images/team/-TA6.gif" alt="" BORDER=0 hspace= 0>
-                    <img src="images/team/CO.gif" alt="" BORDER=0 hspace= 0><br>
-                  </div>
-                  <br>
-                  <p>Miguel Angel Arias Diaz - <span>CO-TA6 - Division Training Advisor 6 </span></p>
-                  <p> <a href="#"> <span> Email : </span> co-ta6@ivao.aero</a></p>
-                </div>
-                
-                
-                
-                <!-- MEMBERSHIP COORDINATORS -->
               
-                <div class="item" data-wow-duration="1000ms" data-wow-delay="300ms">
-                  <div>
-                    <p>MEMBERSHIP COORDINATORS </p>
-                    <img class="item" src="images/team/Foto.jpg" alt=""> 
-                    <img src="images/team/-MC.gif" alt="" BORDER=0 hspace= 0>
-                    <img src="images/team/CO.gif" alt="" BORDER=0 hspace= 0><br>
-                  </div>
-                  <br>
-                  <p>Danny Morales - <span>CO-MC - Membership Coordinator </span></p>
-                  <p> <a href="#"> <span> Email : </span> co-mc@ivao.aero</a></p>
-                </div>
-                
-                <div class="item" data-wow-duration="1000ms" data-wow-delay="300ms">
-                  <div>
-                    <p>MEMBERSHIP COORDINATORS </p>
-                    <img class="item" src="images/team/Foto.jpg" alt=""> 
-                    <img src="images/team/-MAC.gif" alt="" BORDER=0 hspace= 0>
-                    <img src="images/team/CO.gif" alt="" BORDER=0 hspace= 0><br>
-                  </div>
-                  <br>
-                  <p>Gean Carlo Barrera - <span>CO-MAC - Membership Assistant Coordinator </span></p>
-                  <p> <a href="#"> <span> Email : </span> co-mac@ivao.aero</a></p>
-                </div>
-                
-                <div class="item" data-wow-duration="1000ms" data-wow-delay="300ms">
-                  <div>
-                    <p>MEMBERSHIP COORDINATORS </p>
-                    <img class="item" src="images/team/Foto.jpg" alt=""> 
-                    <img src="images/team/-MA1.gif" alt="" BORDER=0 hspace= 0>
-                    <img src="images/team/CO.gif" alt="" BORDER=0 hspace= 0><br>
-                  </div>
-                  <br>
-                  <p>Santiago Lopez Garces - <span>CO-MA1 - Membership Advisor 1 </span></p>
-                  <p> <a href="#"> <span> Email : </span> co-ma1@ivao.aero</a></p>
-                </div> 
-                
-                <div class="item" data-wow-duration="1000ms" data-wow-delay="300ms">
-                  <div>
-                    <p>MEMBERSHIP COORDINATORS </p>
-                    <img class="item" src="images/team/Foto.jpg" alt=""> 
-                    <img src="images/team/-MA1.gif" alt="" BORDER=0 hspace= 0>
-                    <img src="images/team/CO.gif" alt="" BORDER=0 hspace= 0><br>
-                  </div>
-                  <br>
-                  <p>Santiago Espitia Ramirez - <span>CO-MA2 - Membership Advisor 2 </span></p>
-                  <p> <a href="#"> <span> Email : </span> co-ma2@ivao.aero</a></p>
-                </div>                                                  
-                
-                
-                <!-- EVENTS COORDINATORS -->
-                
-                <div class="item" data-wow-duration="1000ms" data-wow-delay="300ms">
-                  <div>
-                    <p>EVENTS COORDINATORS </p>
-                    <img class="item" src="images/team/Foto.jpg" alt=""> 
-                    <img src="images/team/-EC.gif" alt="" BORDER=0 hspace= 0>
-                    <img src="images/team/CO.gif" alt="" BORDER=0 hspace= 0><br>
-                  </div>
-                  <br>
-                  <p>Andres Leandro Pabon Gomez - <span>CO-EC - Event Coordinator </span></p>
-                  <p> <a href="#"> <span> Email : </span> co-ec@ivao.aero</a></p>
-                </div>
-                
-                <div class="item" data-wow-duration="1000ms" data-wow-delay="300ms">
-                  <div>
-                    <p>EVENTS COORDINATORS </p>
-                    <img class="item" src="images/team/Foto.jpg" alt=""> 
-                    <img src="images/team/-EAC.gif" alt="" BORDER=0 hspace= 0>
-                    <img src="images/team/CO.gif" alt="" BORDER=0 hspace= 0><br>
-                  </div>
-                  <br>
-                  <p>Santiago Fajardo - <span>CO-EAC - Event Assistant Coordinator </span></p>
-                  <p> <a href="#"> <span> Email : </span> co-eac@ivao.aero</a></p>
-                </div>
-                
-                <div class="item" data-wow-duration="1000ms" data-wow-delay="300ms">
-                  <div>
-                    <p>EVENTS COORDINATORS </p>
-                    <img class="item" src="images/team/Foto.jpg" alt=""> 
-                    <img src="images/team/-EA1.gif" alt="" BORDER=0 hspace= 0>
-                    <img src="images/team/CO.gif" alt="" BORDER=0 hspace= 0><br>
-                  </div>
-                  <br>
-                  <p>Cristian Cifuentes - <span>CO-EA1 - Division Event Advisor 1 </span></p>
-                  <p> <a href="#"> <span> Email : </span> co-ea1@ivao.aero</a></p>
-                </div>
-                
-                
-                
-                
-                <!-- PUBLIC RELATIONS COORDINATORS -->
-                           
-                <div class="item" data-wow-duration="1000ms" data-wow-delay="300ms">
-                  <div>
-                    <p>PUBLIC RELATIONS COORDINATORS </p>
-                    <img class="item" src="images/team/Foto.jpg" alt=""> 
-                    <img src="images/team/-PRC.gif" alt="" BORDER=0 hspace= 0>
-                    <img src="images/team/CO.gif" alt="" BORDER=0 hspace= 0><br>
-                  </div>
-                  <br>
-                  <p>Mauricio Barraza Montes - <span>CO-PRC - Public Relations Coordinator </span></p>
-                  <p> <a href="#"> <span> Email : </span> co-prc@ivao.aero</a></p>
-                </div>
-                
-                <div class="item" data-wow-duration="1000ms" data-wow-delay="300ms">
-                  <div>
-                    <p>PUBLIC RELATIONS COORDINATORS </p>
-                    <img class="item" src="images/team/Foto.jpg" alt=""> 
-                    <img src="images/team/-PRAC.gif" alt="" BORDER=0 hspace= 0>
-                    <img src="images/team/CO.gif" alt="" BORDER=0 hspace= 0><br>
-                  </div>
-                  <br>
-                  <p>Juan Sebastian Rivera - <span>CO-PRAC - Public Relations Assistant Coordinator </span></p>
-                  <p> <a href="#"> <span> Email : </span> co-prac@ivao.aero</a></p>
-                </div>
-                
-                
-                
-                <!-- WEB DEVELOPMENT -->
-                
-                
-                <div class="item" data-wow-duration="1000ms" data-wow-delay="300ms">
-                  <div>
-                    <p>WEB DEVELOPMENT </p>
-                    <img class="item" src="images/team/Foto.jpg" alt=""> 
-                    <img src="images/team/-WM.gif" alt="" BORDER=0 hspace= 0>
-                    <img src="images/team/CO.gif" alt="" BORDER=0 hspace= 0><br>
-                  </div>
-                  <br>
-                  <p>Andres Giraldo Arenas - <span>CO-WM - Colombia WEB Master </span></p>
-                  <p> <a href="#"> <span> Email : </span> co-wm@ivao.aero</a></p>
-                </div>
-               
-               <div class="item" data-wow-duration="1000ms" data-wow-delay="300ms">
-                  <div>
-                    <p>WEB DEVELOPMENT </p>
-                    <img class="item" src="images/team/Foto.jpg" alt=""> 
-                    <img src="images/team/-AWM.gif" alt="" BORDER=0 hspace= 0>
-                    <img src="images/team/CO.gif" alt="" BORDER=0 hspace= 0><br>
-                  </div>
-                  <br>
-                  <p>Esteban Mejia - <span>CO-AWM - Colombia Assistant WEB Master </span></p>
-                  <p> <a href="#"> <span> Email : </span> co-awm@ivao.aero</a></p>
-                </div>               
-                
-                <!--
-                <div class="item" data-wow-duration="1000ms" data-wow-delay="300ms">
-                  <div>
-                    <p>WEB DEVELOPMENT </p>
-                    <img class="item" src="images/team/Foto.jpg" alt=""> 
-                    <img src="images/team/-DIR.gif" alt="" BORDER=0 hspace= 0>
-                    <img src="images/team/CO.gif" alt="" BORDER=0 hspace= 0><br>
-                  </div>
-                  <br>
-                  <p>Andres Hurtado - <span>CO-DIR - Colombia Director </span></p>
-                  <p> <a href="#"> <span> Email : </span> co-dir@ivao.aero</a></p>
-                </div>
-                -->
-                
-                
-                
-                <!-- FIR CHIEFS -->
-                
-                 <div class="item" data-wow-duration="1000ms" data-wow-delay="300ms">
-                  <div>
-                    <p>FIR CHIEFS </p>
-                    <img class="item" src="images/team/Foto.jpg" alt=""> 
-                    <img src="images/team/-CH.gif" alt="" BORDER=0 hspace= 0>
-                    <img src="images/team/CO.gif" alt="" BORDER=0 hspace= 0><br>
-                  </div>
-                  <br>
-                  <p>Andres Felipe Vargas Velandia - <span>SKEC-CH - Barranquilla Center Chief </span></p>
-                  <p> <a href="#"> <span> Email : </span> skec-ch@ivao.aero</a></p>
-                </div>
-                
-                <div class="item" data-wow-duration="1000ms" data-wow-delay="300ms">
-                  <div>
-                    <p>FIR CHIEFS </p>
-                    <img class="item" src="images/team/Foto.jpg" alt=""> 
-                    <img src="images/team/-ACH.gif" alt="" BORDER=0 hspace= 0>
-                    <img src="images/team/CO.gif" alt="" BORDER=0 hspace= 0><br>
-                  </div>
-                  <br>
-                  <p>Sebastian Carvajal Rodriguez - <span>SKEC-ACH - Barranquilla Center Assistant Chief </span></p>
-                  <p> <a href="#"> <span> Email : </span> skec-ach@ivao.aero</a></p>
-                </div>                
-                
-                <!--
-                <div class="item" data-wow-duration="1000ms" data-wow-delay="300ms">
-                  <div>
-                    <p>FIR CHIEFS </p>
-                    <img class="item" src="images/team/Foto.jpg" alt=""> 
-                    <img src="images/team/-DIR.gif" alt="" BORDER=0 hspace= 0>
-                    <img src="images/team/CO.gif" alt="" BORDER=0 hspace= 0><br>
-                  </div>
-                  <br>
-                  <p>Andres Hurtado - <span>CO-DIR - Colombia Director </span></p>
-                  <p> <a href="#"> <span> Email : </span> co-dir@ivao.aero</a></p>
-                </div>
-                -->
-                
-                <div class="item" data-wow-duration="1000ms" data-wow-delay="300ms">
-                  <div>
-                    <p>FIR CHIEFS </p>
-                    <img class="item" src="images/team/Foto.jpg" alt=""> 
-                    <img src="images/team/-CH.gif" alt="" BORDER=0 hspace= 0>
-                    <img src="images/team/CO.gif" alt="" BORDER=0 hspace= 0><br>
-                  </div>
-                  <br>
-                  <p>David Bonilla - <span>SKED-CH - Bogota FIR Chief </span></p>
-                  <p> <a href="#"> <span> Email : </span> sked-ch@ivao.aero</a></p>
-                </div>
-                
-                <div class="item" data-wow-duration="1000ms" data-wow-delay="300ms">
-                  <div>
-                    <p>FIR CHIEFS </p>
-                    <img class="item" src="images/team/Foto.jpg" alt=""> 
-                    <img src="images/team/-ACH.gif" alt="" BORDER=0 hspace= 0>
-                    <img src="images/team/CO.gif" alt="" BORDER=0 hspace= 0><br>
-                  </div>
-                  <br>
-                  <p>Felipe Trejos Munoz - <span>SKED-ACH - Bogota FIR Assistant Chief </span></p>
-                  <p> <a href="#"> <span> Email : </span> sked-ach@ivao.aero</a></p>
-                </div>
+             
                 
                 
                 
@@ -1875,7 +1600,7 @@
 
 	}
 		  
-	$sql2377 = "SELECT * FROM airlines ";
+	$sql2377 = "SELECT * FROM airlines order by id asc";
 
 	if (!$result2377 = $db->query($sql2377)) {
 
@@ -1934,7 +1659,7 @@
 	?>
           
           
-          <div class="col-sm-4 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="600ms">
+         <div class="col-sm-4 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="600ms">
             <div class="post-thumb">
               <div id="post-carousel"  class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
