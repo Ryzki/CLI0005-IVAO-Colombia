@@ -11,7 +11,7 @@ include('./db_login.php');
 	}
 
 	
-	$sql3 ="select * from eventos where id=$idaa";
+	$sql3 ="select * from eventos where id='$idaa'";
 
 	if (!$result3 = $db->query($sql3)) {
 		die('There was an error running the query [' . $db->error . ']');
@@ -28,7 +28,7 @@ include('./db_login.php');
 		$imagen= $row3["imagen"];
 		
 		
-		$sql33 ="select * from staff where id=$staffa";
+		$sql33 ="select * from staff where id='$staffa'";
 
 	if (!$result33 = $db->query($sql33)) {
 		die('There was an error running the query [' . $db->error . ']');
@@ -36,15 +36,15 @@ include('./db_login.php');
 	while ($row33 = $result33->fetch_assoc()) {
 		$nombrese= $row33["nombres"] . ' ' . $row33["apellidos"];
 		
-		$staff_ivao $row33["staff_ivao"];
+		$staff_ivao = $row33["staff_ivao"];
 		
-		$sql33 ="select * from ranks where id=$staff_ivao";
+		$sql338 ="select * from ranks where id='$staff_ivao'";
 
 	if (!$result338 = $db->query($sql338)) {
 		die('There was an error running the query [' . $db->error . ']');
 	}
 	while ($row338 = $result338->fetch_assoc()) {
-		 $cargose= $row338["posicion"];
+		 $cargose= $row338["callsign"];
 	}
 		
 		
@@ -98,15 +98,15 @@ include('./db_login.php');
                                         </div>
 										 <div class="form-group">
                                             <label>Fecha Evento</label>
-											<input class="form-control" type="date" name="fecha" value="<?php echo $fecha; ?>" readonly="readonly">
+											<input class="form-control" type="date" name="fecha" value="<?php echo $fecha; ?>" readonly="readonly"/>
                                         </div>
 										<div class="form-group">
                                             <label>Hora Inicio</label>
-											<input class="form-control" type="time" name="horauno" value="<?php echo $horaunos; ?> Z" readonly="readonly">
+											<input class="form-control"  name="horauno" value="<?php echo $horaunos; ?> Z" readonly="readonly"/>
                                         </div>
 										<div class="form-group">
                                             <label>Hora Finalización</label>
-											<input class="form-control" type="time" name="horados" value="<?php echo $horadoses; ?> Z" readonly="readonly">
+											<input class="form-control"  name="horados" value="<?php echo $horadoses; ?> Z" readonly="readonly"/>
                                         </div>
 										 <div class="form-group">
                                             <label>Información Evento</label>
