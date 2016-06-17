@@ -90,7 +90,7 @@ $querysel = mysqlexec($sqlconn,$querysel);
 
             <header class="page-title">
                 <div class="container">
-                    <h2>My booked ATC positions</h2>
+                    <h2>Mis posiciones ATC reservadas</h2>
                 </div>
             </header>
 

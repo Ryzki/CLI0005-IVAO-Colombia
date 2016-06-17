@@ -9,7 +9,7 @@ include("phpinc/config.inc.php");
 
 	<header class="page-title">
 		 <div class="container">
-			  <h2>AIS Room <small> Please, be patient to load all the information</small></h2>
+			  <h2>Sala de AIS<small> Por favor, sea paciente para cargar toda la información</small></h2>
 		 </div>
 	</header>
 
@@ -70,7 +70,7 @@ include("phpinc/config.inc.php");
 														<div class="accordion-group">
 															<div class="accordion-heading">
 																<a class="accordion-toggle" data-toggle="collapse" data-parent="#detailsaccordionorgn<?php echo $i; ?>" href="#collapsedetailsorgn<?php echo $i; ?>">
-																	Airport Details
+																	Detalles de Aeropuerto
 																</a>
 															</div>
 															<div id="collapsedetailsorgn<?php echo $i; ?>" class="accordion-body collapse">
@@ -106,7 +106,7 @@ include("phpinc/config.inc.php");
 														<div class="accordion-group">
 															<div class="accordion-heading">
 																<a class="accordion-toggle" data-toggle="collapse" data-parent="#detailsaccordionorgn<?php echo $i; ?>" href="#collapsemaporgn<?php echo $i; ?>">
-																	Airport Map
+																	Mapa de Aeropuerto
 																</a>
 															</div>
 															<div id="collapsemaporgn<?php echo $i; ?>" class="accordion-body collapse">
@@ -131,7 +131,7 @@ include("phpinc/config.inc.php");
 														<div class="accordion-group">
 															<div class="accordion-heading">
 																<a class="accordion-toggle" data-toggle="collapse" data-parent="#detailsaccordiondest<?php echo $i; ?>" href="#collapsedetailsdest<?php echo $i; ?>">
-																	Airport Details
+																	Detalles de Aeropuerto
 																</a>
 															</div>
 															<div id="collapsedetailsdest<?php echo $i; ?>" class="accordion-body collapse">
@@ -167,7 +167,7 @@ include("phpinc/config.inc.php");
 														<div class="accordion-group">
 															<div class="accordion-heading">
 																<a class="accordion-toggle" data-toggle="collapse" data-parent="#detailsaccordiondest<?php echo $i; ?>" href="#collapsemapdest<?php echo $i; ?>">
-																	Airport Map
+																	Mapa de Aeropuerto
 																</a>
 															</div>
 															<div id="collapsemapdest<?php echo $i; ?>" class="accordion-body collapse">

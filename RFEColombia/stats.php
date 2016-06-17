@@ -9,14 +9,14 @@ include("phpinc/config.inc.php");
 
             <header class="page-title">
                 <div class="container">
-                    <h2>General Statistics</h2>
+                    <h2>Estadísticas Generales</h2>
                 </div>
             </header>
 
             <section class="services-page">
 						  <div class="container">
 							
-							<h3>All-long Statistics</h3>
+							<h3>Estadísticas detalladas</h3>
 							
 <?php
 								$query = "SELECT timestart,timeend,timezone,TIME_TO_SEC(TIMEDIFF(timeend,timestart)) AS timediff FROM rfe_config";
@@ -45,9 +45,9 @@ include("phpinc/config.inc.php");
 								$bookpercent = ($bookedflights/$totalflights)*100;
 								$freepercent = 100-$bookpercent;
 ?>
-								<p><b>Total flights:</b> <?php echo $totalflights; ?></p>
-								<p><b>Booked flights:</b> <?php echo $bookedflights; ?> (<?php echo round($bookpercent); ?>%)</p>
-								<p><b>Available flights:</b> <?php echo $totalflights-$bookedflights; ?> (<?php echo 100-round($bookpercent); ?>%)</p>
+								<p><b>Numero de Vuelos:</b> <?php echo $totalflights; ?></p>
+								<p><b>Vuelos reservados:</b> <?php echo $bookedflights; ?> (<?php echo round($bookpercent); ?>%)</p>
+								<p><b>Vuelos disponibles:</b> <?php echo $totalflights-$bookedflights; ?> (<?php echo 100-round($bookpercent); ?>%)</p>
 								<div class="progress progress-striped active">
 									<div class="bar bar-success" style="width: <?php echo $freepercent; ?>%"></div>
 									<div class="bar bar-danger" style="width: <?php echo $bookpercent; ?>%"></div>

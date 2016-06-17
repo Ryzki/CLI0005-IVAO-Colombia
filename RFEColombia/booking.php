@@ -24,7 +24,7 @@ $radiocall  = mysql_result($querycall, 0, 'useradiocallsign');
 
             <header class="page-title">
                 <div class="container">
-                    <h2>Book your flight! <small> Due to the amount of flights, this page may take some time to be loaded. Please, be patient.</small></h2>
+                    <h2>Reserve su vuelo! <small> Debido a la cantidad de vuelos, esta página puede tomar algún tiempo para cargar. Por favor sea paciente.</small></h2>
                 </div>
             </header>
 				
@@ -494,16 +494,16 @@ if (!empty($_POST["slot"]) AND !empty($_POST["callreg"]) AND !empty($_POST["orgn
 															<span style="color: #FF0000"><strong>IMPORTANT! Read here if you wish to booking a private slot!</strong></span>
 															<br>
 															<br>
-															You can see on the left side all available and booked private slots. You can only click on already booked slots to see the flight information. To make sure that your slot time fits to the other scheduled traffic, you need to fill the form below. One of our operations supervisors will check your booking and add it into the schedule. This may take maximum one day and you will receive of course a confirmation mail.
+															Se puede ver en el lado izquierdo todos disponibles y reservado slots privados. Sólo puede hacer clic en las franjas horarias ya reservados para ver la información de vuelo. Para asegurarse de que el intervalo de tiempo se ajusta al otro tráfico regular, es necesario rellenar el siguiente formulario. Uno de nuestros supervisores de operaciones comprobará su reserva y añadirlo en el horario. Este proceso puede tardar un máximo de un día y usted recibirá, por supuesto, un correo de confirmación.
 															<br>
 															<br>
-															<strong>This private slots are for following type of flights: VFR (for concrete runway usage), business jets, cargo, virtual airlines and individual flights. You need to have a slot, if you don't have a slot ATC will NOT accept you if there is no free slot available.</strong> Even a booking during the event is possible. If you decide to make a spontaneous flight, check if a slot is available and the operations supervisor will assign you a free slot.
+															<strong>Este slots privados son para los siguientes tipos de vuelos: VFR (para el uso de pista de hormigón), reactores de negocios, carga, líneas aéreas virtuales y los vuelos individuales. Es necesario tener una ranura, si usted no tiene una ranura para el ATC no se aceptará si no hay ninguna ranura libre disponible.</strong> Incluso una reserva durante el evento es posible. Si decide hacer un vuelo espontánea, verificar si hay una ranura disponible y el supervisor de operaciones will assign you a free slot.
 															<br>
 															<br>
-															<strong><i>One slot per movement!</strong> If you want to arrive and depart again you need to book two slots!</i>
+															<strong><i>Una ranura por el movimiento!</strong> Si quiere llegar y salir de nuevo tienes que reservar dos ranuras!</i>
 															<br>
 															<br>
-															Fill every field carefully with data needed. Every field is mandatory. Incorrect filled slot requests will be denied. If you have any question, write a mail to the operation:
+															Rellene todos los campos con cuidado con los datos necesarios. Cada campo es obligatorio. se denegarán las solicitudes de franjas llenas incorrectas. Si usted tiene cualquier pregunta, escribir un correo a la operación:
 															
 <?php
 															// Get Contact Information of the division from the Database
@@ -609,11 +609,11 @@ if (!empty($_POST["slot"]) AND !empty($_POST["callreg"]) AND !empty($_POST["orgn
 <?php
 																  } else if (($privatestatus == "0") AND ($freeslots != 0)) {
 ?>
-																	<td><center><h3>(PRIVATE BOOKING IS CLOSED!)</h3></center></td>
+																	<td><center><h3>(RESERVA PRIVADA ESTA CERRADA!)</h3></center></td>
 <?php
 																  } else if ($freeslots == 0) {
 ?>
-																	<td><center><h3>(ALL SLOTS ARE BOOKED)</h3></center></td>
+																	<td><center><h3>(Todas las ranuras estan RESERVADAS)</h3></center></td>
 <?php
 																  }
 ?>
@@ -625,7 +625,7 @@ if (!empty($_POST["slot"]) AND !empty($_POST["callreg"]) AND !empty($_POST["orgn
 <?php
 											} else {
 ?>
-												<center><h3>(NO PRIVATE SLOTS TO BOOK)</h3></center>
+												<center><h3>(No hay ranuras privado a RESERVE)</h3></center>
 <?php
 											}
 ?>
@@ -750,10 +750,10 @@ if (!empty($_POST["slot"]) AND !empty($_POST["callreg"]) AND !empty($_POST["orgn
 
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-				<h3>Register your mail</h3>
+				<h3>Registre su email</h3>
 			</div>
 			<div id="modalMailbody" class="modal-body">
-				<p>Please, in order to get updates and confirmations from us direct in your e-mail, write it below and press the Save button. Thanks a lot.</p>
+				<p>Por favor, con el fin de obtener actualizaciones y confirmaciones de nosotros directamente en su correo electrónico, se escriben a continuación y pulse el botón Guardar. Muchas gracias.</p>
 				<input type="email" placeholder="Write your e-mail here" name="membermail" id="membermail" style="width: 95%;font-weight: bold;" required/>
 			</div>
 
