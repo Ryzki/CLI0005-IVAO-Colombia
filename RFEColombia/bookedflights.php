@@ -9,7 +9,7 @@ include("phpinc/config.inc.php");
 
             <header class="page-title">
                 <div class="container">
-                    <h2>My booked flights <small> If all your flights don't appear here, please refresh the page (press F5).</small></h2>
+                    <h2>Mis vuelos reservados <small> Si no aparecen todos sus vuelos aquí, por favor, actualice la página (pulse F5).</small></h2>
                 </div>
             </header>
 
@@ -103,8 +103,8 @@ include("phpinc/config.inc.php");
 												<table width="100%" border=0 cellpadding=0>
 													<tr style="border-bottom: 1px solid #444">
 														<td><b>Flight</b></td>
-														<td><b>Departure</b></td>
-														<td><b>Arrival</b></td>
+														<td><b>Salida</b></td>
+														<td><b>Llegada</b></td>
 													</tr>
 													<tr height="60px">
 														<td style="vertical-align: middle;"><span style="font-size: 30px;"><?php echo mysql_result($query,$i,'flightnumber'); ?></span><br/><span style="font-size: 10px;"><?php echo airlinename(mysql_result($query,$i,'flightnumber')); ?></span></td>
@@ -112,9 +112,9 @@ include("phpinc/config.inc.php");
 														<td style="vertical-align: middle;"><span style="font-size: 30px; margin-top: 10px;"><?php echo getCountry(mysql_result($query,$i,'destination'),"alt")." ".mysql_result($query,$i,'destination'); ?></span><br/><span style="font-size: 10px;"><?php echo mysql_result($querydest,0,'Name'); ?></span>
 													</tr>
 													<tr style="border-bottom: 1px solid #444">
-														<td><b>Aircraft</b> <a href="http://www.airliners.net/search/photo.search?q=<?php echo str_ireplace(" ","+",aircraftname(mysql_result($query,$i,'acft'))); ?>+<?php echo str_ireplace(" ","+",airlinename(mysql_result($query,$i,'flightnumber'),"name")); ?>" target="_blank" style="color: #333;" onMouseOver="this.style.color='#F00'" onMouseOut="this.style.color='#333'"><i class="icon-camera" title="Click here to see pictures of this aircraft"></i></a></td>
-														<td><b>Departure Time</b></td>
-														<td><b>Arrival Time</b></td>
+														<td><b>Aeronave</b> <a href="http://www.airliners.net/search/photo.search?q=<?php echo str_ireplace(" ","+",aircraftname(mysql_result($query,$i,'acft'))); ?>+<?php echo str_ireplace(" ","+",airlinename(mysql_result($query,$i,'flightnumber'),"name")); ?>" target="_blank" style="color: #333;" onMouseOver="this.style.color='#F00'" onMouseOut="this.style.color='#333'"><i class="icon-camera" title="Click here to see pictures of this aircraft"></i></a></td>
+														<td><b>Hora de Salida</b></td>
+														<td><b>Hora de Llegada</b></td>
 													</tr>
 													<tr height="60px">
 														<td style="vertical-align: middle;"><span style="font-size: 30px;"><?php echo aircraftname(mysql_result($query,$i,'acft')); ?></span><br/><span style="font-size: 10px;"><?php echo aircraftname(mysql_result($query,$i,'acft'),"name"); ?></span></td>
@@ -123,7 +123,7 @@ include("phpinc/config.inc.php");
 													</tr>
 													<tr style="border-bottom: 1px solid #444">
 														<td><b>Gate</b></td>
-														<td colspan="2"><b>Route</b> <span style="font-size: 12px;">(extracted from FlightAware - double-check it)</span></td>
+														<td colspan="2"><b>Ruta</b> <span style="font-size: 12px;">(extraída de FlightAware - Doble click aqui)</span></td>
 													</tr>
 													<tr height="50px">
 													<?php if(strpos(mysql_result($query,0,'gate')," ") === FALSE) { ?>

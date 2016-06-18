@@ -170,7 +170,7 @@ $querysel = mysqlexec($sqlconn,$querysel);
 						<img src="images/logo.png" >
 						<p>Brought to you by IVAO-US.</p>
 						<p class="copyright">
-							© <?php echo gmdate("Y"); ?> IVAO United States
+							© <?php echo gmdate("Y"); ?> IVAO
 						</p>
 					</div>
 

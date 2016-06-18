@@ -58,8 +58,8 @@ include("phpinc/config.inc.php");
 					
 					<div class="row">
 						<div class="span12">
-							<h1 class="muted">What's a RFE?</h1>
-							<p>RFE stands for <b>R</b>eal <b>F</b>light <b>E</b>vent. It's an event where the real world airline schedules of an airport are followed during the time of event by all the participants.
+							<h1 class="muted">QUE ES RFE?</h1>
+							<p>RFE significa <b>R</b>eal <b>F</b>light <b>E</b>vent. Es un evento donde se siguen los horarios de las aerolíneas del mundo real de un aeropuerto durante la hora de celebración por todos los participantes.
 							</p>
 						</div>
 					</div>
@@ -72,8 +72,8 @@ include("phpinc/config.inc.php");
 									<i class="fa fa-plane fa-4x features-option-3-icon"></i>
 								</div>
 								<div class="span4 feature-detail">
-									<h3>Wide Variety of Flights</h3>
-									<p> Many airlines fly inside <?php echo mysql_result($querysel,0,0); ?> daily. So, by participating of the event, you'll have the opportunity to see different airlines on the airport.</p>
+									<h3>Amplia variedad de Vuelos</h3>
+									<p> Muchas compañías aéreas vuelan en el interior <?php echo mysql_result($querysel,0,0); ?> diariamente. Por lo tanto, al participar del evento, Se tendrá la oportunidad de ver diferentes aerolíneas en el aeropuerto.</p>
 								</div>
 							</div>
 						</div>
@@ -84,8 +84,8 @@ include("phpinc/config.inc.php");
 									<i class="fa fa-headphones fa-4x features-option-3-icon"></i>
 								</div>
 								<div class="span4 feature-detail">
-									<h3>Realistic ATC Service</h3>
-									<p> During the event, all ATC positions possible are staffed to provide ATC service to the pilots.</p>
+									<h3>Servicio ATC realista</h3>
+									<p> Durante el evento, todas las posiciones posibles ATC se proveen de personal para ofrecer un servicio ATC para los pilotos.</p>
 								</div>
 							</div>
 						</div>
@@ -98,8 +98,8 @@ include("phpinc/config.inc.php");
 									<i class="fa fa-user fa-4x features-option-3-icon"></i>
 								</div>
 								<div class="span4 feature-detail">
-									<h3>Different People</h3>
-									<p> Every IVAO member can join in the event by making his/her flight. So, the RFE is an opportunity to meet new people from different cultures.</p>
+									<h3>Gente diferente</h3>
+									<p> Cada miembro de IVAO puede unirse en el evento y hacer su vuelo. Por lo tanto, El RFE es una oportunidad para conocer nuevas personas de diferentes culturas.</p>
 								</div>
 							</div>
 						</div>
@@ -110,8 +110,8 @@ include("phpinc/config.inc.php");
 									<i class="fa fa-smile-o fa-4x features-option-3-icon"></i>
 								</div>
 								<div class="span4 feature-detail">
-									<h3>An unique opportunity</h3>
-									<p> We don't do this events often in <?php echo mysql_result($querydate,0,'division'); ?> . So, don't lose this opportunity!</p>
+									<h3>Una oportunidad única</h3>
+									<p> Nosotros no hacemos este tipo de eventos a menudo en <?php echo mysql_result($querydate,0,'division'); ?> . Por lo tanto, no pierda esta oportunidad!</p>
 								</div>
 							</div>
 						</div>
@@ -123,8 +123,8 @@ include("phpinc/config.inc.php");
 <div class="container">
 					<div class="row">
 						<div class="span12">
-							<h1 class="muted">How can I join it?</h1>
-							<p>Look to the menu above and click over <b>Book your flight</b>!<br/>
+							<h1 class="muted">¿Cómo puedo participar en ella?</h1>
+							<p>Mira al menú de arriba y haga clic sobre <b> Reserve su vuelo</b>!<br/>
 							<br/>
 							</p>
 

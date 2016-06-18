@@ -25,7 +25,7 @@ include("phpinc/config.inc.php");
 				
 					<div class="row">
 						<div class="span12">
-							<h3 >About <?php if ($is_admin) echo '<i id="abouticon" class="fa fa-edit icon-small pull-right editicon" title="Edit this text" data-toggle="tooltip" data-placement="right" onClick="toggleEditor('.@mysql_result($querysel,0,"id").');"></i>'; ?></h3>
+							<h3 >Aserca de <?php if ($is_admin) echo '<i id="abouticon" class="fa fa-edit icon-small pull-right editicon" title="Edit this text" data-toggle="tooltip" data-placement="right" onClick="toggleEditor('.@mysql_result($querysel,0,"id").');"></i>'; ?></h3>
 							<div id="editor"></div>
 							<div id="abouttext">
 <?php							echo @mysql_result($querysel,0,"description"); ?>
@@ -35,7 +35,7 @@ include("phpinc/config.inc.php");
 					
 					<div class="row">
 						<div class="span12">
-							<h3>Sceneries <?php if ($is_admin) echo '<i id="sceneryicon" class="fa fa-edit icon-small pull-right editicon" title="Edit links" data-toggle="tooltip" data-placement="right" onClick="toggleScenery('.@mysql_result($querysel,0,"id").');"></i>'; ?></h3>
+							<h3>Escenarios <?php if ($is_admin) echo '<i id="sceneryicon" class="fa fa-edit icon-small pull-right editicon" title="Edit links" data-toggle="tooltip" data-placement="right" onClick="toggleScenery('.@mysql_result($querysel,0,"id").');"></i>'; ?></h3>
 							<div id="scenerytext">
 								<table align="center" class="table table-striped" id="tablescenery">
 									<thead>
