@@ -66,13 +66,13 @@
 
 	}
 	
-
+$vass = 0;
 
 	while ($row2377a = $result2377a->fetch_assoc()) {
 	
 
 		 
-		 
+		 $vass++;
 
 
   
@@ -141,7 +141,7 @@
             <li class="scroll"><a href="./#services">IVAO COL</a></li> 
             <li class="scroll"><a href="./#portfolio">Pilotos</a></li>
             <li class="scroll"><a href="./#controladores">Controladores</a></li>
-            <li class="scroll"><a href="./#atc-ss">ATC-SS</a></li>
+            <li class="scroll"><a href="./#atc-ss">ATC</a></li>
             <li class="scroll"><a href="./#team">Eventos</a></li>
             <li class="scroll"><a href="./#features">Recursos</a></li>
             <li class="scroll"><a href="./#pricing">Online</a></li>
@@ -230,9 +230,11 @@
               <i class="fa fa-plane"></i>
             </div>
             </a>
+				
+	
             <div class="service-info">
-              <h3>Aerolineas y Escuelas Virtuales de Colombia</h3>
-              <p>Actualmente IVAO Colombia cuenta con 5 Aerolíneas o Escuelas Virtuales. En la que podrás complementar tu formación. </p>
+              <h3>Aerolineas Virtuales de Colombia</h3>
+              <p>Actualmente IVAO Colombia cuenta con <?php echo $vass; ?> Aerolíneas Virtuales. En la que podrás complementar tu formación. </p>
             </div>
           </div>
           
@@ -243,8 +245,8 @@
             </div>
             </a>
             <div class="service-info">
-              <h3>On-Line</h3>
-              <p>Colombia On-Line - Controladores, Pilotos, Staff, Ceos.</p>
+              <h3>Online</h3>
+              <p>Colombia Online - Controladores, Pilotos, Staff, Ceos.</p>
             </div>
           </div>
         </div>
@@ -276,34 +278,100 @@
         </div>
         <div class="col-sm-6">
           
-          
+           <?
+		 
+		 include('./db_login.php');
+		  
+		  	$db = new mysqli($db_host , $db_username , $db_password , $db_database);
+
+	$db->set_charset("utf8");
+
+	if ($db->connect_errno > 0) {
+
+		die('Unable to connect to database [' . $db->connect_error . ']');
+
+	}
+		  
+	$infodivision = "SELECT * FROM infodivision";
+
+	if (!$resultinfodivision = $db->query($infodivision)) {
+
+		die('There was an error running the query  [' . $db->error . ']');
+
+	}
+	
+$vass = 0;
+
+	while ($rowinfodivision = $resultinfodivision->fetch_assoc()) {
+	
+	
+
+$membersact = $rowinfodivision['members'];
+ $pcas = $rowinfodivision['pilots'];
+ $atcs = $rowinfodivision['atc'];
+  $posos = $rowinfodivision['puesto'];
+  
+  $porcentaje = round((100*$pcas)/$membersact);
+  
+  $porcentajedos = round((100*$atcs)/$membersact);
+	}
+	
+	if ($posos == 1) {
+		$porc = 100;
+	} else if ($posos == 2) {
+		$porc = 95;
+	} else if ($posos == 3) {
+		$porc = 90;
+	} else if ($posos == 4) {
+		$porc = 85;
+	} else if ($posos == 5) {
+		$porc = 80;
+	} else if ($posos == 6) {
+		$porc = 75;
+	} else if ($posos == 7) {
+		$porc = 70;
+	} else if ($posos == 8) {
+		$porc = 65;
+	} else if ($posos == 9) {
+		$porc = 60;
+	} else if ($posos == 10) {
+		$porc = 55;
+	} else if ($posos == 11) {
+		$porc = 50;
+	} else {
+		$porc = 45;
+	}
+
+
+	
+	?>
           
           <div class="our-skills wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
             <div class="single-skill wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
               <p class="lead">Miembros Activos</p>
               <div class="progress">
-                <div class="progress-bar progress-bar-primary six-sec-ease-in-out" role="progressbar"  aria-valuetransitiongoal="50">1121</div>
+                <div class="progress-bar progress-bar-primary six-sec-ease-in-out" role="progressbar"  aria-valuetransitiongoal="100"><?php echo $membersact; ?></div>
               </div>
             </div>
             
             <div class="single-skill wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="400ms">
               <p class="lead">Pilotos</p>
               <div class="progress">
-                <div class="progress-bar progress-bar-primary six-sec-ease-in-out" role="progressbar"  aria-valuetransitiongoal="75">750</div>
+                <div class="progress-bar progress-bar-primary six-sec-ease-in-out" role="progressbar"  aria-valuetransitiongoal="<?php echo $porcentaje; ?>"><?php echo  $pcas; ?></div>
               </div>
             </div>
             
             <div class="single-skill wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="500ms">
               <p class="lead">Controladores</p>
               <div class="progress">
-                <div class="progress-bar progress-bar-primary six-sec-ease-in-out" role="progressbar"  aria-valuetransitiongoal="35">350</div>
+                <div class="progress-bar progress-bar-primary six-sec-ease-in-out" role="progressbar"  aria-valuetransitiongoal="<?php echo $porcentajedos; ?>"><?php echo  $atcs; ?></div>
               </div>
             </div>
             
             <div class="single-skill wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
               <p class="lead">Puesto de la Division</p>
               <div class="progress">
-                <div class="progress-bar progress-bar-primary six-sec-ease-in-out" role="progressbar"  aria-valuetransitiongoal="40">4</div>
+                <div class="progress-bar progress-bar-primary six-sec-ease-in-out" role="progressbar"  aria-valuetransitiongoal="<?php echo $porc; ?>"><?php echo $posos; ?></div>
               </div>
             </div>
             
@@ -332,7 +400,7 @@
       <div class="row">
         <div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
           <h2>PILOTOS</h2>
-          <p>IVAO Colombia cuenta con mas de 700 Pilotos Virtuales activos.</p>
+          <p>IVAO Colombia cuenta con mas de <?php echo  $pcas; ?> Pilotos Virtuales activos.</p>
         </div>
       </div> 
     </div>
@@ -590,7 +658,7 @@
       <div class="row">
         <div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
           <h2>CONTROLADORES</h2>
-          <p>IVAO Colombia cuenta con mas de 350 Controladores Virtuales activos.</p>
+          <p>IVAO Colombia cuenta con mas de <?php echo  $atcs; ?> Controladores Virtuales activos.</p>
         </div>
       </div> 
     </div>
