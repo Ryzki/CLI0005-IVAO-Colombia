@@ -270,7 +270,7 @@ if (substr_count($controller[0],'_') == 1) {
         // Level
         $level = $ctrlevel[$controller[16]];
         
-        echo '<tr><td width="60"><a href="http://www.ivao.ca/flighttrack.php?cs='. $controller[0] .'" onClick="MM_openBrWindow(\'http://www.ivao.ca/flighttrack.php?cs='. $controller[0] .'\',\'\',\'scrollbars=yes,resizable=yes,width=700,height=600\');return false" target="_blank">&nbsp;&nbsp;' . $position . '</a></td><td><a href="http://www.ivao.aero/members/person/details.asp?id=' . $controller[1] . '" onClick="MM_openBrWindow(\'http://www.ivao.aero/members/person/details.asp?id=' . $controller[1] . '\',\'\',\'scrollbars=yes,resizable=yes,width=800,height=600\');return false" target="_blank" title="<b>' . $realname . '</b><br>">' . $controller[1] . '</a>&nbsp;(' . $level . ')</td></tr>';
+        echo '<tr><td width="60"><a href="./?page=flighttrack&cs='. $controller[0] .'" onClick="MM_openBrWindow(\'./?page=flighttrack&cs='. $controller[0] .'\',\'\',\'scrollbars=yes,resizable=yes,width=700,height=600\');return false" target="_blank">&nbsp;&nbsp;<font color="red">' . $position . '</font></a></td><td><a href="http://www.ivao.aero/members/person/details.asp?id=' . $controller[1] . '" onClick="MM_openBrWindow(\'http://www.ivao.aero/members/person/details.asp?id=' . $controller[1] . '\',\'\',\'scrollbars=yes,resizable=yes,width=800,height=600\');return false" target="_blank" title="' . $realname . '"><font color="red">' . $controller[1] . '</font></a>&nbsp;(' . $level . ')</td></tr>';
     }
     echo '</table>';
 } else {

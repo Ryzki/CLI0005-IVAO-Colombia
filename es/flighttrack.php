@@ -19,7 +19,8 @@ $ctrlevel = array(
   12 => '<span class="red">ADM</span>'
 );
 
-								
+	
+			
 $filecontents = file_get_contents('http://api.ivao.aero/getdata/whazzup/whazzup.txt');
 $rows = split("\n", $filecontents);
 foreach ($rows as $row) {
@@ -39,7 +40,11 @@ $fechauno = $fields[36];
 $fechados = $fields[37];	
 
  $level = $ctrlevel[$fields[16]];
+ $pesos = substr($dependencia,5,3);
+ $spotes = $pesos;
 }
+
+
 
 
 }
@@ -49,14 +54,36 @@ $fechasecundaria = substr($fechados, 0, 4) . '-' . substr($fechados, 4, 2) . '-'
 
 $resultado = str_replace("^§", ". &nbsp;", $atis);
 
+$fechass = $fechasecundaria;
+$fechassa = $fechaprimaria;
 
-
-
-$fecha1 = new DateTime($fechaprimaria);
-$fecha2 = new DateTime($fechasecundaria);
+$fecha1 = new DateTime($fechass);
+$fecha2 = new DateTime($fechassa);
 $fecha = $fecha1->diff($fecha2);
-$segundos = ('%d años, %d meses, %d días, %d horas, %d minutos', $fecha->y, $fecha->m, $fecha->d, $fecha->h, $fecha->i);
-// imprime: 2 años, 4 meses, 2 días, 1 horas, 17 minutos
+
+if ($spotes=="DEL") {
+	
+	$infors = "Controlador de Autorizaciones";
+} else if ($spotes=="GND") {
+	
+	$infors = "Controlador de Superficie";
+} else if ($spotes=="TWR") {
+	
+	$infors = "Controlador de Torre";
+} else if ($spotes=="DEP") {
+	
+	$infors = "Controlador de Salidas";
+} else if ($spotes=="APP") {
+	
+	$infors = "Controlador de Aproximaciones";
+} else if ($spotes=="CTR") {
+	
+	$infors = "Controlador de Centro";
+} else if ($spotes=="FSS") {
+	
+	$infors = "Controlador de Información";
+} 
+
 
 
 	?>
@@ -84,7 +111,7 @@ $segundos = ('%d años, %d meses, %d días, %d horas, %d minutos', $fecha->y, $f
  </div>
   <div class="form-group">
           <label>Posición</label>
-          <input class="form-control" name="24" value="<?php echo $vid; ?>" readonly="readonly"/>
+          <input class="form-control" name="24" value="<?php echo $infors; ?>" readonly="readonly"/>
  </div>
   <div class="form-group">
           <label>Frequencia</label>
@@ -95,17 +122,18 @@ $segundos = ('%d años, %d meses, %d días, %d horas, %d minutos', $fecha->y, $f
 											<textarea class="form-control" name="info" readonly="readonly" ><?php echo $resultado; ?></textarea>
                                         </div>
 										
-										<?php
-										
-
-
-print $segundos;
-
-
-?>
+									
   <div class="form-group">
           <label>Tiempo en línea</label>
-          <input class="form-control" name="34" value="<?php echo $level; ?>" readonly="readonly"/>
+          <input class="form-control" name="34" value="<?php printf('%d h  %d minutos', $fecha->h, $fecha->i); ?>" readonly="readonly"/>
+ </div>
+ 
+  <div class="form-group">
+          <label>Ubicación del Control</label>
+         
+		 <td ><iframe src="./mapatc.php?ubicacion=<?php echo $posicionuna; ?>&ubicaciondos=<?php echo $posiciondos; ?>&icaos=<?php echo $dependencia; ?>&freq=<?php echo $frecuencia; ?>&spot=<?php echo $infors; ?>&rank=<?php echo $level; ?>&vid=<?php echo $vid; ?>&name=<?php echo $nombres; ?>" width="100%" height="600px"></iframe></td>
+		 
+		 
  </div>
  
  
