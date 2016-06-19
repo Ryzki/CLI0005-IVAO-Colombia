@@ -293,7 +293,7 @@ if (count($pilots) != 0) {
             $realname = substr($realname,0,-5);
         }
         $realname = remove_accents(ucwords($pilot[2]));
-        echo '<tr><td width="50"><a href="http://www.ivao.ca/flighttrack.php?cs=' . $pilot[0] . '" onClick="MM_openBrWindow(\'http://www.ivao.ca/flighttrack.php?cs=' . $pilot[0] . '\',\'\',\'scrollbars=yes,resizable=yes,width=700,height=600\');return false" target="_blank" title="' . $realname . '">' . $pilot[0] . '</a></td><td width="30">' . $pilot[11] . '</td><td>&gt;&nbsp;' . $pilot[13] . '</td></tr>';
+        echo '<tr><td width="50"><a href="http://www.ivao.ca/flighttrack.php?cs=' . $pilot[0] . '" onClick="MM_openBrWindow(\'http://www.ivao.ca/flighttrack.php?cs=' . $pilot[0] . '\',\'\',\'scrollbars=yes,resizable=yes,width=700,height=600\');return false" target="_blank" title="' . $realname . '"><font color="red">' . $pilot[0] . '</font></a></td><td width="30">' . $pilot[11] . '</td><td>&gt;&nbsp;' . $pilot[13] . '</td></tr>';
     }
     echo '</table>';
 } else {
@@ -335,7 +335,7 @@ if (count($staff) != 0) {
 <?
 
 echo '<br><hr>';
-echo 'There are '; echo count($controllers); echo' controllers, '; echo count($pilots); echo' pilots, and '; echo count($staff); echo' Staff members online in Colombia.';
+echo 'Hay '; echo count($controllers); echo' controladores, '; echo count($pilots); echo' pilotos, y '; echo count($staff); echo' miembros del Staff en línea en Colombia.';
 echo '<br><hr><br><h1>IVAO World</h1>';
 echo '<div class="trafficlistnettotal">' . sprintf($lng['totalonline'], $controllercount, $pilotcount) . '</div>';
 ?>

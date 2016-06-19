@@ -1240,8 +1240,8 @@ $membersact = $rowinfodivision['members'];
     <div class="container">
       <div class="row">
         <div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="300ms">
-          <h2>On-Line</h2>
-          <p>ATC - Pilotos - Staff - CEOS</p>
+          <h2><b>Online</b></h2>
+          <p>Miembros de la división Colombiana en Línea</p>
         </div>
       </div>
       <div class="pricing-table">
