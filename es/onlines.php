@@ -261,7 +261,7 @@ if (substr_count($controller[0],'_') == 1) {
 
         if ($apicao != $capicao) {
             $capicao = $apicao;
-            echo '<tr><td colspan="2"><strong>' . $apicao . ' - ' . $airports[$apicao] . '</td></tr>';
+            echo '<tr><td colspan="2"><strong>' . $apicao . ' - ' . $airports[$apicao];
         }
         
         // Realname
@@ -270,7 +270,7 @@ if (substr_count($controller[0],'_') == 1) {
         // Level
         $level = $ctrlevel[$controller[16]];
         
-        echo '<tr><td width="60"><a href="./?page=flighttrack&cs='. $controller[0] .'" onClick="MM_openBrWindow(\'./?page=flighttrack&cs='. $controller[0] .'\',\'\',\'scrollbars=yes,resizable=yes,width=700,height=600\');return false" target="_blank">&nbsp;&nbsp;<font color="red">' . $position . '</font></a></td><td><a href="http://www.ivao.aero/members/person/details.asp?id=' . $controller[1] . '" onClick="MM_openBrWindow(\'http://www.ivao.aero/members/person/details.asp?id=' . $controller[1] . '\',\'\',\'scrollbars=yes,resizable=yes,width=800,height=600\');return false" target="_blank" title="' . $realname . '"><font color="red">' . $controller[1] . '</font></a>&nbsp;(' . $level . ')</td></tr>';
+        echo '<a href="./?page=flighttrack&cs='. $controller[0] .'" onClick="MM_openBrWindow(\'./?page=flighttrack&cs='. $controller[0] .'\',\'\',\'scrollbars=yes,resizable=yes,width=700,height=600\');return false" target="_blank"><font color="red">' . $position . '</font></a></td><td><a href="http://www.ivao.aero/members/person/details.asp?id=' . $controller[1] . '" onClick="MM_openBrWindow(\'http://www.ivao.aero/members/person/details.asp?id=' . $controller[1] . '\',\'\',\'scrollbars=yes,resizable=yes,width=800,height=600\');return false" target="_blank" title="' . $realname . '"><font color="red">' . $controller[1] . '</font></a>&nbsp;(' . $level . ')</td></tr>';
     }
     echo '</table>';
 } else {
@@ -293,7 +293,7 @@ if (count($pilots) != 0) {
             $realname = substr($realname,0,-5);
         }
         $realname = remove_accents(ucwords($pilot[2]));
-        echo '<tr><td width="50"><a href="http://www.ivao.ca/flighttrack.php?cs=' . $pilot[0] . '" onClick="MM_openBrWindow(\'http://www.ivao.ca/flighttrack.php?cs=' . $pilot[0] . '\',\'\',\'scrollbars=yes,resizable=yes,width=700,height=600\');return false" target="_blank" title="' . $realname . '"><font color="red">' . $pilot[0] . '</font></a></td><td width="30">' . $pilot[11] . '</td><td>&gt;&nbsp;' . $pilot[13] . '</td></tr>';
+        echo '<tr><td width="50"><a href="./?page=flighttracks&cs=' . $pilot[0] . '" onClick="MM_openBrWindow(\'./?page=flighttracks&cs=' . $pilot[0] . '\',\'\',\'scrollbars=yes,resizable=yes,width=700,height=600\');return false" target="_blank" title="' . $realname . '"><font color="red">' . $pilot[0] . '</font></a></td><td width="30">' . $pilot[11] . '</td><td>&gt;&nbsp;' . $pilot[13] . '</td></tr>';
     }
     echo '</table>';
 } else {
@@ -313,7 +313,7 @@ if (count($staff) != 0) {
     foreach ($staff as $staffmember) {
         $realname = $staffmember[2];
         $realname = remove_accents(ucwords($realname));
-        echo '<tr><td><a href="http://www.ivao.aero/staff/details.asp?id=' . $staffmember[0] . '" target="_blank" onClick="MM_openBrWindow(\'http://www.ivao.aero/staff/details.asp?id=' . $staffmember[0] . '\',\'\',\'scrollbars=yes,resizable=yes,width=700,height=600\');return false" title="' . $staffmember[0] . '">'. $staffmember[0]. '</a></td></tr>';
+        echo '<tr><td><a href="http://www.ivao.aero/staff/details.asp?id=' . $staffmember[0] . '" target="_blank" onClick="MM_openBrWindow(\'http://www.ivao.aero/staff/details.asp?id=' . $staffmember[0] . '\',\'\',\'scrollbars=yes,resizable=yes,width=700,height=600\');return false" title="' . $staffmember[0] . '"><font color="red">'. $staffmember[0]. ' (' . $staffmember[1] . ') </font></a></td></tr>';
     }
     echo '</table>';
 } else {
