@@ -260,7 +260,7 @@ $vass = 0;
   
   
   
-  <!-- ------------------------- Aserca de Nosotros --------------------------- -->
+  <!-- ------------------------- Acerca de Nosotros --------------------------- -->
     
   <!--/#Aserca de Nosotros-->
   <section id="about-us" class="parallax">
@@ -921,29 +921,31 @@ $membersact = $rowinfodivision['members'];
           </div>
         </div>
         
+     
+        
         <div class="col-sm-14">
           <div class="about-info wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
-            <h2>Reservar Dependencia</h2>
-            <p> Reserva aqui la dependencia que quieras controlar.</p>
+		   <h2>Reservar Dependencia</h2>
+            <p> Reserva aquí la dependencia que quieras controlar.</p>
             
-            <div class="iframe-container">
-                <iframe width="560" height="315" src="https://ivao.aero/atcss/new.asp" frameborder="0" allowfullscreen></iframe>
-            </div>
-              
-          </div>
-        </div>
-        
-        <br><br><br>
-        
-        <div class="col-sm-14">
-          <div class="about-info wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
+            <form name="myform" action="https://ivao.aero/Login.aspx?r=atcss/new.asp?" method="POST" target="_blank"> 
+                 <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+                              RESERVAR! ATC IVAO Colombia.
+                            </button>
+							</form>
+            <br>
+			<hr>
+			<br>
+			<br>
+			
             <h2>Dependencias Reservadas</h2>
             <p> Visualizador de dependencias reservadas.</p>
             <div class="iframe-container">
                <?php include ('dependencias.php'); ?>
             </div>
           
-            
+           
+			
           </div>
         </div>
         

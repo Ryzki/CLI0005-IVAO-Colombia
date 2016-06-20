@@ -149,7 +149,7 @@
                                             </div>
 											<div class="radio">
                                                 <label>
-                                                    <input type="radio" name="optionsRadios" id="optionsRadios17" value="-MA2"/>Membership Advisor 2
+                                                    <input type="radio" name="optionsRadios" id="optionsRadios17" value="-MA1"/>Membership Advisor 1
                                                 </label>
                                             </div>
 											<div class="radio">

@@ -261,7 +261,7 @@ if (substr_count($controller[0],'_') == 1) {
 
         if ($apicao != $capicao) {
             $capicao = $apicao;
-            echo '<tr><td colspan="2"><strong>' . $apicao . ' - ' . $airports[$apicao];
+            echo '<tr><td colspan="2" align="left"><strong>' . $apicao . ' - ' . $airports[$apicao] . '</td></tr>';
         }
         
         // Realname
@@ -270,7 +270,7 @@ if (substr_count($controller[0],'_') == 1) {
         // Level
         $level = $ctrlevel[$controller[16]];
         
-        echo '<a href="./?page=flighttrack&cs='. $controller[0] .'" onClick="MM_openBrWindow(\'./?page=flighttrack&cs='. $controller[0] .'\',\'\',\'scrollbars=yes,resizable=yes,width=700,height=600\');return false" target="_blank"><font color="red">' . $position . '</font></a></td><td><a href="http://www.ivao.aero/members/person/details.asp?id=' . $controller[1] . '" onClick="MM_openBrWindow(\'http://www.ivao.aero/members/person/details.asp?id=' . $controller[1] . '\',\'\',\'scrollbars=yes,resizable=yes,width=800,height=600\');return false" target="_blank" title="' . $realname . '"><font color="red">' . $controller[1] . '</font></a>&nbsp;(' . $level . ')</td></tr>';
+        echo '<tr><td width="60"><li><a href="./?page=flighttrack&cs='. $controller[0] .'" onClick="MM_openBrWindow(\'./?page=flighttrack&cs='. $controller[0] .'\',\'\',\'scrollbars=yes,resizable=yes,width=700,height=600\');return false" target="_blank"><font color="red">' . $position . '</font></a></td><td><a href="http://www.ivao.aero/members/person/details.asp?id=' . $controller[1] . '" onClick="MM_openBrWindow(\'http://www.ivao.aero/members/person/details.asp?id=' . $controller[1] . '\',\'\',\'scrollbars=yes,resizable=yes,width=800,height=600\');return false" target="_blank" title="' . $realname . '"><font color="red">' . $controller[1] . '</font></a>&nbsp;(' . $level . ')</li></td></tr>';
     }
     echo '</table>';
 } else {
