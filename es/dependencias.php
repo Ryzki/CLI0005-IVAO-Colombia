@@ -52,11 +52,19 @@ if (substr($rows,0,2) == '!') {
 $fechasecundaria = substr($fechados, 0, 4) . '-' . substr($fechados, 4, 2) . '-' . substr($fechados, 6, 2) . ' ' . substr($fechados, 8, 2) . ':' . substr($fechados, 10, 2) . ':' . substr($fechados, 12, 2);
 	
 	$eventa= $fields[8];
-		$infor = '<a href"' . $eventa . '">Ver Evento</a>';
+	$infosp = substr($eventa, 0,1);
 	
+	if ($infosp=="h") {
+		
+		$infor = '<span class="label label-success"><a href="' . $eventa . '">Ver Evento</a></span>';
+		
+	} else {
+	$infor='<span class="label label-warning">No hay evento.</span>';
 	
+	}
 	
-echo '<tr><td>' . $fields[0] . '</td><td>' . $fields[1] . '</td><td> ' . $fechaprimaria . '</td><td>' . $fechasecundaria . '</td><td>' . $infor .'</td></tr>';
+	echo '<tr><td><font color="black">' . $fields[0] . '</font></td><td><a href="http://www.ivao.aero/members/person/details.asp?id=' . $fields[1] . '"><font color="black">' . $fields[1] . '</font></a></td><td><font color="black">' . $fechaprimaria . '</font></td><td><font color="black">' . $fechasecundaria . '</font></td><td><font color="black">' . $infor .'</font></td></tr>';
+
 
 $var++;
 
@@ -73,7 +81,7 @@ echo '</tbody>
 </table>';
 
 if ($var == 0) {
-	echo "No hay reservas de dependencias ATC en el espacio aereo Colombiano";
+	echo '<div class="alert alert-danger" role="alert">No hay reservas de dependencias ATC en el espacio aereo Colombiano</div>';
 	
 }
 

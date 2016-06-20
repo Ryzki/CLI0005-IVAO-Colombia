@@ -44,11 +44,11 @@
 		$cad .= substr($str , rand(0 , 62) , 1);
 	}
 	$clave = $cad;
-	//<label>Password</label>
+	
 	?>
 										<div class="form-group">
-                                            
-                                            <input type="hidden" class="form-control" name="password" value="<?php echo $clave; ?>"/>
+                                            <label>Password</label>
+                                            <input  class="form-control" name="password" value="<?php echo $clave; ?>" readonly="readonly"/>
                                         </div>
 										
 										<div class="form-group">

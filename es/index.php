@@ -929,7 +929,7 @@ $membersact = $rowinfodivision['members'];
             <div class="iframe-container">
                 <iframe width="560" height="315" src="https://ivao.aero/atcss/new.asp" frameborder="0" allowfullscreen></iframe>
             </div>
-            
+              
           </div>
         </div>
         
@@ -939,10 +939,10 @@ $membersact = $rowinfodivision['members'];
           <div class="about-info wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
             <h2>Dependencias Reservadas</h2>
             <p> Visualizador de dependencias reservadas.</p>
-            
             <div class="iframe-container">
-                <iframe width="560" height="315" src="https://ivao.aero/atcss/schedule.asp?Date=" frameborder="0" allowfullscreen></iframe>
+               <?php include ('dependencias.php'); ?>
             </div>
+          
             
           </div>
         </div>
