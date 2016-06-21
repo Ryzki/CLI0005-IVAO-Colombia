@@ -22,7 +22,7 @@ margin-right:auto;
 </thead>
 <tbody>
 <?php
-
+include('./db_login.php');
 
 $filecontents = file_get_contents('http://www.ivao.aero/schedule/indd.asp');
 //$filecontents = file_get_contents('whazzup.txt'); //Testing file
@@ -63,7 +63,35 @@ $fechasecundaria = substr($fechados, 0, 4) . '-' . substr($fechados, 4, 2) . '-'
 	
 	}
 	
-	echo '<tr><td><font color="black">' . $fields[0] . '</font></td><td><a href="http://www.ivao.aero/members/person/details.asp?id=' . $fields[1] . '"><font color="black">' . $fields[1] . '</font></a></td><td><font color="black">' . $fechaprimaria . '</font></td><td><font color="black">' . $fechasecundaria . '</font></td><td><font color="black">' . $infor .'</font></td></tr>';
+	
+	
+	
+	$icaos=substr($fields[0],0,4);
+	
+	
+	
+	
+	
+	$db = new mysqli($db_host , $db_username , $db_password , $db_database);
+	$db->set_charset("utf8");
+	
+	if ($db->connect_errno > 0) {
+		die('Unable to connect to database [' . $db->connect_error . ']');
+	}
+
+	
+	$sql399 ="select * from airports where ident='$icaos'";
+
+	if (!$result399 = $db->query($sql399)) {
+		die('There was an error running the query [' . $db->error . ']');
+	}
+	while ($row399 = $result399->fetch_assoc()) {
+		
+        $callsignes= $row399["name"];
+		$iso_country= $row399["iso_country"];
+	}
+	
+	echo '<tr><td><img src="../admin/intranet/country-flags/' . $iso_country . '.png"><font color="black"> (' . $fields[0] . ')</font><br><font color="black"><b>' . $callsignes . '</b></font></td><td><a href="http://www.ivao.aero/members/person/details.asp?id=' . $fields[1] . '"><font color="red">' . $fields[1] . '</font></a></td><td><font color="black">' . $fechaprimaria . '</font></td><td><font color="black">' . $fechasecundaria . '</font></td><td><font color="black">' . $infor .'</font></td></tr>';
 
 
 $var++;

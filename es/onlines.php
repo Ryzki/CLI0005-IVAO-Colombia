@@ -245,6 +245,22 @@ $d=($d?$d:GMdate("Y-m-d"));
 	
     <tr>
     <td><?
+	include('./db_login.php');
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	// ATC
 //echo '<h3>' . $lng['atcingb'] . '</h3>';
@@ -261,7 +277,29 @@ if (substr_count($controller[0],'_') == 1) {
 
         if ($apicao != $capicao) {
             $capicao = $apicao;
-            echo '<tr><td colspan="2" align="left"><strong>' . $apicao . ' - ' . $airports[$apicao] . '</td></tr>';
+			
+			$db = new mysqli($db_host , $db_username , $db_password , $db_database);
+	$db->set_charset("utf8");
+	
+	if ($db->connect_errno > 0) {
+		die('Unable to connect to database [' . $db->connect_error . ']');
+	}
+
+	
+	$sql3991 ="select * from airports where ident='$apicao'";
+
+	if (!$result3991 = $db->query($sql3991)) {
+		die('There was an error running the query [' . $db->error . ']');
+	}
+	while ($row3991 = $result3991->fetch_assoc()) {
+		
+		$iso_countrya= $row3991["iso_country"];
+		$callsignesa= $row3991["name"];
+	}
+	
+	
+	
+            echo '<tr><td colspan="2" align="left"><img src="../admin/intranet/country-flags/' . $iso_countrya . '.png">' . ' ' . '<strong>' . $callsignesa . ' (' . $apicao . ') - ' . $airports[$apicao] . '</td></tr>';
         }
         
         // Realname

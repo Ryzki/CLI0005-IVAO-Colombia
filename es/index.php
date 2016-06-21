@@ -146,7 +146,8 @@ $vass = 0;
             <li class="scroll"><a href="./#features">Recursos</a></li>
             <li class="scroll"><a href="./#pricing">Online</a></li>
             <li class="scroll"><a href="./#blog">Aerolineas VA</a></li>
-            <li class="scroll"><a href="./#contact">Contactenos</a></li>       
+            <li class="scroll"><a href="./#contact">Contactenos</a></li>   
+			
           </ul>
         </div>
       </div>
