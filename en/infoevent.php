@@ -78,7 +78,7 @@ include('./db_login.php');
                     <!-- Form Elements -->
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            Información Evento
+                            Event Information
                         </div>
                         <div class="panel-body">
                             <div class="row">
@@ -92,24 +92,24 @@ include('./db_login.php');
 								<hr>
 								
                                         <div class="form-group">
-                                            <label>Titulo Evento</label>
+                                            <label>Event Title</label>
                                             <input class="form-control" name="nombre" value="<?php echo $titulo; ?>" readonly="readonly"/>
 										
                                         </div>
 										 <div class="form-group">
-                                            <label>Fecha Evento</label>
+                                            <label>Event Date</label>
 											<input class="form-control" type="date" name="fecha" value="<?php echo $fecha; ?>" readonly="readonly"/>
                                         </div>
 										<div class="form-group">
-                                            <label>Hora Inicio</label>
+                                            <label>Start Hour</label>
 											<input class="form-control"  name="horauno" value="<?php echo $horaunos; ?> Z" readonly="readonly"/>
                                         </div>
 										<div class="form-group">
-                                            <label>Hora Finalización</label>
+                                            <label>Finish Hour</label>
 											<input class="form-control"  name="horados" value="<?php echo $horadoses; ?> Z" readonly="readonly"/>
                                         </div>
 										 <div class="form-group">
-                                            <label>Información Evento</label>
+                                            <label>Event Information</label>
 											<textarea class="form-control" name="info" readonly="readonly" ><?php echo $informacion; ?></textarea>
                                         </div>
 										
