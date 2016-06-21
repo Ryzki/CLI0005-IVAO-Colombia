@@ -129,7 +129,7 @@ include('./db_login.php');
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">IVAO CO</a> 
+                <a class="navbar-brand" href="./">IVAO CO</a> 
             </div>
   <div style="color: white;
 padding: 15px 50px 5px 50px;

@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="IVAO Colombia. Te permite volar y/o controlar en el ambiente simulado más realista posible, incluso con meteorología del mundo real. 
-                Usted puede recibir entrenamiento y disfrutar de nuestra comunidad totalmente gratis. ">
+                Usted puede recibir entrenamiento y disfrutar de nuestra comunidad totalmente gratis.">
   <meta name="author" content="CO">
   <meta name="keywords" content="IVAO, IVAO Colombia, Aviacion virtual, FSX, Prepar3d, Division IVAO Colombia">
   <title>IVAO Colombia</title>
@@ -16,7 +16,8 @@
   <link id="css-preset" href="css/presets/preset1.css" rel="stylesheet">
   <link href="css/responsive.css" rel="stylesheet">
   <link href="css/iframe.css" rel="stylesheet">  <!-- iframe CSS: Para Iframe con Responsive Desig-->
-
+  
+    
   <!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
@@ -27,6 +28,7 @@
 </head><!--/head-->
 
 <body>
+
   <!--.preloader-->
   <div class="preloader"> <i class="fa fa-circle-o-notch fa-spin"></i></div>
   <!--/.preloader-->
@@ -36,15 +38,13 @@
       <div class="carousel-inner">
         <div class="item active" style="background-image: url(images/slider/1.jpg)">
           <div class="caption">
-            <h1 class="animated fadeInLeftBig">Bienvenido a IVAO <span>Colombia</span></h1>
-            <p class="animated fadeInRightBig">La mayor red de pilotos y controladores virtuales</p>
-            <a data-scroll class="btn btn-start animated fadeInUpBig" href="../index.html">Atras</a>
-            <a data-scroll class="btn btn-start animated fadeInUpBig" href="./#services">Continuar</a>
+            <h1 class="animated fadeInLeftBig">Welcome to IVAO <span>Colombia</span></h1>
+            <p class="animated fadeInRightBig">The largest network of virtual pilots and controllers</p>
+            <a data-scroll class="btn btn-start animated fadeInUpBig" href="../index.html">Back</a>
+            <a data-scroll class="btn btn-start animated fadeInUpBig" href="#services">Continue</a>
           </div>
         </div>
-		
-		
-		 <?
+        <?
 		 
 		 include('./db_login.php');
 		  
@@ -83,25 +83,22 @@ $vass = 0;
 	
 	 <div class="item" style="background-image: url(../admin/intranet/imagenair/<?php echo $row2377a["imagen_va"]; ?>)">
           <div class="caption">
-            <h1 class="animated fadeInLeftBig">Aerolínea <span> <?php echo $row2377a["nombre_aerolinea"]; ?></span></h1>
-            <p class="animated fadeInRightBig">Certificada por IVAO World</p>
-            <a data-scroll class="btn btn-start animated fadeInUpBig" href="./">Atras</a>
-            <a data-scroll class="btn btn-start animated fadeInUpBig" href="<?php echo $row2377a["web"]; ?>">Ver</a>
+            <h1 class="animated fadeInLeftBig">Airline <span> <?php echo $row2377a["nombre_aerolinea"]; ?></span></h1>
+            <p class="animated fadeInRightBig">Certified by IVAO World</p>
+            <a data-scroll class="btn btn-start animated fadeInUpBig" href="./">Back</a>
+            <a data-scroll class="btn btn-start animated fadeInUpBig" href="<?php echo $row2377a["web"]; ?>">See</a>
           </div>
         </div>
 	
 	<?php } ?>
-	
-	
         <div class="item" style="background-image: url(images/slider/3.jpg)">
           <div class="caption">
-            <h1 class="animated fadeInLeftBig">Prepararete<span> Virtualmente</span></h1>
-            <p class="animated fadeInRightBig">Como Piloto - Controlador Aereo</p>
-            <a data-scroll class="btn btn-start animated fadeInUpBig" href="../index.html">Atras</a>
-            <a data-scroll class="btn btn-start animated fadeInUpBig" href="./#services">Continuar</a>
+            <h1 class="animated fadeInLeftBig">Get Prepared <span>Virtually </span></h1>
+            <p class="animated fadeInRightBig">As a Pilot - as an air traffic controller</p>
+            <a data-scroll class="btn btn-start animated fadeInUpBig" href="../index.html">Back</a>
+            <a data-scroll class="btn btn-start animated fadeInUpBig" href="#services">Continue</a>
           </div>
         </div>
-		
       </div>
       <a class="left-control" href="#home-slider" data-slide="prev"><i class="fa fa-angle-left"></i></a>
       <a class="right-control" href="#home-slider" data-slide="next"><i class="fa fa-angle-right"></i></a>
@@ -117,37 +114,34 @@ $vass = 0;
     <div class="main-nav">
       
       <div class="container">
-      <div class="navbar-header">
+        <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="./">
+          <a class="navbar-brand" href="index.html">
             <h1><img class="img-responsive" src="images/logo.png" alt="logo"></h1>
           </a>                    
         </div>
         </div>
-      
-       <br>
-       
-      <div class="container">
         
-       
+        <br>
+        
+        <div class="container">
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav navbar-right">                 
-            <li class="scroll active"><a href="./#home">Inicio</a></li>
-            <li class="scroll"><a href="./#services">IVAO COL</a></li> 
-            <li class="scroll"><a href="./#portfolio">Pilotos</a></li>
-            <li class="scroll"><a href="./#controladores">Controladores</a></li>
-            <li class="scroll"><a href="./#atc-ss">ATC</a></li>
-            <li class="scroll"><a href="./#team">Eventos</a></li>
-            <li class="scroll"><a href="./#features">Recursos</a></li>
-            <li class="scroll"><a href="./#pricing">Online</a></li>
-            <li class="scroll"><a href="./#blog">Aerolineas VA</a></li>
-            <li class="scroll"><a href="./#contact">Contactenos</a></li>   
-			
+            <li class="scroll active"><a href="#home">Home</a></li>
+            <li class="scroll"><a href="#services">IVAO COL</a></li> 
+            <li class="scroll"><a href="#portfolio">Pilots</a></li>
+            <li class="scroll"><a href="#controladores">Controllers</a></li>
+            <li class="scroll"><a href="#atc-ss">ATC</a></li>
+            <li class="scroll"><a href="#team">Events</a></li>
+            <li class="scroll"><a href="#features">Resources</a></li>
+            <li class="scroll"><a href="#pricing">On Line</a></li>
+            <li class="scroll"><a href="#blog">Airlines VA</a></li>
+            <li class="scroll"><a href="#contact">Contact Us</a></li>       
           </ul>
         </div>
       </div>
@@ -156,10 +150,10 @@ $vass = 0;
   
   
   <!-- ------------------------- Menu --------------------------- -->
-  
-  <?php
+    <?php
 	if (!isset($_GET["page"]) || trim($_GET["page"]) == "") {
 		?>
+  
   <!-- ------------------------- IVAO Colombia --------------------------- -->
   
   <section id="services">
@@ -168,8 +162,8 @@ $vass = 0;
         <div class="row">
           <div class="text-center col-sm-8 col-sm-offset-2">
             <h2>IVAO Colombia</h2>
-            <p>IVAO™ les permite volar y/o controlar en el ambiente simulado más realista posible, incluso con meteorología del mundo real. 
-                Usted puede recibir entrenamiento y disfrutar de nuestra comunidad gratis.</p>
+            <p>IVAO™ Allows you to fly and / or control in the most realistic simulation environment possible, even with real-world weather. 
+                You can receive training and enjoy our free community.</p>
           </div>
         </div> 
       </div>
@@ -184,8 +178,8 @@ $vass = 0;
             </div>
             </a>
             <div class="service-info">
-              <h3>Acerca de Nosotros</h3>
-              <p>Una comunidad en línea para entusiastas de la aviación.</p>
+              <h3>About us</h3>
+              <p>An online community for aviation enthusiasts.</p>
             </div>
           </div>
           
@@ -196,8 +190,8 @@ $vass = 0;
             </div>
             </a>
             <div class="service-info">
-              <h3>Registrarse</h3>
-              <p>Únete a la red de pilotos y controladores virtuales más grande de simulación aérea en el país.</p>
+              <h3>Register</h3>
+              <p>Join the biggest pilots and air controllers network in the country.</p>
             </div>
           </div>
           
@@ -208,8 +202,8 @@ $vass = 0;
             </div>
             </a>
             <div class="service-info">
-              <h3>Preguntas frecuentes</h3>
-              <p>Encuentra en esta session las respuestas a tus preguntas.</p>
+              <h3>Frequent questions</h3>
+              <p>Find in this session the answers to your questions.</p>
             </div>
           </div>
           
@@ -220,8 +214,8 @@ $vass = 0;
             </div>
             </a>
             <div class="service-info">
-              <h3>Reglas & Regulaciones</h3>
-              <p>Enterate de las reglas y regulaciones de IVAO Colombia.</p>
+              <h3>Rules and Regulations</h3>
+              <p>Find out the rules and regulations of IVAO Colombia.</p>
             </div>
           </div>
           
@@ -231,11 +225,9 @@ $vass = 0;
               <i class="fa fa-plane"></i>
             </div>
             </a>
-				
-	
             <div class="service-info">
-              <h3>Aerolineas Virtuales de Colombia</h3>
-              <p>Actualmente IVAO Colombia cuenta con <?php echo $vass; ?> Aerolíneas Virtuales. En la que podrás complementar tu formación. </p>
+              <h3>Virtual Airlines Colombia</h3>
+              <p>IVAO Colombia currently has 5 Virtual Airlines. In which you can supplement your training.</p>
             </div>
           </div>
           
@@ -247,7 +239,7 @@ $vass = 0;
             </a>
             <div class="service-info">
               <h3>Online</h3>
-              <p>Colombia Online - Controladores, Pilotos, Staff, Ceos.</p>
+              <p>Colombia Online - Controllers Pilots, Staff, Ceos.</p>
             </div>
           </div>
         </div>
@@ -269,17 +261,17 @@ $vass = 0;
       <div class="row">
         <div class="col-sm-6">
           <div class="about-info wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
-            <h2>Acerca de nosotros</h2>
-            <p>IVAO™, International Virtual Aviation Organisation™, ofrece un servicio dedicado, independiente y libre de costo a los entusiastas que hacen parte de la comunidad de simulación de vuelo alrededor del mundo. IVAO™ fue creada para brindar servicios de alta calidad a sus usuarios. </p>
-            <p>El objetivo primario de IVAO™ es brindar a la comunidad de simulación de vuelo un ambiente lo más realista posible. Esto incluye un sistema de vuelo (para pilotos), uno de control aéreo, bases de datos con información aeronáutica internacional, eventos y entrenamiento.</p>
-            <p>IVAO™ les permite volar y/o controlar en el ambiente simulado más realista posible, incluso con meteorología del mundo real. 
-            Usted puede recibir entrenamiento y disfrutar de nuestra comunidad gratis.</p>
-            <p>Únete al grupo más grande de aviadores en Colombia. </p>
+            <h2>About us</h2>
+            <p>IVAO ™, International Virtual Aviation Organisation ™ offers a dedicated service, independent and free of charge to enthusiasts who are part of the flight simulation community worldwide. IVAO ™ was created to provide high quality services to its users.</p>
+            <p>The primary objective of IVAO ™ is to provide the community simulation flight a realistic environment as possible. This includes a flight system (for pilots), one air traffic control databases with international aeronautical information, events and training.</p>
+            <p>IVAO ™ allows them to fly and / or control in the simulated environment as realistic as possible, even with real-world weather.
+             You can receive training and enjoy our free community.</p>
+            <p>Join the largest group of aviators in Colombia. </p>
           </div>
         </div>
         <div class="col-sm-6">
-          
-           <?
+        
+ <?
 		 
 		 include('./db_login.php');
 		  
@@ -345,32 +337,33 @@ $membersact = $rowinfodivision['members'];
 
 
 	
-	?>
+	?>		
+          
           
           <div class="our-skills wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
             <div class="single-skill wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
-              <p class="lead">Miembros Activos</p>
+              <p class="lead">Active members</p>
               <div class="progress">
                 <div class="progress-bar progress-bar-primary six-sec-ease-in-out" role="progressbar"  aria-valuetransitiongoal="100"><?php echo $membersact; ?></div>
               </div>
             </div>
             
             <div class="single-skill wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="400ms">
-              <p class="lead">Pilotos</p>
+              <p class="lead">Pilots</p>
               <div class="progress">
                 <div class="progress-bar progress-bar-primary six-sec-ease-in-out" role="progressbar"  aria-valuetransitiongoal="<?php echo $porcentaje; ?>"><?php echo  $pcas; ?></div>
               </div>
             </div>
             
             <div class="single-skill wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="500ms">
-              <p class="lead">Controladores</p>
+              <p class="lead">Controllers</p>
               <div class="progress">
                 <div class="progress-bar progress-bar-primary six-sec-ease-in-out" role="progressbar"  aria-valuetransitiongoal="<?php echo $porcentajedos; ?>"><?php echo  $atcs; ?></div>
               </div>
             </div>
             
             <div class="single-skill wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
-              <p class="lead">Puesto de la Division</p>
+              <p class="lead">Division</p>
               <div class="progress">
                 <div class="progress-bar progress-bar-primary six-sec-ease-in-out" role="progressbar"  aria-valuetransitiongoal="<?php echo $porc; ?>"><?php echo $posos; ?></div>
               </div>
@@ -378,7 +371,7 @@ $membersact = $rowinfodivision['members'];
             
             <div class="our-skills wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
             <div class="single-skill wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
-              <p class="lead">Tablas estadisticas comparadas con las demas divisiones a nivel internacional</p>
+              <p class="lead">statistical tables compared to other international divisions</p>
               <!--
               <div class="progress">
                 <div class="progress-bar progress-bar-primary six-sec-ease-in-out" role="progressbar"  aria-valuetransitiongoal="50">1075</div>
@@ -392,7 +385,13 @@ $membersact = $rowinfodivision['members'];
       </div>
     </div>
   </section>
-  <!--/#about-us-->
+  
+   <!-- ------------------------- Aserca de Nosotros --------------------------- -->
+   
+   
+   
+  
+  
 
   <!-- ----------------------- PILOTOS ---------------------------- -->
   
@@ -400,8 +399,8 @@ $membersact = $rowinfodivision['members'];
     <div class="container">
       <div class="row">
         <div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
-          <h2>PILOTOS</h2>
-          <p>IVAO Colombia cuenta con mas de <?php echo  $pcas; ?> Pilotos Virtuales activos.</p>
+          <h2>PILOTS</h2>
+          <p>IVAO Colombia has more than <?php echo  $pcas; ?> active virtual pilots.</p>
         </div>
       </div> 
     </div>
@@ -417,8 +416,8 @@ $membersact = $rowinfodivision['members'];
               <div class="overlay-content">
                 <div class="overlay-text">
                   <div class="folio-info">
-                    <h3>Registrarse</h3>
-                    <p>Nuevo Piloto Virtual</p>
+                    <h3>Register</h3>
+                    <p>New Virtual Pilot</p>
                   </div>
                   <div class="folio-overview">
                       
@@ -443,8 +442,8 @@ $membersact = $rowinfodivision['members'];
               <div class="overlay-content">
                 <div class="overlay-text">
                   <div class="folio-info">
-                    <h3>Rangos</h3>
-                    <p>Rangos Piloto IVAO</p>
+                    <h3>Rank</h3>
+                    <p>IVAO Pilot Rank</p>
                   </div>
                   <div class="folio-overview">
                       
@@ -469,8 +468,8 @@ $membersact = $rowinfodivision['members'];
               <div class="overlay-content">
                 <div class="overlay-text">
                   <div class="folio-info">
-                    <h3>Primeros Pasos</h3>
-                    <p>Guía para iniciar</p>
+                    <h3>First steps</h3>
+                    <p>Guide to start</p>
                   </div>
                   <div class="folio-overview">
                       
@@ -495,8 +494,8 @@ $membersact = $rowinfodivision['members'];
               <div class="overlay-content">
                 <div class="overlay-text">
                   <div class="folio-info">
-                    <h3>Formación</h3>
-                    <p>Inicia tu formación como piloto</p>
+                    <h3>School</h3>
+                    <p>Start your school as a pilot</p>
                   </div>
                   <div class="folio-overview">
                       
@@ -521,8 +520,8 @@ $membersact = $rowinfodivision['members'];
               <div class="overlay-content">
                 <div class="overlay-text">
                   <div class="folio-info">
-                    <h3>Entrenamiento</h3>
-                    <p>Instrucción para pilotos</p>
+                    <h3>Training</h3>
+                    <p>Pilot Training</p>
                   </div>
                   <div class="folio-overview">
                     <a class="tumblr" target="_blanck" href="#" ><i class="fa fa-link"></i></a>
@@ -546,8 +545,8 @@ $membersact = $rowinfodivision['members'];
               <div class="overlay-content">
                 <div class="overlay-text">
                   <div class="folio-info">
-                    <h3>Cartas</h3>
-                    <p>Aeródromos, TMA</p>
+                    <h3>Charts</h3>
+                    <p>Aeródremes, TMA</p>
                   </div>
                   <div class="folio-overview">
                     <a class="facebook" target="_blanck" href="http://www.aerocivil.gov.co/AIS/AIP/Paginas/Inicio.aspx" ><i class="fa fa-link"></i></a>
@@ -573,7 +572,7 @@ $membersact = $rowinfodivision['members'];
                 <div class="overlay-text">
                   <div class="folio-info">
                     <h3>IVAP Software</h3>
-                    <p>Descargar IVAP</p>
+                    <p>Dowload IVAP</p>
                   </div>
                   <div class="folio-overview">
                     <a class="facebook" target="_blanck" href="https://www.ivao.aero/softdev/ivap.asp" ><i class="fa fa-link"></i></a>
@@ -589,7 +588,7 @@ $membersact = $rowinfodivision['members'];
         </div>
         
         
-        
+        <!--
         <div class="col-sm-3">
           <div class="folio-item wow fadeInRightBig" data-wow-duration="1000ms" data-wow-delay="700ms">
             <div class="folio-image">
@@ -611,7 +610,7 @@ $membersact = $rowinfodivision['members'];
             </div>
           </div>
         </div>
-        
+        -->
         
         <!--
         <div class="col-sm-3">
@@ -658,8 +657,8 @@ $membersact = $rowinfodivision['members'];
     <div class="container">
       <div class="row">
         <div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
-          <h2>CONTROLADORES</h2>
-          <p>IVAO Colombia cuenta con mas de <?php echo  $atcs; ?> Controladores Virtuales activos.</p>
+          <h2>CONTROLLERS</h2>
+          <p>IVAO Colombia has more than <?php echo  $atcs; ?> active Virtual Air Traffic Controllers.</p>
         </div>
       </div> 
     </div>
@@ -675,8 +674,8 @@ $membersact = $rowinfodivision['members'];
               <div class="overlay-content">
                 <div class="overlay-text">
                   <div class="control-info">
-                    <h3>Registrarse</h3>
-                    <p>Nuevo Controlador Virtual</p>
+                    <h3>Register</h3>
+                    <p>New Virtual Air Traffic Controller.</p>
                   </div>
                   <div class="control-overview">
                     <a class="facebook" target="_blanck" href="https://www.ivao.aero/members/person/register.htm" ><i class="fa fa-link"></i></a>
@@ -700,8 +699,8 @@ $membersact = $rowinfodivision['members'];
               <div class="overlay-content">
                 <div class="overlay-text">
                   <div class="control-info">
-                    <h3>Rangos</h3>
-                    <p>Rangos Controlador IVAO</p>
+                    <h3>Rank</h3>
+                    <p>Rank IVAO Air Traffic Controller </p>
                   </div>
                   <div class="control-overview">
                     <a class="facebook" target="_blanck" href="https://www.ivao.aero/ViewDocument.aspx?Path=/training:atc:ratings" ><i class="fa fa-link"></i></a>
@@ -725,8 +724,8 @@ $membersact = $rowinfodivision['members'];
               <div class="overlay-content">
                 <div class="overlay-text">
                   <div class="control-info">
-                    <h3>Primeros Pasos</h3>
-                    <p>Guia para iniciar</p>
+                    <h3>Firts Teps</h3>
+                    <p>Guide to start</p>
                   </div>
                   <div class="control-overview">
                     <a class="facebook" target="_blanck" href="https://www.ivao.aero/ViewDocument.aspx?Path=training:atc:first_steps" ><i class="fa fa-link"></i></a>
@@ -750,8 +749,8 @@ $membersact = $rowinfodivision['members'];
               <div class="overlay-content">
                 <div class="overlay-text">
                   <div class="control-info">
-                    <h3>Formacion</h3>
-                    <p>Inicia tu formacion como controlador</p>
+                    <h3>School</h3>
+                    <p>Start your school as an Air Traffic Controller</p>
                   </div>
                   <div class="control-overview">
                     <a class="facebook" target="_blanck" href="https://www.ivao.aero/training/documentation/index.php?section=asx" ><i class="fa fa-link"></i></a>
@@ -775,8 +774,8 @@ $membersact = $rowinfodivision['members'];
               <div class="overlay-content">
                 <div class="overlay-text">
                   <div class="control-info">
-                    <h3>Entrenamiento</h3>
-                    <p>Entrenamiento para controladores</p>
+                    <h3>Trainning</h3>
+                    <p>Training for Air Traffic Controllers</p>
                   </div>
                   <div class="control-overview">
                     <a class="facebook" target="_blanck" href="#" ><i class="fa fa-link"></i></a>
@@ -801,7 +800,7 @@ $membersact = $rowinfodivision['members'];
                 <div class="overlay-text">
                   <div class="control-info">
                     <h3>Sector Files</h3>
-                    <p>Descargar Sector Files</p>
+                    <p>Download Sector Files</p>
                   </div>
                   <div class="control-overview">
                     <a class="facebook" target="_blanck" href="https://mega.nz/#F!mZYzxIAB!M5hD_lr_6tyj4_2yIaiJvg" ><i class="fa fa-link"></i></a>
@@ -827,7 +826,7 @@ $membersact = $rowinfodivision['members'];
                 <div class="overlay-text">
                   <div class="control-info">
                     <h3>IVAC Software</h3>
-                    <p>Descargar IVAC</p>
+                    <p>Download IVAC</p>
                   </div>
                   <div class="control-overview">
                     <a class="facebook" target="_blanck" href="https://www.ivao.aero/softdev/ivac.asp" ><i class="fa fa-link"></i></a>
@@ -841,7 +840,7 @@ $membersact = $rowinfodivision['members'];
             </div>
           </div>
         </div>
-       
+        -->
         
        
         
@@ -915,23 +914,27 @@ $membersact = $rowinfodivision['members'];
     <div class="container">
       <div class="row">
         
+        
+        
+        
         <div class="row">
           <div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
-            <h2>Sistema de reservas ATC IVAO ™</h2>
-            <p>Con el Sistema de Reserva ATC de IVAO puede separar una dependencia y controlarla .</p>
+            <h2>ATC SCHEDULING SYSTEM IVAO ™</h2>
+            <p>With the ATC system IVAO Reserve can separate a dependency and control.</p>
           </div>
         </div>
         
-     
+        
+        
         
         <div class="col-sm-14">
-          <div class="about-info wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
-		   <h2>Reservar Dependencia</h2>
-            <p> Reserva aquí la dependencia que quieras controlar.</p>
+           <div class="about-info wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
+		   <h2>Schedule Dependency</h2>
+            <p>Schedule here to control an ATC Dependency.</p>
             
             <form name="myform" action="https://ivao.aero/Login.aspx?r=atcss/new.asp?" method="POST" target="_blank"> 
                  <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-                              RESERVAR! ATC IVAO Colombia.
+                              Schedule! ATC IVAO Colombia.
                             </button>
 							</form>
             <br>
@@ -939,8 +942,8 @@ $membersact = $rowinfodivision['members'];
 			<br>
 			<br>
 			
-            <h2>Dependencias Reservadas</h2>
-            <p> Visualizador de dependencias reservadas.</p>
+            <h2>Scheduled Dependency</h2>
+            <p> Watching of scheduled dependency.</p>
             <div class="iframe-container">
                <?php include ('dependencias.php'); ?>
             </div>
@@ -957,23 +960,29 @@ $membersact = $rowinfodivision['members'];
   
    <!-- ------------------------- ATC SCHEDULING SYSTEM --------------------------- -->
   
-    
   
-  <!-- ----------------------- EVENTOS ---------------------------- -->
+ 
+  
+  
+  
+ <!-- ---------------------------- EVENTOS -------------------------------- -->
 
   <section id="team">
     <div class="container">
       <div class="row">
         <div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="300ms">
-          <h2>EVENTOS</h2>
-          <p>Proximos eventos - Inscribete y acompañanos</p>
+          <h2>EVENTS</h2>
+          <p>Upcoming events - Sign Up and join us</p>
         </div>
       </div>
       <div class="team-members">
         <div class="row">
             
           
-         <?
+          
+          
+          
+            <?
 		  
 		  include('./db_login.php');
 		  
@@ -1019,9 +1028,9 @@ $membersact = $rowinfodivision['members'];
               </div>
               <div class="member-info">
                 <h3><?php echo $row2['nombre']; ?></h3>
-                <h4>Hora: <?php echo $row2['hora_inicio']; ?> Z - <?php echo $row2['hora_fin']; ?> Z</h4>
-                <p>Fecha: <?php echo $row2['fecha']; ?></p>
-                <p>Acompañanos</p>
+                <h4>Hour: <?php echo $row2['hora_inicio']; ?> Z - <?php echo $row2['hora_fin']; ?> Z</h4>
+                <p>Date: <?php echo $row2['fecha']; ?></p>
+                <p>Acompany</p>
               </div>
               <div class="social-icons">
                 <ul>
@@ -1047,7 +1056,7 @@ $membersact = $rowinfodivision['members'];
 	
 	if ($i==0)
 	{
-	echo '<div class="alert alert-danger" role="alert">No hay Eventos disponibles aún.</div>';
+	echo '<div class="alert alert-danger" role="alert">There are not events available yet.</div>';
 	
 	 
 	} 
@@ -1056,8 +1065,6 @@ $membersact = $rowinfodivision['members'];
 		  ?>
           
          
-      
-          
           
           
           
@@ -1076,15 +1083,20 @@ $membersact = $rowinfodivision['members'];
     <div class="container">
       <div class="row">
         <div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="300ms">
-          <h2>NOTICIAS</h2>
-          <p>Ultimas noticias de la Division.</p>
+          <h2>NEWS</h2>
+          <p>Last News of the division.</p>
         </div>
       </div>
       <div class="team-members">
         <div class="row">
             
-                
-         <?
+          
+          
+          
+          
+        
+		
+		 <?
 		 
 		 include('./db_login.php');
 		  
@@ -1131,11 +1143,11 @@ $membersact = $rowinfodivision['members'];
               </div>
               <div class="member-info">
                 <h3><?php echo $row23['nombre_examen']; ?></h3>
-                <h4>Examinado: <?php echo $row23['usuario']; ?></h4>
-                <p>Fecha: <?php echo $row23['fecha']; ?></p>
-                <p>Hora: <?php echo $row23['hora_inicio']; ?> HLC - <?php echo $row23['hora_utcinicio']; ?> UTC</p>
-                <p>Lugar: <?php echo $row23['lugar']; ?></p>
-                <p>Acompañalo</p>
+                <h4>User: <?php echo $row23['usuario']; ?></h4>
+                <p>Date: <?php echo $row23['fecha']; ?></p>
+                <p>Hour: <?php echo $row23['hora_inicio']; ?> HLC - <?php echo $row23['hora_utcinicio']; ?> UTC</p>
+                <p>Place: <?php echo $row23['lugar']; ?></p>
+                <p>Accompany!</p>
               </div>
               <div class="social-icons">
                 <ul>
@@ -1161,16 +1173,14 @@ $membersact = $rowinfodivision['members'];
 	
 	if ($ipp==0)
 	{
-	echo '<div class="alert alert-danger" role="alert">No hay Noticias o Examenes disponibles aún.</div>';
+	echo '<div class="alert alert-danger" role="alert">There are not news or exams available yet.</div>';
 	
 	 
 	} 
 		  
 		  
 		  ?>
-         
           
-        
           
           
         </div>
@@ -1193,8 +1203,8 @@ $membersact = $rowinfodivision['members'];
           <a target="_blank" href="http://www.aerocivil.gov.co/AIS/AIP/Paginas/Inicio.aspx">
           <i class="fa fa-map-o"></i>
           </a>
-          <h3>Cartas</h3>
-          <p>TMA, Aeródromos.</p>
+          <h3>Charts</h3>
+          <p>TMA, Aeródromes.</p>
         </div>
         
         
@@ -1218,7 +1228,7 @@ $membersact = $rowinfodivision['members'];
           <a target="_blank" href="http://tracker.ivao.aero/">
           <i class="fa fa-search"></i>  
           </a>                  
-          <h3>Rastreador</h3>
+          <h3>Tracker</h3>
           <p>IVAO Flght Tracker.</p>
         </div> 
          
@@ -1243,15 +1253,19 @@ $membersact = $rowinfodivision['members'];
     <div class="container">
       <div class="row">
         <div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="300ms">
-          <h2><b>Online</b></h2>
-          <p>Miembros de la división Colombiana en Línea</p>
+          <h2>Online</h2>
+          <p>Members from Colombia's Division online</p>
         </div>
       </div>
       <div class="pricing-table">
         <div class="row">
-      
-	  <?php include('onlines.php'); ?>
-              </div>
+          
+       <?php include('onlines.php'); ?>
+	   
+	   
+	   
+        </div>
+        
       </div>
     </div>
   </section><!--/#pricing-->
@@ -1271,7 +1285,7 @@ $membersact = $rowinfodivision['members'];
             <div class="twitter-icon text-center">
               <i class="fa fa-users"></i>
               <h3>STAFF</h3>
-              <h5>Agradecimientos a:</h5>
+              <h5>Thanks to:</h5>
             </div>
             <br>
             
@@ -1280,22 +1294,7 @@ $membersact = $rowinfodivision['members'];
                 
                 
                 
-                <!-- DIVISION HQ -->
-                
-              <!--  <div class="item active wow fadeIn" data-wow-duration="1000ms" data-wow-delay="300ms">
-                 <div>
-                    <p>DIVISION HQ </p>
-                    <img class="item" src="images/team/Foto.jpg" alt=""> 
-                    <img src="images/team/-DIR.gif" alt="" BORDER=0 hspace= 0>
-                    <img src="images/team/CO.gif" alt="" BORDER=0 hspace= 0><br>
-                  </div>
-                  <br>
-                  <p>Andres Hurtado - <span>CO-DIR - Colombia Director </span></p>
-                  <p> <a href="#"> <span> Email : </span> co-dir@ivao.aero</a></p>
-                </div>-->
-                
-				
-				 <?
+               	 <?
 		 
 		 include('./db_login.php');
 		  
@@ -1404,11 +1403,7 @@ $tiposs = $rowsst['nombre'];
 	
 	}
 	?>
-                
-                
-              
-             
-                
+               
                 
                 
                 
@@ -1461,15 +1456,17 @@ $tiposs = $rowsst['nombre'];
 	?>
       <div class="row">
         <div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="300ms">
-          <h2>Aerolíneas Virtuales de Colombia</h2>
-          <p>Has parte de alguna de las <?php echo $ippii; ?> Aerolíneas Virtuales que tiene la división de IVAO Colombia.</p>
+          <h2>Colombian Airlines Virtual</h2>
+          <p>Be part of one of the <?php echo $ippii; ?> virtual airlines that IVAO Colombian division has.</p>
         </div>
       </div>
       
       <div class="blog-posts">
         <div class="row">
-          
-          <?
+       
+	   
+	   
+	   <?
 		 
 		 include('./db_login.php');
 		  
@@ -1600,10 +1597,8 @@ $tiposs = $rowsst['nombre'];
 		  <?php
 		  }
 	?>
-          
         
-          
-       
+        
         
         </div>
         
@@ -1621,6 +1616,8 @@ $tiposs = $rowsst['nombre'];
   
   
   <!-- -------------------------- CONTACTAR ----------------------------- -->
+ 
+
 
   <section id="contact">
     <!--
@@ -1630,8 +1627,8 @@ $tiposs = $rowsst['nombre'];
       <div class="container">
         <div class="row">
           <div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
-            <h2>Contactenos</h2>
-            <p>Formulario de contacto</p>
+            <h2>Contact Us</h2>
+            <p>Contact Form</p>
           </div>
         </div>
         <div class="contact-form wow fadeIn" data-wow-duration="1000ms" data-wow-delay="600ms">
@@ -1642,7 +1639,7 @@ $tiposs = $rowsst['nombre'];
                   <div class="col-sm-6">
                     <div class="form-group">
                       <span>
-                      <input type="text" name="name" class="form-control" placeholder="Nombre" required="required">
+                      <input type="text" name="name" class="form-control" placeholder="Name" required="required">
                       </span>
                     </div>
                   </div>
@@ -1653,19 +1650,19 @@ $tiposs = $rowsst['nombre'];
                   </div>
                 </div>
                 <div class="form-group">
-                  <input type="text" name="subject" class="form-control" placeholder="Asunto" required="required">
+                  <input type="text" name="subject" class="form-control" placeholder="Subject" required="required">
                 </div>
                 <div class="form-group">
-                  <textarea name="message" id="message" class="form-control" rows="4" placeholder="Escriba su mensaje" required="required"></textarea>
+                  <textarea name="message" id="message" class="form-control" rows="4" placeholder="Enter your Message" required="required"></textarea>
                 </div>                        
                 <div class="form-group">
-                  <button type="submit" class="btn-submit">Inactivo</button>
+                  <button type="submit" class="btn-submit">Inactive</button>
                 </div>
               </form>   
             </div>
             <div class="col-sm-6">
               <div class="contact-info wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
-                <p>Contactanos también por.</p>
+                <p>Contact also.</p>
                 <ul class="address">
                   <!--
                   <li><i class="fa fa-map-marker"></i> <span> Direccion:</span> 2400 South Avenue A </li>
@@ -1685,7 +1682,8 @@ $tiposs = $rowsst['nombre'];
   <!-- -------------------------- CONTACTAR ----------------------------- -->
   
   
-  		<?php
+   
+  <?php
 	}
 	if (!isset($_GET["page"]) || trim($_GET["page"]) == "") {
 	} else {
@@ -1700,7 +1698,6 @@ $tiposs = $rowsst['nombre'];
 	
 
 ?>
-
   
   <footer id="footer">
     <div class="footer-top wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
@@ -1727,18 +1724,14 @@ $tiposs = $rowsst['nombre'];
         </div>
       </div>
     </div>
-	
-	
-	
-
     <div class="footer-bottom">
       <div class="container">
         <div class="row">
           <div class="col-sm-6">
-            <p>&copy; IVAO Colombia <?php echo date('Y'); ?>.</p>
+           <p>&copy; IVAO Colombia <?php echo date('Y'); ?>.</p>
           </div>
           <div class="col-sm-6">
-            <p class="pull-right">Diseño Web <a href="#">Andres Giraldo</a>  &  Sistematización <a href="#">Andres Zapata</a></p>
+            <p class="pull-right">Design WEB <a href="#">Andres Giraldo</a> &  Systematization <a href="#">Andres Zapata</a></p>
           </div>
         </div>
       </div>
