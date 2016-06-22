@@ -228,8 +228,8 @@ $vass = 0;
             </div>
             </a>
             <div class="service-info">
-              <h3>Virtual Airlines Colombia</h3>
-              <p>IVAO Colombia currently has 5 Virtual Airlines. In which you can supplement your training.</p>
+              <h3>Virtual Airlines</h3>
+              <p>IVAO Colombia currently has 5 Virtual Airlines. </p>
             </div>
           </div>
           
@@ -241,7 +241,7 @@ $vass = 0;
             </a>
             <div class="service-info">
               <h3>Online</h3>
-              <p>Colombia Online - Controllers Pilots, Staff, Ceos.</p>
+              <p>Colombia Online.</p>
             </div>
           </div>
         </div>
