@@ -78,7 +78,7 @@ include('./db_login.php');
                     <!-- Form Elements -->
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            Información Aerolínea
+                            Airline Information
                         </div>
                         <div class="panel-body">
                             <div class="row">
@@ -93,42 +93,42 @@ include('./db_login.php');
 								<hr>
 								
                                         <div class="form-group">
-                                            <label>Nombre Aerolínea</label>
+                                            <label>Airline Name</label>
                                             <input class="form-control" name="nombre" value="<?php echo $nombre_aerolinea; ?>" readonly="readonly"/>
 										
                                         </div>
 										 <div class="form-group">
-                                            <label>Tipo Aerolínea</label>
+                                            <label>Type of Airline</label>
                                            <input class="form-control" name="icaossa" value="<?php echo $tipo_aerolinea; ?>" readonly="readonly" />
 											
                                         </div>
 										<div class="form-group">
-                                            <label>Sistema Aerolínea</label>
+                                            <label>Airline System</label>
                                             <input class="form-control" name="icaoss" value="<?php echo $sistema; ?>"/ readonly="readonly" >
 											
                                         </div>
 										 <div class="form-group">
-                                            <label>ICAO Aerolínea</label>
+                                            <label>ICAO Airline</label>
 											<input class="form-control" name="icao" value="<?php echo $icao_aerolinea; ?>" readonly="readonly" />
                                         </div>
 										<div class="form-group">
-                                            <label>IATA Aerolínea</label>
+                                            <label>IATA Airline</label>
 											<input class="form-control" name="iata" value="<?php echo $iata_aerolinea; ?>" readonly="readonly" />
                                         </div>
 										<div class="form-group">
-                                            <label>Radio Aerolínea</label>
+                                            <label>Radio Airline</label>
 											<input class="form-control" name="radio" value="<?php echo $radio; ?>" readonly="readonly" />
                                         </div>
 										<div class="form-group">
-                                            <label>CEO Aerolínea</label>
+                                            <label>CEO Airline</label>
 											<input class="form-control" name="ceo" value="<?php echo $ceo; ?>" readonly="readonly" />
                                         </div>
 										<div class="form-group">
-                                            <label>URL Web <a href="<?php echo $web; ?>">Ver.</a></label>
+                                            <label>URL Web <a href="<?php echo $web; ?>">See.</a></label>
                                             <input class="form-control" name="url" value="<?php echo $web; ?>" readonly="readonly" />
                                         </div>
 										 <div class="form-group">
-                                            <label>Información Aerolínea</label>
+                                            <label>Airline Information</label>
 											<textarea class="form-control" name="info" readonly="readonly" ><?php echo $informacion; ?></textarea>
                                         </div>
 										
@@ -142,7 +142,7 @@ include('./db_login.php');
 								<br>
 								<br>
 								<hr>
-								<h1>Pilotos de <?php echo $nombre_aerolinea; ?></h1>
+								<h1><?php echo $nombre_aerolinea; ?>'s Pilots</h1>
 								
 								
 										<?php 
@@ -159,8 +159,8 @@ echo '<table id="table_list"  class="table table-hover" width="100%">
                                         <thead>
                                             <tr>
 												<th><b>Callsign</b></th>
-												<th><b>Nombre</b></th>
-												<th><b>Horas</b></th>
+												<th><b>Name</b></th>
+												<th><b>Hours</b></th>
 												<th><b>IVAO</b></th>
                                             </tr>
 											
@@ -207,7 +207,7 @@ $totalaa= $horasa.' h '.$minutosa.' m ';
 				</table>';
 							} else {
 								
-								    echo '<div class="alert alert-danger" role="alert">No hay información disponible.</div>';      
+								    echo '<div class="alert alert-danger" role="alert">There is not information available.</div>';      
 							}
 
 ?>	
@@ -218,7 +218,7 @@ $totalaa= $horasa.' h '.$minutosa.' m ';
 								
 								
 								<br>
-								<h1>Estadísticas de <?php echo $nombre_aerolinea; ?></h1>
+								<h1><?php echo $nombre_aerolinea; ?>'s Statistics</h1>
 								
 								
 								<?php 
@@ -248,27 +248,27 @@ $total= $horas.' h '.$minutos.' m ';
 				  
 				  echo '<table class="table table-striped" width="100%">
 				  <tbody><tr>
-					<td valign="top" width="20%"><strong>Pilotos:</strong></td>
+					<td valign="top" width="20%"><strong>Pilots:</strong></td>
 					<td valign="top" width="30%">' . $fields[0] . '</td>
-					<td valign="top" width="20%"><strong>Pasajeros:</strong></td>
+					<td valign="top" width="20%"><strong>Passengers:</strong></td>
 					<td valign="top" width="30%" >' . $fields[1] . '</td>
 				  </tr>
 				  <tr>
-					<td><strong>Horas:</strong></td>
+					<td><strong>Hours:</strong></td>
 					<td>' . $total . '</td>
-					<td><strong>Combustible Usado:</strong></td>
+					<td><strong>Fuel Burned:</strong></td>
 					<td>' . $fields[3] . '</td>
 				  </tr>
 				  <tr>
-					<td><strong>Vuelos:</strong></td>
+					<td><strong>Flights:</strong></td>
 					<td>' . $fields[4] . '</td>
-					<td><strong>Rutas:</strong></td>
+					<td><strong>Routes:</strong></td>
 					<td>' . $fields[7] . '</td>
 				  </tr>
 				  <tr>
-					<td><strong>Distancia:</strong></td>
+					<td><strong>Distance:</strong></td>
 					 <td>' . $fields[5] . '</td>
-					<td><strong>Aeronaves:</strong></td>
+					<td><strong>Aircrafts:</strong></td>
 					<td>+' . $fields[6] . '</td>   
 				  </tr>
 				</tbody>
@@ -277,7 +277,7 @@ $total= $horas.' h '.$minutos.' m ';
 
 } else {
 								
-								    echo '<div class="alert alert-danger" role="alert">No hay información disponible.</div>';      
+								    echo '<div class="alert alert-danger" role="alert">There is not information available.</div>';      
 							}
 
 
@@ -304,11 +304,11 @@ echo '<table id="table_list"  class="table table-hover" width="100%">
                                         <thead>
                                             <tr>
 												<th><b>Callsign</b></th>
-												<th><b>Nombre</b></th>
-												<th><b>Origen</b></th>
-												<th><b>Destino</b></th>
-												<th><b>Fecha</b></th>
-												<th><b>Duracion</b></th>
+												<th><b>Name</b></th>
+												<th><b>Departure</b></th>
+												<th><b>Arrival</b></th>
+												<th><b>Date</b></th>
+												<th><b>Duration</b></th>
                                             </tr>
 											
                                         </thead>
@@ -365,13 +365,13 @@ $minutospe = floor(($segundospe-($horaspe*3600))/60);
 $segundospe = $segundospe-($horaspe*3600)-($minutospe*60);
 $totalpe= $horaspe.' h '.$minutospe.' m ';
 
- echo '<div class="alert alert-success" role="alert">Hay ' . $totalpe . ' horas realizadas este mes, por esta aerolinea.</div>';
+ echo '<div class="alert alert-success" role="alert">There are ' . $totalpe . ' hours made in this month by this airline.</div>';
  
 				echo '</tbody>
 				</table>';
 							} else {
 								
-								    echo '<div class="alert alert-danger" role="alert">No hay información disponible.</div>';      
+								    echo '<div class="alert alert-danger" role="alert">There is not information available.</div>';      
 							}
 
 ?>	

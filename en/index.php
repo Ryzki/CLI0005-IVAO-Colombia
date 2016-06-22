@@ -33,7 +33,16 @@
   <div class="preloader"> <i class="fa fa-circle-o-notch fa-spin"></i></div>
   <!--/.preloader-->
 
-  <header id="home">
+
+  
+  
+  <!-- ------------------------- Menu --------------------------- -->
+    <?php
+	if (!isset($_GET["page"]) || trim($_GET["page"]) == "") {
+		?>
+  
+  <!-- ------------------------- IVAO Colombia --------------------------- -->
+    <header id="home">
     <div id="home-slider" class="carousel slide carousel-fade" data-ride="carousel">
       <div class="carousel-inner">
         <div class="item active" style="background-image: url(images/slider/1.jpg)">
@@ -121,7 +130,7 @@ $vass = 0;
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.html">
+          <a class="navbar-brand" href="./">
             <h1><img class="img-responsive" src="images/logo.png" alt="logo"></h1>
           </a>                    
         </div>
@@ -139,7 +148,7 @@ $vass = 0;
             <li class="scroll"><a href="#atc-ss">ATC</a></li>
             <li class="scroll"><a href="#team">Events</a></li>
             <li class="scroll"><a href="#features">Resources</a></li>
-            <li class="scroll"><a href="#pricing">On Line</a></li>
+            <li class="scroll"><a href="#pricing">Online</a></li>
             <li class="scroll"><a href="#blog">Airlines VA</a></li>
             <li class="scroll"><a href="#contact">Contact Us</a></li>       
           </ul>
@@ -148,13 +157,6 @@ $vass = 0;
     </div><!--/#main-nav-->
   </header><!--/#home-->
   
-  
-  <!-- ------------------------- Menu --------------------------- -->
-    <?php
-	if (!isset($_GET["page"]) || trim($_GET["page"]) == "") {
-		?>
-  
-  <!-- ------------------------- IVAO Colombia --------------------------- -->
   
   <section id="services">
     <div class="container">
@@ -1684,6 +1686,52 @@ $tiposs = $rowsst['nombre'];
   
    
   <?php
+	} else {
+		
+		?>
+		
+		  <header id="home">
+  
+    <div class="main-nav">
+      
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="./">
+            <h1><img class="img-responsive" src="images/logo.png" alt="logo"></h1>
+          </a>                    
+        </div>
+        </div>
+        
+        <br>
+        
+        <div class="container">
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">                 
+            <li class="scroll active"><a href="#home">Home</a></li>
+            <li class="scroll"><a href="#services">IVAO COL</a></li> 
+            <li class="scroll"><a href="#portfolio">Pilots</a></li>
+            <li class="scroll"><a href="#controladores">Controllers</a></li>
+            <li class="scroll"><a href="#atc-ss">ATC</a></li>
+            <li class="scroll"><a href="#team">Events</a></li>
+            <li class="scroll"><a href="#features">Resources</a></li>
+            <li class="scroll"><a href="#pricing">Online</a></li>
+            <li class="scroll"><a href="#blog">Airlines VA</a></li>
+            <li class="scroll"><a href="#contact">Contact Us</a></li>       
+          </ul>
+        </div>
+      </div>
+    </div><!--/#main-nav-->
+  </header><!--/#home-->
+  
+  
+  <?php
+		
 	}
 	if (!isset($_GET["page"]) || trim($_GET["page"]) == "") {
 	} else {

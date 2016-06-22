@@ -31,6 +31,15 @@
   <div class="preloader"> <i class="fa fa-circle-o-notch fa-spin"></i></div>
   <!--/.preloader-->
 
+  
+  
+  
+  <!-- ------------------------- Menu --------------------------- -->
+  
+  <?php
+	if (!isset($_GET["page"]) || trim($_GET["page"]) == "") {
+		?>
+  <!-- ------------------------- IVAO Colombia --------------------------- -->
   <header id="home">
     <div id="home-slider" class="carousel slide carousel-fade" data-ride="carousel">
       <div class="carousel-inner">
@@ -154,13 +163,6 @@ $vass = 0;
     </div><!--/#main-nav-->
   </header><!--/#home-->
   
-  
-  <!-- ------------------------- Menu --------------------------- -->
-  
-  <?php
-	if (!isset($_GET["page"]) || trim($_GET["page"]) == "") {
-		?>
-  <!-- ------------------------- IVAO Colombia --------------------------- -->
   
   <section id="services">
     <div class="container">
@@ -1686,11 +1688,63 @@ $tiposs = $rowsst['nombre'];
   
   
   		<?php
+	} else {
+		?>
+		<header id="home">
+
+    <div class="main-nav">
+      
+      <div class="container">
+      <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="./">
+            <h1><img class="img-responsive" src="images/logo.png" alt="logo"></h1>
+          </a>                    
+        </div>
+        </div>
+      
+       <br>
+       
+      <div class="container">
+        
+       
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">                 
+            <li class="scroll active"><a href="./#home">Inicio</a></li>
+            <li class="scroll"><a href="./#services">IVAO COL</a></li> 
+            <li class="scroll"><a href="./#portfolio">Pilotos</a></li>
+            <li class="scroll"><a href="./#controladores">Controladores</a></li>
+            <li class="scroll"><a href="./#atc-ss">ATC</a></li>
+            <li class="scroll"><a href="./#team">Eventos</a></li>
+            <li class="scroll"><a href="./#features">Recursos</a></li>
+            <li class="scroll"><a href="./#pricing">Online</a></li>
+            <li class="scroll"><a href="./#blog">Aerolineas VA</a></li>
+            <li class="scroll"><a href="./#contact">Contactenos</a></li>   
+			
+          </ul>
+        </div>
+      </div>
+    </div><!--/#main-nav-->
+  </header><!--/#home-->
+  
+  <?
+		
 	}
 	if (!isset($_GET["page"]) || trim($_GET["page"]) == "") {
 	} else {
 		$Existe = file_exists($_GET["page"] . ".php");
 		if ($Existe == true) {
+			
+			?>
+			
+			
+			
+			<?
 			include($_GET["page"] . ".php");
 		} else {
 			echo "Page Not Found";

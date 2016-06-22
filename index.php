@@ -53,18 +53,42 @@
 				</li>
 
 				<li>
-					<a class="nav-link about-content">
+					<a class="nav-link services-content">
 						<i class="icon ion-ios-people-outline"></i>
-						About
+						Info
 					</a>
 				</li>
+				
+				
+				
+
+			
 
 			
 
 			</ul> <!-- CLOSE Main nav -->
 
 			<ul class="bottom-nav">
-
+			<li class="google-color">
+					<a target="_blanck" href="https://plus.google.com/u/0/109843136396902602405" title="">
+						<i class="icon ion-social-google-outline"></i>
+						Google
+					</a>
+				</li>
+			<li class="instagram-color">
+					<a target="_blanck" href="https://www.instagram.com/ivaocolombia/" title="">
+						<i class="icon ion-social-instagram-outline"></i>
+						Instagram
+					</a>
+				</li>
+				
+                <li class="youtube-color">
+					<a target="_blanck" href="https://www.youtube.com/channel/UCOUr_AMGqcMu2JZwSCzWPQA" title="">
+						<i class="icon ion-social-youtube-outline"></i>
+						Youtube
+					</a>
+				</li>
+				
 				<li class="twitter-color">
 					<a target="_blanck" href="https://twitter.com/ivaoco" title="">
 						<i class="icon ion-social-twitter-outline"></i>
@@ -98,8 +122,8 @@
 					<div class="cd-words-wrapper">
 
 						<b class="is-visible">Una &nbsp;División!</b> <!-- use the code &nbsp; to add a space between 2 words -->
-						<b>Responsables</b>
-						<b>De &nbsp;Calidad</b>
+						<b>Los &nbsp;Mejores!</b>
+						<b>Profesionales &nbsp;del &nbsp;aire!</b>
 
 					</div>
 
@@ -144,25 +168,23 @@
 
 			<div class="inner-content" id="about-content">
 
-				<h2>Information</h2>
+				<h2>Information | Information</h2>
 				<div class="separator"></div>
 
 				<div class="row">
 
 					<div class="col-xs-12 col-sm-12 col-lg-6">
-						<p>IVAO ™, International Virtual Aviation Organisation ™ offers a dedicated service, independent and free of charge to enthusiasts who are part of the flight simulation community worldwide. IVAO ™ was created to provide high quality services to its users.<br>
-
-The primary objective of IVAO ™ is to provide the community simulation flight a realistic environment as possible. This includes a flight system (for pilots), one air traffic control databases with international aeronautical information, events and training.
-
-
-						</p>
+						<p>In this page, you can find the important websites about Colombian Aviation from IVAO Colombia.<br>
+						   We have: Events, News, Notams, Airlines, Real Flight Events and Training Center.</p>
 					</div>
 
 					<div class="col-xs-12 col-sm-12 col-lg-6">
-						<p>IVAO ™ allows them to fly and / or control in the simulated environment as realistic as possible, even with real-world weather. You can receive training and enjoy our free community.
-
-<br>Join the largest group of aviators in Colombia.</p>
+						<p>En esta página, tu puedes encontrar los sitios webs importantes acerca de la aviación Colombiana desde IVAO Colombia.<br>
+                           Nosotros tenemos: Eventos, Noticias, Notams, Aerolineas, Eventos de Vuelo Real y Centro de Entrenamiento.						</p>
 					</div>
+					<br>
+					<hr>
+					<h2>Check! | Mira!</h2>
 
 				</div>
 
@@ -172,13 +194,13 @@ The primary objective of IVAO ™ is to provide the community simulation flight 
 
 				<div class="col-xs-12 col-sm-6 col-lg-6">
 
-					<a href="https://www.ivao.aero/softdev/IvAc/home.asp" title="Software IVAC" class="swipebox">
+					<a href="#" title="RFE Colombia" class="swipebox">
 
 					<div class="large-square">
 
 						<div class="hover-info">
-				            <h4>IvAc ATC</h4>
-				            <span class="date-info">From IVAO.</span>
+				            <h4>RFE Colombia</h4>
+				            <span class="date-info">From IVAO CO.</span>
 				        </div>    
 
 					</div>
@@ -191,13 +213,13 @@ The primary objective of IVAO ™ is to provide the community simulation flight 
 
 					<div class="col-xs-12 col-sm-6 col-lg-6">
 
-						<a href="img/gallery-2.jpg" title="Software IvAp" class="swipebox">
+						<a href="#" title="Training Colombia" class="swipebox">
 
 							<div class="small-square">
 
 								<div class="hover-info">
-						            <h4>IvAp Pilots</h4>
-						            <span class="date-info">From IVAO.</span>
+						            <h4>Training Colombia</h4>
+						            <span class="date-info">From IVAO CO.</span>
 						        </div>
 
 						    </div>
@@ -208,13 +230,13 @@ The primary objective of IVAO ™ is to provide the community simulation flight 
 
 					<div class="col-xs-12 col-sm-6 col-lg-6">
 
-						<a href="https://www.ivao.aero/ViewDocument.aspx?Path=/training:atc:ratings" title="Ranks ATC" class="swipebox">
+						<a href="#" title="Events Colombia" class="swipebox">
 
 						<div class="small-square second">
 
 							<div class="hover-info">
-					            <h4>Information Ranks ATC</h4>
-					            <span class="date-info">From IVAO.</span>
+					            <h4>Events Colombia</h4>
+					            <span class="date-info">From IVAO CO.</span>
 					        </div>
 
 					    </div>
@@ -225,13 +247,13 @@ The primary objective of IVAO ™ is to provide the community simulation flight 
 
 					<div class="col-xs-12 col-sm-6 col-lg-6">
 
-						<a href="https://www.ivao.aero/ViewDocument.aspx?Path=/training:pilot:ratings" title="Ranks Pilots" class="swipebox">
+						<a href="#" title="News Colombia" class="swipebox">
 
 						<div class="small-square third">
 
 							<div class="hover-info">
-					            <h4>Information Ranks Pilots</h4>
-					            <span class="date-info">From IVAO.</span>
+					            <h4>News Colombia</h4>
+					            <span class="date-info">From IVAO CO.</span>
 					        </div>
 
 					    </div>
