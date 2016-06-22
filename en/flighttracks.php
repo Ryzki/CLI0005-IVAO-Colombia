@@ -98,12 +98,12 @@ $fecha = $fecha1->diff($fecha2);
 
 
 	?>
-<h1>Información de Piloto</h1>
+<h1>Pilot Information</h1>
 <hr>
 <br>
-<h3><b>Piloto</b></h3>
+<h3><b>Pilot</b></h3>
  <div class="form-group">
-          <label>Nombre Piloto</label>
+          <label>Pilot's Name</label>
           <input class="form-control" name="1" value="<?php echo $nombres; ?>" readonly="readonly"/>
  </div>
   <div class="form-group">
@@ -111,53 +111,53 @@ $fecha = $fecha1->diff($fecha2);
           <input class="form-control" name="2" value="<?php echo $vid; ?>" readonly="readonly"/>
  </div>
   <div class="form-group">
-          <label>Rango IVAO</label>
+          <label>IVAO Rank</label>
           <input class="form-control" name="3" value="<?php echo $rank; ?>" readonly="readonly"/>
  </div>
  <br>
-<h3><b>Plan de Vuelo</b></h3>
+<h3><b>Flight Plan</b></h3>
  <div class="form-group">
-          <label>Origen</label>
+          <label>Departure</label>
           <input class="form-control" name="14" value="<?php echo $departure; ?>" readonly="readonly"/>
  </div>
   <div class="form-group">
-          <label>Destino</label>
+          <label>Arrival</label>
           <input class="form-control" name="24" value="<?php echo $arrival; ?>" readonly="readonly"/>
  </div>
   <div class="form-group">
-          <label>Nivel de Vuelo</label>
+          <label>Flight Level</label>
           <input class="form-control" name="34" value="<?php echo $altitud; ?> ft AMSL" readonly="readonly"/>
  </div>
   <div class="form-group">
-          <label>Velocidad</label>
+          <label>Speed</label>
           <input class="form-control" name="34" value="<?php echo $groundspeed; ?> kts" readonly="readonly"/>
  </div>
  <div class="form-group">
-                                            <label>Ruta</label>
+                                            <label>Route</label>
 											<textarea class="form-control" name="info" readonly="readonly" ><?php echo $ruta; ?></textarea>
                                         </div>
 										 <div class="form-group">
                                             <label>Remarks</label>
 											<textarea class="form-control" name="info" readonly="readonly" ><?php echo $rmk; ?></textarea>
                                         </div>
-										<h3><b>Aeronave</b></h3>
+										<h3><b>Aircraft</b></h3>
 										 <div class="form-group">
-          <label>Tipo</label>
+          <label>Type</label>
           <input class="form-control" name="34" value="<?php echo $aeronave; ?>" readonly="readonly"/>
  </div>
   <div class="form-group">
-          <label>Categoria</label>
+          <label>Category</label>
           <input class="form-control" name="34" value="<?php echo $tipe; ?>" readonly="readonly"/>
  </div>
 										
 									
   <div class="form-group">
-          <label>Tiempo en línea</label>
+          <label>Online for</label>
           <input class="form-control" name="34" value="<?php printf('%d h  %d minutos', $fecha->h, $fecha->i); ?>" readonly="readonly"/>
  </div>
  
   <div class="form-group">
-          <label>Ubicación del Control</label>
+          <label>Pilot's Location</label>
          
 		 <td ><iframe src="./mappca.php?ubicacion=<?php echo $posicionuna; ?>&ubicaciondos=<?php echo $posiciondos; ?>&icaos=<?php echo $cs; ?>&freq=<?php echo $departure . ' - ' . $arrival ; ?>&rank=<?php echo $aeronave; ?>&vid=<?php echo $vid; ?>&name=<?php echo $nombres; ?>&hdg=<?php echo $rumbo; ?>&altura=<?php echo $altitud; ?>&speed=<?php echo $groundspeed; ?>" width="100%" height="600px"></iframe></td>
 		 
