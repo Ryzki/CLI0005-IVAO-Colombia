@@ -16,6 +16,8 @@ Variables: Definition for IVAO connection.
 define('cookie_name', 'rfe_token');
 define('login_url', 'http://login.ivao.aero/index.php');
 define('api_url', 'http://login.ivao.aero/api.php');
+//define('api_url', 'http://api.ivao.aero/getdata/whazzup/whazzup.txt');
+//define('api_url', 'http://api.ivao.aero/getdata/whazzup/whazzup.txt.gz');
 define('url', 'http://www.ivaocol.com.co/RFEColombia/');
 
 /*========================================================================
