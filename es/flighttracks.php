@@ -120,11 +120,11 @@ $fecha = $fecha1->diff($fecha2);
  </div>
   <div class="form-group">
           <label>Nivel de Vuelo</label>
-          <input class="form-control" name="34" value="<?php echo $altitud; ?>" readonly="readonly"/>
+          <input class="form-control" name="34" value="<?php echo $altitud; ?> ft AMSL" readonly="readonly"/>
  </div>
   <div class="form-group">
           <label>Velocidad</label>
-          <input class="form-control" name="34" value="<?php echo $groundspeed; ?>" readonly="readonly"/>
+          <input class="form-control" name="34" value="<?php echo $groundspeed; ?> kts" readonly="readonly"/>
  </div>
  <div class="form-group">
                                             <label>Ruta</label>

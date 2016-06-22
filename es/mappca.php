@@ -1,4 +1,10 @@
-﻿<?php
+﻿
+<?php
+$self = $_SERVER['PHP_SELF']; //Obtenemos la página en la que nos encontramos
+header("refresh:300; url=$self"); //Refrescamos cada 300 segundos
+?>
+
+<?php
 	
 	$latitudine_centro = $_GET['ubicacion'];
 	$longitudine_centro = $_GET['ubicaciondos'];
