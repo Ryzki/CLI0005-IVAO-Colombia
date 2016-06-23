@@ -17,8 +17,8 @@ miIframe.style.height=alturaPagina;
 <body>
 <!--START IFRAME-->
 <div align="left"><iframe
-src="https://www.ivao.aero/ViewDocument.aspx?Path=training:atc:first_steps"
-scrolling="no" align="middle" width="1100" height="6000"
+src="https://doc.ivao.aero/training:atc:first_steps"
+ align="middle" width="1100" height="6000"
 frameborder="no" id ="miIframe" allowtransparency="true" background-color="transparent" onLoad="resizeIframe();"></iframe> 
 <!--END IFRAME-->
 </body>

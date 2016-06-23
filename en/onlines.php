@@ -308,7 +308,7 @@ if (substr_count($controller[0],'_') == 1) {
         // Level
         $level = $ctrlevel[$controller[16]];
         
-        echo '<tr><td width="60"><li><a href="./?page=flighttrack&cs='. $controller[0] .'" onClick="MM_openBrWindow(\'./?page=flighttrack&cs='. $controller[0] .'\',\'\',\'scrollbars=yes,resizable=yes,width=700,height=600\');return false" target="_blank"><font color="red">' . $position . '</font></a></td><td><a href="http://www.ivao.aero/members/person/details.asp?id=' . $controller[1] . '" onClick="MM_openBrWindow(\'http://www.ivao.aero/members/person/details.asp?id=' . $controller[1] . '\',\'\',\'scrollbars=yes,resizable=yes,width=800,height=600\');return false" target="_blank" title="' . $realname . '"><font color="red">' . $controller[1] . '</font></a>&nbsp;(' . $level . ')</li></td></tr>';
+        echo '<tr><td width="60"><li><a href="./?page=flighttrack&cs='. $controller[0] .'" onClick="MM_openBrWindow(\'./?page=flighttrack&cs='. $controller[0] .'\',\'\',\'scrollbars=yes,resizable=yes,width=700,height=600\');return false"><font color="red">' . $position . '</font></a></td><td><a href="http://www.ivao.aero/members/person/details.asp?id=' . $controller[1] . '" onClick="MM_openBrWindow(\'http://www.ivao.aero/members/person/details.asp?id=' . $controller[1] . '\',\'\',\'scrollbars=yes,resizable=yes,width=800,height=600\');return false" target="_blank" title="' . $realname . '"><font color="red">' . $controller[1] . '</font></a>&nbsp;(' . $level . ')</li></td></tr>';
     }
     echo '</table>';
 } else {
@@ -331,7 +331,7 @@ if (count($pilots) != 0) {
             $realname = substr($realname,0,-5);
         }
         $realname = remove_accents(ucwords($pilot[2]));
-        echo '<tr><td width="50"><a href="./?page=flighttracks&cs=' . $pilot[0] . '" onClick="MM_openBrWindow(\'./?page=flighttracks&cs=' . $pilot[0] . '\',\'\',\'scrollbars=yes,resizable=yes,width=700,height=600\');return false" target="_blank" title="' . $realname . '"><font color="red">' . $pilot[0] . '</font></a></td><td width="30">' . $pilot[11] . '</td><td>&gt;&nbsp;' . $pilot[13] . '</td></tr>';
+        echo '<tr><td width="50"><a href="./?page=flighttracks&cs=' . $pilot[0] . '" onClick="MM_openBrWindow(\'./?page=flighttracks&cs=' . $pilot[0] . '\',\'\',\'scrollbars=yes,resizable=yes,width=700,height=600\');return false" title="' . $realname . '"><font color="red">' . $pilot[0] . '</font></a></td><td width="30">' . $pilot[11] . '</td><td>&gt;&nbsp;' . $pilot[13] . '</td></tr>';
     }
     echo '</table>';
 } else {

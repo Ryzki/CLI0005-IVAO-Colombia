@@ -1,5 +1,5 @@
 	<div class="container">
-	<h1>Primeros Pasos para Pilotos</h1>
+	<h1>Ranks for Controllers</h1>
 	<hr>
 	
 
@@ -17,8 +17,8 @@ miIframe.style.height=alturaPagina;
 <body>
 <!--START IFRAME-->
 <div align="left"><iframe
-src="https://doc.ivao.aero/training:pilot:first_steps"
-align="middle" width="1100" height="6000"
+src="https://doc.ivao.aero//training:atc:ratings"
+ scrolling="no" align="middle" width="1100" height="1100"
 frameborder="no" id ="miIframe" allowtransparency="true" background-color="transparent" onLoad="resizeIframe();"></iframe> 
 <!--END IFRAME-->
 </body>

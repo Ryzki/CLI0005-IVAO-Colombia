@@ -139,18 +139,90 @@ $vass = 0;
         <br>
         
         <div class="container">
+		 <style type="text/css">
+			
+			* {
+				margin:0px;
+				padding:0px;
+			}
+			
+			#header {
+				margin:auto;
+				width:500px;
+				font-family: 'Open Sans', sans-serif;
+			}
+			
+			ul, ol {
+				list-style:none;
+			}
+			
+			.nav > li {
+				float:left;
+			}
+			
+			.nav li a {
+				background-color:#028fcc;
+				color:#fff;
+				text-decoration:none;
+				padding:10px 12px;
+				display:block;
+			}
+			
+			.nav li a:hover {
+				background-color:#047AAC;
+				
+			}
+			
+			.nav li ul {
+				display:none;
+				position:absolute;
+				min-width:140px;
+			}
+			
+			.nav li:hover > ul {
+				display:block;
+			}
+			
+			.nav li ul li {
+				position:relative;
+			}
+			
+			.nav li ul li ul {
+				right:-140px;
+				top:0px;
+			}
+			
+		</style>
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav navbar-right">                 
-            <li class="scroll active"><a href="#home">Home</a></li>
-            <li class="scroll"><a href="#services">IVAO COL</a></li> 
-            <li class="scroll"><a href="#portfolio">Pilots</a></li>
-            <li class="scroll"><a href="#controladores">Controllers</a></li>
-            <li class="scroll"><a href="#atc-ss">ATC</a></li>
-            <li class="scroll"><a href="#team">Events</a></li>
-            <li class="scroll"><a href="#features">Resources</a></li>
-            <li class="scroll"><a href="#pricing">Online</a></li>
-            <li class="scroll"><a href="#blog">Airlines VA</a></li>
-            <li class="scroll"><a href="#contact">Contact Us</a></li>       
+            <li class="scroll active"><a href="./#home">Home</a></li>
+            <li class="scroll"><a href="./#services">IVAO COL</a></li> 
+            <li class="scroll"><a>Pilots</a>
+							<ul>
+								<li class="scroll"><a href="./?page=registrar">Registration</a></li>
+								<li class="scroll"><a href="./?page=rankpca">Ranks</a></li>
+								<li class="scroll"><a href="./?page=pcastep">First Steps</a></li>
+								<li class="scroll"><a href="./?page=forma">Formation</a></li>
+								<li class="scroll"><a href="http://www.aerocivil.gov.co/AIS/AIP/Paginas/Inicio.aspx">Charts</a></li>
+								<li class="scroll"><a href="https://www.ivao.aero/softdev/ivap.asp">IvAp Software</a></li>
+							</ul>
+		    </li>
+			<li class="scroll"><a>Controllers</a>
+							<ul>
+								<li class="scroll"><a href="./?page=registrar">Registration</a></li>
+								<li class="scroll"><a href="./?page=rankatc">Ranks</a></li>
+								<li class="scroll"><a href="./?page=atcstep">First Steps</a></li>
+								<li class="scroll"><a href="./?page=formatc">Formation</a></li>
+								<li class="scroll"><a href="https://mega.nz/#F!mZYzxIAB!M5hD_lr_6tyj4_2yIaiJvg">Sector Files</a></li>
+								<li class="scroll"><a href="https://www.ivao.aero/softdev/ivac.asp">IvAc Software</a></li>
+							</ul>
+		    </li>
+            <li class="scroll"><a href="./#atc-ss">ATC</a></li>
+            <li class="scroll"><a href="./#team">Events</a></li>
+            <li class="scroll"><a href="./#features">Resources</a></li>
+            <li class="scroll"><a href="./#pricing">Online</a></li>
+            <li class="scroll"><a href="./#blog">Airlines VA</a></li>
+            <li class="scroll"><a href="./#contact">Contact Us</a></li>       
           </ul>
         </div>
       </div>
@@ -395,513 +467,13 @@ $membersact = $rowinfodivision['members'];
   
   
 
-  <!-- ----------------------- PILOTOS ---------------------------- -->
-  
-  <section id="portfolio">
-    <div class="container">
-      <div class="row">
-        <div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
-          <h2>PILOTS</h2>
-          <p>IVAO Colombia has more than <?php echo  $pcas; ?> active virtual pilots.</p>
-        </div>
-      </div> 
-    </div>
-    <div class="container-fluid">
-      <div class="row">
-        
-        <div class="col-sm-3">
-          <div class="folio-item wow fadeInRightBig" data-wow-duration="1000ms" data-wow-delay="300ms">
-            <div class="folio-image">
-              <img class="img-responsive" src="images/P&C/P_Register.png" alt="">
-            </div>
-            <div class="overlay">
-              <div class="overlay-content">
-                <div class="overlay-text">
-                  <div class="folio-info">
-                    <h3>Register</h3>
-                    <p>New Virtual Pilot</p>
-                  </div>
-                  <div class="folio-overview">
-                      
-                    <a class="facebook" target="_blanck" href="https://www.ivao.aero/members/person/register.htm" ><i class="fa fa-link"></i></a>
-                    <!--
-                    <span class="folio-link"><a class="folio-read-more" target="_blanck" href="https://www.ivao.aero/members/person/register.htm" data-single_url="portfolio-single.html"><i class="fa fa-link"></i></a></span>
-                    <span class="folio-expand"><a target="_blanck" href="https://www.ivao.aero/members/person/register.htm" data-lightbox="portfolio"><i class="fa fa-search-plus"></i></a></span>
-                    -->
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <div class="col-sm-3">
-          <div class="folio-item wow fadeInRightBig" data-wow-duration="1000ms" data-wow-delay="300ms">
-            <div class="folio-image">
-              <img class="img-responsive" src="images/P&C/P_Rangos.png" alt="">
-            </div>
-            <div class="overlay">
-              <div class="overlay-content">
-                <div class="overlay-text">
-                  <div class="folio-info">
-                    <h3>Rank</h3>
-                    <p>IVAO Pilot Rank</p>
-                  </div>
-                  <div class="folio-overview">
-                      
-                    <a class="facebook" target="_blanck" href="https://ivao.aero/ViewDocument.aspx?Path=/training:pilot:ratings" ><i class="fa fa-link"></i></a>
-                    <!--
-                    <span class="folio-link"><a class="folio-read-more" target="_blanck" href="https://www.ivao.aero/members/person/register.htm" data-single_url="portfolio-single.html"><i class="fa fa-link"></i></a></span>
-                    <span class="folio-expand"><a target="_blanck" href="https://www.ivao.aero/members/person/register.htm" data-lightbox="portfolio"><i class="fa fa-search-plus"></i></a></span>
-                    -->
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <div class="col-sm-3">
-          <div class="folio-item wow fadeInRightBig" data-wow-duration="1000ms" data-wow-delay="300ms">
-            <div class="folio-image">
-              <img class="img-responsive" src="images/P&C/P_Primeros Pasos.gif" alt="">
-            </div>
-            <div class="overlay">
-              <div class="overlay-content">
-                <div class="overlay-text">
-                  <div class="folio-info">
-                    <h3>First steps</h3>
-                    <p>Guide to start</p>
-                  </div>
-                  <div class="folio-overview">
-                      
-                    <a class="facebook" target="_blanck" href="https://ivao.aero/ViewDocument.aspx?Path=training:pilot:first_steps" ><i class="fa fa-link"></i></a>
-                    <!--
-                    <span class="folio-link"><a class="folio-read-more" target="_blanck" href="https://www.ivao.aero/members/person/register.htm" data-single_url="portfolio-single.html"><i class="fa fa-link"></i></a></span>
-                    <span class="folio-expand"><a target="_blanck" href="https://www.ivao.aero/members/person/register.htm" data-lightbox="portfolio"><i class="fa fa-search-plus"></i></a></span>
-                    -->
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-       <div class="col-sm-3">
-          <div class="folio-item wow fadeInRightBig" data-wow-duration="1000ms" data-wow-delay="300ms">
-            <div class="folio-image">
-              <img class="img-responsive" src="images/P&C/P_Formacion.png" alt="">
-            </div>
-            <div class="overlay">
-              <div class="overlay-content">
-                <div class="overlay-text">
-                  <div class="folio-info">
-                    <h3>School</h3>
-                    <p>Start your school as a pilot</p>
-                  </div>
-                  <div class="folio-overview">
-                      
-                    <a class="facebook" target="_blanck" href="https://ivao.aero/training/documentation/index.php?section=fsx" ><i class="fa fa-link"></i></a>
-                    <!--
-                    <span class="folio-link"><a class="folio-read-more" target="_blanck" href="https://www.ivao.aero/members/person/register.htm" data-single_url="portfolio-single.html"><i class="fa fa-link"></i></a></span>
-                    <span class="folio-expand"><a target="_blanck" href="https://www.ivao.aero/members/person/register.htm" data-lightbox="portfolio"><i class="fa fa-search-plus"></i></a></span>
-                    -->
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <div class="col-sm-3">
-          <div class="folio-item wow fadeInLeftBig" data-wow-duration="1000ms" data-wow-delay="400ms">
-            <div class="folio-image">
-              <img class="img-responsive" src="images/P&C/P_Entrenamiento.jpg" alt="">
-            </div>
-            <div class="overlay">
-              <div class="overlay-content">
-                <div class="overlay-text">
-                  <div class="folio-info">
-                    <h3>Training</h3>
-                    <p>Pilot Training</p>
-                  </div>
-                  <div class="folio-overview">
-                    <a class="tumblr" target="_blanck" href="#" ><i class="fa fa-link"></i></a>
-                    <!--  
-                    <span class="folio-link"><a class="folio-read-more" href="#" data-single_url="portfolio-single.html" ><i class="fa fa-link"></i></a></span>
-                    <span class="folio-expand"><a href="images/portfolio/portfolio-details.jpg" data-lightbox="portfolio"><i class="fa fa-search-plus"></i></a></span>
-                    -->
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <div class="col-sm-3">
-          <div class="folio-item wow fadeInRightBig" data-wow-duration="1000ms" data-wow-delay="500ms">
-            <div class="folio-image">
-              <img class="img-responsive" src="images/P&C/P_Cartas.jpg" alt="">
-            </div>
-            <div class="overlay">
-              <div class="overlay-content">
-                <div class="overlay-text">
-                  <div class="folio-info">
-                    <h3>Charts</h3>
-                    <p>Aeródremes, TMA</p>
-                  </div>
-                  <div class="folio-overview">
-                    <a class="facebook" target="_blanck" href="http://www.aerocivil.gov.co/AIS/AIP/Paginas/Inicio.aspx" ><i class="fa fa-link"></i></a>
-                    <!--
-                    <span class="folio-link"><a class="folio-read-more" href="#" data-single_url="portfolio-single.html" ><i class="fa fa-link"></i></a></span>
-                    <span class="folio-expand"><a href="images/portfolio/portfolio-details.jpg" data-lightbox="portfolio"><i class="fa fa-search-plus"></i></a></span>
-                    -->
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        
-        <div class="col-sm-3">
-          <div class="folio-item wow fadeInLeftBig" data-wow-duration="1000ms" data-wow-delay="600ms">
-            <div class="folio-image">
-              <img class="img-responsive" src="images/P&C/P_Software.jpg" alt="">
-            </div>
-            <div class="overlay">
-              <div class="overlay-content">
-                <div class="overlay-text">
-                  <div class="folio-info">
-                    <h3>IVAP Software</h3>
-                    <p>Dowload IVAP</p>
-                  </div>
-                  <div class="folio-overview">
-                    <a class="facebook" target="_blanck" href="https://www.ivao.aero/softdev/ivap.asp" ><i class="fa fa-link"></i></a>
-                    <!--  
-                    <span class="folio-link"><a class="folio-read-more" href="#" data-single_url="portfolio-single.html" ><i class="fa fa-link"></i></a></span>
-                    <span class="folio-expand"><a href="images/portfolio/portfolio-details.jpg" data-lightbox="portfolio"><i class="fa fa-search-plus"></i></a></span>
-                    -->
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        
-        <!--
-        <div class="col-sm-3">
-          <div class="folio-item wow fadeInRightBig" data-wow-duration="1000ms" data-wow-delay="700ms">
-            <div class="folio-image">
-              <img class="img-responsive" src="images/P&C/P_Registrar.jpg" alt="">
-            </div>
-            <div class="overlay">
-              <div class="overlay-content">
-                <div class="overlay-text">
-                  <div class="folio-info">
-                    <h3>Time Hours</h3>
-                    <p>Design, Photography</p>
-                  </div>
-                  <div class="folio-overview">
-                    <span class="folio-link"><a class="folio-read-more" href="#" data-single_url="portfolio-single.html" ><i class="fa fa-link"></i></a></span>
-                    <span class="folio-expand"><a href="images/portfolio/portfolio-details.jpg" data-lightbox="portfolio"><i class="fa fa-search-plus"></i></a></span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        -->
-        
-        <!--
-        <div class="col-sm-3">
-          <div class="folio-item wow fadeInLeftBig" data-wow-duration="1000ms" data-wow-delay="800ms">
-            <div class="folio-image">
-              <img class="img-responsive" src="images/P&C/P_Registrar.jpg" alt="">
-            </div>
-            <div class="overlay">
-              <div class="overlay-content">
-                <div class="overlay-text">
-                  <div class="folio-info">
-                    <h3>Time Hours</h3>
-                    <p>Design, Photography</p>
-                  </div>
-                  <div class="folio-overview">
-                    <span class="folio-link"><a class="folio-read-more" href="#" data-single_url="portfolio-single.html" ><i class="fa fa-link"></i></a></span>
-                    <span class="folio-expand"><a href="images/portfolio/portfolio-details.jpg" data-lightbox="portfolio"><i class="fa fa-search-plus"></i></a></span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        -->
-        
-        
-        
-      </div>
-    </div>
-    <div id="portfolio-single-wrap">
-      <div id="portfolio-single">
-      </div>
-    </div><!-- /#portfolio-single-wrap -->
-  </section><!--/#portfolio1-->
-  
-  
-  <!-- ----------------------- PILOTOS ---------------------------- -->
   
   
   
   <!-- ----------------------- CONTROLADORES ---------------------------- -->
   
   <section id="controladores">
-    <div class="container">
-      <div class="row">
-        <div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
-          <h2>CONTROLLERS</h2>
-          <p>IVAO Colombia has more than <?php echo  $atcs; ?> active Virtual Air Traffic Controllers.</p>
-        </div>
-      </div> 
-    </div>
-    <div class="container-fluid">
-      <div class="row">
-          
-        <div class="col-sm-3">
-          <div class="control-item wow fadeInRightBig" data-wow-duration="1000ms" data-wow-delay="300ms">
-            <div class="control-image">
-              <img class="img-responsive" src="images/P&C/C_Register.jpg" alt="">
-            </div>
-            <div class="overlay">
-              <div class="overlay-content">
-                <div class="overlay-text">
-                  <div class="control-info">
-                    <h3>Register</h3>
-                    <p>New Virtual Air Traffic Controller.</p>
-                  </div>
-                  <div class="control-overview">
-                    <a class="facebook" target="_blanck" href="https://www.ivao.aero/members/person/register.htm" ><i class="fa fa-link"></i></a>
-                    <!--
-                    <span class="folio-link"><a class="folio-read-more" target="_blanck" href="https://www.ivao.aero/members/person/register.htm" data-single_url="portfolio-single.html"><i class="fa fa-link"></i></a></span>
-                    <span class="folio-expand"><a target="_blanck" href="https://www.ivao.aero/members/person/register.htm" data-lightbox="portfolio"><i class="fa fa-search-plus"></i></a></span>
-                    -->
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <div class="col-sm-3">
-          <div class="control-item wow fadeInRightBig" data-wow-duration="1000ms" data-wow-delay="700ms">
-            <div class="control-image">
-              <img class="img-responsive" src="images/P&C/C_Rangos.png" alt="">
-            </div>
-            <div class="overlay">
-              <div class="overlay-content">
-                <div class="overlay-text">
-                  <div class="control-info">
-                    <h3>Rank</h3>
-                    <p>Rank IVAO Air Traffic Controller </p>
-                  </div>
-                  <div class="control-overview">
-                    <a class="facebook" target="_blanck" href="https://www.ivao.aero/ViewDocument.aspx?Path=/training:atc:ratings" ><i class="fa fa-link"></i></a>
-                    <!--
-                    <span class="folio-link"><a class="folio-read-more" target="_blanck" href="https://www.ivao.aero/members/person/register.htm" data-single_url="portfolio-single.html"><i class="fa fa-link"></i></a></span>
-                    <span class="folio-expand"><a target="_blanck" href="https://www.ivao.aero/members/person/register.htm" data-lightbox="portfolio"><i class="fa fa-search-plus"></i></a></span>
-                    -->
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <div class="col-sm-3">
-          <div class="control-item wow fadeInRightBig" data-wow-duration="1000ms" data-wow-delay="500ms">
-            <div class="control-image">
-              <img class="img-responsive" src="images/P&C/C_Primeros Pasos.jpg" alt="">
-            </div>
-            <div class="overlay">
-              <div class="overlay-content">
-                <div class="overlay-text">
-                  <div class="control-info">
-                    <h3>Firts Teps</h3>
-                    <p>Guide to start</p>
-                  </div>
-                  <div class="control-overview">
-                    <a class="facebook" target="_blanck" href="https://www.ivao.aero/ViewDocument.aspx?Path=training:atc:first_steps" ><i class="fa fa-link"></i></a>
-                    <!--
-                    <span class="folio-link"><a class="folio-read-more" target="_blanck" href="https://www.ivao.aero/members/person/register.htm" data-single_url="portfolio-single.html"><i class="fa fa-link"></i></a></span>
-                    <span class="folio-expand"><a target="_blanck" href="https://www.ivao.aero/members/person/register.htm" data-lightbox="portfolio"><i class="fa fa-search-plus"></i></a></span>
-                    -->
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <div class="col-sm-3">
-          <div class="control-item wow fadeInLeftBig" data-wow-duration="1000ms" data-wow-delay="400ms">
-            <div class="control-image">
-              <img class="img-responsive" src="images/P&C/C_Formacion.jpg" alt="">
-            </div>
-            <div class="overlay">
-              <div class="overlay-content">
-                <div class="overlay-text">
-                  <div class="control-info">
-                    <h3>School</h3>
-                    <p>Start your school as an Air Traffic Controller</p>
-                  </div>
-                  <div class="control-overview">
-                    <a class="facebook" target="_blanck" href="https://www.ivao.aero/training/documentation/index.php?section=asx" ><i class="fa fa-link"></i></a>
-                    <!--
-                    <span class="folio-link"><a class="folio-read-more" target="_blanck" href="https://www.ivao.aero/members/person/register.htm" data-single_url="portfolio-single.html"><i class="fa fa-link"></i></a></span>
-                    <span class="folio-expand"><a target="_blanck" href="https://www.ivao.aero/members/person/register.htm" data-lightbox="portfolio"><i class="fa fa-search-plus"></i></a></span>
-                    -->
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <div class="col-sm-3">
-          <div class="control-item wow fadeInLeftBig" data-wow-duration="1000ms" data-wow-delay="400ms">
-            <div class="control-image">
-              <img class="img-responsive" src="images/P&C/C_Entrenamiento.jpg" alt="">
-            </div>
-            <div class="overlay">
-              <div class="overlay-content">
-                <div class="overlay-text">
-                  <div class="control-info">
-                    <h3>Trainning</h3>
-                    <p>Training for Air Traffic Controllers</p>
-                  </div>
-                  <div class="control-overview">
-                    <a class="facebook" target="_blanck" href="#" ><i class="fa fa-link"></i></a>
-                    <!--
-                    <span class="folio-link"><a class="folio-read-more" target="_blanck" href="https://www.ivao.aero/members/person/register.htm" data-single_url="portfolio-single.html"><i class="fa fa-link"></i></a></span>
-                    <span class="folio-expand"><a target="_blanck" href="https://www.ivao.aero/members/person/register.htm" data-lightbox="portfolio"><i class="fa fa-search-plus"></i></a></span>
-                    -->
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <div class="col-sm-3">
-          <div class="control-item wow fadeInRightBig" data-wow-duration="1000ms" data-wow-delay="500ms">
-            <div class="control-image">
-              <img class="img-responsive" src="images/P&C/C_SectorFile.jpg" alt="">
-            </div>
-            <div class="overlay">
-              <div class="overlay-content">
-                <div class="overlay-text">
-                  <div class="control-info">
-                    <h3>Sector Files</h3>
-                    <p>Download Sector Files</p>
-                  </div>
-                  <div class="control-overview">
-                    <a class="facebook" target="_blanck" href="https://mega.nz/#F!mZYzxIAB!M5hD_lr_6tyj4_2yIaiJvg" ><i class="fa fa-link"></i></a>
-                    <!--
-                    <span class="folio-link"><a class="folio-read-more" target="_blanck" href="https://www.ivao.aero/members/person/register.htm" data-single_url="portfolio-single.html"><i class="fa fa-link"></i></a></span>
-                    <span class="folio-expand"><a target="_blanck" href="https://www.ivao.aero/members/person/register.htm" data-lightbox="portfolio"><i class="fa fa-search-plus"></i></a></span>
-                    -->
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        
-        <div class="col-sm-3">
-          <div class="control-item wow fadeInLeftBig" data-wow-duration="1000ms" data-wow-delay="600ms">
-            <div class="control-image">
-              <img class="img-responsive" src="images/P&C/C_Software.jpg" alt="">
-            </div>
-            <div class="overlay">
-              <div class="overlay-content">
-                <div class="overlay-text">
-                  <div class="control-info">
-                    <h3>IVAC Software</h3>
-                    <p>Download IVAC</p>
-                  </div>
-                  <div class="control-overview">
-                    <a class="facebook" target="_blanck" href="https://www.ivao.aero/softdev/ivac.asp" ><i class="fa fa-link"></i></a>
-                    <!--
-                    <span class="folio-link"><a class="folio-read-more" target="_blanck" href="https://www.ivao.aero/members/person/register.htm" data-single_url="portfolio-single.html"><i class="fa fa-link"></i></a></span>
-                    <span class="folio-expand"><a target="_blanck" href="https://www.ivao.aero/members/person/register.htm" data-lightbox="portfolio"><i class="fa fa-search-plus"></i></a></span>
-                    -->
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        -->
-        
-       
-        
-        <!--
-        <div class="col-sm-3">
-          <div class="control-item wow fadeInLeftBig" data-wow-duration="1000ms" data-wow-delay="800ms">
-            <div class="control-image">
-              <img class="img-responsive" src="images/P&C/P_Registrar.jpg" alt="">
-            </div>
-            <div class="overlay">
-              <div class="overlay-content">
-                <div class="overlay-text">
-                  <div class="control-info">
-                    <h3>Time Hours</h3>
-                    <p>Design, Photography</p>
-                  </div>
-                  <div class="control-overview">
-                    <span class="control-link"><a class="control-read-more" href="#" data-single_url="controladores-single.html" ><i class="fa fa-link"></i></a></span>
-                    <span class="control-expand"><a href="images/portfolio/portfolio-details.jpg" data-lightbox="controladores"><i class="fa fa-search-plus"></i></a></span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        -->
-        
-        <!--
-        <div class="col-sm-3">
-          <div class="control-item wow fadeInRightBig" data-wow-duration="1000ms" data-wow-delay="900ms">
-            <div class="control-image">
-              <img class="img-responsive" src="images/P&C/P_Registrar.jpg" alt="">
-            </div>
-            <div class="overlay">
-              <div class="overlay-content">
-                <div class="overlay-text">
-                  <div class="control-info">
-                    <h3>Time Hours</h3>
-                    <p>Design, Photography</p>
-                  </div>
-                  <div class="control-overview">
-                    <span class="control-link"><a class="control-read-more" href="#" data-single_url="controladores-single.html" ><i class="fa fa-link"></i></a></span>
-                    <span class="control-expand"><a href="images/portfolio/portfolio-details.jpg" data-lightbox="controladores"><i class="fa fa-search-plus"></i></a></span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        -->
-        
-       
-        
-      </div>
-    </div>
-    <div id="controladores-single-wrap">
-      <div id="controladores-single">
-      </div>
-    </div><!-- /#controladores-single-wrap -->
+   <hr>
   </section><!--/#controladores-->
   
   
@@ -1711,18 +1283,90 @@ $tiposs = $rowsst['nombre'];
         <br>
         
         <div class="container">
+		 <style type="text/css">
+			
+			* {
+				margin:0px;
+				padding:0px;
+			}
+			
+			#header {
+				margin:auto;
+				width:500px;
+				font-family: 'Open Sans', sans-serif;
+			}
+			
+			ul, ol {
+				list-style:none;
+			}
+			
+			.nav > li {
+				float:left;
+			}
+			
+			.nav li a {
+				background-color:#028fcc;
+				color:#fff;
+				text-decoration:none;
+				padding:10px 12px;
+				display:block;
+			}
+			
+			.nav li a:hover {
+				background-color:#047AAC;
+				
+			}
+			
+			.nav li ul {
+				display:none;
+				position:absolute;
+				min-width:140px;
+			}
+			
+			.nav li:hover > ul {
+				display:block;
+			}
+			
+			.nav li ul li {
+				position:relative;
+			}
+			
+			.nav li ul li ul {
+				right:-140px;
+				top:0px;
+			}
+			
+		</style>
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav navbar-right">                 
-            <li class="scroll active"><a href="#home">Home</a></li>
-            <li class="scroll"><a href="#services">IVAO COL</a></li> 
-            <li class="scroll"><a href="#portfolio">Pilots</a></li>
-            <li class="scroll"><a href="#controladores">Controllers</a></li>
-            <li class="scroll"><a href="#atc-ss">ATC</a></li>
-            <li class="scroll"><a href="#team">Events</a></li>
-            <li class="scroll"><a href="#features">Resources</a></li>
-            <li class="scroll"><a href="#pricing">Online</a></li>
-            <li class="scroll"><a href="#blog">Airlines VA</a></li>
-            <li class="scroll"><a href="#contact">Contact Us</a></li>       
+            <li class="scroll active"><a href="./">Home</a></li>
+            <li class="scroll"><a href="./#services">IVAO COL</a></li> 
+             <li class="scroll"><a>Pilots</a>
+							<ul>
+								<li class="scroll"><a href="./?page=registrar">Registration</a></li>
+								<li class="scroll"><a href="./?page=rankpca">Ranks</a></li>
+								<li class="scroll"><a href="./?page=pcastep">First Steps</a></li>
+								<li class="scroll"><a href="./?page=forma">Formation</a></li>
+								<li class="scroll"><a href="http://www.aerocivil.gov.co/AIS/AIP/Paginas/Inicio.aspx">Charts</a></li>
+								<li class="scroll"><a href="https://www.ivao.aero/softdev/ivap.asp">IvAp Software</a></li>
+							</ul>
+		    </li>
+			<li class="scroll"><a>Controllers</a>
+							<ul>
+								<li class="scroll"><a href="./?page=registrar">Registration</a></li>
+								<li class="scroll"><a href="./?page=rankatc">Ranks</a></li>
+								<li class="scroll"><a href="./?page=atcstep">First Steps</a></li>
+								<li class="scroll"><a href="./?page=formatc">Formation</a></li>
+								<li class="scroll"><a href="https://mega.nz/#F!mZYzxIAB!M5hD_lr_6tyj4_2yIaiJvg">Sector Files</a></li>
+								<li class="scroll"><a href="https://www.ivao.aero/softdev/ivac.asp">IvAc Software</a></li>
+							</ul>
+		    </li>
+            <li class="scroll"><a href="./#atc-ss">ATC</a></li>
+            <li class="scroll"><a href="./#team">Events</a></li>
+            <li class="scroll"><a href="./#features">Resources</a></li>
+            <li class="scroll"><a href="./#pricing">Online</a></li>
+            <li class="scroll"><a href="./#blog">Airlines VA</a></li>
+            <li class="scroll"><a href="./#contact">Contact Us</a></li>       
           </ul>
         </div>
       </div>

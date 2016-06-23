@@ -216,7 +216,7 @@ $vass = 0;
 								<li class="scroll"><a href="./?page=registrar">Registrarse</a></li>
 								<li class="scroll"><a href="./?page=rankatc">Rangos</a></li>
 								<li class="scroll"><a href="./?page=atcstep">Primeros Pasos</a></li>
-								<li class="scroll"><a href="https://www.ivao.aero/training/documentation/index.php?section=asx">Formación</a></li>
+								<li class="scroll"><a href="./?page=formatc">Formación</a></li>
 								<li class="scroll"><a href="https://mega.nz/#F!mZYzxIAB!M5hD_lr_6tyj4_2yIaiJvg">Sector Files</a></li>
 								<li class="scroll"><a href="https://www.ivao.aero/softdev/ivac.asp">IvAc Software</a></li>
 							</ul>
@@ -1259,7 +1259,60 @@ $tiposs = $rowsst['nombre'];
 	} else {
 		?>
 		<header id="home">
-
+  <style type="text/css">
+			
+			* {
+				margin:0px;
+				padding:0px;
+			}
+			
+			#header {
+				margin:auto;
+				width:500px;
+				font-family: 'Open Sans', sans-serif;
+			}
+			
+			ul, ol {
+				list-style:none;
+			}
+			
+			.nav > li {
+				float:left;
+			}
+			
+			.nav li a {
+				background-color:#028fcc;
+				color:#fff;
+				text-decoration:none;
+				padding:10px 12px;
+				display:block;
+			}
+			
+			.nav li a:hover {
+				background-color:#047AAC;
+				
+			}
+			
+			.nav li ul {
+				display:none;
+				position:absolute;
+				min-width:140px;
+			}
+			
+			.nav li:hover > ul {
+				display:block;
+			}
+			
+			.nav li ul li {
+				position:relative;
+			}
+			
+			.nav li ul li ul {
+				right:-140px;
+				top:0px;
+			}
+			
+		</style>
     <div class="main-nav">
       
       <div class="container">
@@ -1283,10 +1336,28 @@ $tiposs = $rowsst['nombre'];
        
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav navbar-right">                 
-            <li class="scroll active"><a href="./#home">Inicio</a></li>
+            <li class="scroll active"><a href="./">Inicio</a></li>
             <li class="scroll"><a href="./#services">IVAO COL</a></li> 
-            <li class="scroll"><a href="./#portfolio">Pilotos</a></li>
-            <li class="scroll"><a href="./#controladores">Controladores</a></li>
+            	<li class="scroll"><a>Pilotos</a>
+							<ul>
+								<li class="scroll"><a href="./?page=registrar">Registrarse</a></li>
+								<li class="scroll"><a href="./?page=rankpca">Rangos</a></li>
+								<li class="scroll"><a href="./?page=pcastep">Primeros Pasos</a></li>
+								<li class="scroll"><a href="./?page=forma">Formación</a></li>
+								<li class="scroll"><a href="http://www.aerocivil.gov.co/AIS/AIP/Paginas/Inicio.aspx">Cartas</a></li>
+								<li class="scroll"><a href="https://www.ivao.aero/softdev/ivap.asp">IvAp Software</a></li>
+							</ul>
+		    </li>
+			<li class="scroll"><a>Controladores</a>
+							<ul>
+								<li class="scroll"><a href="./?page=registrar">Registrarse</a></li>
+								<li class="scroll"><a href="./?page=rankatc">Rangos</a></li>
+								<li class="scroll"><a href="./?page=atcstep">Primeros Pasos</a></li>
+								<li class="scroll"><a href="./?page=formatc">Formación</a></li>
+								<li class="scroll"><a href="https://mega.nz/#F!mZYzxIAB!M5hD_lr_6tyj4_2yIaiJvg">Sector Files</a></li>
+								<li class="scroll"><a href="https://www.ivao.aero/softdev/ivac.asp">IvAc Software</a></li>
+							</ul>
+		    </li>
             <li class="scroll"><a href="./#atc-ss">ATC</a></li>
             <li class="scroll"><a href="./#team">Eventos</a></li>
             <li class="scroll"><a href="./#features">Recursos</a></li>
