@@ -164,7 +164,7 @@ $vass = 0;
 			}
 			
 			.nav li a {
-				background-color:#198389;
+				background-color:#028fcc;
 				color:#fff;
 				text-decoration:none;
 				padding:10px 12px;
@@ -172,7 +172,7 @@ $vass = 0;
 			}
 			
 			.nav li a:hover {
-				background-color:#434343;
+				background-color:#047AAC;
 				
 			}
 			
@@ -203,19 +203,19 @@ $vass = 0;
             <li class="scroll"><a href="./#services">IVAO COL</a></li> 
 			<li class="scroll"><a>Pilotos</a>
 							<ul>
-								<li class="scroll"><a href="./?page=registpca">Registrarse</a></li>
+								<li class="scroll"><a href="./?page=registrar">Registrarse</a></li>
 								<li class="scroll"><a href="./?page=rankpca">Rangos</a></li>
 								<li class="scroll"><a href="./?page=pcastep">Primeros Pasos</a></li>
-								<li class="scroll"><a href="https://ivao.aero/training/documentation/index.php?section=fsx">Formación</a></li>
+								<li class="scroll"><a href="./?page=forma">Formación</a></li>
 								<li class="scroll"><a href="http://www.aerocivil.gov.co/AIS/AIP/Paginas/Inicio.aspx">Cartas</a></li>
 								<li class="scroll"><a href="https://www.ivao.aero/softdev/ivap.asp">IvAp Software</a></li>
 							</ul>
 		    </li>
 			<li class="scroll"><a>Controladores</a>
 							<ul>
-								<li class="scroll"><a href="./?page=registatc">Registrarse</a></li>
+								<li class="scroll"><a href="./?page=registrar">Registrarse</a></li>
 								<li class="scroll"><a href="./?page=rankatc">Rangos</a></li>
-								<li class="scroll"><a href="https://www.ivao.aero/ViewDocument.aspx?Path=training:atc:first_steps">Primeros Pasos</a></li>
+								<li class="scroll"><a href="./?page=atcstep">Primeros Pasos</a></li>
 								<li class="scroll"><a href="https://www.ivao.aero/training/documentation/index.php?section=asx">Formación</a></li>
 								<li class="scroll"><a href="https://mega.nz/#F!mZYzxIAB!M5hD_lr_6tyj4_2yIaiJvg">Sector Files</a></li>
 								<li class="scroll"><a href="https://www.ivao.aero/softdev/ivac.asp">IvAc Software</a></li>
