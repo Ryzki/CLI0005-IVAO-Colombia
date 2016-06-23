@@ -142,7 +142,60 @@ $vass = 0;
        <br>
        
       <div class="container">
-        
+        <style type="text/css">
+			
+			* {
+				margin:0px;
+				padding:0px;
+			}
+			
+			#header {
+				margin:auto;
+				width:500px;
+				font-family: 'Open Sans', sans-serif;
+			}
+			
+			ul, ol {
+				list-style:none;
+			}
+			
+			.nav > li {
+				float:left;
+			}
+			
+			.nav li a {
+				background-color:#198389;
+				color:#fff;
+				text-decoration:none;
+				padding:10px 12px;
+				display:block;
+			}
+			
+			.nav li a:hover {
+				background-color:#434343;
+				
+			}
+			
+			.nav li ul {
+				display:none;
+				position:absolute;
+				min-width:140px;
+			}
+			
+			.nav li:hover > ul {
+				display:block;
+			}
+			
+			.nav li ul li {
+				position:relative;
+			}
+			
+			.nav li ul li ul {
+				right:-140px;
+				top:0px;
+			}
+			
+		</style>
        
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav navbar-right">                 
@@ -156,7 +209,14 @@ $vass = 0;
             <li class="scroll"><a href="./#pricing">Online</a></li>
             <li class="scroll"><a href="./#blog">Aerolineas VA</a></li>
             <li class="scroll"><a href="./#contact">Contactenos</a></li>   
-			
+			<li><a href="">Submenu4</a>
+							<ul>
+								<li><a href="">Submenu1</a></li>
+								<li><a href="">Submenu2</a></li>
+								<li><a href="">Submenu3</a></li>
+								<li><a href="">Submenu4</a></li>
+							</ul>
+						</li>
           </ul>
         </div>
       </div>
