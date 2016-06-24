@@ -119,10 +119,10 @@ $vass = 0;
 
    
    
-   <!-- ------------------------- Menu --------------------------- -->
+    <!-- ------------------------- Menu --------------------------- -->
    
    
-    </div><!--/#home-slider-->
+    </div>
     <div class="main-nav">
     
       <div class="container">
@@ -204,7 +204,7 @@ $vass = 0;
                <li class="scroll active"><a href="./#home">Inicio</a></li>
             <li class="scroll"><a href="./#services">IVAO COL</a></li> 
 			<li class="scroll"><a>Pilotos</a>
-							<ul>
+							<ul nav navbar-nav navbar-right>
 								<li class="scroll"><a href="./?page=registrar">Registrarse</a></li>
 								<li class="scroll"><a href="./?page=rankpca">Rangos</a></li>
 								<li class="scroll"><a href="./?page=pcastep">Primeros Pasos</a></li>
@@ -215,12 +215,12 @@ $vass = 0;
 		    </li>
 			<li class="scroll"><a>Controladores</a>
 							<ul>
-								<li ><a href="./?page=registrar">Registrarse</a></li>
-								<li ><a href="./?page=rankatc">Rangos</a></li>
-								<li ><a href="./?page=atcstep">Primeros Pasos</a></li>
-								<li ><a href="./?page=formatc">Formación</a></li>
-								<li ><a href="https://mega.nz/#F!mZYzxIAB!M5hD_lr_6tyj4_2yIaiJvg">Sector Files</a></li>
-								<li ><a href="https://www.ivao.aero/softdev/ivac.asp">IvAc Software</a></li>
+								<li class="scroll"><a href="./?page=registrar">Registrarse</a></li>
+								<li class="scroll"><a href="./?page=rankatc">Rangos</a></li>
+								<li class="scroll"><a href="./?page=atcstep">Primeros Pasos</a></li>
+								<li class="scroll"><a href="./?page=formatc">Formación</a></li>
+								<li class="scroll"><a href="https://mega.nz/#F!mZYzxIAB!M5hD_lr_6tyj4_2yIaiJvg">Sector Files</a></li>
+								<li class="scroll"><a href="https://www.ivao.aero/softdev/ivac.asp">IvAc Software</a></li>
 							</ul>
 		    </li>
             <li class="scroll"><a href="./#atc-ss">ATC</a></li>
@@ -233,9 +233,11 @@ $vass = 0;
           </ul>
         </div> 
       </div>
-    </div><!--/#main-nav-->
+    </div>
 	
 	
+    
+    <!-- ------------------------- Menu --------------------------- -->
 	
 	
 	
