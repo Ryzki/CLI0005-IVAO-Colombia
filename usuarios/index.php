@@ -115,13 +115,13 @@ if($_COOKIE[cookie_name]) {
                 <li>
                     <a href="icons.html">
                         <i class="pe-7s-science"></i>
-                        <p>Icons</p>
+                        <p>Eventos & Noticias</p>
                     </a>
                 </li>
                 <li>
                     <a href="maps.html">
                         <i class="pe-7s-map-marker"></i>
-                        <p>Maps</p>
+                        <p>Examenes</p>
                     </a>
                 </li>
                 <li>
@@ -131,9 +131,9 @@ if($_COOKIE[cookie_name]) {
                     </a>
                 </li>
 				<li class="active-pro">
-                    <a href="upgrade.html">
+                    <a href="../RFEColombia/">
                         <i class="pe-7s-rocket"></i>
-                        <p>Upgrade to PRO</p>
+                        <p>RFE Colombia</p>
                     </a>
                 </li>
             </ul>
@@ -202,7 +202,7 @@ if($_COOKIE[cookie_name]) {
                               </ul>
                         </li>
                         <li>
-                            <a href="./?page=logout">
+                            <a href="./logout.php">
                                 Log out
                             </a>
                         </li>
