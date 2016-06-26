@@ -55,12 +55,17 @@
 				<li>
 					<a class="nav-link services-content">
 						<i class="icon ion-ios-people-outline"></i>
-						Oters
+						Info
 					</a>
 				</li>
 				
 				
-				
+					<li>
+					<a href="http://login.ivao.aero/index.php?url=http://www.ivaocol.com.co/usuarios/index.php" class="nav-link services-content">
+						<i class="icon ion-ios-world-outline"></i>
+						Services
+					</a>
+				</li>
 
 			
 
@@ -69,12 +74,12 @@
 			</ul> <!-- CLOSE Main nav -->
 
 			<ul class="bottom-nav">
-			<li class="google-color">
+		<!--	<li class="google-color">
 					<a target="_blanck" href="https://plus.google.com/u/0/109843136396902602405" title="">
 						<i class="icon ion-social-google-outline"></i>
 						Google
 					</a>
-				</li>
+				</li>-->
 			<li class="instagram-color">
 					<a target="_blanck" href="https://www.instagram.com/ivaocolombia/" title="">
 						<i class="icon ion-social-instagram-outline"></i>
