@@ -55,7 +55,7 @@
 				<li>
 					<a class="nav-link services-content">
 						<i class="icon ion-ios-people-outline"></i>
-						Info
+						Oters
 					</a>
 				</li>
 				
@@ -194,7 +194,7 @@
 
 				<div class="col-xs-12 col-sm-6 col-lg-6">
 
-					<a href="#" title="RFE Colombia" class="swipebox">
+					<a href="http://www.ivaocol.com.co/RFEColombia/" title="RFE Colombia" class="swipebox">
 
 					<div class="large-square">
 
