@@ -8,7 +8,7 @@ define('url', 'http://www.ivaocol.com.co/');
 //redirect function
 function redirect() {
 	setcookie(cookie_name, '', time()-3600);
-	header('Location: '.login_url.'?url='.url);
+	header('Location: '.url);
 	exit;
 }
 
@@ -458,7 +458,7 @@ if($_COOKIE[cookie_name]) {
                     </ul>
                 </nav>
                 <p class="copyright pull-right">
-                    &copy; 2016 <a href="http://www.creative-tim.com">Creative Tim</a>, made with love for a better web
+                    &copy; <?php echo date('Y'); ?> <a href="http://www.ivaocol.com.co">IVAO Colombia</a>, Sistematización Andrés Zapata.
                 </p>
             </div>
         </footer>

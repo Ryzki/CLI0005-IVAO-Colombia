@@ -54,6 +54,31 @@
 		$calling_code= $row34["calling_code"];
 	}
 	
+	$ii=0;
+		$sql345 ="select * from airlines";
+
+	if (!$result345 = $db->query($sql345)) {
+		die('There was an error running the query [' . $db->error . ']');
+	}
+	while ($row345 = $result345->fetch_assoc()) {
+		$ii++;
+	}
+	
+	$aleatorio = rand(1, $ii);
+	$iip=0;
+	
+	
+	$sql3457 ="select * from airlines";
+
+	if (!$result3457 = $db->query($sql3457)) {
+		die('There was an error running the query [' . $db->error . ']');
+	}
+	while ($row3457 = $result3457->fetch_assoc()) {
+		$iip++;
+		if($iip==$aleatorio) {
+			$imagen = "../admin/intranet/imagenair/" . $row3457['imagen_va'];
+		}
+	}
 	?>
                                                 <label>Division</label>
                                                 <input type="text" class="form-control" disabled placeholder="Company" value="<?php echo $short_name; ?>">
@@ -129,7 +154,7 @@
                     <div class="col-md-4">
                         <div class="card card-user">
                             <div class="image">
-                                <img src="https://ununsplash.imgix.net/photo-1431578500526-4d9613015464?fit=crop&fm=jpg&h=300&q=75&w=400" alt="..."/>
+                                <img src="<?php echo $imagen; ?>" alt="..." width="30%"/>
                             </div>
                             <div class="content">
                                 <div class="author">
@@ -141,9 +166,12 @@
                                       </h4>
                                     </a>
                                 </div>
-                                <p class="description text-center"> "Lamborghini Mercy <br>
-                                                    Your chick she so thirsty <br>
-                                                    I'm in that two seat Lambo"
+								<br>
+								<hr>
+                                <p class="description text-center">
+								<b>Rango PCA &nbsp;&nbsp;</b>  <img  src="https://www.ivao.aero/data/images/ratings/pilot/<?php echo $user_array->ratingatc ?>.gif" alt="..."/><br>
+                                <b>Rango ATC &nbsp;&nbsp;</b> <img  src="https://www.ivao.aero/data/images/ratings/atc/<?php echo $user_array->ratingpilot ?>.gif" alt="..."/><br>
+                                                   
                                 </p>
                             </div>
                             <hr>
