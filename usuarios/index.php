@@ -95,21 +95,21 @@ if($_COOKIE[cookie_name]) {
                     </a>
                 </li>
                 <li>
-                    <a href="user.html">
+                    <a href="./?page=user">
                         <i class="pe-7s-user"></i>
                         <p>Mi Perfil</p>
                     </a>
                 </li>
                 <li>
-                    <a href="table.html">
+                    <a href="./?page=training">
                         <i class="pe-7s-note2"></i>
-                        <p>Table List</p>
+                        <p>Entrenamiento</p>
                     </a>
                 </li>
                 <li>
-                    <a href="typography.html">
+                    <a href="./?page=eventosatc">
                         <i class="pe-7s-news-paper"></i>
-                        <p>Typography</p>
+                        <p>Eventos ATC Reserva!</p>
                     </a>
                 </li>
                 <li>
@@ -202,7 +202,7 @@ if($_COOKIE[cookie_name]) {
                               </ul>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="./?page=logout">
                                 Log out
                             </a>
                         </li>
@@ -499,7 +499,7 @@ if($_COOKIE[cookie_name]) {
 
         	$.notify({
             	icon: 'pe-7s-gift',
-            	message: "Welcome to <b>IVAO Colombia Dashboard</b> - <?php echo utf8_decode($user_array->firstname).' '.utf8_decode($user_array->lastname).'!'; ?>."
+            	message: "Welcome to <b>IVAO Colombia Dashboard</b> - <?php echo utf8_decode($user_array->firstname).' '.utf8_decode($user_array->lastname). ' (' . $user_array->vid . ') !'; ?>."
 
             },{
                 type: 'info',
