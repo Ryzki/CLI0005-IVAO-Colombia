@@ -61,9 +61,9 @@
 				
 				
 					<li>
-					<a href="http://login.ivao.aero/index.php?url=http://www.ivaocol.com.co/usuarios/index.php" class="nav-link services-content">
+					<a href="http://login.ivao.aero/index.php?url=http://www.ivaocol.com.co/usuarios/login.php" >
 						<i class="icon ion-ios-world-outline"></i>
-						Services
+						Login
 					</a>
 				</li>
 

@@ -26,7 +26,7 @@ if($_COOKIE[cookie_name]) {
 	$user_array = json_decode(file_get_contents(api_url.'?type=json&token='.$_COOKIE[cookie_name]));
 	if($user_array->result) {
 		//Success! A user has been found!
-		echo 'Hello '.utf8_decode($user_array->firstname).' '.utf8_decode($user_array->lastname).'!';
+		
 	} else {
 		redirect();
     }
@@ -71,7 +71,7 @@ if($_COOKIE[cookie_name]) {
 <body>
 
 <div class="wrapper">
-    <div class="sidebar" data-color="purple" data-image="assets/img/sidebar-5.jpg">
+    <div class="sidebar"  data-image="assets/img/sidebar-5.jpg">
 
     <!--
 
@@ -89,15 +89,15 @@ if($_COOKIE[cookie_name]) {
 
             <ul class="nav">
                 <li class="active">
-                    <a href="dashboard.html">
+                    <a href="./">
                         <i class="pe-7s-graph"></i>
-                        <p>Dashboard</p>
+                        <p>INICIO</p>
                     </a>
                 </li>
                 <li>
                     <a href="user.html">
                         <i class="pe-7s-user"></i>
-                        <p>User Profile</p>
+                        <p>Mi Perfil</p>
                     </a>
                 </li>
                 <li>
@@ -499,7 +499,7 @@ if($_COOKIE[cookie_name]) {
 
         	$.notify({
             	icon: 'pe-7s-gift',
-            	message: "Welcome to <b>Light Bootstrap Dashboard</b> - a beautiful freebie for every web developer."
+            	message: "Welcome to <b>IVAO Colombia Dashboard</b> - <?php echo utf8_decode($user_array->firstname).' '.utf8_decode($user_array->lastname).'!'; ?>."
 
             },{
                 type: 'info',
