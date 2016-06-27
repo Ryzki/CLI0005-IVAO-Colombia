@@ -71,13 +71,13 @@ if ($ranks==1){
 	$rank="Commercial Pilot (CP)";
 } else if ($ranks==8){
 	$rank="Airline Transport Pilot (ATP)";
-} else if ($ranks==8){
+} else if ($ranks==9){
 	$rank="Senior Flight Instructor (SFI)";
-} else if ($ranks==8){
+} else if ($ranks==10){
 	$rank="Chief Flight Instructor (CFI)";
-} else if ($ranks==8){
+} else if ($ranks==11){
 	$rank="Supervisor (SUP)";
-} else if ($ranks==8){
+} else if ($ranks==12){
 	$rank="Administrator (ADM)";
 }
 

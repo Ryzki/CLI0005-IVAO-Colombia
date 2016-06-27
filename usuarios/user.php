@@ -79,6 +79,62 @@
 			$imagen = "../admin/intranet/imagenair/" . $row3457['imagen_va'];
 		}
 	}
+	
+	$ranks= $user_array->ratingpilot;
+	if ($ranks==1){
+	$rank="Observer (OBS)";
+} else if ($ranks==2){
+	$rank="Basic Flight Student (FS1)";
+} else if ($ranks==3){
+	$rank="Flight Student (FS2)";
+} else if ($ranks==4){
+	$rank="Advanced Flight Student (FS3)";
+} else if ($ranks==5){
+	$rank="Private Pilot (PP)";
+} else if ($ranks==6){
+	$rank="Senior Private Pilot (SPP)";
+} else if ($ranks==7){
+	$rank="Commercial Pilot (CP)";
+} else if ($ranks==8){
+	$rank="Airline Transport Pilot (ATP)";
+} else if ($ranks==9){
+	$rank="Senior Flight Instructor (SFI)";
+} else if ($ranks==10){
+	$rank="Chief Flight Instructor (CFI)";
+} else if ($ranks==11){
+	$rank="Supervisor (SUP)";
+} else if ($ranks==12){
+	$rank="Administrator (ADM)";
+}
+
+
+
+$ranks2= $user_array->ratingatc;
+	if ($ranks2==1){
+	$rank2="Observer (OBS)";
+} else if ($ranks2==2){
+	$rank2="ATC Applicant (AS1)";
+} else if ($ranks2==3){
+	$rank2="ATC Trainee (AS2)";
+} else if ($ranks2==4){
+	$rank2="Advanced ATC Trainee (AS3)";
+} else if ($ranks2==5){
+	$rank2="Aerodrome Controller (ADC)";
+} else if ($ranks2==6){
+	$rank2="Approach Controller (APC)";
+} else if ($ranks2==7){
+	$rank2="Centre Controller (ACC)	";
+} else if ($ranks2==8){
+	$rank2="Senior Controller (SEC)";
+} else if ($ranks2==9){
+	$rank2="Senior ATC Instructor (SAI)";
+} else if ($ranks2==10){
+	$rank2="Chief ATC Instructor (CAI)";
+} else if ($ranks2==11){
+	$rank2="Supervisor (SUP)";
+} else if ($ranks2==12){
+	$rank2="Administrator (ADM)";
+}
 	?>
                                                 <label>Division</label>
                                                 <input type="text" class="form-control" disabled placeholder="Company" value="<?php echo $short_name; ?>">
@@ -113,14 +169,14 @@
                                         </div>
                                     </div>
 
-                                 <!--   <div class="row">
+                                   <div class="row">
                                         <div class="col-md-12">
                                             <div class="form-group">
-                                                <label>Horas como Piloto</label>
-                                                <input type="text" class="form-control" disabled placeholder="Home Address" value="<?php echo $user_array->hours_pilot; ?>">
+                                                <label>Rangos</label>
+                                                <input type="text" class="form-control" disabled placeholder="Home Address" value="Piloto: <?php echo $rank; ?> & Controlador: <?php echo $rank2; ?>">
                                             </div>
                                         </div>
-                                    </div> -->
+                                    </div> 
 
                                     <div class="row">
                                         <div class="col-md-4">
