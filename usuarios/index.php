@@ -166,6 +166,65 @@ if($_COOKIE[cookie_name]) {
                                     <span class="notification">5</span>
                               </a>
                               <ul class="dropdown-menu">
+							  <li><b>EVENTOS</b></li>
+							   <?
+		  
+		  include('./db_login.php');
+		  
+		  	$db = new mysqli($db_host , $db_username , $db_password , $db_database);
+
+	$db->set_charset("utf8");
+
+	if ($db->connect_errno > 0) {
+
+		die('Unable to connect to database [' . $db->connect_error . ']');
+
+	}
+	
+	$sql2 = "SELECT * FROM eventos ";
+
+	if (!$result2 = $db->query($sql2)) {
+
+		die('There was an error running the query  [' . $db->error . ']');
+
+	}
+	
+	$i=0;
+
+	while ($row2 = $result2->fetch_assoc()) {
+	
+	
+	
+	$año = substr ($row2['fecha'], 0,4);
+	$mes = substr ($row2['fecha'], 5,2);
+	$dia = substr ($row2['fecha'], 8,2);
+	$fechass = $año .''.$mes.''.$dia;
+	$hoy = date("Ymd");  
+	if($fechass >= $hoy) {
+	$i++;
+	?>
+	
+	
+	
+	
+		  
+		  <li><a href="./?page=infoevent&id=<?php echo $row2['id']; ?>"><?php echo $row2['nombre']; ?> (<?php echo $row2['fecha']; ?>)</a></li>
+	
+	<?
+	
+	} 
+	}
+	
+	
+	if ($i==0)
+	{
+	echo '<li>No hay Eventos disponibles aún.</li>';
+	
+	 
+	} 
+		  
+		  
+		  ?>
                                 <li><a href="#">Notification 1</a></li>
                                 <li><a href="#">Notification 2</a></li>
                                 <li><a href="#">Notification 3</a></li>
@@ -182,8 +241,8 @@ if($_COOKIE[cookie_name]) {
 
                     <ul class="nav navbar-nav navbar-right">
                         <li>
-                           <a href="">
-                               Account
+                           <a href="./?page=user">
+                               Cuenta
                             </a>
                         </li>
                         <li class="dropdown">
@@ -203,7 +262,7 @@ if($_COOKIE[cookie_name]) {
                         </li>
                         <li>
                             <a href="./logout.php">
-                                Log out
+                                Cerrar Sesión
                             </a>
                         </li>
                     </ul>
