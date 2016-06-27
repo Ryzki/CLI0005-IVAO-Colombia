@@ -176,24 +176,24 @@ $infos = $user_array->vid;
                         <p>Eventos ATC Reserva!</p>
                     </a>
                 </li>
-                <li>
+                <!--  <li>
                     <a href="./?page=airlines">
                         <i class="pe-7s-science"></i>
                         <p>Aerolíneas</p>
                     </a>
-                </li>
+                </li> -->
                 <li>
                     <a href="./?page=examenes">
                         <i class="pe-7s-map-marker"></i>
                         <p>Mis Examenes</p>
                     </a>
                 </li>
-                <li>
+               <!-- <li>
                     <a href="notifications.html">
                         <i class="pe-7s-bell"></i>
                         <p>Notifications</p>
                     </a>
-                </li>
+                </li> -->
 				<li class="active-pro">
                     <a href="../RFEColombia/">
                         <i class="pe-7s-rocket"></i>
@@ -399,7 +399,7 @@ $infos = $user_array->vid;
 		  
 		  
 		  ?>
-		  
+		  <li><a><b>NOTAMS</b></a></li>
 		  
                                 
                               </ul>
