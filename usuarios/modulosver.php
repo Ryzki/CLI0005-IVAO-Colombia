@@ -61,7 +61,7 @@
 <div>
 <div class="activityinstance">
 <a class="" onclick="" href="./?page=muestrapcamodulos&id=<?php echo $row3i["id"]; ?>">
-<img src="http://static.batanga.com/sites/default/files/styles/full/public/tech.batanga.com/files/627px-Wikipedia-logo-de.png?itok=-Z-tsI-S" class="iconlarge activityicon" alt=" " role="presentation" width="4%"/>
+<img src="./images/ivaoco.png" class="iconlarge activityicon" alt=" " role="presentation" width="3%"/>
 <span class="instancename"><?php echo $row3i["titulo"]; ?><span class="accesshide " > Documento</span></span></a></div>
 <span class="actions">
 </span>
