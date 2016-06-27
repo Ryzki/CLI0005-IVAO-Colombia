@@ -986,7 +986,7 @@ if (substr_count($controller[0],'_') == 1) {
 ?>
         <footer class="footer">
             <div class="container-fluid">
-                <nav class="pull-left">
+              <!--  <nav class="pull-left">
                     <ul>
                         <li>
                             <a href="#">
@@ -1009,7 +1009,7 @@ if (substr_count($controller[0],'_') == 1) {
                             </a>
                         </li>
                     </ul>
-                </nav>
+                </nav> -->
                 <p class="copyright pull-right">
                     &copy; <?php echo date('Y'); ?> <a href="http://www.ivaocol.com.co">IVAO Colombia</a>, Sistematización Andrés Zapata.
                 </p>

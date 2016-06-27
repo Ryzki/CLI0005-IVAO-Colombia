@@ -10,7 +10,7 @@
                                 <h4 class="title">Editar Perfil</h4>
                             </div>
                             <div class="content">
-                                <form>
+                                
                                     <div class="row">
                                         <div class="col-md-5">
                                             <div class="form-group">
@@ -135,21 +135,44 @@ $ranks2= $user_array->ratingatc;
 } else if ($ranks2==12){
 	$rank2="Administrator (ADM)";
 }
+
+
+$vids = $user_array->vid;
+
+$sql3457a ="select * from usuariosivao where vid=$vids";
+
+	if (!$result3457a = $db->query($sql3457a)) {
+		die('There was an error running the query [' . $db->error . ']');
+	}
+	while ($row3457a = $result3457a->fetch_assoc()) {
+		
+		
+			$imagena = $row3457a['foto'];
+			$emails = $row3457a['email'];
+			
+			if($imagena!=""){
+				$imageness = "./assets/img/faces/" . $row3457a['foto'];
+				
+			} else {
+				$imageness = "assets/img/faces/face-3.jpg";
+			}
+		
+	}
 	?>
                                                 <label>Division</label>
-                                                <input type="text" class="form-control" disabled placeholder="Company" value="<?php echo $short_name; ?>">
+                                                <input type="text" class="form-control" disabled placeholder="Company" value="<?php echo $short_name; ?>"/>
                                             </div>
                                         </div>
                                         <div class="col-md-3">
                                             <div class="form-group">
                                                 <label>Código IVAO</label>
-                                                <input type="text" class="form-control" disabled placeholder="Username" value="<?php echo $user_array->vid; ?>">
+                                                <input type="text" class="form-control" disabled placeholder="Username" value="<?php echo $user_array->vid; ?>"/>
                                             </div>
                                         </div>
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <label for="exampleInputEmail1">Skype</label>
-                                                <input type="email" class="form-control" disabled placeholder="skype" value="<?php echo $user_array->skype; ?>">
+                                                <input type="email" class="form-control" disabled placeholder="skype" value="<?php echo $user_array->skype; ?>"/>
                                             </div>
                                         </div>
                                     </div>
@@ -158,13 +181,13 @@ $ranks2= $user_array->ratingatc;
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label>Nombres</label>
-                                                <input type="text" class="form-control" disabled placeholder="Company" value="<?php echo utf8_decode($user_array->firstname); ?>">
+                                                <input type="text" class="form-control" disabled placeholder="Company" value="<?php echo utf8_decode($user_array->firstname); ?>"/>
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label>Apellidos</label>
-                                                <input type="text" class="form-control" disabled placeholder="Last Name" value="<?php echo utf8_decode($user_array->lastname); ?>">
+                                                <input type="text" class="form-control" disabled placeholder="Last Name" value="<?php echo utf8_decode($user_array->lastname); ?>"/>
                                             </div>
                                         </div>
                                     </div>
@@ -173,7 +196,7 @@ $ranks2= $user_array->ratingatc;
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label>Rangos</label>
-                                                <input type="text" class="form-control" disabled placeholder="Home Address" value="Piloto: <?php echo $rank; ?> & Controlador: <?php echo $rank2; ?>">
+                                                <input type="text" class="form-control" disabled placeholder="Home Address" value="Piloto: <?php echo $rank; ?> & Controlador: <?php echo $rank2; ?>"/>
                                             </div>
                                         </div>
                                     </div> 
@@ -182,28 +205,43 @@ $ranks2= $user_array->ratingatc;
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <label>División Vista</label>
-                                                <input type="text" class="form-control" disabled placeholder="City" value="IVAO Colombia!">
+                                                <input type="text" class="form-control" disabled placeholder="City" value="IVAO Colombia!"/>
                                             </div>
                                         </div>
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <label>País</label>
-                                                <input type="text" class="form-control" disabled placeholder="Country" value="<?php echo $short_name4; ?>">
+                                                <input type="text" class="form-control" disabled placeholder="Country" value="<?php echo $short_name4; ?>"/>
                                             </div>
                                         </div>
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <label>Código Postal</label>
-                                                <input type="number" class="form-control" disabled placeholder="ZIP Code" value="<?php echo $calling_code; ?>">
+                                                <input type="number" class="form-control" disabled placeholder="ZIP Code" value="<?php echo $calling_code; ?>"/>
                                             </div>
                                         </div>
                                     </div>
-
-                                    
-
-                                    <button type="submit" class="btn btn-info btn-fill pull-right">Actualizar Perfil</button>
+<form  enctype="multipart/form-data" action="./page=usuarioactualizado" method="post">
+									<div class="row">
+									<div class="col-md-4">
+                                            <div class="form-group">
+                                                <label><b>Registra Tu Correo Electrónico!</b></label>
+                                                <input name="email" class="form-control" value="<?php echo $emails; ?>" placeholder="cuenta@dominio.com" />
+                                            </div>
+                                        </div>
+										<div class="col-md-4">
+                                            <div class="form-group">
+                                                <label><b>Subir Su Imagen! <font color="red">120 px * 120px</font></b></label>
+                                                <input name="image_file"  type="file">
+                                            </div>
+                                        </div>
+										 <input type="hidden" class="form-control" name="id" value="<?php echo $user_array->vid;?>"/>
+                                   
+                                    </div>
+ <button type="submit" class="btn btn-info btn-fill pull-right">Actualizar Perfil</button>
+									</form>
                                     <div class="clearfix"></div>
-                                </form>
+                               
                             </div>
                         </div>
                     </div>
@@ -215,7 +253,7 @@ $ranks2= $user_array->ratingatc;
                             <div class="content">
                                 <div class="author">
                                      <a href="#">
-                                    <img class="avatar border-gray" src="assets/img/faces/face-3.jpg" alt="..."/>
+                                    <img class="avatar border-gray" src="<?php echo $imageness; ?>" alt="..."/>
 
                                       <h4 class="title"><?php echo utf8_decode($user_array->firstname) . ' ' . utf8_decode($user_array->lastname); ?><br />
                                          <small><?php echo $user_array->skype; ?></small>
