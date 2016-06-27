@@ -40,7 +40,7 @@
 	}
 	
 	
-	$idaaa = $user_array->division;
+	$idaaa = $user_array->country;
 	
 
 	
@@ -149,7 +149,7 @@ $ranks2= $user_array->ratingatc;
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <label for="exampleInputEmail1">Skype</label>
-                                                <input type="email" class="form-control" disabled placeholder="email" value="<?php echo $user_array->skype; ?>">
+                                                <input type="email" class="form-control" disabled placeholder="skype" value="<?php echo $user_array->skype; ?>">
                                             </div>
                                         </div>
                                     </div>

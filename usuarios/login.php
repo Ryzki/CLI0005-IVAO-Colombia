@@ -26,11 +26,32 @@ if($_COOKIE[cookie_name]) {
 	$user_array = json_decode(file_get_contents(api_url.'?type=json&token='.$_COOKIE[cookie_name]));
 	if($user_array->result) {
 		//Success! A user has been found!
-		echo 'Hello '.utf8_decode($user_array->firstname).' '.utf8_decode($user_array->lastname).'!';
+		//echo 'Hello '.utf8_decode($user_array->firstname).' '.utf8_decode($user_array->lastname).'!';
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 	} else {
 		redirect();
     }
 } else {
 	redirect();
 }
+
+
+		
+		
+		
+		
 ?>

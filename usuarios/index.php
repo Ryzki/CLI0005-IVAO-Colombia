@@ -33,6 +33,70 @@ if($_COOKIE[cookie_name]) {
 } else {
 	redirect();
 }
+
+
+
+
+$infos = $user_array->vid;
+		
+		include('./db_login.php');
+		
+		$db = new mysqli($db_host , $db_username , $db_password , $db_database);
+		$db->set_charset("utf8");
+		if ($db->connect_errno > 0) {
+			die('Unable to connect to database [' . $db->connect_error . ']');
+		}
+		
+		$sql115 = "select * from usuariosivao where vid=$infos";
+
+		if (!$result115 = $db->query($sql115)) {
+			die('There was an error running the query [' . $db->error . ']');
+		}
+		$is=0;
+		
+		while ($row2 = $result115->fetch_assoc()) {
+			$is++;
+		}
+		
+		$ip = $_SERVER['REMOTE_ADDR']; 
+			$division = $user_array->division;
+			$country = $user_array->country;
+			$ranks= $user_array->ratingpilot;
+			$ranks2= $user_array->ratingatc;
+			$skype = $user_array->skype;
+			$nombre = utf8_decode($user_array->firstname);
+			$apellido = utf8_decode($user_array->lastname);
+			
+		if ($is>0){
+			
+			
+			
+				
+				$sql1157 = "UPDATE usuariosivao set nombres='$nombre', apellidos='$apellido', skype='$skype', rangopca='$ranks', rangoatc='$ranks2', pais='$country ', division='$division', lastconect=now(), lastip='$ip' where vid='$infos'";
+
+		if (!$result1157 = $db->query($sql1157)) {
+			die('There was an error running the query [' . $db->error . ']');
+		}
+				
+			
+		
+		
+			
+			
+			
+			
+		} else
+			
+			{
+				
+					$sql177 = "insert into usuariosivao (vid,nombres,apellidos,skype,rangopca,rangoatc,pais,division,lastconect,lastip,ip)
+                    values ('$infos','$nombre','$apellido','$skype','$ranks','$ranks2','$country','$division',now(),'$ip','$ip');";
+				if (!$result77 = $db->query($sql177)) {
+					die('There was an error running the query [' . $db->error . ']');
+				}
+				
+				
+			}
 ?>
 
 <!doctype html>
