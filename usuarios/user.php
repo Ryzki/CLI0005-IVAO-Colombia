@@ -169,8 +169,8 @@
 								<br>
 								<hr>
                                 <p class="description text-center">
-								<b>Rango PCA &nbsp;&nbsp;</b>  <img  src="https://www.ivao.aero/data/images/ratings/pilot/<?php echo $user_array->ratingatc ?>.gif" alt="..."/><br>
-                                <b>Rango ATC &nbsp;&nbsp;</b> <img  src="https://www.ivao.aero/data/images/ratings/atc/<?php echo $user_array->ratingpilot ?>.gif" alt="..."/><br>
+								<b>Rango PCA &nbsp;&nbsp;</b>  <img  src="https://www.ivao.aero/data/images/ratings/pilot/<?php echo $user_array->ratingpilot; ?>.gif" alt="..."/><br>
+                                <b>Rango ATC &nbsp;&nbsp;</b> <img  src="https://www.ivao.aero/data/images/ratings/atc/<?php echo $user_array->ratingatc; ?>.gif" alt="..."/><br>
                                                    
                                 </p>
                             </div>

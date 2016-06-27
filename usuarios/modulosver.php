@@ -24,19 +24,18 @@
 	}
 		?>
 		
-        <div class="content">
-           
+      <div class="content">
+            <div class="container-fluid">
                     
-				
+				<div class="card">
 				 <div class="header">
                                <h1>Módulos para pilotos</h1>
 				<h4>Rango: <?php echo $short_name; ?></h4>
                             </div>
-				<br>
-				<hr>
-				<br>
-					 <div class="content">
-                               	 <div class="ct-chart ct-perfect-fourth">		
+				<div class="content">
+							<div class="table-full-width">
+							<table class="table">
+							<tr>		
 								 
 								 
 								 <?
@@ -54,7 +53,7 @@
 		?>
 		
 		
-		
+		<div class="col-md-12">
 	<li class="activity page modtype_page " id="module-18">
 <div>
 <div class="mod-indent-outer">
@@ -70,15 +69,21 @@
 <div class="no-overflow">
 <div class="no-overflow">
 <p>Con esta cartilla, aprenderás efectivamente mucha información dada por el Staff de IVAO Colombia..</p></div></div></div></div></div></div></li>
-
+</div>
 <?php } 
 
 if ($i==0){
-	echo '<div class="alert alert-danger" role="alert">No hay material subido a este módulo.</div>';
+	echo '<div class="col-md-8"><div class="alert alert-danger" role="alert">No hay material subido a este módulo.</div></div>';
 }
 ?>
 
+</tr>
+</table>
 
+
+
+</div>
+					</div>
 
 
 

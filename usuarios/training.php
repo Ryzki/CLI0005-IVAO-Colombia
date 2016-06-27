@@ -1,5 +1,28 @@
+<style>
+.button {
+    background-color: #008CBA;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
 
+.button1 {
+    background-color: #f44336;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
 
+.button2 {width: 100%;}
+</style>
         <div class="content">
             <div class="container-fluid">
                 
@@ -11,7 +34,9 @@
                                 <p class="category">Preparación por parte de IVAO Colombia.</p>
                             </div>
                             <div class="content">
-							 <div class="ct-chart ct-perfect-fourth">
+							<div class="table-full-width">
+							<table class="table">
+							<tr>
 							 <?php
 											
 											
@@ -35,10 +60,12 @@
 		$short_name= $row3["nombre"] . ' (' . $row3["abreviacion"] . ')';
 		?>
 	
-                                <div class="col-md-6">
-                                    <button class="btn btn-default btn-block" onclick="location='./?page=modulosver&id=<?php echo $row3["id"]; ?>'"><?php echo $short_name; ?></button>
-                               </div>
+                                <div class="col-md-12">
+                                    <button class="button button2" onclick="location='./?page=modulosver&id=<?php echo $row3["id"]; ?>'"><?php echo $short_name; ?></button>
+                               <br><br></div>
 	<? } ?>
+	</tr>
+	</table>
 </div>
                                 
                             </div>
@@ -53,7 +80,9 @@
                                 <p class="category">Preparación por parte de IVAO Colombia.</p>
                             </div>
                             <div class="content">
-                               	 <div class="ct-chart ct-perfect-fourth">
+                               	 <div class="table-full-width">
+							<table class="table">
+							<tr>
 							 <?php
 											
 											
@@ -68,10 +97,12 @@
 		$short_names= $row38["nombre"] . ' (' . $row38["abreviacion"] . ')';
 		?>
 	
-                                <div class="col-md-6">
-                                    <button class="btn btn-default btn-block" onclick="location='./?page=modulosveratc&id=<?php echo $row38["id"]; ?>'"><?php echo $short_names; ?></button>
-                               </div>
+                                <div class="col-md-12">
+                                    <button class="button1 button2" onclick="location='./?page=modulosveratc&id=<?php echo $row38["id"]; ?>'"><?php echo $short_names; ?></button>
+                               <br><br></div>
 	<? } ?>
+	</tr>
+	</table>
 </div>
 
                             
