@@ -1,4 +1,4 @@
-<?php header('Content-Type: text/html; charset=UTF-8');   ?>
+
 							
 								
 								
@@ -23,6 +23,9 @@
                                             <label>Aeropuerto a Consultar</label>
 						<select class="form-control" name="airport">					
 <?php
+
+header('Content-Type: text/html; charset=UTF-8');  
+
 include('./db_login.php');
 	$idaa = $_GET['id'];
 	
@@ -59,15 +62,15 @@ include('./db_login.php');
 	?>
 
 											
-  <option value="<?php echo $icao; ?>"><?php echo '(' . $icao . ') ' . utf8_decode($name); ?></option>
+  <option value="<?php echo $icao; ?>"><?php echo  $icao . ' (' . utf8_decode($name) . ')'; ?></option>
 	<? } ?>
 </select>
 <br>
 <br>
 <button type="submit" class="btn btn-info btn-fill pull-right">Buscar Información</button>
-</form>
+</form> </div>	
 </td></tr></table>
-                                        </div>			
+                                       		
 
                                  
                                 </div>
