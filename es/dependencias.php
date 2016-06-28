@@ -14,7 +14,7 @@ margin-right:auto;
 </style>
 </head>
 <body>
- <table class="table table-striped" width="100%">
+ <table class="table table-striped"  width="100%" bgcolor="#FFFFFF">
 <thead>
   <tr>
     <th>DEPENDENCIA</th><th>CONTROLADOR</th><th>FECHA Y HORA INICIO</th><th>FECHA Y HORA FINALIZACIÓN</th><th>EVENTO</th>
@@ -91,7 +91,7 @@ $fechasecundaria = substr($fechados, 0, 4) . '-' . substr($fechados, 4, 2) . '-'
 		$iso_country= $row399["iso_country"];
 	}
 	
-	echo '<tr><td><img src="../admin/intranet/country-flags/' . $iso_country . '.png"><font color="black"> (' . $fields[0] . ')</font><br><font color="black"><b>' . $callsignes . '</b></font></td><td><a href="http://www.ivao.aero/members/person/details.asp?id=' . $fields[1] . '"><font color="red">' . $fields[1] . '</font></a></td><td><font color="black">' . $fechaprimaria . '</font></td><td><font color="black">' . $fechasecundaria . '</font></td><td><font color="black">' . $infor .'</font></td></tr>';
+	echo '<tr bgcolor="#FFFFFF"><td bgcolor="#FFFFFF"><img src="../admin/intranet/country-flags/' . $iso_country . '.png"><font color="black"> (' . $fields[0] . ')</font><br><font color="black"><b>' . $callsignes . '</b></font></td><td><a href="http://www.ivao.aero/members/person/details.asp?id=' . $fields[1] . '"><font color="red">' . $fields[1] . '</font></a></td><td><font color="black">' . $fechaprimaria . '</font></td><td><font color="black">' . $fechasecundaria . '</font></td><td><font color="black">' . $infor .'</font></td></tr>';
 
 
 $var++;

@@ -11,7 +11,7 @@ include('./db_login.php');
 	}
 
 	
-	$sql3 ="select * from eventos where id='$idaa'";
+	$sql3 ="select * from noticias where id='$idaa'";
 
 	if (!$result3 = $db->query($sql3)) {
 		die('There was an error running the query [' . $db->error . ']');
@@ -19,14 +19,15 @@ include('./db_login.php');
 	while ($row3 = $result3->fetch_assoc()) {
 		
         $callsign= $row3["id"];
-		$titulo= $row3["nombre"];
-		$horaunos= $row3["hora_inicio"];
-		$horadoses= $row3["hora_fin"];
-		$staffa= $row3["staff"];
-		$fecha= $row3["fecha"];
-	    $informacion= utf8_decode($row3["informacion"]);
-		$imagen= $row3["imagen"];
-		
+		$hora_inicio= $row3["hora_inicio"];
+		$hora_utcinicio= $row3["hora_utcinicio"];
+		$nombre_examen= $row3["nombre_examen"];
+		$lugar= $row3["lugar"];
+		$informacion= utf8_decode($row3["informacion"]);
+	    $imagen= $row3["imagen"];
+		$usuario= $row3["usuario"];
+$staffa= $row3["staff"];
+$fecha= $row3["fecha"];
 		
 		$sql33 ="select * from staff where id='$staffa'";
 
@@ -68,40 +69,59 @@ include('./db_login.php');
 		
 
 	?>
-	 <div class="content">
+
+							
+								
+								
+								
+								 <div class="content">
             <div class="container-fluid">
                 
 				  <div class="row">
                     <div class="col-md-12">
                         <div class="card">
                             <div class="header">
-                                <h4 class="title">Información de Evento</h4>
+                                <h4 class="title">Información de Examen</h4>
                             </div>
                             <div class="content">
 							<div class="table-full-width">
 							<table class="table">
 							<tr><td>	
 							
-								 
-								<center><img src="../admin/intranet/uploads/<?php echo $imagen; ?>" width="60%" /></center>
-						
 							
+								<center><img src="../admin/intranet/uploadsnoticias/<?php echo $imagen; ?>" width="60%" /></center>
+								<hr>
+                             
+								<br>
+                                   
+								<hr>
+								
                                         <div class="form-group">
-                                            <label>Titulo Evento</label>
-                                            <input class="form-control" name="nombre" value="<?php echo $titulo; ?>" readonly="readonly"/>
+                                            <label>Nombre Examen</label>
+                                            <input class="form-control" name="nombre" value="<?php echo $nombre_examen; ?>" readonly="readonly"/>
+										
+                                        </div>
+										<div class="form-group">
+                                            <label>Examinado</label>
+                                            <input class="form-control" name="nombre" value="<?php echo $usuario; ?>" readonly="readonly"/>
 										
                                         </div>
 										 <div class="form-group">
-                                            <label>Fecha Evento</label>
+                                            <label>Fecha Examen</label>
 											<input class="form-control" type="date" name="fecha" value="<?php echo $fecha; ?>" readonly="readonly"/>
                                         </div>
 										<div class="form-group">
-                                            <label>Hora Inicio</label>
-											<input class="form-control"  name="horauno" value="<?php echo $horaunos; ?> Z" readonly="readonly"/>
+                                            <label>Hora HLC</label>
+											<input class="form-control"  name="horauno" value="<?php echo $hora_inicio; ?> HLC" readonly="readonly"/>
                                         </div>
 										<div class="form-group">
-                                            <label>Hora Finalización</label>
-											<input class="form-control"  name="horados" value="<?php echo $horadoses; ?> Z" readonly="readonly"/>
+                                            <label>Hora UTC</label>
+											<input class="form-control"  name="horados" value="<?php echo $hora_utcinicio; ?> UTC" readonly="readonly"/>
+                                        </div>
+										<div class="form-group">
+                                            <label>Lugar Examen</label>
+                                            <input class="form-control" name="nombre" value="<?php echo $lugar; ?>" readonly="readonly"/>
+										
                                         </div>
 										 <div class="form-group">
                                             <label>Información Evento</label>
@@ -117,14 +137,28 @@ include('./db_login.php');
 										<span style="color: #666666; font-size: 8pt;">International Virtual Aviation Organisation<br />
 										<a href="http://co.ivao.aero/"><font color="blue">http://co.ivao.aero</font></a></span></p>
 
-								</td></tr>
-	</table>
-	
-</div>
-                                
+										
+
+                                 
+                                </div>
+								
+								
+								
+													   
                             </div>
                         </div>
                     </div>
-					</div>
-                        </div>
-                    </div>
+                     <!-- End Form Elements -->
+					 
+				
+					
+					
+					
+					
+                </div>
+            </div>
+                <!-- /. ROW  -->
+               
+                <!-- /. ROW  -->
+    </div>
+      

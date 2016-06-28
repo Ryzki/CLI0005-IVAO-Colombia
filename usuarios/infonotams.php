@@ -22,7 +22,7 @@ include('./db_login.php');
 		$titulo= $row3["titulo"];
 		$staffa= $row3["staff"];
 		$fecha= $row3["fecha"];
-	    $informacion= $row3["informacion"];
+	    $informacion= utf8_decode($row3["informacion"]);
 		
 		
 		$sql33 ="select * from staff where id='$staffa'";
@@ -65,48 +65,35 @@ include('./db_login.php');
 		
 
 	?>
-	<div class="container">
-	 <div id="page-wrapper" >
-            <div id="page-inner">
-                 <!-- /. ROW  -->
-                 <hr />
-               <div class="row">
-                <div class="col-md-10">
-                    <!-- Form Elements -->
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            Información Notams
-                        </div>
-                        <div class="panel-body">
-                            <div class="row">
-							
-								
-								<center><img src="../admin/intranet/uploads/<?php echo $imagen; ?>" width="60%" /></center>
-								<hr>
-                                <div class="col-md-6">
-								<br>
-                                   
-								<hr>
+	 <div class="content">
+            <div class="container-fluid">
+                
+				  <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="header">
+                                <h4 class="title">Información de Notam</h4>
+                            </div>
+                            <div class="content">
+							<div class="table-full-width">
+							<table class="table">
+							<tr><td>	
 								
                                         <div class="form-group">
-                                            <label>Titulo Evento</label>
+										<img src="./images/ivaoco.png" class="iconlarge activityicon" alt=" " role="presentation" width="3%"/>
+                                            <label>Titulo Notam</label>
                                             <input class="form-control" name="nombre" value="<?php echo $titulo; ?>" readonly="readonly"/>
 										
                                         </div>
 										 <div class="form-group">
-                                            <label>Fecha Evento</label>
+										 <img src="./images/ivaoco.png" class="iconlarge activityicon" alt=" " role="presentation" width="3%"/>
+                                            <label>Fecha de Creación</label>
 											<input class="form-control" type="date" name="fecha" value="<?php echo $fecha; ?>" readonly="readonly"/>
                                         </div>
-										<div class="form-group">
-                                            <label>Hora Inicio</label>
-											<input class="form-control"  name="horauno" value="<?php echo $horaunos; ?> Z" readonly="readonly"/>
-                                        </div>
-										<div class="form-group">
-                                            <label>Hora Finalización</label>
-											<input class="form-control"  name="horados" value="<?php echo $horadoses; ?> Z" readonly="readonly"/>
-                                        </div>
+							
 										 <div class="form-group">
-                                            <label>Información Evento</label>
+										 <img src="./images/ivaoco.png" class="iconlarge activityicon" alt=" " role="presentation" width="3%"/>
+                                            <label>Información Notam</label>
 											<textarea class="form-control" name="info" readonly="readonly" ><?php echo $informacion; ?></textarea>
                                         </div>
 										
@@ -115,34 +102,18 @@ include('./db_login.php');
 										
 										<p>
 										<span style="color: #2a4982; font-family: Arial; font-size: 11pt;"><strong><?php echo $nombrese; ?></strong></span><br />
-										<span style="color: #666666; font-size: 10pt;"><strong><?php echo $cargose; ?></strong></span><br />
+										<span style="color: #666666; font-size: 10pt;"><strong><?php echo $cargose; ?> - Colombia</strong></span><br />
 										<span style="color: #666666; font-size: 8pt;">International Virtual Aviation Organisation<br />
 										<a href="http://co.ivao.aero/"><font color="blue">http://co.ivao.aero</font></a></span></p>
 
-										
-
-                                 
-                                </div>
-								
-								
-								
-													   
+									</td></tr>
+	</table>
+	
+</div>
+                                
                             </div>
                         </div>
                     </div>
-                     <!-- End Form Elements -->
-					 
-				
-					
-					
-					
-					
-                </div>
-            </div>
-                <!-- /. ROW  -->
-               
-                <!-- /. ROW  -->
-    </div>
-             <!-- /. PAGE INNER  -->
- </div>     
- </div>        
+					</div>
+                        </div>
+                    </div>

@@ -176,24 +176,24 @@ $infos = $user_array->vid;
                         <p>Eventos ATC Reserva!</p>
                     </a>
                 </li>
-                <!--  <li>
-                    <a href="./?page=airlines">
+                  <li>
+                    <a href="./?page=airports">
                         <i class="pe-7s-science"></i>
-                        <p>Aerolíneas</p>
+                        <p>Aeropuertos</p>
                     </a>
-                </li> -->
+                </li>
                 <li>
                     <a href="./?page=examenes">
                         <i class="pe-7s-map-marker"></i>
                         <p>Mis Examenes</p>
                     </a>
                 </li>
-               <!-- <li>
-                    <a href="notifications.html">
+               <li>
+                    <a href="./?page=sugerencias">
                         <i class="pe-7s-bell"></i>
-                        <p>Notifications</p>
+                        <p>Buzón de Sugerencias</p>
                     </a>
-                </li> -->
+                </li>
 				<li class="active-pro">
                     <a href="../RFEColombia/">
                         <i class="pe-7s-rocket"></i>
@@ -1048,14 +1048,14 @@ if (substr_count($controller[0],'_') == 1) {
 ?>
         <footer class="footer">
             <div class="container-fluid">
-              <!--  <nav class="pull-left">
+             <nav class="pull-left">
                     <ul>
                         <li>
-                            <a href="#">
-                                Home
+                            <a href="http://co.forum.ivao.aero/">
+                                Foro IVAO Colombia
                             </a>
                         </li>
-                        <li>
+                        <!--   <li>
                             <a href="#">
                                 Company
                             </a>
@@ -1069,9 +1069,9 @@ if (substr_count($controller[0],'_') == 1) {
                             <a href="#">
                                Blog
                             </a>
-                        </li>
+                        </li>-->
                     </ul>
-                </nav> -->
+                </nav> 
                 <p class="copyright pull-right">
                     &copy; <?php echo date('Y'); ?> <a href="http://www.ivaocol.com.co">IVAO Colombia</a>, Sistematización Andrés Zapata.
                 </p>
