@@ -284,7 +284,27 @@ $infos = $user_array->vid;
 	
 	}
 	}
-	$total = $ippa+$ia;
+	
+	$sql23pa = "SELECT * FROM notams ";
+
+	if (!$result23pa = $db->query($sql23pa)) {
+
+		die('There was an error running the query  [' . $db->error . ']');
+
+	}
+	
+	
+$ippla=0;
+	while ($row23pa = $result23pa->fetch_assoc()) {
+	
+	
+	
+$ippla++;
+
+	}
+	
+	
+	$total = $ippa+$ia+$ippla;
 	?>
 	
 	
@@ -400,7 +420,49 @@ $infos = $user_array->vid;
 		  
 		  ?>
 		  <li><a><b>NOTAMS</b></a></li>
+		   <?
+		 
+	
+	$sql23p = "SELECT * FROM notams ";
+
+	if (!$result23p = $db->query($sql23p)) {
+
+		die('There was an error running the query  [' . $db->error . ']');
+
+	}
+	
+	
+$ippl=0;
+	while ($row23p = $result23p->fetch_assoc()) {
+	
+	
+	
+$ippl++;
+	
+	?>
+          
+          
+          <li><a href="./?page=infonotams&id=<?php echo $row23p['id']; ?>"><?php echo $row23p['titulo']; ?> (<?php echo $row23p['fecha']; ?>)</a></li>
+          
+         
 		  
+		  
+		  
+	<?php  
+	
+	
+	
+	}
+	
+	if ($ippl==0)
+	{
+	
+	echo '<li><a>No hay Notams disponibles aún.</a></li>';
+	 
+	} 
+		  
+		  
+		  ?>
                                 
                               </ul>
                         </li>
