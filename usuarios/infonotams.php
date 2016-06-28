@@ -11,7 +11,7 @@ include('./db_login.php');
 	}
 
 	
-	$sql3 ="select * from eventos where id='$idaa'";
+	$sql3 ="select * from notams where id='$idaa'";
 
 	if (!$result3 = $db->query($sql3)) {
 		die('There was an error running the query [' . $db->error . ']');
@@ -19,13 +19,10 @@ include('./db_login.php');
 	while ($row3 = $result3->fetch_assoc()) {
 		
         $callsign= $row3["id"];
-		$titulo= $row3["nombre"];
-		$horaunos= $row3["hora_inicio"];
-		$horadoses= $row3["hora_fin"];
+		$titulo= $row3["titulo"];
 		$staffa= $row3["staff"];
 		$fecha= $row3["fecha"];
 	    $informacion= $row3["informacion"];
-		$imagen= $row3["imagen"];
 		
 		
 		$sql33 ="select * from staff where id='$staffa'";
@@ -78,7 +75,7 @@ include('./db_login.php');
                     <!-- Form Elements -->
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            Información Evento
+                            Información Notams
                         </div>
                         <div class="panel-body">
                             <div class="row">
