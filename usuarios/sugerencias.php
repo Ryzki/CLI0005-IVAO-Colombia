@@ -10,7 +10,7 @@
                                 <h4 class="title">Sistema de Reclamos, Opiniones y Sugerencias.</h4>
                             </div>
                             <div class="content">
-                                
+                                <form  enctype="multipart/form-data" action="./page=mensajesug" method="post">
                                     <div class="row">
                                         <div class="col-md-5">
                                             <div class="form-group">
@@ -140,16 +140,7 @@ $ranks2= $user_array->ratingatc;
                                         </div>
                                     </div>
 
-                                   <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="form-group">
-                                                <label>Titulo</label>
-                                                <input type="text" class="form-control" placeholder="Titulo del Mensaje" value=""/>
-                                            </div>
-                                        </div>
-                                    </div> 
-
-                                    <div class="row">
+									  <div class="row">
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <label>División</label>
@@ -186,24 +177,36 @@ $sql3457a ="select * from typestaff";
                                             </div>
                                         </div>
                                     </div>
-<form  enctype="multipart/form-data" action="./page=usuarioactualizado" method="post">
-									<div class="row">
-									<div class="col-md-4">
+									
+                                   <div class="row">
+                                        <div class="col-md-12">
                                             <div class="form-group">
-                                                <label><b>Registra Tu Correo Electrónico!</b></label>
-                                                <input name="email" class="form-control" value="<?php echo $emails; ?>" placeholder="cuenta@dominio.com" />
+                                                <label>Titulo</label>
+                                                <input type="text" class="form-control" placeholder="Titulo del Mensaje" value=""/>
                                             </div>
                                         </div>
-										<div class="col-md-4">
+                                    </div> 
+
+                                    <div class="row">
+                                        <div class="col-md-12">
                                             <div class="form-group">
-                                                <label><b>Subir Su Imagen! <font color="red">120 px * 120px</font></b></label>
-                                                <input name="image_file"  type="file">
+                                                <label>URL de IMAGEN <font color="red">*Opcional</font></label>
+                                                <input type="text" class="form-control" placeholder="Titulo del Mensaje" value=""/>
                                             </div>
                                         </div>
-										 <input type="hidden" class="form-control" name="id" value="<?php echo $user_array->vid;?>"/>
-                                   
-                                    </div>
- <button type="submit" class="btn btn-info btn-fill pull-right">Actualizar Perfil</button>
+                                    </div> 
+									
+									 <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label>Mensaje</font></label>
+                                                <textarea name="comment" class="form-control"></textarea>
+                                            </div>
+                                        </div>
+                                    </div> 
+
+									
+ <button type="submit" class="btn btn-info btn-fill pull-right">Enviar Mensaje</button>
 									</form>
                                     <div class="clearfix"></div>
                                
