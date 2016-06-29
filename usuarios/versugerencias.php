@@ -134,7 +134,7 @@
 					<?php 
 											
 							
-							
+			date_default_timezone_set('America/Bogota');					
 											include('./db_login.php');
 	$id = $_GET['id'];
 	
@@ -145,21 +145,7 @@
 		die('Unable to connect to database [' . $db->connect_error . ']');
 	}
 
-	
-	$sql3a ="select * from buzonmensajes where id='$id'";
-
-	if (!$result3a = $db->query($sql3a)) {
-		die('There was an error running the query [' . $db->error . ']');
-	}
-	while ($row3a = $result3a->fetch_assoc()) {
-		$titulo= $row3a["titulo"];
-		$mensaje= $row3a["mensaje"];
-		$departamento= $row3a["departamento"];
-		$fechaa= $row3a["fecha"];
-		
-	}
-	
-	date_default_timezone_set('America/Bogota');
+	$fechasecundaria = date('Y-m-d H:i:s');
 	
 	$vids = $user_array->vid;
 
@@ -183,34 +169,14 @@ $sql3457a ="select * from usuariosivao where vid=$vids";
 		
 	}
 	
-	
-	
-	$fechaprimaria = $fechaa;
-$fechasecundaria = date('Y-m-d H:i:s');
-
-
-
-$fechass = $fechasecundaria;
-$fechassa = $fechaprimaria;
-
-$fecha1 = new DateTime($fechass);
-$fecha2 = new DateTime($fechassa);
-$fecha = $fecha1->diff($fecha2);
 	?>				
 										<div id="chat">
 	<div id="header-chat">
-		<?php echo utf8_decode($user_array->firstname) . ' ' . utf8_decode($user_array->lastname) . ' -  Tema: ' . $titulo; ?>
+		<?php echo utf8_decode($user_array->firstname) . ' ' . utf8_decode($user_array->lastname) . ' -  IVAO Colombia Staff'; ?>
 	</div>
 	<div id="mensajes">
 	
-		<div class="mensaje-autor">
-			<img src="<?php echo $imageness; ?>" alt="" class="foto" width="5%">
-			<div class="flecha-izquierda"></div>
-			<div class="contenido">
-				<?php echo $mensaje; ?>
-			</div>
-			<div class="fecha">Enviado hace <?php printf('%d h  %d minutos', $fecha->h, $fecha->i); ?></div>
-		</div>
+		
 
 		<?php 
 											
@@ -221,14 +187,14 @@ $fecha = $fecha1->diff($fecha2);
 	
 
 	
-	$sql3ap ="select * from respuestasdelbuzon where idmensaje='$id' order by fecha desc";
+	$sql3ap ="select * from respuestasdelbuzon where idmensaje='$id' ORDER BY fecha DESC";
 
 	if (!$result3ap = $db->query($sql3ap)) {
 		die('There was an error running the query [' . $db->error . ']');
 	}
 	while ($row3ap = $result3ap->fetch_assoc()) {
 		if($row3ap["staff"]!=""){
-			
+	date_default_timezone_set('America/Bogota');		
 			
 	$fechaprimariae = $row3ap["fecha"];		
 			
@@ -252,8 +218,10 @@ $fechae = $fecha1e->diff($fecha2e);
 			
 			
 			<?php
-		} else if($row3ap["vid"]!=""){
-			
+		} 
+		
+		if($row3ap["vid"]!=""){
+	date_default_timezone_set('America/Bogota');		
 				$fechaprimariaee = $row3ap["fecha"];		
 			
 			
@@ -283,6 +251,59 @@ $fechaee = $fecha1ee->diff($fecha2ee);
 	}
 	
 	?>	
+	
+	
+	
+	
+	<?php 
+	
+	
+	$sql3a ="select * from buzonmensajes where id='$id'";
+
+	if (!$result3a = $db->query($sql3a)) {
+		die('There was an error running the query [' . $db->error . ']');
+	}
+	while ($row3a = $result3a->fetch_assoc()) {
+		$titulo= $row3a["titulo"];
+		$mensaje= $row3a["mensaje"];
+		$departamento= $row3a["departamento"];
+		$fechaa= $row3a["fecha"];
+		
+	}
+	
+	date_default_timezone_set('America/Bogota');
+	
+	
+	
+	
+	$fechaprimaria = $fechaa;
+
+
+
+
+$fechass = $fechasecundaria;
+$fechassa = $fechaprimaria;
+
+$fecha1 = new DateTime($fechass);
+$fecha2 = new DateTime($fechassa);
+$fecha = $fecha1->diff($fecha2);
+
+?>
+	
+	
+	
+	
+	
+	
+	
+	<div class="mensaje-autor">
+			<img src="<?php echo $imageness; ?>" alt="" class="foto" width="5%">
+			<div class="flecha-izquierda"></div>
+			<div class="contenido">
+				<?php echo $mensaje; ?>
+			</div>
+			<div class="fecha">Enviado hace <?php printf('%d h  %d minutos', $fecha->h, $fecha->i); ?></div>
+		</div>
 		
 	</div>
 
