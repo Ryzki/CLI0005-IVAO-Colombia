@@ -159,16 +159,16 @@ $radiocall  = mysql_result($querycall, 0, 'useradiocallsign');
 													$vid = mysql_result($query,$i,'vid');
 													if (empty($vid)) {
 ?>
-														<td style="vertical-align:middle"><button type="button" class="btn btn-success" data-toggle="modal" href="#modalFlights" onClick="loadModal(<?php echo mysql_result($query,$i,'id'); ?>)">Available</button></td>
+														<td style="vertical-align:middle"><button type="button" class="btn btn-success" data-toggle="modal" href="#modalFlights" onClick="loadModal(<?php echo mysql_result($query,$i,'id'); ?>)">Disponible</button></td>
 <?php
 													} else {
 														if (mysql_result($query,$i,'bookingstatus') == 1) {
 ?>
-															<td style="vertical-align:middle;"><button type="button" class="btn btn-warning" data-toggle="modal" href="#modalFlights" onClick="loadModal(<?php echo mysql_result($query,$i,'id'); ?>)">Booked by <b><?php echo mysql_result($query,$i,'vid'); ?>
+															<td style="vertical-align:middle;"><button type="button" class="btn btn-warning" data-toggle="modal" href="#modalFlights" onClick="loadModal(<?php echo mysql_result($query,$i,'id'); ?>)">Reservado <b><?php echo mysql_result($query,$i,'vid'); ?>
 <?php
 														} else if (mysql_result($query,$i,'bookingstatus') == 2) {
 ?>
-															<td style="vertical-align:middle;"><button type="button" class="btn btn-danger" data-toggle="modal" href="#modalFlights" onClick="loadModal(<?php echo mysql_result($query,$i,'id'); ?>)">Booked by <b><?php echo mysql_result($query,$i,'vid'); ?>
+															<td style="vertical-align:middle;"><button type="button" class="btn btn-danger" data-toggle="modal" href="#modalFlights" onClick="loadModal(<?php echo mysql_result($query,$i,'id'); ?>)">Reservado <b><?php echo mysql_result($query,$i,'vid'); ?>
 <?php
 														}
 													}
@@ -275,16 +275,16 @@ $radiocall  = mysql_result($querycall, 0, 'useradiocallsign');
 													$vid = mysql_result($query,$i,'vid');
 													if (empty($vid)) {
 ?>
-														<td style="vertical-align:middle"><button type="button" class="btn btn-success" data-toggle="modal" href="#modalFlights" onClick="loadModal(<?php echo mysql_result($query,$i,'id'); ?>)">Available</button></td>
+														<td style="vertical-align:middle"><button type="button" class="btn btn-success" data-toggle="modal" href="#modalFlights" onClick="loadModal(<?php echo mysql_result($query,$i,'id'); ?>)">Disponible</button></td>
 <?php
 													} else {
 														if (mysql_result($query,$i,'bookingstatus') == 1) {
 ?>
-															<td style="vertical-align:middle;"><button type="button" class="btn btn-warning" data-toggle="modal" href="#modalFlights" onClick="loadModal(<?php echo mysql_result($query,$i,'id'); ?>)">Booked by <b><?php echo mysql_result($query,$i,'vid'); ?>
+															<td style="vertical-align:middle;"><button type="button" class="btn btn-warning" data-toggle="modal" href="#modalFlights" onClick="loadModal(<?php echo mysql_result($query,$i,'id'); ?>)">Reservado <b><?php echo mysql_result($query,$i,'vid'); ?>
 <?php
 														} else if (mysql_result($query,$i,'bookingstatus') == 2) {
 ?>
-															<td style="vertical-align:middle;"><button type="button" class="btn btn-danger" data-toggle="modal" href="#modalFlights" onClick="loadModal(<?php echo mysql_result($query,$i,'id'); ?>)">Booked by <b><?php echo mysql_result($query,$i,'vid'); ?>
+															<td style="vertical-align:middle;"><button type="button" class="btn btn-danger" data-toggle="modal" href="#modalFlights" onClick="loadModal(<?php echo mysql_result($query,$i,'id'); ?>)">Reservado <b><?php echo mysql_result($query,$i,'vid'); ?>
 <?php
 														}
 													}
@@ -383,16 +383,16 @@ $radiocall  = mysql_result($querycall, 0, 'useradiocallsign');
 													$vid = mysql_result($query,$i,'vid');
 													if (empty($vid)) {
 ?>
-														<td style="vertical-align:middle"><button type="button" class="btn btn-success" data-toggle="modal" href="#modalFlights" onClick="loadModal(<?php echo mysql_result($query,$i,'id'); ?>)">Available</button></td>
+														<td style="vertical-align:middle"><button type="button" class="btn btn-success" data-toggle="modal" href="#modalFlights" onClick="loadModal(<?php echo mysql_result($query,$i,'id'); ?>)">Disponible</button></td>
 <?php
 													} else {
 														if (mysql_result($query,$i,'bookingstatus') == 1) {
 ?>
-															<td style="vertical-align:middle;"><button type="button" class="btn btn-warning" data-toggle="modal" href="#modalFlights" onClick="loadModal(<?php echo mysql_result($query,$i,'id'); ?>)">Booked by <b><?php echo mysql_result($query,$i,'vid'); ?></b></button></td>
+															<td style="vertical-align:middle;"><button type="button" class="btn btn-warning" data-toggle="modal" href="#modalFlights" onClick="loadModal(<?php echo mysql_result($query,$i,'id'); ?>)">Reservado <b><?php echo mysql_result($query,$i,'vid'); ?></b></button></td>
 <?php
 														} else if (mysql_result($query,$i,'bookingstatus') == 2) {
 ?>
-															<td style="vertical-align:middle;"><button type="button" class="btn btn-danger" data-toggle="modal" href="#modalFlights" onClick="loadModal(<?php echo mysql_result($query,$i,'id'); ?>)">Booked by <b><?php echo mysql_result($query,$i,'vid'); ?></b></button></td>
+															<td style="vertical-align:middle;"><button type="button" class="btn btn-danger" data-toggle="modal" href="#modalFlights" onClick="loadModal(<?php echo mysql_result($query,$i,'id'); ?>)">Reservado <b><?php echo mysql_result($query,$i,'vid'); ?></b></button></td>
 <?php
 														}
 													}
@@ -478,11 +478,11 @@ if (!empty($_POST["slot"]) AND !empty($_POST["callreg"]) AND !empty($_POST["orgn
 																$vid = mysql_result($query,$i,'vid');
 																if (empty($vid)) {
 			?>
-																<td align="center"><button type="button" class="btn btn-success" style="width: 200px;" data-toggle="modal" href="#">Available</button></td></tr>
+																<td align="center"><button type="button" class="btn btn-success" style="width: 200px;" data-toggle="modal" href="#">Disponible</button></td></tr>
 			<?php
 																} else {
 			?>
-																<td align="center"><button type="button" class="btn btn-danger" style="width: 200px;" data-toggle="modal" href="#modalFlights"  onClick="loadPrivate(<?php echo mysql_result($query,$i,'id'); ?>)"><b>Booked by <?php echo mysql_result($query,$i,'vid'); ?></b></button></td></tr>
+																<td align="center"><button type="button" class="btn btn-danger" style="width: 200px;" data-toggle="modal" href="#modalFlights"  onClick="loadPrivate(<?php echo mysql_result($query,$i,'id'); ?>)"><b>Reservado <?php echo mysql_result($query,$i,'vid'); ?></b></button></td></tr>
 			<?php
 																}
 															}
