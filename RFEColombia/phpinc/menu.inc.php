@@ -2,7 +2,7 @@
 	<ul class="nav pull-right">
 
 		<!--##### HOME #####-->
-		<li <?php echo (strstr($_SERVER["SCRIPT_NAME"],"index"))?'class="active"':''; ?>><a href="./">Home</a></li>
+		<li <?php echo (strstr($_SERVER["SCRIPT_NAME"],"index"))?'class="active"':''; ?>><a href="./">Inicio</a></li>
 
 		<!--##### BRIEFING #####-->
 <?php
@@ -28,10 +28,10 @@
 		}
 ?>
 		<!--##### ABOUT #####-->
-		<li <?php echo (strstr($_SERVER["SCRIPT_NAME"],"about"))?'class="active"':''; ?>><a href="about">About</a></li>
+		<li <?php echo (strstr($_SERVER["SCRIPT_NAME"],"about"))?'class="active"':''; ?>><a href="about">Acerca del RFE</a></li>
 
 		<!--##### BOOKING #####-->
-		<li <?php echo (strstr($_SERVER["SCRIPT_NAME"],"booking"))?'class="active"':''; ?>><a href="booking" <?php echo (strstr($_SERVER["SCRIPT_NAME"],"booking"))?'':'id="booklink"'; ?> style="text-decoration: underline;">Book your Flight!</a></li>
+		<li <?php echo (strstr($_SERVER["SCRIPT_NAME"],"booking"))?'class="active"':''; ?>><a href="booking" <?php echo (strstr($_SERVER["SCRIPT_NAME"],"booking"))?'':'id="booklink"'; ?> style="text-decoration: underline;">Reserva su vuelo!</a></li>
 
 <?php
 		//if($IVAO_Info->result) {
@@ -43,10 +43,10 @@
 ?>
 			<!--##### PILOT LOUNGE #####-->
 			<li class="dropdown <?php echo (strstr($_SERVER["SCRIPT_NAME"],"bookedflights") || strstr($_SERVER["SCRIPT_NAME"],"ais"))?'active':''; ?>">
-				<a href="#" class="dropdown-toggle" data-toggle="dropdown">Pilot Lounge <b class="caret"></b></a>
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown">Sala de Piloto <b class="caret"></b></a>
 				<ul class="dropdown-menu">
-					<li><a href="bookedflights">My Booked Flights</a></li>
-					<li><a href="ais">AIS Room</a></li>
+					<li><a href="bookedflights">Mis vuelos reservados</a></li>
+					<li><a href="ais">AIS Salón</a></li>
 				</ul>
 			</li>
 <?php
@@ -74,13 +74,13 @@
 		<!--<li><a href="atcschedule">ATC Schedule</a></li>-->
 		
 		<!--##### GENERAL STATISTICS #####-->
-		<li <?php echo (strstr($_SERVER["SCRIPT_NAME"],"stats"))?'class="active"':''; ?>><a href="stats">General Statistics</a></li>
+		<li <?php echo (strstr($_SERVER["SCRIPT_NAME"],"stats"))?'class="active"':''; ?>><a href="stats">Estadísticas Generales</a></li>
 		
 <?php
 		if($IVAO_Info->result) {
 ?>
 			<!--##### PROFILE #####-->
-			<li <?php echo (strstr($_SERVER["SCRIPT_NAME"],"profile"))?'class="active"':''; ?>><a href="profile">My Profile</a></li>
+			<li <?php echo (strstr($_SERVER["SCRIPT_NAME"],"profile"))?'class="active"':''; ?>><a href="profile">Mi Perfil</a></li>
 <?php
 		}
 ?>
@@ -89,12 +89,12 @@
 		if($IVAO_Info->result) {
 ?>
 			<!--##### LOGOUT #####-->
-			<li><a data-toggle="modal" href="#modalLogoff" onClick="logout()" rel="tooltip" data-placement="bottom" data-html="true" title="<b>Logged in as</b><br><?php echo $IVAO_Info->firstname." ".$IVAO_Info->lastname." (".$IVAO_Info->vid.")"; ?>">Logout</a></li>
+			<li><a data-toggle="modal" href="#modalLogoff" onClick="logout()" rel="tooltip" data-placement="bottom" data-html="true" title="<b>Logged in as</b><br><?php echo $IVAO_Info->firstname." ".$IVAO_Info->lastname." (".$IVAO_Info->vid.")"; ?>">Cerrar Sesión</a></li>
 <?php
 		} else {
 ?>
 			<!--##### LOGIN #####-->
-			<li><a href="<?php echo login_url; ?>?url=<?php echo url; ?>">Login</a></li>
+			<li><a href="<?php echo login_url; ?>?url=<?php echo url; ?>">Iniciar Sesión</a></li>
 <?php
 		}
 ?>

@@ -264,6 +264,21 @@ if	($estado<>4) {
 							
                         </ul>
                       </li>  
+					  
+					  
+					   <li>
+                        <a href="#"><i class="fa fa-table fa-3x"></i> Eventos ATC Reservas<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="?page=fra">Lista FRA</a>
+                            </li>
+                            <li>
+                                <a href="?page=eventatcs">Eventos</a>
+                            </li>
+							
+							
+                        </ul>
+                      </li> 
 				<? } else {
 					
 					?>

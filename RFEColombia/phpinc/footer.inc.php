@@ -9,9 +9,9 @@ $query = mysqlexec($sqlconn,$query);
 		<div class="row">
 			<div class="span3" style="padding-left: 20px; background: linear-gradient(to bottom, rgba(44, 17, 14,0.85) 0%,rgba(44, 17, 14,0.3) 150%),0% 0%/45% no-repeat url(images/divlogo/divlogo@140px.png);">
 				<img src="phpinc/generatelogo.php">
-				<p>Brought to you by IVAO <?php echo mysql_result($query,0,'division'); ?>.</p>
+				<p>Realizado por IVAO <?php echo mysql_result($query,0,'division'); ?>.</p>
 				<p class="copyright">
-					&copy; <?php echo gmdate("Y"); ?> - <a href="http://www.ivaous.org">IVAO United States</a>
+					&copy; <?php echo gmdate("Y"); ?> - <a href="http://www.ivaous.org">IVAO Colombia</a>
 				</p>
 			</div>
 <?php
@@ -23,7 +23,7 @@ if (@mysql_result($query2,0,'facebook')) {
 ?>
 			<div class="span2">
 				<h1><i class="fa fa-facebook"></i></h1>
-				<p><a href="<?php echo mysql_result($query2,0,'facebook'); ?>">Find IVAO-<?php echo mysql_result($query,0,'divisioniso'); ?> on Facebook</a></p>
+				<p><a href="<?php echo mysql_result($query2,0,'facebook'); ?>">Encontrar IVAO-<?php echo mysql_result($query,0,'divisioniso'); ?> en Facebook</a></p>
 			</div>
 <?php
 }
@@ -31,7 +31,7 @@ if (@mysql_result($query2,0,'twitter')) {
 ?>
 			<div class="span2">
 				<h1><i class="fa fa-twitter"></i></h1>
-				<p><a href="<?php echo mysql_result($query2,0,'twitter'); ?>">Find IVAO-<?php echo mysql_result($query,0,'divisioniso'); ?> on Twitter</a></p>
+				<p><a href="<?php echo mysql_result($query2,0,'twitter'); ?>">Encontrar IVAO-<?php echo mysql_result($query,0,'divisioniso'); ?> en Twitter</a></p>
 			</div>
 <?php
 }
@@ -39,7 +39,7 @@ if (@mysql_result($query2,0,'googleplus')) {
 ?>
 			<div class="span2">
 				<h1><i class="fa fa-google-plus"></i></h1>
-				<p><a href="<?php echo mysql_result($query2,0,'googleplus'); ?>">Find IVAO-<?php echo mysql_result($query,0,'divisioniso'); ?> on Google+</a></p>
+				<p><a href="<?php echo mysql_result($query2,0,'googleplus'); ?>">Encontrar IVAO-<?php echo mysql_result($query,0,'divisioniso'); ?> en Google+</a></p>
 			</div>
 <?php
 }

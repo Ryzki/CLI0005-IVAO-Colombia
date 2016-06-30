@@ -33,7 +33,7 @@ include("phpinc/config.inc.php");
 						</div>
 					<div class="flexslider home">
 						<ul class="slides">
-							<li><h1 style="color: #fff; text-shadow: 3px 3px 2px rgba(25, 25, 25, 1);">RFE <?php echo mysql_result($querysel,0,'aptname'); ?></h1><h3 style="color: #fff; text-shadow: 3px 3px 2px rgba(25, 25, 25, 1);"><?php echo mysql_result($querydate,0,'eventdate'); ?>, <?php echo mysql_result($querydate,0,'starttime'); ?>-<?php echo mysql_result($querydate,0,'endtime'); ?> | Enjoy the event prepared by IVAO <?php echo mysql_result($querydate,0,'division'); ?>!</h3><br/><img src="images/divlogo/divlogo@140px.png"/><br/><br/></li>
+							<li><h1 style="color: #fff; text-shadow: 3px 3px 2px rgba(25, 25, 25, 1);">RFE <?php echo mysql_result($querysel,0,'aptname'); ?></h1><h3 style="color: #fff; text-shadow: 3px 3px 2px rgba(25, 25, 25, 1);"><?php echo mysql_result($querydate,0,'eventdate'); ?>, <?php echo mysql_result($querydate,0,'starttime'); ?>-<?php echo mysql_result($querydate,0,'endtime'); ?> | Disfruta el evento preparado por IVAO <?php echo mysql_result($querydate,0,'division'); ?>!</h3><br/><img src="images/divlogo/divlogo@140px.png"/><br/><br/></li>
 						</ul>
 					</div>
 
