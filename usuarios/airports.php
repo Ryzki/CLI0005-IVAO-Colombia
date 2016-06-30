@@ -1,5 +1,4 @@
 
-							
 								
 								
 						   	 <div class="content"> 
@@ -23,10 +22,10 @@
                                             <label>Aeropuerto a Consultar</label>
 						<select class="form-control" name="airport">					
 <?php
-
 header('Content-Type: text/html; charset=UTF-8');  
-
 include('./db_login.php');
+
+
 	$idaa = $_GET['id'];
 	
 	$db = new mysqli($db_host , $db_username , $db_password , $db_database);
@@ -37,7 +36,7 @@ include('./db_login.php');
 	}
 
 	
-	$sql3 ="select DISTINCT * from airports where iso_country='CO' order by ident";
+	$sql3 ="select DISTINCT * from airports where iso_country='CO' order by ident desc";
 
 	if (!$result3 = $db->query($sql3)) {
 		die('There was an error running the query [' . $db->error . ']');
@@ -48,7 +47,7 @@ include('./db_login.php');
 		$icao= $row3["ident"];
 		$name= $row3["name"];
 	
-
+$namea = $name;
 
   
 	
@@ -62,7 +61,7 @@ include('./db_login.php');
 	?>
 
 											
-  <option value="<?php echo $icao; ?>"><?php echo  $icao . ' (' . utf8_decode($name) . ')'; ?></option>
+  <option value="<?php echo $icao; ?>"><?php echo  $icao; ?></option>
 	<? } ?>
 </select>
 <br>
