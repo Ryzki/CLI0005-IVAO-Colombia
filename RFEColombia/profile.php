@@ -9,7 +9,7 @@ include("phpinc/config.inc.php");
 
             <header class="page-title">
                 <div class="container">
-                    <h2>My Profile</h2>
+                    <h2>Mi Perfil</h2>
                 </div>
             </header>
 					
@@ -29,11 +29,11 @@ include("phpinc/config.inc.php");
 				
 					<div class="row">
 						<div class="span12">
-							<h3>Personal Data</h3>
+							<h3>Información Personal</h3>
 							<div id="personaldata">
 								<table align="center" class="table" id="tabledata">
 									<tr>
-										<th style='width: 15%'><center>Name</center></th>
+										<th style='width: 15%'><center>Nombre</center></th>
 										<td><input type="text" value="<?php echo mysql_result($querysel,0,"name"); ?>" name="name" id="name" style="width: 80%;font-weight: bold;" disabled/></td>
 									</tr>
 									<tr>
@@ -41,13 +41,13 @@ include("phpinc/config.inc.php");
 										<td><input type="text" value="<?php echo mysql_result($querysel,0,"email"); ?>" name="emailtext" id="emailtext" style="width: 80%;"/></td>
 									</tr>
 									<tr>
-										<th style='width: 15%'><center>Privacy</center></th>
-										<td><form id="privacyForm"><input type="radio" name="privacy" value="1" <?php echo (mysql_result($querysel,0,"privacy")==1?"checked":""); ?>> Yes, I allow this site to publish my name.<br><input type="radio" name="privacy" value="0" <?php echo (mysql_result($querysel,0,"privacy")==0?"checked":""); ?>> No, I don't allow this site to publish my name.</form></td>
+										<th style='width: 15%'><center>Privacidad</center></th>
+										<td><form id="privacyForm"><input type="radio" name="privacy" value="1" <?php echo (mysql_result($querysel,0,"privacy")==1?"checked":""); ?>> Si, Yo permito a este sitio publicar mi nombre.<br><input type="radio" name="privacy" value="0" <?php echo (mysql_result($querysel,0,"privacy")==0?"checked":""); ?>> No, Yo no permito a este sitio publicar mi nombre.</form></td>
 									</tr>
 								</table>
 							</div>
 							
-							<h3>IVAO Data</h3>
+							<h3>Datos de IVAO</h3>
 							<div id="personaldata">
 								<table align="center" class="table" id="tabledata">
 									<tr>
@@ -55,11 +55,11 @@ include("phpinc/config.inc.php");
 										<td><input type="text" value="<?php echo mysql_result($querysel,0,"vid"); ?>" name="vid" id="vid" style="width: 80%;font-weight: bold;" disabled/></td>
 									</tr>
 									<tr>
-										<th style='width: 15%'><center>Ratings</center></th>
+										<th style='width: 15%'><center>Rangos</center></th>
 										<td><input type="text" value="<?php echo mysql_result($queryselatc,0,"ratingatc"); ?>" name="ratingatc" id="ratingatc" style="width: 80%;font-weight: bold;" disabled/><input type="text" value="<?php echo mysql_result($queryselplt,0,"ratingpilot"); ?>" name="ratingpilot" id="ratingpilot" style="width: 80%;font-weight: bold;" disabled/></td>
 									</tr>
 									<tr>
-										<th style='width: 15%'><center>Division</center></th>
+										<th style='width: 15%'><center>División</center></th>
 										<td><input type="text" value="<?php echo mysql_result($querysel,0,"division"); ?>" name="division" id="division" style="width: 80%;font-weight: bold;" disabled/></td>
 									</tr>
 								</table>
@@ -67,7 +67,7 @@ include("phpinc/config.inc.php");
 						</div>
 					</div>
 					
-					<button name="singlebutton" class="btn btn-success" onClick="updateProfile(<?php echo mysql_result($querysel,0,"id"); ?>);">Update Profile</button>
+					<button name="singlebutton" class="btn btn-success" onClick="updateProfile(<?php echo mysql_result($querysel,0,"id"); ?>);">Actualizar Perfil</button>
 					
 				</div>
             </section>   

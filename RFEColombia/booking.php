@@ -31,13 +31,13 @@ $radiocall  = mysql_result($querycall, 0, 'useradiocallsign');
 
 				<section class="services-page">
 							<div class="container">
-								<input type="text" id="searchbook" placeholder="Flight Number, ICAO, Aircraft (IATA code)..." style="width: 100%;height:100%;font-size: 16px;" ><br>
+								<input type="text" id="searchbook" placeholder="Número de Vuelo, ICAO, Aeronave (Código IATA)..." style="width: 100%;height:100%;font-size: 16px;" ><br>
 							</div>
 							
 							<div class="container" id="resulttable">
 								<table class="table table-striped table-hover">
 									<thead style="background-color: white;border-bottom: 1px solid #ddd;">
-										<tr align="center"><th class="col-sm-1">&nbsp;</th><th class="col-sm-1">&nbsp;</th><th class="col-sm-1">Flight</th><th class="col-sm-3">Acft</th><th class="col-sm-1">Origin</th><th class="col-sm-1">Destination</th><th class="col-sm-1">Time</th><th class="col-sm-1">Gate</th><th class="col-sm-1">Status</th></tr>
+										<tr align="center"><th class="col-sm-1">&nbsp;</th><th class="col-sm-1">&nbsp;</th><th class="col-sm-1">Vuelo</th><th class="col-sm-3">Aeronave</th><th class="col-sm-1">Origen</th><th class="col-sm-1">Destino</th><th class="col-sm-1">Tiempo</th><th class="col-sm-1">Gate</th><th class="col-sm-1">Estado</th></tr>
 									</thead>
 									<tbody id="resultbody">	
 									</tbody>
@@ -52,7 +52,7 @@ $radiocall  = mysql_result($querycall, 0, 'useradiocallsign');
 <?php
 								if (isset($_REQUEST['viewall']) AND ($_REQUEST['viewall'] == "1")) {
 ?>
-									<li class="active" style="width:100%;text-align:center;"><a href="#all" data-toggle="tab"><img src="images/dep.png"> ALL FLIGHTS <img src="images/arr.png"></a></li>
+									<li class="active" style="width:100%;text-align:center;"><a href="#all" data-toggle="tab"><img src="images/dep.png"> TODOS LOS VUELOS <img src="images/arr.png"></a></li>
 <?php								
 								} else {
 							
@@ -62,14 +62,14 @@ $radiocall  = mysql_result($querycall, 0, 'useradiocallsign');
 
 									if ($allslots > 0) {
 ?>									
-										<li class="active" style="width:33%;text-align:center;"><a href="#dep" data-toggle="tab"><img src="images/dep.png"> Departures</a></li>
-										<li style="width:34%;text-align:center;"><a href="#arr" data-toggle="tab"><img src="images/arr.png"> Arrivals</a></li>
-										<li style="width:33%;text-align:center;"><a href="#priv" data-toggle="tab"><img src="images/priv.png"> Private Slots</a></li>
+										<li class="active" style="width:33%;text-align:center;"><a href="#dep" data-toggle="tab"><img src="images/dep.png"> Salidas</a></li>
+										<li style="width:34%;text-align:center;"><a href="#arr" data-toggle="tab"><img src="images/arr.png"> Llegadas</a></li>
+										<li style="width:33%;text-align:center;"><a href="#priv" data-toggle="tab"><img src="images/priv.png"> Slots Privados</a></li>
 <?php
 									} else {
 ?>
-										<li class="active" style="width:50%;text-align:center;"><a href="#dep" data-toggle="tab"><img src="images/dep.png"> Departures</a></li>
-										<li style="width:50%;text-align:center;"><a href="#arr" data-toggle="tab"><img src="images/arr.png"> Arrivals</a></li>
+										<li class="active" style="width:50%;text-align:center;"><a href="#dep" data-toggle="tab"><img src="images/dep.png"> Salidas</a></li>
+										<li style="width:50%;text-align:center;"><a href="#arr" data-toggle="tab"><img src="images/arr.png"> Llegadas</a></li>
 <?php
 									}
 									
@@ -86,7 +86,7 @@ $radiocall  = mysql_result($querycall, 0, 'useradiocallsign');
 									<div class="tab-pane fade in active" id="all">
 										<table class="table table-striped table-hover">
 											<thead style="background-color: white;border-bottom: 1px solid #ddd;">
-													<tr align="center"><th class="col-sm-1">&nbsp;</th><th class="col-sm-1">Flight</th><?php if ($radiocall) echo '<th class="col-sm-1">Radio</th>'; ?><th class="col-sm-3">Acft</th><th class="col-sm-1">Origin</th><th class="col-sm-1">Destination</th><th class="col-sm-1">Slots</th><th class="col-sm-1">Gate</th><th class="col-sm-1">Status</th>
+													<tr align="center"><th class="col-sm-1">&nbsp;</th><th class="col-sm-1">Vuelo</th><?php if ($radiocall) echo '<th class="col-sm-1">Radio</th>'; ?><th class="col-sm-3">Aeronave</th><th class="col-sm-1">Destino</th><th class="col-sm-1">Tiempo</th><th class="col-sm-1">Slots</th><th class="col-sm-1">Gate</th><th class="col-sm-1">Estado</th>
 													<?php if ($is_admin) { echo "<th>Manage</th>"; } ?>
 
 												</tr>
@@ -190,7 +190,7 @@ $radiocall  = mysql_result($querycall, 0, 'useradiocallsign');
 									<div class="tab-pane fade in active" id="dep">
 										<table class="table table-striped table-hover">
 											<thead style="background-color: white;border-bottom: 1px solid #ddd;">
-													<tr align="center"><th class="col-sm-1">&nbsp;</th><th class="col-sm-1">Flight</th><?php if ($radiocall) echo '<th class="col-sm-1">Radio</th>'; ?><th class="col-sm-3">Acft</th><!--<th class="col-sm-1">Origin</th>--><th class="col-sm-1">Destination</th><th class="col-sm-1">Dep</th><th class="col-sm-1">Gate</th><th class="col-sm-1">Status</th>
+													<tr align="center"><th class="col-sm-1">&nbsp;</th><th class="col-sm-1">Vuelo</th><?php if ($radiocall) echo '<th class="col-sm-1">Radio</th>'; ?><th class="col-sm-3">Aeronave</th><!--<th class="col-sm-1">Origin</th>--><th class="col-sm-1">Origen</th><th class="col-sm-1">Tiempo</th><th class="col-sm-1">Gate</th><th class="col-sm-1">Estado</th>
 													<?php if ($is_admin) { echo "<th>Manage</th>"; } ?>
 
 												</tr>
@@ -302,7 +302,7 @@ $radiocall  = mysql_result($querycall, 0, 'useradiocallsign');
 									<div class="tab-pane fade" id="arr">
 										<table class="table table-striped table-hover">
 											<thead style="background-color: white;border-bottom: 1px solid #ddd;">
-												<tr align="center"><th class="col-sm-1">&nbsp;</th><th class="col-sm-1">Flight</th><?php if ($radiocall) echo '<th class="col-sm-1">Radio</th>'; ?><th class="col-sm-3">Acft</th><th class="col-sm-1">Origin</th><!--<th class="col-sm-1">Destination</th>--><th class="col-sm-1">Arr</th><th class="col-sm-1">Gate</th><th class="col-sm-1">Status</th>
+												<tr align="center"><th class="col-sm-1">&nbsp;</th><th class="col-sm-1">Vuelo</th><?php if ($radiocall) echo '<th class="col-sm-1">Radio</th>'; ?><th class="col-sm-3">Aeronave</th><th class="col-sm-1">Destino</th><th class="col-sm-1">Tiempo</th><th class="col-sm-1">Gate</th><th class="col-sm-1">Estado</th>
 												<?php if ($is_admin) { echo "<th>Manage</th>"; } ?>
 												</tr>
 											</thead>
@@ -491,7 +491,7 @@ if (!empty($_POST["slot"]) AND !empty($_POST["callreg"]) AND !empty($_POST["orgn
 															</table>
 														</td>
 														<td align="left" valign="top" style="text-align: justify">
-															<span style="color: #FF0000"><strong>IMPORTANT! Read here if you wish to booking a private slot!</strong></span>
+															<span style="color: #FF0000"><strong>IMPORTANTE! Leer acá si tu deseas reservar un slot privado!</strong></span>
 															<br>
 															<br>
 															Se puede ver en el lado izquierdo todos disponibles y reservado slots privados. Sólo puede hacer clic en las franjas horarias ya reservados para ver la información de vuelo. Para asegurarse de que el intervalo de tiempo se ajusta al otro tráfico regular, es necesario rellenar el siguiente formulario. Uno de nuestros supervisores de operaciones comprobará su reserva y añadirlo en el horario. Este proceso puede tardar un máximo de un día y usted recibirá, por supuesto, un correo de confirmación.
@@ -530,9 +530,9 @@ if (!empty($_POST["slot"]) AND !empty($_POST["callreg"]) AND !empty($_POST["orgn
 																		<table border="0" cellspacing="0" cellpadding="3">
 																		<form method="post" action="booking#priv" enctype="multipart/form-data">
 																		<fieldset>
-																		<legend>Request booking of your slot here</legend>
+																		<legend>Solicitar reserva de un slot acá</legend>
 																			<tr>
-																				<th style="vertical-align: middle; width: 240px;">Select Slot</th>
+																				<th style="vertical-align: middle; width: 240px;">Seleccionar Slot</th>
 																				<td style="vertical-align: middle; width: 80%;">
 																				<select name="slot" id="slot" style="width: 33%;"/>
 <?php															  
@@ -550,34 +550,34 @@ if (!empty($_POST["slot"]) AND !empty($_POST["callreg"]) AND !empty($_POST["orgn
 																				</td>
 																			</tr>
 																			<tr>
-																				<th style="vertical-align: middle; width: 240px;">Callsign/Register</th>
+																				<th style="vertical-align: middle; width: 240px;">Callsign/Registrar</th>
 																				<td style="vertical-align: middle; width: 80%">
 																					<input type="text" name="callreg" id="callreg" maxlength="7" style="width: 30%;font-weight: bold;" required></div>
 																				</td>
 																			</tr>
 																			<tr>
-																				<th style="vertical-align: middle; width: 240px;">Origin (ICAO)</th>
+																				<th style="vertical-align: middle; width: 240px;">Origen (ICAO)</th>
 																				<td style="vertical-align: middle; width: 80%">
 																					<input type="text" name="orgn" id="orgn" maxlength="4" onKeyUp='if(this.value.length == 4) { loadApt(this.value.toUpperCase(),"orgndiv"); } else { $("#orgndiv").html(""); }' style="width: 30%;" required>
 																					<div id="orgndiv" style="display:inline;padding-left: 10px;"></div>
 																				</td>
 																			</tr>
 																			<tr>
-																				<th style="vertical-align: middle; width: 240px;">Destination (ICAO)</th>
+																				<th style="vertical-align: middle; width: 240px;">Destino (ICAO)</th>
 																				<td style="vertical-align: middle; width: 80%;">
 																					<input type="text" name="dest" id="dest" maxlength="4" onKeyUp='if(this.value.length == 4) { loadApt(this.value.toUpperCase(),"destdiv"); } else { $("#destdiv").html(""); }' style="display:inline;width: 30%;" required>
 																					<div id="destdiv" style="display:inline; padding-left: 10px;"></div>
 																				</td>
 																			</tr>
 																			<tr>
-																				<th style="vertical-align: middle; width: 240px;">Aircraft (ICAO)</th>
+																				<th style="vertical-align: middle; width: 240px;">Aeronave (ICAO)</th>
 																				<td style="vertical-align: middle; width: 80%">
 																					<input type="text" name="acft" id="acft" maxlength="4" onKeyUp='if(this.value.length > 1) { loadAcft(this.value.toUpperCase()); } else { $("#acftdiv").html(""); }' style="width: 30%;" required>
 																					<div id="acftdiv" style="display:inline;padding-left: 10px;"></div>
 																				</td>
 																			</tr>
 																			<tr>
-																				<th style="vertical-align: middle; width: 240px;">Route</th>
+																				<th style="vertical-align: middle; width: 240px;">Ruta</th>
 																				<td style="vertical-align: middle; width: 80%"><input type="text" name="route" id="route" style="width: 95%;font-family:Courier New,monospace;"/></td>
 																			</tr>
 																			<tr>
@@ -600,7 +600,7 @@ if (!empty($_POST["slot"]) AND !empty($_POST["callreg"]) AND !empty($_POST["orgn
 																			</tr>
 																			<tr>
 																				<th></th>
-																				<td style="vertical-align: middle; width: 80%"><button type="submit" class="btn btn-info" style="width: 200px;">Request booking</button></td>
+																				<td style="vertical-align: middle; width: 80%"><button type="submit" class="btn btn-info" style="width: 200px;">Solicitar Reserva</button></td>
 																			</tr>
 																		</fieldset>
 																		</form>
@@ -754,12 +754,12 @@ if (!empty($_POST["slot"]) AND !empty($_POST["callreg"]) AND !empty($_POST["orgn
 			</div>
 			<div id="modalMailbody" class="modal-body">
 				<p>Por favor, con el fin de obtener actualizaciones y confirmaciones de nosotros directamente en su correo electrónico, se escriben a continuación y pulse el botón Guardar. Muchas gracias.</p>
-				<input type="email" placeholder="Write your e-mail here" name="membermail" id="membermail" style="width: 95%;font-weight: bold;" required/>
+				<input type="email" placeholder="Escribir su correo acá" name="membermail" id="membermail" style="width: 95%;font-weight: bold;" required/>
 			</div>
 
 			<div class="modal-footer">
-				<button class="btn btn-inverse" data-dismiss="modal" aria-hidden="true">Close</button>
-				<button name="singlebutton" class="btn btn-success" onClick="saveMail('<?php echo mysql_result($query,0,'id'); ?>');">Save Mail</button>
+				<button class="btn btn-inverse" data-dismiss="modal" aria-hidden="true">Cerrar</button>
+				<button name="singlebutton" class="btn btn-success" onClick="saveMail('<?php echo mysql_result($query,0,'id'); ?>');">Guardar Correo</button>
 			</div>
 		</div>
 		

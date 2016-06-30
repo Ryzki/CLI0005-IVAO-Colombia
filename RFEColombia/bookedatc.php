@@ -174,15 +174,15 @@ $querysel = mysqlexec($sqlconn,$querysel);
 				<div class="row">
 					<div class="span3">
 						<img src="images/logo.png" >
-						<p>Brought to you by IVAO-US.</p>
+						<p>Realizado por IVAO Colombia para usted.</p>
 						<p class="copyright">
-							© <?php echo gmdate("Y"); ?> IVAO United States
+							© <?php echo gmdate("Y"); ?> IVAO Colombia
 						</p>
 					</div>
 
 					<div class="span4">
 						<h1><i class="icon-facebook"></i></h1>
-						<p><a href="http://www.facebook.com/ivaousa">Find us on Facebook</a>.</p>
+						<p><a href="http://www.facebook.com/ivaousa">Encuéntranos en Facebook</a>.</p>
 					</div>
 
 

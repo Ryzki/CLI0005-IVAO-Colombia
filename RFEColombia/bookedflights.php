@@ -82,16 +82,16 @@ include("phpinc/config.inc.php");
 									<div class="accordion-group" id="accordflt<?php echo $id; ?>">
 										<div class="accordion-heading">
 											<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse<?php echo $i; ?>">
-												<?php echo $direction." ".$logo.mysql_result($query,$i,"flightnumber")." (".airlinename(mysql_result($query,$i,'flightnumber')).") | ".mysql_result($query,$i,'origin')."-".mysql_result($query,$i,'destination'); ?>&nbsp;<span class="label label-warning pull-right" onMouseOut="$(this).addClass('label-warning').removeClass('label-info');" onMouseOver="$(this).addClass('label-info').removeClass('label-warning');" onClick="removePosition(<?php echo $id; ?>,'accordflt<?php echo $id; ?>');">Click here to delete this booking</span>
+												<?php echo $direction." ".$logo.mysql_result($query,$i,"flightnumber")." (".airlinename(mysql_result($query,$i,'flightnumber')).") | ".mysql_result($query,$i,'origin')."-".mysql_result($query,$i,'destination'); ?>&nbsp;<span class="label label-warning pull-right" onMouseOut="$(this).addClass('label-warning').removeClass('label-info');" onMouseOver="$(this).addClass('label-info').removeClass('label-warning');" onClick="removePosition(<?php echo $id; ?>,'accordflt<?php echo $id; ?>');">Click acá para borrar este vuelo.</span>
 <?php
 												if (mysql_result($query,$i,'bookingstatus') == 1) {
 ?>
-													<span class="label label-important pull-right" style="margin-left: 3px; margin-right: 3px;">Not Confirmed</span>
-													<span id="maillabel<?php echo $id; ?>" class="label label-inverse pull-right" onClick="sendBookmail(<?php echo $id; ?>);" style="margin-left: 3px; margin-right: 3px;">Send Confirmation Mail</span>
+													<span class="label label-important pull-right" style="margin-left: 3px; margin-right: 3px;">No Confirmado</span>
+													<span id="maillabel<?php echo $id; ?>" class="label label-inverse pull-right" onClick="sendBookmail(<?php echo $id; ?>);" style="margin-left: 3px; margin-right: 3px;">Enviar Confirmación al E-mail</span>
 <?php
 												} else if (mysql_result($query,$i,'bookingstatus') == 2) {
 ?>
-												<span class="label label-success pull-right" style="margin-left: 3px; margin-right: 3px;">Confirmed</span>
+												<span class="label label-success pull-right" style="margin-left: 3px; margin-right: 3px;">Confirmado</span>
 <?php
 												}
 ?>
@@ -102,7 +102,7 @@ include("phpinc/config.inc.php");
 
 												<table width="100%" border=0 cellpadding=0>
 													<tr style="border-bottom: 1px solid #444">
-														<td><b>Flight</b></td>
+														<td><b>Vuelo</b></td>
 														<td><b>Salida</b></td>
 														<td><b>Llegada</b></td>
 													</tr>
@@ -118,8 +118,8 @@ include("phpinc/config.inc.php");
 													</tr>
 													<tr height="60px">
 														<td style="vertical-align: middle;"><span style="font-size: 30px;"><?php echo aircraftname(mysql_result($query,$i,'acft')); ?></span><br/><span style="font-size: 10px;"><?php echo aircraftname(mysql_result($query,$i,'acft'),"name"); ?></span></td>
-														<td style="vertical-align: middle;"><span style="font-size: 30px; margin-top: 10px;"><?php if (mysql_result($query,$i,'deptime')!="----") { echo mysql_result($query,$i,'deptime'); } else { ?> <span style="color: red;"><?php echo timeOperation(mysql_result($query,$i,'arrtime'),flighttime(mysql_result($query,$i,'origin'),mysql_result($query,$i,'destination'),mysql_result($query,$i,'acft')),"diff"); ?></span><?php } ?></span><br/><span style="font-size: 10px;"><?php if (mysql_result($query,$i,'deptime')!="----") { echo "ZULU"; } else {?><span style="color: red;">ZULU (AUTOMATICALLY ESTIMATED)</span><?php }?></span>
-														<td style="vertical-align: middle;"><span style="font-size: 30px; margin-top: 10px;"><?php if (mysql_result($query,$i,'arrtime')!="----") { echo mysql_result($query,$i,'arrtime'); } else { ?> <span style="color: red;"><?php echo timeOperation(mysql_result($query,$i,'deptime'),flighttime(mysql_result($query,$i,'origin'),mysql_result($query,$i,'destination'),mysql_result($query,$i,'acft')),"add"); ?></span><?php } ?></span><br/><span style="font-size: 10px;"><?php if (mysql_result($query,$i,'arrtime')!="----") { echo "ZULU"; } else {?><span style="color: red;">ZULU (AUTOMATICALLY ESTIMATED)</span><?php }?></span>
+														<td style="vertical-align: middle;"><span style="font-size: 30px; margin-top: 10px;"><?php if (mysql_result($query,$i,'deptime')!="----") { echo mysql_result($query,$i,'deptime'); } else { ?> <span style="color: red;"><?php echo timeOperation(mysql_result($query,$i,'arrtime'),flighttime(mysql_result($query,$i,'origin'),mysql_result($query,$i,'destination'),mysql_result($query,$i,'acft')),"diff"); ?></span><?php } ?></span><br/><span style="font-size: 10px;"><?php if (mysql_result($query,$i,'deptime')!="----") { echo "ZULU"; } else {?><span style="color: red;">ZULU (ESTIMATO AUTOMATICAMENTE)</span><?php }?></span>
+														<td style="vertical-align: middle;"><span style="font-size: 30px; margin-top: 10px;"><?php if (mysql_result($query,$i,'arrtime')!="----") { echo mysql_result($query,$i,'arrtime'); } else { ?> <span style="color: red;"><?php echo timeOperation(mysql_result($query,$i,'deptime'),flighttime(mysql_result($query,$i,'origin'),mysql_result($query,$i,'destination'),mysql_result($query,$i,'acft')),"add"); ?></span><?php } ?></span><br/><span style="font-size: 10px;"><?php if (mysql_result($query,$i,'arrtime')!="----") { echo "ZULU"; } else {?><span style="color: red;">ZULU (ESTIMATO AUTOMATICAMENTE)</span><?php }?></span>
 													</tr>
 													<tr style="border-bottom: 1px solid #444">
 														<td><b>Gate</b></td>
