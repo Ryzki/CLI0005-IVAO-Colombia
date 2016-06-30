@@ -152,7 +152,60 @@ font-size: 16px;"> Last access : <?php echo $last_visit_date; ?> &nbsp; <a href=
 					<li  >
                         <a  href="?page=myprofile"><i class="fa fa-edit fa-3x"></i> Mi Perfil </a>
                     </li>
-				
+							<?php
+											
+											
+
+	
+	$sql3a ="select * from buzonmensajes where departamento='$idaa'";
+
+	if (!$result3a = $db->query($sql3a)) {
+		die('There was an error running the query [' . $db->error . ']');
+	}
+	while ($row3a = $result3a->fetch_assoc()) {
+		$titulo= $row3a["titulo"];
+		$mensaje= $row3a["mensaje"];
+		$departamento= $row3a["departamento"];
+		$fecha= $row3a["fecha"];
+		$estado = $row3a["estado"];
+		
+		
+		$sql3aa ="select * from typestaff where id='$departamento'";
+
+	if (!$result3aa = $db->query($sql3aa)) {
+		die('There was an error running the query [' . $db->error . ']');
+	}
+	while ($row3aa = $result3aa->fetch_assoc()) {
+	$departamentoa= $row3aa["nombre"];	
+	}
+	
+	$conts=0;
+	// Estado
+// 0 = Nuevo
+// 1 = Leido
+// 2 = Respondido
+// 3 = Nuevo mensaje
+// 4 = Eliminado
+
+if($estado==0) {
+	$vares = '<span class="label label-success">Mensaje Recibido</span>';
+} else if($estado==1) {
+	$vares = '<span class="label label-warning">Mensaje Leído</span>';
+} else if($estado==2) {
+	$vares = '<span class="label label-danger">Mensaje Respondido</span>';
+} else if($estado==3) {
+	$vares = '<span class="label label-info">Mensaje Nuevo</span>';
+}
+	
+if	($estado<>4) {
+	$conts++;
+}
+
+	}
+?>
+				<li  >
+                        <a  href="?page=sugerencias"><i class="fa fa-edit fa-3x"></i> Buzón Sugerencias <font color="red"> +<?php echo $conts; ?></font></a>
+                    </li>
 				 <li>
                         <a href="#"><i class="fa fa-sitemap fa-3x"></i> Staff IVAO<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
@@ -220,7 +273,10 @@ font-size: 16px;"> Last access : <?php echo $last_visit_date; ?> &nbsp; <a href=
 					<li  >
                         <a  href="?page=myprofile"><i class="fa fa-edit fa-3x"></i> Mi Perfil </a>
                     </li>
-				
+			
+				<li  >
+                        <a  href="?page=sugerencias"><i class="fa fa-edit fa-3x"></i> Buzón Sugerencias <font color="red"> +<?php echo $conts; ?></font></a>
+                    </li>
 			
 					  
 					  
