@@ -89,7 +89,7 @@
 		if($IVAO_Info->result) {
 ?>
 			<!--##### LOGOUT #####-->
-			<li><a data-toggle="modal" href="#modalLogoff" onClick="logout()" rel="tooltip" data-placement="bottom" data-html="true" title="<b>Logged in as</b><br><?php echo $IVAO_Info->firstname." ".$IVAO_Info->lastname." (".$IVAO_Info->vid.")"; ?>">Cerrar Sesión</a></li>
+			<li><a data-toggle="modal" href="#modalLogoff" onClick="logout()" rel="tooltip" data-placement="bottom" data-html="true" title="<b>Logeado como</b><br><?php echo $IVAO_Info->firstname." ".$IVAO_Info->lastname." (".$IVAO_Info->vid.")"; ?>">Cerrar Sesión</a></li>
 <?php
 		} else {
 ?>

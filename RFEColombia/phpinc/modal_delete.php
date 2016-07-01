@@ -38,13 +38,13 @@ if (file_exists("../logos/".substr(mysql_result($querymodal,0,'flightnumber'),0,
 
 	<div class="modal-header">
 		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-		<h3><?php echo $logo; ?>Flight <?php echo substr(mysql_result($querymodal,0,'flightnumber'),3,strlen(mysql_result($querymodal,0,'flightnumber'))); ?></h3>
+		<h3><?php echo $logo; ?>Vuelo <?php echo substr(mysql_result($querymodal,0,'flightnumber'),3,strlen(mysql_result($querymodal,0,'flightnumber'))); ?></h3>
 	</div>
 	<div id="modalFlightsbody" class="modal-body">
-		<div class="alert alert-error" style="height:65px;"><center><br/><h4>Do you <em>really</em> want to delete this flight?</h4></center></div>
+		<div class="alert alert-error" style="height:65px;"><center><br/><h4> ¿Tú <em>realmente</em> quieres eliminar este vuelo?</h4></center></div>
 	</div>
 
 	<div class="modal-footer" id="modalFlightsfooter">
-		<button class="btn btn-primary" data-dismiss="modal" aria-hidden="true">Close</button>
-		<button name="singlebutton" class="btn btn-danger" onClick="deletePosition(<?php echo mysql_result($querymodal,0,'id'); ?>);">Delete flight</button>
+		<button class="btn btn-primary" data-dismiss="modal" aria-hidden="true">Cerrar</button>
+		<button name="singlebutton" class="btn btn-danger" onClick="deletePosition(<?php echo mysql_result($querymodal,0,'id'); ?>);">Borrar vuelo</button>
 	</div>

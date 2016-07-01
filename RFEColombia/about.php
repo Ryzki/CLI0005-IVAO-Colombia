@@ -83,7 +83,7 @@ include("phpinc/config.inc.php");
 							<h3>Cartas <?php if ($is_admin) echo '<i id="chartsicon" class="fa fa-edit icon-small pull-right editicon" title="Edit link" data-toggle="tooltip" data-placement="right" onClick="toggleChartLink('.@mysql_result($querysel,0,"id").');"></i>'; ?></h3>
 							<div id="chartstext">
 <?php
-								echo (mysql_result($querysel,0,"charts") ? 'You can find them <a href="'.mysql_result($querysel,0,"charts").'">here</a>.' : 'Not currently available.');
+								echo (mysql_result($querysel,0,"charts") ? 'Tu puedes encontrarlas <a href="'.mysql_result($querysel,0,"charts").'">acá</a>.' : 'Actualmente no disponible.');
 ?>
 							</div>
 						</div>
@@ -258,9 +258,9 @@ include("phpinc/config.inc.php");
 				});
 				
 				if ($('#chartstextinput').val()) {
-					$("#chartstext").html('You can find them <a href="'+$("#chartstextinput").val()+'">here</a>.');
+					$("#chartstext").html('Tu puedes encontrarlas <a href="'+$("#chartstextinput").val()+'">acá</a>.');
 				} else {
-					$("#chartstext").html('Not currently available.');
+					$("#chartstext").html('Actualmente no disponible.');
 				}
 				
 				$("#chartstext").effect('highlight',3000);

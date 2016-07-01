@@ -274,7 +274,7 @@ if (empty($vid)) {
 
 		<div class="modal-footer">
 			<button class="btn btn-inverse" data-dismiss="modal" aria-hidden="true">Cerrar</button>
-			<button name="singlebutton" class="btn btn-primary" onClick="window.location.assign('<?php echo login_url.'?url='.url; ?>')">Click acá para iniciar sesión</button>
+			<button name="singlebutton" class="btn btn-primary" onClick="window.location.assign('<?php echo login_url.'?url='.url; ?>')">Iniciar sesión</button>
 		</div>
 <?php
 	}
