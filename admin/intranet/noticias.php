@@ -115,7 +115,7 @@
 	<td>' . $row2['lugar'] . '</td>
 	<td>' . $row2['fecha'] . '</td>
 	<td>' . $row2['hora_inicio'] . ' HLC<br>' . $row2['hora_utcinicio'] . ' UTC</td>
-	<td>' . $row2['informacion'] . '</td>
+	<td>' . utf8_decode($row2['informacion']) . '</td>
 	<td><img src="./uploadsnoticias/' . $row2['imagen'] . '"  width="60%" height="20%"></td>
 	<td><form  action="?page=updatenoticia&id=' . $identi . '"  method="post"><button class="btn btn-default"><i class="fa fa-refresh"></i> Actualizar</button></form></td>
 	<td><form  action="?page=deletenoticia&id=' . $identi . '"  method="post"><button class="btn btn-danger"><i class="fa fa-pencil"></i> Borrar</button></form></td>

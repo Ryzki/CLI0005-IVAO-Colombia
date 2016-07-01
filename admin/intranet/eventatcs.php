@@ -14,26 +14,36 @@
                     <!-- Form Elements -->
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            NOTAMS IVAO Colombia
+                            Eventos ATC IVAO Colombia
                         </div>
                         <div class="panel-body">
                             <div class="row">
                                 <div class="col-md-6">
                                     <h3>IVAO AERO</h3>
-                                    <form enctype="multipart/form-data"  action="./?page=addnotam" method="post" >
+                                    <form enctype="multipart/form-data"  action="./?page=addeventoatc" method="post" >
                                         <div class="form-group">
-                                            <label>Titulo NOTAM</label>
+                                            <label>Nombre Evento</label>
                                             <input class="form-control" name="nombre" />
                                         </div>
-										 <div class="form-group">
-                                            <label>Información NOTAM</label>
-											<textarea name="persona"></textarea>
+										<div class="form-group">
+                                            <label>Hora Inicio</label>
+											<input type="time" name="horauno">
                                         </div>
-										
-										
-										 <input type="hidden" class="form-control" name="id" value="<?php echo $id; ?>"/>
+										<div class="form-group">
+                                            <label>Hora Finalización</label>
+											<input type="time" name="horados">
+                                        </div>
+                                          <div class="form-group">
+                                            <label>Fecha Evento</label>
+											<input type="date" name="fecha">
+                                        </div>
+										 <div class="form-group">
+                                            <label>Información Evento</label>
+											<textarea name="info"></textarea>
+                                        </div>
+									
 								
-                                        <button type="submit" class="btn btn-default">Añadir NOTAM</button>
+                                        <button type="submit" class="btn btn-default">Añadir Evento ATC</button>
 
                                     </form>
                                   
@@ -48,7 +58,7 @@
 					 
 					  <div class="panel panel-default">
                         <div class="panel-heading">
-                            Administración de NOTAMS
+                            Administración de Eventos ATC
                         </div>
                         <div class="panel-body">
                             <div class="row">
@@ -59,14 +69,14 @@
 								
 <thead>
   <tr>
-    <th>Titulo NOTAM</th><th>Información NOTAM</th><th>Staff</th><th>Actualizar</th><th>Eliminar</th>
+    <th>Nombre Evento</th><th>Fecha</th><th>Horario</th><th>Información</th><th>Imagen</th><th>Actualizar</th><th>Eliminar</th>
   </tr>
 </thead>
 <tbody>
 <?php
 
 
-	$sql2 = "SELECT * FROM notams ";
+	$sql2 = "SELECT * FROM eventos ";
 
 	if (!$result2 = $db->query($sql2)) {
 
@@ -77,28 +87,17 @@
 	while ($row2 = $result2->fetch_assoc()) {
 
 		    $identi = $row2['id'];
-$identis = $row2['staff'];
+
 			
-				$sql28 = "SELECT * FROM staff where id='$identis'";
-
-	if (!$result28 = $db->query($sql28)) {
-
-		die('There was an error running the query  [' . $db->error . ']');
-
-	}
-
-	while ($row28 = $result28->fetch_assoc()) {
-	$namess = $row28["nombres"] . ' ' . $row28["apellidos"];
-	}
-	
-	
-	
+			
 			echo' <tr>
-	<td>' . $row2['titulo'] . '</td>
-	<td>' . utf8_decode($row2['informacion']) . '</td>
-	<td>' . $namess . '</td>
-	<td><form  action="?page=updatenotam&id=' . $identi . '"  method="post"><button class="btn btn-default"><i class="fa fa-refresh"></i> Actualizar</button></form></td>
-	<td><form  action="?page=deletenotam&id=' . $identi . '"  method="post"><button class="btn btn-danger"><i class="fa fa-pencil"></i> Borrar</button></form></td>
+	<td>' . $row2['nombre'] . '</td>
+	<td>' . $row2['fecha'] . '</td>
+	<td>' . $row2['hora_inicio'] . ' a ' . $row2['hora_fin'] . '</td>
+	<td>' . $row2['informacion'] . '</td>
+	<td><img src="./uploads/' . $row2['imagen'] . '"  width="60%" height="20%"></td>
+	<td><form  action="?page=updateevento&id=' . $identi . '"  method="post"><button class="btn btn-default"><i class="fa fa-refresh"></i> Actualizar</button></form></td>
+	<td><form  action="?page=deleteevento&id=' . $identi . '"  method="post"><button class="btn btn-danger"><i class="fa fa-pencil"></i> Borrar</button></form></td>
   </tr>';
 
 

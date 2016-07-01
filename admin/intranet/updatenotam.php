@@ -19,7 +19,7 @@ include('./db_login.php');
 	while ($row3 = $result3->fetch_assoc()) {
 		$idgrupo= $row3["id"];
         $titulo= $row3["titulo"];
-		$informacion= $row3["informacion"];
+		$informacion= utf8_decode($row3["informacion"]);
 		$staff= $row3["staff"];
 	
 	

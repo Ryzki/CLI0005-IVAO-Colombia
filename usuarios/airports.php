@@ -36,7 +36,7 @@ include('./db_login.php');
 	}
 
 	
-	$sql3 ="select DISTINCT * from airports where iso_country='CO' order by ident desc";
+	$sql3 ="select DISTINCT * from airports where iso_country='CO' order by ident asc";
 
 	if (!$result3 = $db->query($sql3)) {
 		die('There was an error running the query [' . $db->error . ']');
@@ -54,7 +54,8 @@ $namea = $name;
 	
 
 	
-	
+$primeras = substr($row3['ident'],0,3);
+		if(($primeras<>"SK-") && ($primeras<>"AGI") && ($primeras<>"CO-") && ($primeras<>"LMC") && ($primeras<>"SK5")){	
 
 		
 
@@ -62,7 +63,9 @@ $namea = $name;
 
 											
   <option value="<?php echo $icao; ?>"><?php echo  $icao; ?></option>
-	<? } ?>
+	<? } 
+	
+	}?>
 </select>
 <br>
 <br>

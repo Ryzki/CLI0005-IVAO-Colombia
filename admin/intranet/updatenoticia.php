@@ -22,7 +22,7 @@ include('./db_login.php');
 		$hora_inicio= $row3["hora_inicio"];
 		$hora_fin= $row3["hora_utcinicio"];
 		$lugar= $row3["lugar"];
-		$informacion= $row3["informacion"];
+		$informacion= utf8_decode($row3["informacion"]);
 	    
 		$staff= $row3["staff"];
 		$imagen= $row3["imagen"];
