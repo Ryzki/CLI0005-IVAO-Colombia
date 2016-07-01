@@ -38,7 +38,7 @@
 											<input type="date" name="fecha">
                                         </div>
 										 <div class="form-group">
-                                            <label>Información Evento</label>
+                                            <label>Información Evento (Aeropuertos)</label>
 											<textarea name="info"></textarea>
                                         </div>
 									
@@ -69,14 +69,14 @@
 								
 <thead>
   <tr>
-    <th>Nombre Evento</th><th>Fecha</th><th>Horario</th><th>Información</th><th>Imagen</th><th>Actualizar</th><th>Eliminar</th>
+    <th>Nombre Evento</th><th>Fecha</th><th>Horario</th><th>Información</th><th>Aeropuertos Eventos | Solicitudes | Aprobaciones</th><th>Eliminar</th>
   </tr>
 </thead>
 <tbody>
 <?php
 
 
-	$sql2 = "SELECT * FROM eventos ";
+	$sql2 = "SELECT * FROM eventosatc ";
 
 	if (!$result2 = $db->query($sql2)) {
 
@@ -91,13 +91,12 @@
 			
 			
 			echo' <tr>
-	<td>' . $row2['nombre'] . '</td>
+	<td>' . $row2['titulo'] . '</td>
 	<td>' . $row2['fecha'] . '</td>
-	<td>' . $row2['hora_inicio'] . ' a ' . $row2['hora_fin'] . '</td>
-	<td>' . $row2['informacion'] . '</td>
-	<td><img src="./uploads/' . $row2['imagen'] . '"  width="60%" height="20%"></td>
-	<td><form  action="?page=updateevento&id=' . $identi . '"  method="post"><button class="btn btn-default"><i class="fa fa-refresh"></i> Actualizar</button></form></td>
-	<td><form  action="?page=deleteevento&id=' . $identi . '"  method="post"><button class="btn btn-danger"><i class="fa fa-pencil"></i> Borrar</button></form></td>
+	<td>' . $row2['horario_inicio'] . ' a ' . $row2['horario_fin'] . '</td>
+	<td>' . utf8_decode($row2['informacion']) . '</td>
+	<td><form  action="?page=infoeventoatc&id=' . $identi . '"  method="post"><button class="btn btn-default"><i class="fa fa-refresh"></i> Ver</button></form></td>
+	<td><form  action="?page=deleteeventoatc&id=' . $identi . '"  method="post"><button class="btn btn-danger"><i class="fa fa-pencil"></i> Borrar</button></form></td>
   </tr>';
 
 
