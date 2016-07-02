@@ -44,7 +44,7 @@ include('./db_login.php');
                             <div class="row">
                                 <div class="col-md-6">
                                     <h3>IVAO AERO</h3>
-                                      <form   method="post" >
+                                   
                                         <div class="form-group">
                                             <label>Nombre Evento</label>
                                             <input class="form-control" name="nombre" value="<?php echo $titulos; ?>" readonly="readonly"/>
@@ -68,7 +68,7 @@ include('./db_login.php');
 									
 								
 
-                                </form>
+                         
                                   
 
                                  
@@ -102,6 +102,7 @@ include('./db_login.php');
 							 <form enctype="multipart/form-data"  action="./?page=addaeropuertoeventoatc" method="post" >
                                         <div class="form-group">
                                             <label>ICAO Aeropuerto</label>
+											<input  type="hidden" name="idsa" value="<?php echo $ida; ?>">
                                            	<select name="icaos">
 											 <option value="SKED">SKED</option>
 											 <option value="SKEC">SKEC</option>
@@ -181,7 +182,7 @@ include('./db_login.php');
 
 	while ($row2 = $result2->fetch_assoc()) {
 
-		    $identi = $row2['id'];
+		    $identi = $row2['icao'];
 			
 			
 			
@@ -200,7 +201,7 @@ include('./db_login.php');
 			
 			
 			echo' <tr>
-	<td>' . $identi . ' - ' . $nombre . '</td>
+	<td>' . $identi . '  ' . $nombre . '</td>
 	
 	<td><form  action="?page=deleteeventoatc&id=' . $identi . '"  method="post"><button class="btn btn-danger"><i class="fa fa-pencil"></i> Borrar</button></form></td>
   </tr>';
