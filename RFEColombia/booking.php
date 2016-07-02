@@ -23,9 +23,13 @@ $radiocall  = mysql_result($querycall, 0, 'useradiocallsign');
             <!--################ HEADER START ################-->
 
         
-			  <header class="page-title" style="background: url(http://www.ivaocol.com.co/RFEColombia/images/header0.jpg) no-repeat;width:100%;height:300px">
+			  <header class="page-title" style="background: url(./images/header0.jpg) no-repeat;width:100%;height:300px">
 			<div class="container" >
-                    <h1><font color="red">Reserve su vuelo!</font></h1><br> <h3><font color="black">Debido a la cantidad de vuelos, esta página puede tomar algún tiempo para cargar. Por favor sea paciente.</font></h3>
+                   <ul class="slides">
+				  
+							<li><h1 style="color: #fff; text-shadow: 3px 3px 2px rgba(25, 25, 25, 1);">Reserve su vuelo!</h1><h3 style="color: #fff; text-shadow: 3px 3px 2px rgba(25, 25, 25, 1);">Debido a la cantidad de vuelos, esta página puede tomar algún tiempo para cargar. Por favor sea paciente.</h3><br/><img src="images/divlogo/divlogo@140px.png"/><br/><br/></li>
+						</ul>
+<!--						<h1><font color="red">Reserve su vuelo!</font></h1><br> <h3><font color="black">Debido a la cantidad de vuelos, esta página puede tomar algún tiempo para cargar. Por favor sea paciente.</font></h3> -->
                 </div>
             </header>
 				

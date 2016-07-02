@@ -5,13 +5,13 @@ $query = mysqlexec($sqlconn,$query);
 ?>
 
 <footer id="footer">
-	<div class="container">
+	<div class="container" style="background: url(./img/signature.png) no-repeat;width:100%;height:90%">
 		<div class="row">
-			<div class="span3" style="padding-left: 20px; background: linear-gradient(to bottom, rgba(44, 17, 14,0.85) 0%,rgba(44, 17, 14,0.3) 150%),0% 0%/45% no-repeat url(images/divlogo/divlogo@140px.png);">
+			<div class="span3" style=" padding-left: 20px;  ">
 				<img src="phpinc/generatelogo.php">
 				<p>Realizado por IVAO <?php echo mysql_result($query,0,'division'); ?>.</p>
 				<p class="copyright">
-					&copy; <?php echo gmdate("Y"); ?> - <a href="http://www.ivaous.org">IVAO Colombia</a>
+					&copy; <?php echo gmdate("Y"); ?> - <a href="http://co.ivao.aero">IVAO Colombia</a>
 				</p>
 			</div>
 <?php
