@@ -22,9 +22,10 @@ $radiocall  = mysql_result($querycall, 0, 'useradiocallsign');
 
             <!--################ HEADER START ################-->
 
-            <header class="page-title">
-                <div class="container">
-                    <h2>Reserve su vuelo! <small> Debido a la cantidad de vuelos, esta página puede tomar algún tiempo para cargar. Por favor sea paciente.</small></h2>
+        
+			  <header class="page-title" style="background: url(http://www.ivaocol.com.co/RFEColombia/images/header0.jpg) no-repeat;width:100%;height:300px">
+			<div class="container" >
+                    <h1><font color="red">Reserve su vuelo!</font></h1><br> <h3><font color="black">Debido a la cantidad de vuelos, esta página puede tomar algún tiempo para cargar. Por favor sea paciente.</font></h3>
                 </div>
             </header>
 				
@@ -190,7 +191,7 @@ $radiocall  = mysql_result($querycall, 0, 'useradiocallsign');
 									<div class="tab-pane fade in active" id="dep">
 										<table class="table table-striped table-hover">
 											<thead style="background-color: white;border-bottom: 1px solid #ddd;">
-													<tr align="center"><th class="col-sm-1">&nbsp;</th><th class="col-sm-1">Vuelo</th><?php if ($radiocall) echo '<th class="col-sm-1">Radio</th>'; ?><th class="col-sm-3">Aeronave</th><!--<th class="col-sm-1">Origin</th>--><th class="col-sm-1">Origen</th><th class="col-sm-1">Tiempo</th><th class="col-sm-1">Gate</th><th class="col-sm-1">Estado</th>
+													<tr align="center"><th class="col-sm-1">&nbsp;</th><th class="col-sm-1">Vuelo</th><?php if ($radiocall) echo '<th class="col-sm-1">Radio</th>'; ?><th class="col-sm-3">Aeronave</th><!--<th class="col-sm-1">Origin</th>--><th class="col-sm-1">Destino</th><th class="col-sm-1">Tiempo</th><th class="col-sm-1">Gate</th><th class="col-sm-1">Estado</th>
 													<?php if ($is_admin) { echo "<th>Manage</th>"; } ?>
 
 												</tr>
@@ -302,7 +303,7 @@ $radiocall  = mysql_result($querycall, 0, 'useradiocallsign');
 									<div class="tab-pane fade" id="arr">
 										<table class="table table-striped table-hover">
 											<thead style="background-color: white;border-bottom: 1px solid #ddd;">
-												<tr align="center"><th class="col-sm-1">&nbsp;</th><th class="col-sm-1">Vuelo</th><?php if ($radiocall) echo '<th class="col-sm-1">Radio</th>'; ?><th class="col-sm-3">Aeronave</th><th class="col-sm-1">Destino</th><th class="col-sm-1">Tiempo</th><th class="col-sm-1">Gate</th><th class="col-sm-1">Estado</th>
+												<tr align="center"><th class="col-sm-1">&nbsp;</th><th class="col-sm-1">Vuelo</th><?php if ($radiocall) echo '<th class="col-sm-1">Radio</th>'; ?><th class="col-sm-3">Aeronave</th><th class="col-sm-1">Origen</th><th class="col-sm-1">Tiempo</th><th class="col-sm-1">Gate</th><th class="col-sm-1">Estado</th>
 												<?php if ($is_admin) { echo "<th>Manage</th>"; } ?>
 												</tr>
 											</thead>

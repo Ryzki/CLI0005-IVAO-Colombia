@@ -50,11 +50,11 @@ include("phpinc/config.inc.php");
 			<!--################ FEATURES SECTION START ################-->
 			<section  id="features" class="paddingtop10 features-home-page">
 				<div class="container">
-					<!--<div class="row">
+				<!--	<div class="row">
 						<div class="span12">
-							<center><iframe width="800" height="450" src="//www.youtube.com/embed/G5WCi77p5E0?rel=0" frameborder="0" allowfullscreen></iframe></center>
+							<center><iframe width="800" height="450" src="//https://youtu.be/G2lu1m6uyoA?t=17" frameborder="0" allowfullscreen></iframe></center>
 						</div>
-					</div>-->
+					</div> -->
 					
 					<div class="row">
 						<div class="span12">
