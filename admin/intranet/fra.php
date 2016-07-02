@@ -24,6 +24,9 @@
                                         <div class="form-group">
                                             <label>ICAO Aeropuerto</label>
 											<select name="icaos">
+											 <option value="SKED">SKED</option>
+											 <option value="SKEC">SKEC</option>
+											 <option value="SKMI">SKMI</option>
 											<?php
 
 
