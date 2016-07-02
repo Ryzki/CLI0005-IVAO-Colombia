@@ -18,6 +18,7 @@
 	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
 	<!-- Le styles -->
+	<link rel="shortcut icon" href="img/favicon.png">
 	<link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
 	<link href="css/font-awesome.css" media="all" rel="stylesheet" type="text/css" />
 	<link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css" media="all" />
