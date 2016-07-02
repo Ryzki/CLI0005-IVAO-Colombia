@@ -7,9 +7,15 @@ include("phpinc/config.inc.php");
 
             <!--################ HEADER START ################-->
 
-            <header class="page-title">
-                <div class="container">
-                    <h2>Mi Perfil</h2>
+          
+			
+			<header class="page-title" style="background: url(./images/header2.jpg) no-repeat;width:100%;height:300px">
+			<div class="container" >
+                   <ul class="slides">
+				  
+							<li><h1 style="color: #fff; text-shadow: 3px 3px 2px rgba(25, 25, 25, 1);">Mi Perfil</h1><br/><img src="images/divlogo/divlogo@140px.png"/><br/><br/></li>
+						</ul>
+<!--						<h1><font color="red">Reserve su vuelo!</font></h1><br> <h3><font color="black">Debido a la cantidad de vuelos, esta página puede tomar algún tiempo para cargar. Por favor sea paciente.</font></h3> -->
                 </div>
             </header>
 					
