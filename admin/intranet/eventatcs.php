@@ -69,7 +69,7 @@
 								
 <thead>
   <tr>
-    <th>Nombre Evento</th><th>Fecha</th><th>Horario</th><th>Información</th><th>Aeropuertos Eventos | Solicitudes | Aprobaciones</th><th>Eliminar</th>
+    <th>Nombre Evento</th><th>Fecha</th><th>Horario</th><th>Información</th><th>Aeropuertos Eventos</th><th>Solicitudes | Aprobaciones</th><th>Eliminar</th>
   </tr>
 </thead>
 <tbody>
@@ -96,6 +96,7 @@
 	<td>' . $row2['horario_inicio'] . ' a ' . $row2['horario_fin'] . '</td>
 	<td>' . utf8_decode($row2['informacion']) . '</td>
 	<td><form  action="?page=infoeventoatc&id=' . $identi . '"  method="post"><button class="btn btn-default"><i class="fa fa-refresh"></i> Ver</button></form></td>
+	<td><form  action="?page=infoeventoatcmas&id=' . $identi . '"  method="post"><button class="btn btn-default"><i class="fa fa-refresh"></i> Solicitudes & Aprobaciones</button></form></td>
 	<td><form  action="?page=deleteeventoatc&id=' . $identi . '"  method="post"><button class="btn btn-danger"><i class="fa fa-pencil"></i> Borrar</button></form></td>
   </tr>';
 

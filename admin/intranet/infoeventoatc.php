@@ -183,10 +183,10 @@ include('./db_login.php');
 	while ($row2 = $result2->fetch_assoc()) {
 
 		    $identi = $row2['icao'];
+			$identia = $row2['id'];
 			
 			
-			
-			$sql23	= "SELECT * FROM airports where ident='$ida'";
+			$sql23	= "SELECT * FROM airports where ident='$identi'";
 
 	if (!$result23 = $db->query($sql23)) {
 
@@ -203,7 +203,7 @@ include('./db_login.php');
 			echo' <tr>
 	<td>' . $identi . '  ' . $nombre . '</td>
 	
-	<td><form  action="?page=deleteeventoatc&id=' . $identi . '"  method="post"><button class="btn btn-danger"><i class="fa fa-pencil"></i> Borrar</button></form></td>
+	<td><form  action="?page=deleteeventoatcaeropuerto&id=' . $identia . '&web=' . $ida . '"  method="post"><button class="btn btn-danger"><i class="fa fa-pencil"></i> Borrar</button></form></td>
   </tr>';
 
 
