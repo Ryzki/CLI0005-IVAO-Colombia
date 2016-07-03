@@ -93,7 +93,7 @@ include('./db_login.php');
 		?>
 	
                                 <div class="col-md-12">
-                                    <button class="button button2" onclick="location='./?page=veraeropuertoevento&id=<?php echo $row3["icao"]; ?>'"><?php echo $short_name; ?></button>
+                                    <button class="button button2" onclick="location='./?page=veraeropuertoevento&id=<?php echo $row3["icao"]; ?>&web=<?php echo $ida; ?>'"><?php echo $short_name; ?></button>
                                <br><br></div>
 	<? } 
 	
@@ -111,6 +111,117 @@ include('./db_login.php');
                         </div>
 						
                     </div>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					 <div class="col-md-12">
+                        <div class="card">
+                            <div class="header">
+                                <h2 class="title">Información de Aprobación ATC Reservas</h2>
+								<br>
+                            </div>
+                            <div class="content">
+							<div class="table-full-width">
+														
+<table class="table table-striped" width="100%">
+								
+<thead>
+  <tr>
+    <th>Aeropuerto</th><th>Nombre Controlador | VID</th><th>Rango ATC</th><th>Fecha y Hora</th><th>ESTADO</th>
+  </tr>
+</thead>
+<tbody>
+<?php
+
+
+	$sql2a = "SELECT * FROM aprobacioneventoatc where idevento='$ida'";
+
+	if (!$result2a = $db->query($sql2a)) {
+
+		die('There was an error running the query  [' . $db->error . ']');
+
+	}
+$plasas=0;
+	while ($row2a = $result2a->fetch_assoc()) {
+ $idss = $row2a['id'];
+		    $icaosa = $row2a['icaoairport'];
+			$posiciona = $row2a['posicion'];
+			$rangoa = $row2a['rank'];
+			$identia = $row2a['vidatc'];
+			$fechala = $row2a['fecha'];
+			$horarioinicioa = $row2a['horarioinicio'];
+			$horariofina = $row2a['horariofin'];
+			
+			$sql23a	= "SELECT * FROM usuariosivao where ident='$identi'";
+
+	if (!$result23a = $db->query($sql23a)) {
+
+		die('There was an error running the query  [' . $db->error . ']');
+
+	}
+
+	while ($row23a = $result23a->fetch_assoc()) {
+		$nombresaa = $row23a['nombres'];
+		$apellidosaa = $row23a['apellidos'];
+	}
+
+			$plasas++;
+			
+			echo' <tr>
+	<td>' . $icaosa. '_' . $posiciona . '</td>
+	<td>' . $nombresaa. ' ' . $apellidosaa . ' (' . $identia . ')</td>
+	<td>' . $icaosa. '_' . $posiciona . '</td>
+	<td><img src="https://www.ivao.aero/data/images/ratings/atc/' . $rangoa . '.gif"></td>
+	<td>' . $fechala. ' (' . $horarioinicioa . ' - ' . $horariofina . ')</td>
+	<td>APROBADO</td>
+  </tr>';
+
+
+	}
+	
+   
+						
+?>
+					  
+
+</tbody>
+</table>
+
+
+	
+</div>
+                
+                            </div>
+				     
+                        </div>
+						
+						<?
+
+
+	
+	if($plasas==0){
+		
+		echo ' <div class="col-md-12"><div class="alert alert-danger" role="alert">No hay aprobaciones realizadas aún.</div></div>';
+	}?>    
+						
+                    </div>
+					
+					
+					
+					
+					
+					
+					
 					 </div>
                         </div>
                     </div>
