@@ -208,6 +208,27 @@ $sql3457a ="select * from typestaff";
 		$departamento= $row3a["departamento"];
 		$fecha= $row3a["fecha"];
 		$estado = $row3a["estado"];
+		$ipa= $row3a["id"];
+		
+		
+		
+		$perez=0;
+		
+		$sql3aa ="select * from respuestasdelbuzon where idmensaje='$ipa'";
+
+	if (!$result3aa = $db->query($sql3aa)) {
+		die('There was an error running the query [' . $db->error . ']');
+	}
+	while ($row3aa = $result3aa->fetch_assoc()) {
+		
+		$perez++;
+		
+		}
+		
+		
+		
+		
+		
 		
 		
 		$sql3aa ="select * from typestaff where id='$departamento'";
@@ -227,14 +248,10 @@ $sql3457a ="select * from typestaff";
 // 3 = Nuevo mensaje
 // 4 = Eliminado
 
-if($estado==0) {
+if($perez==0) {
 	$vares = '<span class="label label-success">Mensaje Enviado</span>';
-} else if($estado==1) {
-	$vares = '<span class="label label-warning">Mensaje Leído</span>';
-} else if($estado==2) {
-	$vares = '<span class="label label-danger">Mensaje Respondido</span>';
-} else if($estado==3) {
-	$vares = '<span class="label label-info">Mensaje Nuevo</span>';
+} else if($perez<>0) {
+	$vares = '<span class="label label-danger">Mensajes Nuevos</span>';
 }
 	
 if	($estado<>4) {

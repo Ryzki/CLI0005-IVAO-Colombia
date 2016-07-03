@@ -177,7 +177,7 @@ $sql3457a ="select * from usuariosivao where vid=$vids";
 	}
 	while ($row3457a = $result3457a->fetch_assoc()) {
 		
-		
+		    $namea = $row3457a['nombres'] . ' ' . $row3457a['apellidos'];
 			$imagena = $row3457a['foto'];
 			$emails = $row3457a['email'];
 			
@@ -193,7 +193,7 @@ $sql3457a ="select * from usuariosivao where vid=$vids";
 	?>				
 										<div id="chat">
 	<div id="header-chat">
-		<?php echo utf8_decode($user_array->firstname) . ' ' . utf8_decode($user_array->lastname) . ' -  IVAO Colombia Staff'; ?>
+		<?php echo utf8_decode($namea) . ' (' . $vids . ') -  IVAO Colombia Staff'; ?>
 	</div>
 	<div id="mensajes">
 	
@@ -219,13 +219,36 @@ $sql3457a ="select * from usuariosivao where vid=$vids";
 			
 	$fechaprimariae = $row3ap["fecha"];		
 			
-			
+	$cod = $row3ap["staff"];		
+	
 $fechasse = $fechasecundaria;
 $fechassae = $fechaprimariae;
 
 $fecha1e = new DateTime($fechasse);
 $fecha2e = new DateTime($fechassae);
 $fechae = $fecha1e->diff($fecha2e);
+
+
+$sql = "SELECT * FROM staff where id='$cod'";
+
+	if (!$result = $db->query($sql)) {
+
+		die('There was an error running the query  [' . $db->error . ']');
+
+	}
+
+	while ($row = $result->fetch_assoc()) {
+
+
+
+			$nombresa = $row['nombres'];
+
+			$apellidosa = $row['apellidos'];
+
+			$vid_ivaos = $row['vid_ivao'];
+			
+			
+	}
 			?>
 			
 			<div class="mensaje-amigo">
@@ -233,8 +256,8 @@ $fechae = $fecha1e->diff($fecha2e);
 				<?php echo $row3ap["mensaje"]; ?>
 			</div>
 			<div class="flecha-derecha"></div>
-			<img src="../../usuarios/assets/img/faces/face-3.jpg" alt="" class="foto" width="5%">
-			<div class="fecha">Enviado hace <?php printf('%d h  %d minutos', $fechae->h, $fechae->i); ?></div>
+			<img src="https://www.ivao.aero/data/images/staff/<?php echo $vid_ivaos; ?>.jpg" alt="" class="foto" width="5%">
+			<div class="fecha"><?php echo '<b>' . $nombresa . ' ' . $apellidosa . '</b>'; ?> Enviado hace <?php printf('%d h  %d minutos', $fechae->h, $fechae->i); ?></div>
 		</div>
 			
 			
@@ -260,7 +283,7 @@ $fechaee = $fecha1ee->diff($fecha2ee);
 			<div class="contenido">
 				<?php echo $row3ap["mensaje"]; ?>
 			</div>
-			<div class="fecha">Enviado hace <?php printf('%d h  %d minutos', $fechaee->h, $fechaee->i); ?></div>
+			<div class="fecha"><?php echo '<b>' . $namea . '</b>'; ?> Enviado hace <?php printf('%d h  %d minutos', $fechaee->h, $fechaee->i); ?></div>
 		</div>
 			
 			
@@ -323,7 +346,7 @@ $fecha = $fecha1->diff($fecha2);
 			<div class="contenido">
 				<?php echo $mensaje; ?>
 			</div>
-			<div class="fecha">Enviado hace <?php printf('%d h  %d minutos', $fecha->h, $fecha->i); ?></div>
+			<div class="fecha"><?php echo '<b>' . $namea . '</b>'; ?>  Enviado hace <?php printf('%d h  %d minutos', $fecha->h, $fecha->i); ?></div>
 		</div>
 		
 	</div>
