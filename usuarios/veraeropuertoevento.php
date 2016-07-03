@@ -53,7 +53,7 @@
 				<form   action="./?page=enviarsolicitudatc" method="post">		
  <div class="form-group">
             <label>Aeropuerto</label>
-			<input type="text" name="aeropuerto" class="form-control" disabled placeholder="Company" value="<?php echo $idaa; ?>"/>		
+			<input type="text" name="aeropuertoa" class="form-control"  placeholder="aeropuertoa" value="<?php echo $idaa; ?>" readonly="readonly"/>		
 </div>
  <div class="form-group">
             <label>Dependencia</label>
@@ -69,17 +69,17 @@
 </div>
 <div class="form-group">
                                             <label>Hora Inicio</label>
-											<input type="time" class="form-control" name="horauno" min="<?php echo $horario_inicio; ?>" max="<?php echo $horario_fin; ?>">
+											<input type="time" class="form-control" name="horauno" min="<?php echo $horario_inicio; ?>" max="<?php echo $horario_fin; ?>"/>
                                         </div>
 										<div class="form-group">
                                             <label>Hora Finalización</label>
-											<input type="time" class="form-control" name="horados" min="<?php echo $horario_inicio; ?>" max="<?php echo $horario_fin; ?>"> 
+											<input type="time" class="form-control" name="horados" min="<?php echo $horario_inicio; ?>" max="<?php echo $horario_fin; ?>"/> 
                                         </div>
                                           <div class="form-group">
                                             <label>Fecha Evento</label>
-											<input type="date" class="form-control" disabled placeholder="Company" name="fecha" value="<?php echo $fechas; ?>">
+											<input type="date" class="form-control" placeholder="fecha" name="fecha" value="<?php echo $fechas; ?>" readonly="readonly"/>
                                         </div>
-										<input type="hidden" class="form-control" disabled placeholder="Company" name="id" value="<?php echo $webs; ?>">
+										<input type="hidden" class="form-control"  name="id" value="<?php echo $webs; ?>"/>
 <button type="submit" class="btn btn-info btn-fill pull-right">Enviar Solicitud</button>
 </form> </div>	
 </td></tr></table>
