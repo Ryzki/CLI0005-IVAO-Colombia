@@ -213,6 +213,7 @@ $vass = 0;
 								<li class="scroll"><a href="./?page=rankatc">Ranks</a></li>
 								<li class="scroll"><a href="./?page=atcstep">First Steps</a></li>
 								<li class="scroll"><a href="./?page=formatc">Formation</a></li>
+								<li class="scroll"><a href="./?page=fra">FRA List</a></li>
 								<li class="scroll"><a href="https://mega.nz/#F!mZYzxIAB!M5hD_lr_6tyj4_2yIaiJvg">Sector Files</a></li>
 								<li class="scroll"><a href="https://www.ivao.aero/softdev/ivac.asp">IvAc Software</a></li>
 							</ul>
