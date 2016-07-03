@@ -77,7 +77,7 @@ include('./db_login.php');
 			$horarioinicio = $row2['horarioinicio'];
 			$horariofin = $row2['horariofin'];
 			
-			$sql23	= "SELECT * FROM usuariosivao where ident='$identi'";
+			$sql23	= "SELECT * FROM usuariosivao where vid='$identi'";
 
 	if (!$result23 = $db->query($sql23)) {
 
@@ -95,12 +95,12 @@ include('./db_login.php');
 			echo' <tr>
 	<td>' . $icaos. '_' . $posicion . '</td>
 	<td>' . $nombresa. ' ' . $apellidosa . ' (' . $identi . ')</td>
-	<td>' . $icaos. '_' . $posicion . '</td>
+	
 	<td><img src="https://www.ivao.aero/data/images/ratings/atc/' . $rango . '.gif"></td>
 	<td>' . $fechal. ' (' . $horarioinicio . ' - ' . $horariofin . ')</td>
 	<td>
 	<form  action="?page=deletesolicitud&id=' . $idss . '&web=' . $ida . '"  method="post"><button class="btn btn-danger"><i class="fa fa-pencil"></i> Rechazar</button></form><br>
-	<form  action="?page=aprobarsolicitud&id=' . $idss . '&web=' . $ida . '"  method="post"><button class="btn btn-danger"><i class="fa fa-pencil"></i> Rechazar</button></form>
+	<form  action="?page=aprobarsolicitud&id=' . $idss . '&web=' . $ida . '"  method="post"><button class="btn btn-success"><i class="fa fa-pencil"></i> Aceptar</button></form>
 	</td>
   </tr>';
 
@@ -183,7 +183,7 @@ include('./db_login.php');
 			$horarioinicioa = $row2a['horarioinicio'];
 			$horariofina = $row2a['horariofin'];
 			
-			$sql23a	= "SELECT * FROM usuariosivao where ident='$identi'";
+			$sql23a	= "SELECT * FROM usuariosivao where vid='$identia'";
 
 	if (!$result23a = $db->query($sql23a)) {
 
@@ -201,7 +201,6 @@ include('./db_login.php');
 			echo' <tr>
 	<td>' . $icaosa. '_' . $posiciona . '</td>
 	<td>' . $nombresaa. ' ' . $apellidosaa . ' (' . $identia . ')</td>
-	<td>' . $icaosa. '_' . $posiciona . '</td>
 	<td><img src="https://www.ivao.aero/data/images/ratings/atc/' . $rangoa . '.gif"></td>
 	<td>' . $fechala. ' (' . $horarioinicioa . ' - ' . $horariofina . ')</td>
 	<td>APROBADO</td>

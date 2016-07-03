@@ -49,7 +49,7 @@
 	if ($db->connect_errno > 0) {
 		die('Unable to connect to database [' . $db->connect_error . ']');
 	}
-
+$pp=0;
 	
 	$sql3 ="select * from eventosatc";
 
@@ -57,17 +57,28 @@
 		die('There was an error running the query [' . $db->error . ']');
 	}
 	while ($row3 = $result3->fetch_assoc()) {
-		$short_name= $row3["titulo"] . ' ' . $row3["fecha"] . ' (' . $row3["horario_inicio"] . 'Z' . $row3["horario_fin"] . 'Z)';
+		$pp++;
+		$short_name= $row3["titulo"] . ' ' . $row3["fecha"] . ' (' . $row3["horario_inicio"] . ' Z ' . $row3["horario_fin"] . ' Z)';
 		?>
 	
                                 <div class="col-md-12">
                                     <button class="button button2" onclick="location='./?page=modulosveratcevento&id=<?php echo $row3["id"]; ?>'"><?php echo $short_name; ?></button>
                                <br><br></div>
-	<? } ?>
+	<? } 
+	
+	
+
+if($pp==0){
+	
+	echo '<div class="col-md-12"><div class="alert alert-danger" role="alert">No hay eventos ATC creados.</div></div>';
+	
+}		
+
+?>      
 	</tr>
 	</table>
 </div>
-                                
+                          
                             </div>
                         </div>
                     </div>
