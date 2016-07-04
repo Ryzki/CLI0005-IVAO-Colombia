@@ -59,7 +59,7 @@ include('./db_login.php');
 <?php
 
 
-	$sql2 = "SELECT * FROM solicitudeseventosatc where idevento='$ida'";
+	$sql2 = "SELECT * FROM solicitudeseventosatc where idevento='$ida' and estado=0";
 
 	if (!$result2 = $db->query($sql2)) {
 
@@ -72,6 +72,7 @@ include('./db_login.php');
 		    $icaos = $row2['icaoairport'];
 			$posicion = $row2['posicion'];
 			$rango = $row2['rank'];
+			$mix=$icaos . '_' . $posicion;
 			$identi = $row2['vidatc'];
 			$fechal = $row2['fecha'];
 			$horarioinicio = $row2['horarioinicio'];
@@ -100,7 +101,7 @@ include('./db_login.php');
 	<td>' . $fechal. ' (' . $horarioinicio . ' - ' . $horariofin . ')</td>
 	<td>
 	<form  action="?page=deletesolicitud&id=' . $idss . '&web=' . $ida . '"  method="post"><button class="btn btn-danger"><i class="fa fa-pencil"></i> Rechazar</button></form><br>
-	<form  action="?page=aprobarsolicitud&id=' . $idss . '&web=' . $ida . '"  method="post"><button class="btn btn-success"><i class="fa fa-pencil"></i> Aceptar</button></form>
+	<form  action="?page=aprobarsolicitud&id=' . $idss . '&web=' . $ida . '&aeropuerto=' . $icaos  . '&posicion=' . $posicion . '&mix=' . $mix . '&horauno=' . $horarioinicio . '&horados=' . $horariofin . '&fecha=' . $fechal . '&vidse=' . $identi . '&ranks2=' . $rango . '"  method="post"><button class="btn btn-success"><i class="fa fa-pencil"></i> Aceptar</button></form>
 	</td>
   </tr>';
 
@@ -163,9 +164,11 @@ include('./db_login.php');
 </thead>
 <tbody>
 <?php
+//0 Nuevo
+// 1 APROBADO
+// 2 Desaprobado
 
-
-	$sql2a = "SELECT * FROM aprobacioneventoatc where idevento='$ida'";
+	$sql2a = "SELECT * FROM solicitudeseventosatc where idevento='$ida' and estado=1";
 
 	if (!$result2a = $db->query($sql2a)) {
 
@@ -203,7 +206,7 @@ include('./db_login.php');
 	<td>' . $nombresaa. ' ' . $apellidosaa . ' (' . $identia . ')</td>
 	<td><img src="https://www.ivao.aero/data/images/ratings/atc/' . $rangoa . '.gif"></td>
 	<td>' . $fechala. ' (' . $horarioinicioa . ' - ' . $horariofina . ')</td>
-	<td>APROBADO</td>
+	<td><span class="label label-success">APROBADO</span></td>
   </tr>';
 
 

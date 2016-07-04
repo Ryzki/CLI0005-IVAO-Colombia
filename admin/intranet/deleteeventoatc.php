@@ -34,11 +34,7 @@
 			die('There was an error running the query [' . $db->error . ']');
 		}
 		
-		$sql1234 = "delete from aprobacioneventoatc where idevento=$id";  
-
-		if (!$result1234 = $db->query($sql1234)) {
-			die('There was an error running the query [' . $db->error . ']');
-		}
+		
 		
 		
 	
