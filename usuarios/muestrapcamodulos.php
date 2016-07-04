@@ -135,7 +135,7 @@ $file ='../admin/intranet/modulosPCA/'.$pdf;
 <br>
 	<p>
 										<span style="color: #2a4982; font-family: Arial; font-size: 11pt;"><strong><?php echo $nombrese; ?></strong></span><br />
-										<span style="color: #666666; font-size: 10pt;"><strong><?php echo $cargose; ?></strong></span><br />
+										<span style="color: #666666; font-size: 10pt;"><strong><?php echo $cargose; ?> - Colombia</strong></span><br />
 										<span style="color: #666666; font-size: 8pt;">International Virtual Aviation Organisation<br />
 										<a href="http://co.ivao.aero/"><font color="blue">http://co.ivao.aero</font></a></span></p>					
 
