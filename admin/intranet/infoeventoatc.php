@@ -103,14 +103,14 @@ include('./db_login.php');
                                         <div class="form-group">
                                             <label>ICAO Aeropuerto</label>
 											<input  type="hidden" name="idsa" value="<?php echo $ida; ?>">
-                                           	<select name="icaos">
+                                           	<select name="icaos" class="form-control">
 											 <option value="SKED">SKED</option>
 											 <option value="SKEC">SKEC</option>
 											 <option value="SKMI">SKMI</option>
 											<?php
 
 
-	$sql25 = "SELECT * FROM airports where iso_country='CO' order by ident asc";
+	$sql25 = "SELECT DISTINCT * FROM airports where iso_country='CO' order by ident asc";
 
 	if (!$result25 = $db->query($sql25)) {
 
@@ -131,7 +131,54 @@ include('./db_login.php');
 	</select>
                                         </div>
 										
-									
+                                           <div class="form-group">
+										 <label>Dependencia: GND</label>
+                                           	<select name="gnd" class="form-control">
+											 <option value="1">Si</option>
+											 <option value="0">No</option>
+                                       </select>
+                                        </div>
+										
+										<div class="form-group">
+										 <label>Dependencia: DEL</label>
+                                           	<select name="del" class="form-control">
+											 <option value="1">Si</option>
+											 <option value="0">No</option>
+                                       </select>
+                                        </div>
+										
+									<div class="form-group">
+										 <label>Dependencia: TWR</label>
+                                           	<select name="twr" class="form-control">
+											 <option value="1">Si</option>
+											 <option value="0">No</option>
+                                       </select>
+                                        </div>
+										
+										<div class="form-group">
+										 <label>Dependencia: APP </label>
+                                           	<select name="app" class="form-control">
+											 <option value="1">Si</option>
+											 <option value="0">No</option>
+                                       </select>
+                                        </div>
+										
+										<div class="form-group">
+										 <label>Dependencia: CTR </label>
+                                           	<select name="ctr" class="form-control">
+											 <option value="1">Si</option>
+											 <option value="0">No</option>
+                                       </select>
+                                        </div>
+										
+										<div class="form-group">
+										 <label>Dependencia: DEP </label>
+                                           	<select name="dep" class="form-control">
+											 <option value="1">Si</option>
+											 <option value="0">No</option>
+                                       </select>
+                                        </div>
+								
 								
                                         <button type="submit" class="btn btn-default">Añadir Aeropuerto a Evento ATC</button>
 
@@ -165,7 +212,7 @@ include('./db_login.php');
 								
 <thead>
   <tr>
-    <th>Aeropuerto</th><th>Eliminar</th>
+    <th>Aeropuerto</th><th>GND</th><th>APP</th><th>TWR</th><th>CTR</th><th>DEL</th><th>DEP</th><th>Eliminar</th>
   </tr>
 </thead>
 <tbody>
@@ -198,10 +245,51 @@ include('./db_login.php');
 		$nombre = $row23['name'];
 	}
 
-			
+		if($row2['dep']==1){
+$dep= '&checkmark;&nbsp;';
+		} else {
+		$dep=  '&nbsp;';
+		}
+		
+		if($row2['app']==1){
+$app= '&checkmark;&nbsp;';
+		} else {
+		$app=  '&nbsp;';
+		}
+		
+		if($row2['del']==1){
+$del= '&checkmark;&nbsp;';
+		} else {
+		$del=  '&nbsp;';
+		}
+		
+		if($row2['twr']==1){
+$twr= '&checkmark;&nbsp;';
+		} else {
+		$twr=  '&nbsp;';
+		}
+		
+		if($row2['ctr']==1){
+$ctr= '&checkmark;&nbsp;';
+		} else {
+		$ctr=  '&nbsp;';
+		}
+		
+		if($row2['gnd']==1){
+$gnd= '&checkmark;&nbsp;';
+		} else {
+		$gnd=  '&nbsp;';
+		}
 			
 			echo' <tr>
 	<td>' . $identi . '  ' . $nombre . '</td>
+	
+	<td>' . $gnd . '</td>
+	<td>' . $app . '</td>
+	<td>' . $twr . '</td>
+	<td>' . $ctr . '</td>
+	<td>' . $del . '</td>
+	<td>' . $dep . '</td>
 	
 	<td><form  action="?page=deleteeventoatcaeropuerto&id=' . $identia . '&web=' . $ida . '"  method="post"><button class="btn btn-danger"><i class="fa fa-pencil"></i> Borrar</button></form></td>
   </tr>';

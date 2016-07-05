@@ -55,15 +55,55 @@
             <label>Aeropuerto</label>
 			<input type="text" name="aeropuertoa" class="form-control"  placeholder="aeropuertoa" value="<?php echo $idaa; ?>" readonly="readonly"/>		
 </div>
+
  <div class="form-group">
             <label>Dependencia</label>
 	<select name="posicion" class="form-control">
-  <option value="APP">APP</option>
-  <option value="DEP">DEP</option>
-  <option value="TWR">TWR</option>
-  <option value="GND">GND</option>
-  <option value="CTR">CTR</option>
-  <option value="DEL">DEL</option>
+	
+<?php
+
+$sql2 = "SELECT * FROM eventosatcaeropuertos where icao='$idaa'";
+
+	if (!$result2 = $db->query($sql2)) {
+
+		die('There was an error running the query  [' . $db->error . ']');
+
+	}
+
+	while ($row2 = $result2->fetch_assoc()) {
+
+if($row2['dep']==1){
+echo ' <option value="DEP">DEP</option>';
+		} 
+		
+		if($row2['app']==1){
+echo '<option value="APP">APP</option>';
+		} 
+		
+		if($row2['del']==1){
+echo  '<option value="DEL">DEL</option>';
+		} 
+		
+		if($row2['twr']==1){
+echo ' <option value="TWR">TWR</option>';
+		} 
+		
+		if($row2['ctr']==1){
+echo   '<option value="CTR">CTR</option>';
+		} 
+		
+		if($row2['gnd']==1){
+echo '<option value="GND">GND</option>';
+		}
+		
+	}
+		?>
+  
+ 
+ 
+  
+
+ 
  
 </select>
 </div>

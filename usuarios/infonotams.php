@@ -88,13 +88,13 @@ include('./db_login.php');
 										 <div class="form-group">
 										 <img src="./images/ivaoco.png" class="iconlarge activityicon" alt=" " role="presentation" width="3%"/>
                                             <label>Fecha de Creación</label>
-											<input class="form-control" type="date" name="fecha" value="<?php echo $fecha; ?>" readonly="readonly"/>
+											<input class="form-control" type="text" name="fecha" value="<?php echo $fecha; ?>" readonly="readonly"/>
                                         </div>
 							
 										 <div class="form-group">
 										 <img src="./images/ivaoco.png" class="iconlarge activityicon" alt=" " role="presentation" width="3%"/>
                                             <label>Información Notam</label>
-											<textarea class="form-control" name="info" readonly="readonly" ><?php echo $informacion; ?></textarea>
+											<textarea class="form-control" name="info" readonly="readonly" rows="14" ><?php echo $informacion; ?></textarea>
                                         </div>
 										
 										<br>
