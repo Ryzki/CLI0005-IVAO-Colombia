@@ -162,13 +162,15 @@ font-size: 16px;"> Last access : <?php echo $last_visit_date; ?> &nbsp; <a href=
 	if (!$result3a = $db->query($sql3a)) {
 		die('There was an error running the query [' . $db->error . ']');
 	}
+	$conts=0;	
+	
 	while ($row3a = $result3a->fetch_assoc()) {
 		$titulo= $row3a["titulo"];
 		$mensaje= $row3a["mensaje"];
 		$departamento= $row3a["departamento"];
 		$fecha= $row3a["fecha"];
 		$estado = $row3a["estado"];
-		
+	
 		
 		$sql3aa ="select * from typestaff where id='$departamento'";
 
@@ -179,28 +181,9 @@ font-size: 16px;"> Last access : <?php echo $last_visit_date; ?> &nbsp; <a href=
 	$departamentoa= $row3aa["nombre"];	
 	}
 	
-	$conts=0;
-	// Estado
-// 0 = Nuevo
-// 1 = Leido
-// 2 = Respondido
-// 3 = Nuevo mensaje
-// 4 = Eliminado
-
-if($estado==0) {
-	$vares = '<span class="label label-success">Mensaje Recibido</span>';
-} else if($estado==1) {
-	$vares = '<span class="label label-warning">Mensaje Leído</span>';
-} else if($estado==2) {
-	$vares = '<span class="label label-danger">Mensaje Respondido</span>';
-} else if($estado==3) {
-	$vares = '<span class="label label-info">Mensaje Nuevo</span>';
-}
 	
-if	($estado<>4) {
-	$conts++;
-}
 
+$conts++;
 	}
 ?>
 				<li  >
@@ -334,7 +317,7 @@ if	($estado<>4) {
                         </ul>
                       </li>  
 					
-					<?php if ($idaa==2) { ?>
+					
 					 <li>
                         <a href="#"><i class="fa fa-table fa-3x"></i> Eventos ATC Reservas<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
@@ -348,7 +331,7 @@ if	($estado<>4) {
 							
                         </ul>
                       </li> 
-					<?php } ?>
+				
 					
 				<?php	
 					

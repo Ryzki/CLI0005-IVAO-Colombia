@@ -264,7 +264,7 @@ if	($estado<>4) {
 		<td><?php echo $departamentoa; ?></td>
 		<td><?php echo $fecha; ?></td>
 		<td><font color="black"><?php echo $vares; ?></font></td>
-		<td><a href="./?page=versugerencias&id=<?php echo $row3a["id"]; ?>" class="btn btn-success" role="button">Responder</a>&nbsp;&nbsp;<a href="./?page=archivarsug&id=<?php echo $row3a["id"]; ?>" class="btn btn-danger" role="button">Archivar</a></td>
+		<td><a href="./?page=versugerencias&id=<?php echo $row3a["id"]; ?>" class="btn btn-success" role="button">Responder</a>&nbsp;&nbsp;<a href="./?page=archivarsug&id=<?php echo $row3a["id"]; ?>" class="btn btn-danger" role="button">Finalizar Correo</a></td>
 		</tr>	
 		<?
 	}

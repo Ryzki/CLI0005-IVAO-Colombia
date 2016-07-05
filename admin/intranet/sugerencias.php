@@ -27,7 +27,7 @@
 											 <table class="table table-striped"  width="100%" >
 <thead>
   <tr>
-    <th>Titulo</th><th>Mensaje</th><th>Departamento</th><th>Fecha</th><th>Estado</th><th>OPCIONES</th>
+    <th>Titulo</th><th width="40%">Mensaje</th><th>Estado</th><th>OPCIONES</th>
   </tr>
 </thead>
 <tbody>
@@ -57,6 +57,7 @@
 		$departamento= $row3a["departamento"];
 		$fecha= $row3a["fecha"];
 		$estado = $row3a["estado"];
+		$urs = $row3a["urlfoto"];
 		
 		
 		$sql3aa ="select * from typestaff where id='$departamento'";
@@ -78,28 +79,32 @@
 
 if($estado==0) {
 	$vares = '<span class="label label-success">Mensaje Recibido</span>';
-} else if($estado==1) {
-	$vares = '<span class="label label-warning">Mensaje Leído</span>';
-} else if($estado==2) {
-	$vares = '<span class="label label-danger">Mensaje Respondido</span>';
-} else if($estado==3) {
-	$vares = '<span class="label label-info">Mensaje Nuevo</span>';
+}  else if	($estado==4) {
+	$vares = '<span class="label label-warning">Mensaje Finalizado</span>';
 }
-	
-if	($estado<>4) {
 	$conts++;
 		?>
 		
 		<tr>
-		<td><?php echo $titulo; ?></td>
-		<td><?php echo $mensaje; ?></td>
-		<td><?php echo $departamentoa; ?></td>
-		<td><?php echo $fecha; ?></td>
+		<td><?php echo $titulo; ?><br>
+		<li><b><?php echo $departamentoa; ?><br>
+		<li><b><?php echo $fecha; ?></b></li></td>
+		<td width="40%"><?php echo $mensaje; ?>
+		<br>
+		<?php if($urs!="") {
+			
+			echo '<img src="' . $urs . '" width="50%">';
+		}	
+			?></td>
 		<td><font color="black"><?php echo $vares; ?></font></td>
-		<td><a href="./?page=versugerencias&id=<?php echo $row3a["id"]; ?>" class="btn btn-success" role="button">Responder</a>&nbsp;&nbsp;<a href="./?page=archivarsug&id=<?php echo $row3a["id"]; ?>" class="btn btn-danger" role="button">Eliminar</a></td>
+		<td>
+		<a href="./?page=versugerencias&id=<?php echo $row3a["id"]; ?>" class="btn btn-success" role="button">Responder</a>&nbsp;&nbsp;
+		<?php if	($estado==4) { ?>
+		<a href="./?page=archivarsug&id=<?php echo $row3a["id"]; ?>" class="btn btn-danger" role="button">Eliminar</a></td>
+		<?php } ?>
 		</tr>	
 		<?
-	}
+	
 	}
 	
 	?>
