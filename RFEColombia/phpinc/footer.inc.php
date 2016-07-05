@@ -4,14 +4,14 @@ $query = "SELECT division,divisioniso FROM rfe_config";
 $query = mysqlexec($sqlconn,$query);
 ?>
 
-<footer id="footer">
-	<div class="container" style="background: url(./img/signature.png) no-repeat;width:100%;height:90%">
+<footer id="footer" >
+	<div class="container2" style="background: url(./img/signature.png) no-repeat;width:100%;height:90%">
 		<div class="row">
 			<div class="span3" style=" padding-left: 20px;  ">
 				<img src="phpinc/generatelogo.php">
-				<p>Realizado por IVAO <?php echo mysql_result($query,0,'division'); ?>.</p>
-				<p class="copyright">
-					&copy; <?php echo gmdate("Y"); ?> - <a href="http://co.ivao.aero">IVAO Colombia</a>
+				<p><font color="black">Realizado por IVAO <?php echo mysql_result($query,0,'division'); ?>.</font></p>
+				<p class="copyright"><font color="black">
+					&copy; <?php echo gmdate("Y"); ?> - <a href="http://co.ivao.aero">IVAO Colombia</a></font>
 				</p>
 			</div>
 <?php
