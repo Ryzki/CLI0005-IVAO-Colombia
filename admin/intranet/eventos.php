@@ -1,4 +1,5 @@
-﻿ <div id="page-wrapper" >
+﻿
+ <div id="page-wrapper" >
             <div id="page-inner">
                 <div class="row">
                     <div class="col-md-12">
@@ -85,7 +86,7 @@
 </thead>
 <tbody>
 <?php
-
+header('Content-Type: text/html; charset=UTF8');
 
 	$sql2 = "SELECT * FROM eventos ";
 
@@ -98,14 +99,14 @@
 	while ($row2 = $result2->fetch_assoc()) {
 
 		    $identi = $row2['id'];
-
+$miss = utf8_decode($row2['informacion']);
 			
 			
 			echo' <tr>
 	<td>' . $row2['nombre'] . '</td>
 	<td>' . $row2['fecha'] . '</td>
 	<td>' . $row2['hora_inicio'] . ' a ' . $row2['hora_fin'] . '</td>
-	<td>' . utf8_decode($row2['informacion']) . '</td>
+	<td>' . $miss . '</td>
 	<td><img src="./uploads/' . $row2['imagen'] . '"  width="60%" height="20%"></td>
 	<td><form  action="?page=updateevento&id=' . $identi . '"  method="post"><button class="btn btn-default"><i class="fa fa-refresh"></i> Actualizar</button></form></td>
 	<td><form  action="?page=deleteevento&id=' . $identi . '"  method="post"><button class="btn btn-danger"><i class="fa fa-pencil"></i> Borrar</button></form></td>

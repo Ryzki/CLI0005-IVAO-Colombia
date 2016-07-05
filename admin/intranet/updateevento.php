@@ -22,7 +22,7 @@ include('./db_login.php');
 		$hora_inicio= $row3["hora_inicio"];
 		$hora_fin= $row3["hora_fin"];
 		$fecha= $row3["fecha"];
-		$informacion= utf8_decode($row3["informacion"]);
+		$informacion= $row3["informacion"];
 	    $imagen= $row3["imagen"];
 		$staff= $row3["staff"];
 	
@@ -80,7 +80,7 @@ include('./db_login.php');
                                         </div>
 										 <div class="form-group">
                                             <label>Información Evento</label>
-											<textarea name="info"><?php echo $informacion; ?></textarea>
+											<textarea name="info"><?php echo utf8_decode($informacion); ?></textarea>
                                         </div>
 										
 										<div class="form-group">
