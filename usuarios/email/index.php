@@ -58,17 +58,19 @@ if($_COOKIE[cookie_name]) {
 	</head>
 	
 	<body>
-
-		<!-- YouTube link -->
-		<a id="bgndVideo" class="player" data-property="{videoURL:'https://youtu.be/EYYESBCbxkk?t=20',containment:'body',autoPlay:true, mute:false, startAt:20, stopAt:105, opacity:1}"></a>
-
-		<!-- Page preloader -->
+	
+	<!-- Page preloader -->
 		<div id="loading">
 			<div id="preloader">
 				<span></span>
 				<span></span>
 			</div>
 		</div>
+
+		<!-- YouTube link -->
+		<a id="bgndVideo" class="player" data-property="{videoURL:'https://www.youtube.com/watch?v=EYYESBCbxkk',containment:'body',autoPlay:true, mute:false, startAt:20, stopAt:101, opacity:1}"></a>
+
+		
 
 		<!-- Overlay and Star effect -->
 		<div class="global-overlay">
@@ -91,11 +93,10 @@ if($_COOKIE[cookie_name]) {
 
 				<h2 class="text-intro opacity-0">REGISTRE SU CORREO:</h2>
 				<p>Es requisito obligatorio si deseas usar los servicios de IVAO Colombia, registrar su correo oficial. <b>BENEFICIOS</b><br>
-				<li>Recibir información oportuna de Eventos, Examenes y Notams.</li>
 				<li>Recibir respuestas del Staff a través del buzón de mensajes.</li>
 				<li>Recibir información acerca de reservas ATC y el estado de solicitud.</li>
 				</p>
-
+<br>
 				<nav>
 					<ul>
 						<li>
