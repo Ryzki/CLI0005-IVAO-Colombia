@@ -300,6 +300,10 @@ $plasas=0;
                 
                             </div>
 							
+					
+				     
+                        </div>
+						
 							<?
 
 
@@ -307,11 +311,7 @@ $plasas=0;
 	if($plasas==0){
 		
 		echo ' <div class="col-md-12"><div class="alert alert-danger" role="alert">No hay aprobaciones realizadas aún.</div></div>';
-	}?>    
-				     
-                        </div>
-						
-						
+	}?>    	
 						
                     </div>
 					
