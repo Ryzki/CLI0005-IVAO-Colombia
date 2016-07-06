@@ -177,7 +177,6 @@ $plasasa=0;
 			
 			echo' <tr>
 	<td>' . $icaosaa. '_' . $posicionaa . '</td>
-	<td>' . $nombresaaa. ' ' . $apellidosaaa . ' (' . $identiaa . ')</td>
 	<td><img src="https://www.ivao.aero/data/images/ratings/atc/' . $rangoaa . '.gif"></td>
 	<td>' . $fechalaa. ' (' . $horarioinicioaa . ' - ' . $horariofinaa . ')</td>
 	<td>' . $lase . '</td>
