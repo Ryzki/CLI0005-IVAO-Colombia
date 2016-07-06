@@ -100,7 +100,7 @@ include('./db_login.php');
 	<td><img src="https://www.ivao.aero/data/images/ratings/atc/' . $rango . '.gif"></td>
 	<td>' . $fechal. ' (' . $horarioinicio . ' - ' . $horariofin . ')</td>
 	<td>
-	<form  action="?page=deletesolicitud&id=' . $idss . '&web=' . $ida . '"  method="post"><button class="btn btn-danger"><i class="fa fa-pencil"></i> Rechazar</button></form><br>
+	<form  action="?page=deletesolicitud&id=' . $idss . '&web=' . $ida . '&aeropuerto=' . $icaos  . '&posicion=' . $posicion . '&mix=' . $mix . '&horauno=' . $horarioinicio . '&horados=' . $horariofin . '&fecha=' . $fechal . '&vidse=' . $identi . '&ranks2=' . $rango . '"  method="post"><button class="btn btn-danger"><i class="fa fa-pencil"></i> Rechazar</button></form><br>
 	<form  action="?page=aprobarsolicitud&id=' . $idss . '&web=' . $ida . '&aeropuerto=' . $icaos  . '&posicion=' . $posicion . '&mix=' . $mix . '&horauno=' . $horarioinicio . '&horados=' . $horariofin . '&fecha=' . $fechal . '&vidse=' . $identi . '&ranks2=' . $rango . '"  method="post"><button class="btn btn-success"><i class="fa fa-pencil"></i> Aceptar</button></form>
 	</td>
   </tr>';
