@@ -116,7 +116,7 @@ include('./db_login.php');
 					 <div class="col-md-12">
                         <div class="card">
                             <div class="header">
-                                <h2 class="title"><font color="red">Solicitudes Enviadas ATC Reservas</font></h2>
+                                <h2 class="title"><font color="red">Mis Solicitudes Enviadas ATC Reservas</font></h2>
 								<br>
                             </div>
                             <div class="content">
@@ -126,14 +126,14 @@ include('./db_login.php');
 								
 <thead>
   <tr>
-    <th>Aeropuerto</th><th>Nombre Controlador | VID</th><th>Rango ATC</th><th>Fecha y Hora</th><th>ESTADO</th>
+    <th>Aeropuerto</th><th>Rango ATC</th><th>Fecha y Hora</th><th>ESTADO</th>
   </tr>
 </thead>
 <tbody>
 <?php
 
 
-	$sql2aa = "SELECT * FROM solicitudeseventosatc where idevento='$ida' and estado<>1";
+	$sql2aa = "SELECT * FROM solicitudeseventosatc where idevento='$ida' and estado<>1 and vidatc='$infos' order by horarioinicio, icaoairport asc";
 
 	if (!$result2aa = $db->query($sql2aa)) {
 
@@ -242,7 +242,7 @@ $plasasa=0;
 <?php
 
 
-	$sql2a = "SELECT * FROM solicitudeseventosatc where idevento='$ida' and estado=1";
+	$sql2a = "SELECT * FROM solicitudeseventosatc where idevento='$ida' and estado=1 order by horarioinicio asc, icaoairport asc";
 
 	if (!$result2a = $db->query($sql2a)) {
 
@@ -299,10 +299,8 @@ $plasas=0;
 </div>
                 
                             </div>
-				     
-                        </div>
-						
-						<?
+							
+							<?
 
 
 	
@@ -310,6 +308,10 @@ $plasas=0;
 		
 		echo ' <div class="col-md-12"><div class="alert alert-danger" role="alert">No hay aprobaciones realizadas aún.</div></div>';
 	}?>    
+				     
+                        </div>
+						
+						
 						
                     </div>
 					
