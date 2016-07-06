@@ -97,6 +97,9 @@ $infos = $user_array->vid;
 				
 				
 			}
+			
+			require('./verificaremail.php');	
+			
 ?>
 
 <!doctype html>
