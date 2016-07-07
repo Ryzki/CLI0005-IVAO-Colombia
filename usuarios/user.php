@@ -221,7 +221,7 @@ $sql3457a ="select * from usuariosivao where vid=$vids";
                                             </div>
                                         </div>
                                     </div>
-<form  enctype="multipart/form-data" action="./page=usuarioactualizado" method="post">
+<form  enctype="multipart/form-data" action="./?page=usuarioactualizado" method="post">
 									<div class="row">
 									<div class="col-md-4">
                                             <div class="form-group">

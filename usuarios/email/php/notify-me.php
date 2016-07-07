@@ -16,9 +16,10 @@ include('./db_login.php');
 		if (!$result1157 = $db->query($sql1157)) {
 			die('There was an error running the query [' . $db->error . ']');
 		}
-
-?>
-<script>
+		
+		echo"<script>
 alert('Disfruta de nuestros beneficios!.');
 window.location = '../../';
-</script>
+</script>";
+
+?>

@@ -68,7 +68,7 @@ if($_COOKIE[cookie_name]) {
 		</div>
 
 		<!-- YouTube link -->
-		<a id="bgndVideo" class="player" data-property="{videoURL:'https://www.youtube.com/watch?v=EYYESBCbxkk',containment:'body',autoPlay:true, mute:false, startAt:20, stopAt:101, opacity:1}"></a>
+		<a id="bgndVideo" class="player" data-property="{videoURL:'https://www.youtube.com/watch?v=APRFDV1RLVE',containment:'body',autoPlay:true, mute:false, startAt:6, stopAt:0101, opacity:1}"></a>
 
 		
 
@@ -139,7 +139,7 @@ if($_COOKIE[cookie_name]) {
 					<!-- Newsletter Form -->
 					<div id="subscribe">
 
-		                <form action="./php/notify-me.php"  method="POST">
+		                <form action="./php/notify-me.php" method="POST">
 
 		                    <div class="form-group" >
 

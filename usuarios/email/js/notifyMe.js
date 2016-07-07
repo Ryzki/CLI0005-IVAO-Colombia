@@ -42,6 +42,13 @@
                         $(".message").removeClass("bad-email").addClass("success-full");
                         $(".block-message").addClass("show-block-valid").removeClass("show-block-error");
                         $(".message").html('<p class="notify-valid">Congrats! You are in list.<br>We will inform you as soon as we finish.</p>').fadeIn();
+						
+						
+						
+
+						
+						
+						
                     } else {
                         if (e.type == "ValidationError") {
                             $(".fa-spinner").addClass("opacity-0").removeClass("fa-spin");

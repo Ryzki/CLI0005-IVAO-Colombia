@@ -138,7 +138,7 @@ $infos = $user_array->vid;
 <body>
 
 <div class="wrapper">
-    <div class="sidebar"  data-image="assets/img/sidebar-5.jpg">
+    <div class="sidebar"  data-color="azure" data-image="assets/img/sidebar-5.jpg">
 
     <!--
 
