@@ -23,7 +23,7 @@
 
 .button2 {width: 100%;}
 </style>
-        <div class="content">
+        <div class="content" style="background-image: url(https://c2.staticflickr.com/8/7264/6855209490_af85f26d02_b.jpg); no-repeat; height: 100%; width: 100%; border: 0px solid black;">
             <div class="container-fluid">
                 
 				  <div class="row">
@@ -89,7 +89,7 @@ if($pp==0){
 					
 					
 					
-					
+					</div>
 					
 					
 					

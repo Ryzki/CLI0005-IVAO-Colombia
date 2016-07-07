@@ -157,7 +157,7 @@ $infos = $user_array->vid;
             <ul class="nav">
                 <li class="active">
                     <a href="./">
-                        <i class="pe-7s-graph"></i>
+                        <i class="pe-7s-home"></i>
                         <p>INICIO</p>
                     </a>
                 </li>
@@ -169,7 +169,7 @@ $infos = $user_array->vid;
                 </li>
                 <li>
                     <a href="./?page=training">
-                        <i class="pe-7s-note2"></i>
+                        <i class="pe-7s-global"></i>
                         <p>Entrenamiento</p>
                     </a>
                 </li>
@@ -181,13 +181,13 @@ $infos = $user_array->vid;
                 </li>
                   <li>
                     <a href="./?page=airports">
-                        <i class="pe-7s-science"></i>
+                        <i class="pe-7s-map"></i>
                         <p>Aeropuertos</p>
                     </a>
                 </li>
                 <li>
                     <a href="./?page=examenes">
-                        <i class="pe-7s-map-marker"></i>
+                        <i class="pe-7s-note2"></i>
                         <p>Mis Examenes</p>
                     </a>
                 </li>
@@ -197,12 +197,19 @@ $infos = $user_array->vid;
                         <p>Buzón de Sugerencias</p>
                     </a>
                 </li>
-				<li class="active-pro">
+				<li>
                     <a href="../RFEColombia/">
-                        <i class="pe-7s-rocket"></i>
+                        <i class="pe-7s-plane"></i>
                         <p>RFE Colombia</p>
                     </a>
                 </li>
+				<li class="active-pro">
+                    <a href="./?page=primerospasos">
+                        <i class="pe-7s-paper-plane"></i>
+                        <p>PRIMEROS PASOS</p>
+                    </a>
+                </li>
+				
             </ul>
     	</div>
     </div>
@@ -506,7 +513,7 @@ $ippl++;
 <?php
 	if (!isset($_GET["page"]) || trim($_GET["page"]) == "") {
 		?>
-        <div class="content">
+        <div class="content" style="background-image: url(http://uploads.tapatalk-cdn.com/20160122/e5e8cc4017f800311d00bcc9b3373c99.jpg); no-repeat; height: 160%; width: 100%; border: 0px solid black;">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-4">

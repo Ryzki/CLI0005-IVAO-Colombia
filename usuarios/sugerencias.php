@@ -1,7 +1,7 @@
 
 
 
-        <div class="content">
+        <div class="content" style="background-image: url(https://i.ytimg.com/vi/gXtZGBygMeQ/maxresdefault.jpg);  height: 160%; width: 100%; border: 0px solid black;">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-12">
@@ -291,6 +291,9 @@ if($conts==0){
                   
 
                 </div>
+            </div>
+        </div>
+    </div>
             </div>
         </div>
 

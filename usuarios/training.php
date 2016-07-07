@@ -23,7 +23,7 @@
 
 .button2 {width: 100%;}
 </style>
-        <div class="content">
+        <div class="content" style="background-image: url(http://www.financecolombia.com/wp-content/uploads/2015/06/copa-and-avianca.jpg); no-repeat; height: 160%; width: 100%; border: 0px solid black;">
             <div class="container-fluid">
                 
 				  <div class="row">
@@ -117,5 +117,6 @@
 					
 					
 					
+					</div>
 					</div>
 					</div>

@@ -1,7 +1,7 @@
 
 
 
-        <div class="content">
+        <div class="content" style="background-image: url(https://i.ytimg.com/vi/KG8sib3kGio/maxresdefault.jpg); no-repeat; height: 100%; width: 100%; border: 0px solid black;">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-8">
