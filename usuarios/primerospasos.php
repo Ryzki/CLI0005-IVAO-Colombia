@@ -37,20 +37,14 @@
 							<div class="table-full-width">
 							<table class="table">
 							<tr>
-					<div class="col-md-12">
-                                    <button class="button button2" onclick="location='./?page=modulosver&id=<?php echo $row3["id"]; ?>'">Iniciate como Piloto!</button>
-                               <br><br></div>
-							   
-							   				<div class="col-md-12">
-                                    <button class="button button2" onclick="location='./?page=modulosver&id=<?php echo $row3["id"]; ?>'">Iniciate como Controlador!</button>
-                               <br><br></div>
+					
 
 							    <div class="col-md-12">
-                                    <button class="button button2" onclick="location='./?page=modulosver&id=<?php echo $row3["id"]; ?>'">Guía del Piloto</button>
+                                    <button class="button button2" onclick="location='./?page=pilotguide'">Guía del Piloto</button>
                                <br><br></div>
 	
                                 <div class="col-md-12">
-                                    <button class="button button2" onclick="location='./?page=modulosver&id=<?php echo $row3["id"]; ?>'">Preguntas mas Frecuentes</button>
+                                    <button class="button button2" onclick="location='./?page=faq'">Preguntas mas Frecuentes</button>
                                <br><br></div>
 
 	</tr>
