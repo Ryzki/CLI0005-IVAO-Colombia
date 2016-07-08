@@ -48,7 +48,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_POST["email"])) {
 $subject = "Confirmación Sistema IVAO Colombia";
 $txt = "En este Email, encontrará consignada la información para validar su ingreso al sistema.
 
-Link: http://www.ivaocol.com.co/es/validacioninfo.php?vid=' . $infos . '&estado=1
+Link: http://www.ivaocol.com.co/es/validacioninfo.php?vid=$infos&estado=1
 
 =================================================
 
@@ -59,7 +59,7 @@ $headers = "From: co-wm@ivao.aero" . "\r\n" .
 
 
 
-mail($to,$subject,$txt,$headers);	
+mail($to,utf8_decode($subject),$txt,$headers);	
 
 
 
@@ -96,7 +96,7 @@ mail($to,$subject,$txt,$headers);
 			
 		<script>
 alert('Disfruta de nuestros beneficios, pero antes revisa tu correo!.');
-window.location = '../../../';
+window.location = '../../';
 </script>
 <?php
 			} else {

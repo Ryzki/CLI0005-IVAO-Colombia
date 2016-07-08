@@ -35,17 +35,20 @@ $mass = 0;
       
       <table class="table table-condensed" width="100%">
         <colgroup>
+		  <col style="width:10%">
 		  <col style="width:20%">
-		  <col style="width:40%">
 		  <col style="width:20%">
 		  <col style="width:20%">
+		  <col style="width:10%">
+		  <col style="width:10%">
+		  		 <col style="width:10%">
 	    </colgroup>  
 
         <tbody>
         </tbody>
           <tr class="bg-primary"><td>VID</td> <td>Name</td> <td style="text-align:center">ATC Rating</td> <td style="text-align:center">Pilot Rating</td>
 		  <td style="text-align:center">Última Conexión</td>
-		   <td style="text-align:center">Email</td></tr>
+		   <td style="text-align:center">Email</td><td style="text-align:center">Estado</td></tr></tr>
 
 
 
@@ -118,6 +121,17 @@ $sql2 = "SELECT * FROM usuariosivao order by vid asc LIMIT ".$inicio."," . $TAMA
 	<td align="center"><?php echo $row2['lastconect'] . ' (' . $row2['lastip'] . ')'; ?></td>
 	
 	<td align="center"><?php echo $row2['email']; ?></td>
+	
+	<td align="center"><?php 
+	if ($row2['estado']==1){
+		
+		echo '<span class="label label-success">E-MAIL Verificado</span>';
+	} else {
+		echo '<span class="label label-danger">E-MAIL Sin Validar</span>';
+		
+	}
+	?>
+	</td>
     
   </tr>
   
