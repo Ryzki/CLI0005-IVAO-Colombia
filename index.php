@@ -173,7 +173,7 @@
 
 			<div class="inner-content" id="about-content">
 
-				<h2>Information | Information</h2>
+				<h2>Information | Información</h2>
 				<div class="separator"></div>
 
 				<div class="row">
@@ -184,7 +184,7 @@
 					</div>
 
 					<div class="col-xs-12 col-sm-12 col-lg-6">
-						<p>En esta página, tu puedes encontrar los sitios webs importantes acerca de la aviación Colombiana desde IVAO Colombia.<br>
+						<p>En esta página, tu puedes encontrar los sitios web importantes acerca de la aviación Colombiana desde IVAO Colombia.<br>
                            Nosotros tenemos: Eventos, Noticias, Notams, Aerolineas, Eventos de Vuelo Real y Centro de Entrenamiento.						</p>
 					</div>
 					<br>
