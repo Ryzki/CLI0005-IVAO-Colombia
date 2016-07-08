@@ -30,6 +30,6 @@ $db = new mysqli($db_host , $db_username , $db_password , $db_database);
 
 
 <script>
-alert('Su válidación ha sido exitosa, inicia sesión!.');
+alert('Su validacion ha sido exitosa, inicia sesion!.');
 window.location = 'http://login.ivao.aero/index.php?url=http://www.ivaocol.com.co/usuarios/login.php';
 </script>
