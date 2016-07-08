@@ -207,6 +207,10 @@ $conts++;
 							
                         </ul>
                       </li>  
+					   <li>
+                        <a href="./?page=visualusuario"><i class="fa fa-sitemap fa-3x"></i> Usuarios IVAO CO</a>
+                       
+                      </li>  
 					  
 					  
 					  <li>
@@ -275,7 +279,11 @@ $conts++;
 				<li  >
                         <a  href="?page=sugerencias"><i class="fa fa-edit fa-3x"></i> Buzón Sugerencias <font color="red"> +<?php echo $conts; ?></font></a>
                     </li>
-			
+
+					<li>
+                        <a href="./?page=visualusuario"><i class="fa fa-sitemap fa-3x"></i> Usuarios IVAO CO</a>
+                       
+                      </li>  
 					  
 					  
 					  <li>
