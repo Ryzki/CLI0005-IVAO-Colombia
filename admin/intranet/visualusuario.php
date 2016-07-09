@@ -179,6 +179,5 @@ $sql2 = "SELECT * FROM usuariosivao order by vid asc LIMIT ".$inicio."," . $TAMA
 					
 					
 					
-					
-                </div>
+			
            
