@@ -917,7 +917,7 @@ $staffss = 0;
 
 	}
 	
-	$staffss++;
+	
 
 	while ($rowssa = $resultranks->fetch_assoc()) {
 		$spots = $rowssa['posicion'];
@@ -952,7 +952,7 @@ $tiposs = $rowsst['nombre'];
 		$iaap = "https://www.ivao.aero/data/images/staff/000000.gif";
 		
 	}
-	
+	$staffss++;
 	
 	if($staffss==1){
 		?>
