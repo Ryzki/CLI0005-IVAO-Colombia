@@ -125,7 +125,7 @@ $fecha= $row3["fecha"];
                                         </div>
 										 <div class="form-group">
                                             <label>Información Evento</label>
-											<textarea class="form-control" name="info" readonly="readonly" ><?php echo $informacion; ?></textarea>
+											<textarea class="form-control" name="info" readonly="readonly" rows="14" ><?php echo $informacion; ?></textarea>
                                         </div>
 										
 										<br>

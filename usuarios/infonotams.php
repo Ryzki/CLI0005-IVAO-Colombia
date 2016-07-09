@@ -23,7 +23,7 @@ include('./db_login.php');
 		$staffa= $row3["staff"];
 		$fecha= $row3["fecha"];
 	    $informacion= utf8_decode($row3["informacion"]);
-		
+		$foto= $row3["foto"];
 		
 		$sql33 ="select * from staff where id='$staffa'";
 
@@ -75,6 +75,15 @@ include('./db_login.php');
                                 <h4 class="title">Información de Notam</h4>
                             </div>
                             <div class="content">
+							
+							
+							<?php if($foto!="") { ?>
+							<br><center>
+							<img src="../admin/intranet/uploadsnotam/<?php echo $foto; ?>"  width="60%" height="20%">
+							</center>
+							<br>
+							<?php } ?>
+							
 							<div class="table-full-width">
 							<table class="table">
 							<tr><td>	

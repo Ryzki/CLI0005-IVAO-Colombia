@@ -21,9 +21,9 @@ include('./db_login.php');
         $callsign= $row3["id"];
 		$hora_inicio= $row3["hora_inicio"];
 		$hora_utcinicio= $row3["hora_utcinicio"];
-		$nombre_examen= $row3["nombre_examen"];
+		$nombre_examen= utf8_decode($row3["nombre_examen"]);
 		$lugar= $row3["lugar"];
-		$informacion= $row3["informacion"];
+		$informacion= utf8_decode($row3["informacion"]);
 	    $imagen= $row3["imagen"];
 		$usuario= $row3["usuario"];
 $staffa= $row3["staff"];
@@ -35,7 +35,7 @@ $fecha= $row3["fecha"];
 		die('There was an error running the query [' . $db->error . ']');
 	}
 	while ($row33 = $result33->fetch_assoc()) {
-		$nombrese= $row33["nombres"] . ' ' . $row33["apellidos"];
+		$nombrese= utf8_decode($row33["nombres"]) . ' ' . utf8_decode($row33["apellidos"]);
 		
 		$staff_ivao = $row33["staff_ivao"];
 		
@@ -129,7 +129,7 @@ $fecha= $row3["fecha"];
 										
 										<p>
 										<span style="color: #2a4982; font-family: Arial; font-size: 11pt;"><strong><?php echo $nombrese; ?></strong></span><br />
-										<span style="color: #666666; font-size: 10pt;"><strong><?php echo $cargose; ?></strong></span><br />
+										<span style="color: #666666; font-size: 10pt;"><strong><?php echo $cargose; ?> - Colombia</strong></span><br />
 										<span style="color: #666666; font-size: 8pt;">International Virtual Aviation Organisation<br />
 										<a href="http://co.ivao.aero/"><font color="blue">http://co.ivao.aero</font></a></span></p>
 

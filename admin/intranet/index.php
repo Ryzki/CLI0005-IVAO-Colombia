@@ -145,7 +145,7 @@ font-size: 16px;"> Last access : <?php echo $last_visit_date; ?> &nbsp; <a href=
 					</li>
 				
 				
-				<?php if ($idaa==1 || $idaa== 7) { ?>
+			
 				<li>
                         <a class="active-menu"  href="./"><i class="fa fa-dashboard fa-3x"></i> Información de la División</a>
                     </li>
@@ -189,6 +189,8 @@ $conts++;
 				<li  >
                         <a  href="?page=sugerencias"><i class="fa fa-edit fa-3x"></i> Buzón Sugerencias <font color="red"> +<?php echo $conts; ?></font></a>
                     </li>
+					
+						<?php if ($idaa==1 || $idaa== 7) { ?>
 				 <li>
                         <a href="#"><i class="fa fa-sitemap fa-3x"></i> Staff IVAO<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
@@ -207,105 +209,44 @@ $conts++;
 							
                         </ul>
                       </li>  
+					  
+						<?php } ?>
 					   <li>
                         <a href="./?page=visualusuario"><i class="fa fa-sitemap fa-3x"></i> Usuarios IVAO CO</a>
                        
                       </li>  
 					  
-					  
+					  <?php if ($idaa==1 || $idaa== 7 || $idaa== 5 || $idaa== 6) { ?>
 					  <li>
                         <a  href="./?page=eventos"><i class="fa fa-desktop fa-3x"></i> Eventos</a>
                     </li>
-					  
+					  <?php } ?>
+					  <?php if ($idaa==1 || $idaa== 7 || $idaa== 5 || $idaa== 6 || $idaa== 3) { ?>
 					 <li>
                         <a  href="./?page=noticias"><i class="fa fa-desktop fa-3x"></i> Examenes</a>
                     </li>
-                    
+                    <?php } ?>
+					
                      <li>
                         <a  href="./?page=notams"><i class="fa fa-desktop fa-3x"></i> Notams</a>
                     </li>
-				
-				
+				   
+				<?php if ($idaa==1 || $idaa== 7) { ?>
                     <li>
                         <a  href="./?page=airlines"><i class="fa fa-qrcode fa-3x"></i> Aerolineas Virtuales</a>
                     	
-                      <li/>
-					  
-					  
-					
-					 <li>
-                        <a href="#"><i class="fa fa-table fa-3x"></i> Centro de Entrenamiento<span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li>
-                                <a href="?page=ranksatc">Rangos ATC</a>
-                            </li>
-                            <li>
-                                <a href="?page=rankspca">Rangos Pilotos</a>
-                            </li>
-							<li>
-                                <a href="?page=materialatc">Material para ATC</a>
-                            </li>
-							<li>
-                                <a href="?page=materialpca">Material para Pilotos</a>
-                            </li>
-							
-                        </ul>
-                      </li>  
-					  
-					  
-					   <li>
-                        <a href="#"><i class="fa fa-table fa-3x"></i> Eventos ATC Reservas<span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li>
-                                <a href="?page=fra">Lista FRA</a>
-                            </li>
-                            <li>
-                                <a href="?page=eventatcs">Eventos</a>
-                            </li>
-							
-							
-                        </ul>
-                      </li> 
-				<? } else {
-					
-					?>
-						<li>
-                        <a class="active-menu"  href="./"><i class="fa fa-dashboard fa-3x"></i> Información de la División</a>
-                    </li>
-					<li  >
-                        <a  href="?page=myprofile"><i class="fa fa-edit fa-3x"></i> Mi Perfil </a>
-                    </li>
-			
-				<li  >
-                        <a  href="?page=sugerencias"><i class="fa fa-edit fa-3x"></i> Buzón Sugerencias <font color="red"> +<?php echo $conts; ?></font></a>
-                    </li>
+                     </li>
+				<?php } ?>  
 
-					<li>
-                        <a href="./?page=visualusuario"><i class="fa fa-sitemap fa-3x"></i> Usuarios IVAO CO</a>
-                       
-                      </li>  
-					  
-					  
-					  <li>
-                        <a  href="./?page=eventos"><i class="fa fa-desktop fa-3x"></i> Eventos</a>
-                    </li>
-					  
-					 <li>
-                        <a  href="./?page=noticias"><i class="fa fa-desktop fa-3x"></i> Examenes</a>
-                    </li>
-                    
-                     <li>
-                        <a  href="./?page=notams"><i class="fa fa-desktop fa-3x"></i> Notams</a>
-                    </li>
 				
-				
+				<?php if ($idaa==1 || $idaa== 7 || $idaa== 2) { ?>
                     <li>
-                        <a  href="./?page=airlines"><i class="fa fa-qrcode fa-3x"></i> Aerolineas Virtuales</a>
+                        <a  href="#"><i class="fa fa-qrcode fa-3x"></i> Horas Aerolíneas</a>
                     	
-                      <li/>
-					  
-					  
+                     </li>
+				<?php } ?>  
 					
+					<?php if ($idaa==1 || $idaa== 7 || $idaa== 3) { ?>
 					 <li>
                         <a href="#"><i class="fa fa-table fa-3x"></i> Centro de Entrenamiento<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
@@ -324,9 +265,10 @@ $conts++;
 							
                         </ul>
                       </li>  
-					
-					
-					 <li>
+					  <?php } ?>  
+					  
+					  <?php if ($idaa==1 || $idaa== 7 || $idaa== 3 || $idaa== 5 || $idaa== 2) { ?>
+					   <li>
                         <a href="#"><i class="fa fa-table fa-3x"></i> Eventos ATC Reservas<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
@@ -340,15 +282,7 @@ $conts++;
                         </ul>
                       </li> 
 				
-					
-				<?php	
-					
-				}
-				
-				
-				
-				?>
-				
+				<?php } ?>  
 				
 				
 				

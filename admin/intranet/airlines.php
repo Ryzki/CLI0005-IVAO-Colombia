@@ -144,7 +144,7 @@
 			
 			echo' <tr>
 	<td>' . $row2['nombre_aerolinea'] . '</td>
-	<td>' . $row2['ceo'] . '</td>
+	<td>' . utf8_decode($row2['ceo']) . '</td>
 	<td><a href="' . $row2['web'] . '" target="_blanck">Ver</a></td>
 	<td><a href="?page=statsairline&id=' . $row2['id'] . '">Ver</a></td>
 	<td><form  action="?page=updateairline&id=' . $identi . '"  method="post"><button class="btn btn-default"><i class="fa fa-refresh"></i> Actualizar</button></form></td>

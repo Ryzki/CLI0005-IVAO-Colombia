@@ -30,7 +30,16 @@
 											<textarea name="persona"></textarea>
                                         </div>
 										
+											<div class="form-group">
+                                            <label>Imagen NOTAM</label>
+                                           
+<input name="image_file"  type="file">
+
+<br>
+<hr>
+
 										
+                                        </div>
 										 <input type="hidden" class="form-control" name="id" value="<?php echo $id; ?>"/>
 								
                                         <button type="submit" class="btn btn-default">Añadir NOTAM</button>
@@ -91,10 +100,15 @@ $identis = $row2['staff'];
 	$namess = $row28["nombres"] . ' ' . $row28["apellidos"];
 	}
 	
-	
+	if($row2['foto']!="") {
+		$les = '<img src="./uploadsnotam/' . $row2['foto'] . '"  width="60%" height="20%">';
+	} else {
+		$les="";
+	}
 	
 			echo' <tr>
-	<td>' . $row2['titulo'] . '</td>
+	<td width="30%">'  . $les . '<br>' . $row2['titulo'] . '</td>
+	
 	<td>' . utf8_decode($row2['informacion']) . '</td>
 	<td>' . $namess . '</td>
 	<td><form  action="?page=updatenotam&id=' . $identi . '"  method="post"><button class="btn btn-default"><i class="fa fa-refresh"></i> Actualizar</button></form></td>

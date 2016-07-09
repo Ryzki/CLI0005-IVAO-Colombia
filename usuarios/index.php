@@ -203,6 +203,12 @@ $infos = $user_array->vid;
                         <p>RFE Colombia</p>
                     </a>
                 </li>
+				<li>
+                    <a href="./?page=tours">
+                        <i class="pe-7s-graph1"></i>
+                        <p>Tours</p>
+                    </a>
+                </li>
 				<li class="active-pro">
                     <a href="./?page=primerospasos">
                         <i class="pe-7s-paper-plane"></i>
