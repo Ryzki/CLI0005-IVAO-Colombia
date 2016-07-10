@@ -1103,21 +1103,21 @@ $tiposs = $rowsst['nombre'];
 	$ruta_imgss = "https://www.ivao.aero/data/images/airline/" . $numeros . ".gif"; // 
 	
 	
-	
+	$i=0;
 
     if(getimagesize($ruta_img)){
     $iaa = ".jpg";
- 
-    }
+$i++;
+    } 
 
     if(getimagesize($ruta_imgs)){
     $iaa = ".png";
- 
+ $i++;
     }
 	
 	    if(getimagesize($ruta_imgss)){
     $iaa = ".gif";
- 
+$i++;
     }
 
 
@@ -1133,20 +1133,23 @@ $tiposs = $rowsst['nombre'];
                 <ol class="carousel-indicators">
                   <li data-target="#post-carousel" data-slide-to="0" class="active"></li>
                   <li data-target="#post-carousel" data-slide-to="1"></li>
-                  <li data-target="#post-carousel" data-slide-to="2"></li>
                 </ol>
                 <div class="carousel-inner">
+				<?php if ($i>0) { ?>
                   <div class="item active">
                     <img class="img-responsive" src="https://www.ivao.aero/data/images/airline/<?php echo $numeros; ?><?php echo $iaa; ?>" alt="">
                   </div>
-                  <div class="item">
+				  <div class="item">
                     <img class="img-responsive" src="../admin/intranet/imagenair/<?php echo $vas; ?>" alt="" width="398" height="224">
                   </div>
-                  <!--
-                  <div class="item">
-                    <a href="#"><img class="img-responsive" src="images/blog/3.jpg" alt=""></a>
+				<?php } else {?>
+				<div class="item active">
+                     <img class="img-responsive" src="../admin/intranet/imagenair/<?php echo $vas; ?>" alt="" width="398" height="224">
                   </div>
-                  -->
+				
+				<?php } ?>
+                  
+                
                 </div>                               
                 <!--
                 <a class="blog-left-control" href="#post-carousel" role="button" data-slide="prev"><i class="fa fa-angle-left"></i></a>

@@ -26,7 +26,7 @@
 								
 <thead>
   <tr>
-    <th>Nombres y Apellidos</th><th>Vid IVAO</th><th>Primer IP</th><th>Último IP y Fecha</th><th>Email</th><th>Cargo</th><th>Eliminar</th>
+    <th>Nombres y Apellidos</th><th>Vid IVAO</th><th>Primer IP</th><th>Último IP y Fecha</th><th>Email</th><th>Cargo</th><th>Actualizar</th><th>Eliminar</th>
   </tr>
 </thead>
 <tbody>
@@ -74,7 +74,7 @@
 	<td>' . $row2['email'] . '</td>
 	<td>' . $callsign_name . ' <br> <img border="0" src="https://www.ivao.aero/data/images/badge/' . $spot .'.gif"><img border="0" src="https://www.ivao.aero/data/images/badge/CO.gif"></td>
 	
-	
+<td><form  action="?page=actualizarstaff&id=' . $identi . '"  method="post"><button class="btn btn-default"><i class="fa fa-refresh"></i> Actualizar</button></form></td>
 	<td><form  action="?page=deletestaff&id=' . $identi . '"  method="post"><button class="btn btn-danger"><i class="fa fa-pencil"></i> Borrar</button></form></td>
   </tr>';
 

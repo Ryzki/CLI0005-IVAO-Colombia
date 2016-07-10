@@ -23,15 +23,23 @@
 
 	}
 $mass = 0;
+$massa = 0;
 	while ($row2a= $result2a->fetch_assoc()) {
+		
+	if($row2a['division']=="CO") {
+		$massa++;
+	}
+	
 		$mass++;
+		
+		
 	}
 	
 	
 
 	?>
 			 
-    <p>There are currently <?php echo $mass; ?> registered members in the Colombia division. To see a member's details - click on the VID</p>
+    <p>There are currently <?php echo $mass; ?> registered members, and there are <?php echo $massa; ?> registered members in the Colombia division. To see a member's details - click on the VID</p>
       
       <table class="table table-condensed" width="100%">
         <colgroup>
