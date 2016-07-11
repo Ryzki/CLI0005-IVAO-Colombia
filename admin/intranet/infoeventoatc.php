@@ -240,7 +240,7 @@ include('./db_login.php');
 		die('There was an error running the query  [' . $db->error . ']');
 
 	}
-
+$nombre="";
 	while ($row23 = $result23->fetch_assoc()) {
 		$nombre = $row23['name'];
 	}
