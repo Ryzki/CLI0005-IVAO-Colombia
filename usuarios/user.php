@@ -238,8 +238,15 @@ $sql3457a ="select * from usuariosivao where vid=$vids";
 										 <input type="hidden" class="form-control" name="id" value="<?php echo $user_array->vid;?>"/>
                                    
                                     </div>
+									<div class="col-md-4">
  <button type="submit" class="btn btn-info btn-fill pull-right">Actualizar Perfil</button>
+  </div>
+ <?php if($estado==0){ ?>
+								<div class="col-md-4">	 <a href="./?page=notify-me" class="btn btn-danger btn-fill pull-right">Confirmar Correo!</a>  </div>
+									<?php } ?>
 									</form>
+									
+									
                                     <div class="clearfix"></div>
                                
                             </div>

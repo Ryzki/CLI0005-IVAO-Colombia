@@ -56,7 +56,7 @@ $massa = 0;
         </tbody>
           <tr class="bg-primary"><td>VID</td> <td>Name</td> <td style="text-align:center">ATC Rating</td> <td style="text-align:center">Pilot Rating</td>
 		  <td style="text-align:center">Última Conexión</td>
-		   <td style="text-align:center">Email</td><td style="text-align:center">Estado</td></tr></tr>
+		   <td style="text-align:center">Email</td><td style="text-align:center">Estado</td><td style="text-align:center">Division</td></tr></tr>
 
 
 
@@ -140,7 +140,8 @@ $sql2 = "SELECT * FROM usuariosivao order by vid asc LIMIT ".$inicio."," . $TAMA
 	}
 	?>
 	</td>
-    
+    <td align="center">
+    <img src="./48/<?php echo $row2['division']; ?>.png" title=""></td>
   </tr>
   
   <?php

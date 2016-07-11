@@ -56,6 +56,8 @@ $infos = $user_array->vid;
 		
 		while ($row2 = $result115->fetch_assoc()) {
 			$is++;
+			$estado=$row2['estado'];
+			$correo=$row2['email'];
 		}
 		
 		$ip = $_SERVER['REMOTE_ADDR']; 
@@ -136,9 +138,26 @@ $infos = $user_array->vid;
 
 </head>
 <body>
+<?php 
+$cuenta = rand(1, 6);
 
+if($cuenta==1){
+	$color ="blue";
+} else if($cuenta==2){
+$color ="azure";	
+} else if($cuenta==3){
+$color ="green";	
+} else if($cuenta==4){
+$color ="orange";	
+} else if($cuenta==5){
+$color ="red";	
+} else if($cuenta==6){
+$color ="purple";	
+}
+
+?>
 <div class="wrapper">
-    <div class="sidebar"  data-color="azure" data-image="assets/img/sidebar-5.jpg">
+    <div class="sidebar"  data-color="<?php echo $color; ?>" data-image="assets/img/sidebar-5.jpg">
 
     <!--
 
@@ -150,7 +169,7 @@ $infos = $user_array->vid;
     	<div class="sidebar-wrapper">
             <div class="logo">
                 <a href="./" class="simple-text">
-                    IVAO Colombia
+                <img src="./images/ivaoco.png" width="20%">    IVAO Colombia
                 </a>
             </div>
 
@@ -1129,7 +1148,7 @@ if (substr_count($controller[0],'_') == 1) {
         	demo.initChartist();
 
         	$.notify({
-            	icon: 'pe-7s-gift',
+            	icon: 'pe-7s-plane',
             	message: "Welcome to <b>IVAO Colombia Dashboard</b> - <?php echo utf8_decode($user_array->firstname).' '.utf8_decode($user_array->lastname). ' (' . $user_array->vid . ') !'; ?>."
 
             },{
