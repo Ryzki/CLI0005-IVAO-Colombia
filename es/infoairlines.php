@@ -151,7 +151,7 @@ include('./db_login.php');
 								
 $filecontentsa = file_get_contents($url_pilotos);
 //$filecontents = file_get_contents('whazzup.txt'); //Testing file
-$rows = split(PHP_EOL, $filecontentsa);
+$rows = split("\n", $filecontentsa);
 
 
 echo '<table id="table_list"  class="table table-hover" width="100%">
@@ -176,7 +176,9 @@ foreach ($rows as $row) {
 
 	$fieldsa = split(":", $row);
 	
-if($fieldsa[0]!=""){
+
+	if (empty($fieldsa[0])) {
+	} else {
 $horariosa = $fieldsa[2];
 
 $sumasa= round($horariosa  , 2);
