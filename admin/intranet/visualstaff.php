@@ -33,7 +33,7 @@
 <?php
 
 
-	$sql2 = "SELECT * FROM staff";
+	$sql2 = "SELECT * FROM staff order by nombres";
 
 	if (!$result2 = $db->query($sql2)) {
 
