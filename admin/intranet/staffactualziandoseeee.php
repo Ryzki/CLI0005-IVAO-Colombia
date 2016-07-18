@@ -6,7 +6,7 @@
 		
 		$correosa = $_POST['correos'];
 
-	        $ides = $_POST['id'];
+	        $ides = $_POST['idasee'];
 	
 			
 				
@@ -18,7 +18,7 @@
 		
 		
 
-$sql = 'select * from staff where UPPER(email)="' . $correosa . '"';
+$sql = 'select * from staff where id="' . $ides . '"';
 	if (!$result = $db->query($sql)) {
 	die('There was an error running the query [' . $db->error . ']');
 }
@@ -36,7 +36,7 @@ $sql = 'select * from staff where UPPER(email)="' . $correosa . '"';
 	$con_encriptada = md5($clave);
 	
 	// update the password
-	$sql = 'UPDATE staff SET password="' . $con_encriptada . '" where UPPER(email)="' . $correosa . '" and id=$ides';
+	$sql = 'UPDATE staff SET password="' . $con_encriptada . '" where id="' . $ides . '"';
 
 	if (!$result = $db->query($sql)) {
 		die('There was an error running the query [' . $db->error . ']');

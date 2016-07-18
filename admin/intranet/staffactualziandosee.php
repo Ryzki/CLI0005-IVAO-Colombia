@@ -6,7 +6,7 @@
 		
 		
 
-	        $ides = $_POST['id'];
+	        $ides = $_POST['idas'];
 	
 			
 				
