@@ -45,28 +45,7 @@
 
 			<ul class="main-navigation">
 
-				<li>
-					<a class="nav-link-close">
-						<i class="icon ion-ios-home-outline"></i>
-						Home
-					</a>
-				</li>
-
-				<li>
-					<a class="nav-link services-content">
-						<i class="icon ion-ios-people-outline"></i>
-						Info
-					</a>
-				</li>
 				
-				
-					<li>
-					<a href="http://login.ivao.aero/index.php?url=http://www.ivaocol.com.co/usuarios/login.php" >
-						<i class="icon ion-ios-world-outline"></i>
-						Login
-					</a>
-				</li>
-
 			
 
 			
@@ -74,12 +53,12 @@
 			</ul> <!-- CLOSE Main nav -->
 
 			<ul class="bottom-nav">
-		<!--	<li class="google-color">
+		<li class="google-color">
 					<a target="_blanck" href="https://plus.google.com/u/0/109843136396902602405" title="">
 						<i class="icon ion-social-google-outline"></i>
 						Google
 					</a>
-				</li>-->
+				</li>
 			<li class="instagram-color">
 					<a target="_blanck" href="https://www.instagram.com/ivaocolombia/" title="">
 						<i class="icon ion-social-instagram-outline"></i>
@@ -136,11 +115,13 @@
 
 				<p>Idiomas | Language </p>
 
-				<a class="btn open-newsletter btn-color" href="./es/">Español</a>
+				<a class="btn open-newsletter btn-color" href="./es/"><i class="icon ion-ios-home-outline"></i> Español</a>
 
-				<a class="btn open-content btn-light about-content" href="./en/">English</a>
+				<a class="btn open-content btn-light about-content" href="./en/"><i class="icon ion-ios-home-outline"></i> English</a>
 				
+				<a class="btn open-content btn-light about-content" href="http://login.ivao.aero/index.php?url=http://www.ivaocol.com.co/usuarios/login.php"><i class="icon ion-ios-world-outline"></i> Zona Usuarios</a>
 			</div> <!-- CLOSE item-title -->
+				
 
 		</section> <!-- CLOSE #home-part -->
 
