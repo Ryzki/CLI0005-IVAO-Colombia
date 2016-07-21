@@ -1,4 +1,28 @@
 
+
+
+         <div id="page-wrapper" >
+            <div id="page-inner">
+                <div class="row">
+                    <div class="col-md-12">
+                     <h2>IVAO Colombia</h2>   
+                        <h5>Bienvenido <?php echo $nombres . ' ' . $apellidos; ?> , Encantado de volverte a ver. </h5>
+                       
+                    </div>
+                </div>
+                 <!-- /. ROW  -->
+                 <hr />
+               <div class="row">
+                <div class="col-md-12">
+                    <!-- Form Elements -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Mis Reclamos, Opiniones y Sugerencias.
+                        </div>
+                        <div class="panel-body">
+                            <div class="row">
+							
+                                        <div class="col-md-12">
 <?php
 			include('./db_login.php');
 			
@@ -199,6 +223,9 @@ mail($para, utf8_decode($titulo), utf8_decode($mensaje), $cabeceras);
 
 
 
+echo '<hr>';
+
+echo '<h1>La nueva Clave es: </h1><b>' . $clave . '</b><h2>Registrada para el correo: </h2><b>' . $correosa . '</b>';
 
 
 
@@ -211,27 +238,39 @@ mail($para, utf8_decode($titulo), utf8_decode($mensaje), $cabeceras);
 
 
 
-
-
-
-
-	$mensaje = "Se ha enviado un correo con la nueva clave.";
-echo "<script>";
-echo "alert('$mensaje');";  
-echo "window.location = './?page=actualizarstaff&id=$ides';";
-echo "</script>";  
 
 
 
 							}
 							else
 							{
-						$mensaje = "La informacion es incorrecta.";
-echo "<script>";
-echo "alert('$mensaje');";  
-echo "window.location = './?page=actualizarstaff&id=$ides';";
-echo "</script>";  
+						
+						
+				
+echo '<hr>';
+
+echo '<h1>Hubo un error en el proceso</h1>';
+
+
+		
+						
+						
 							}
 						}
 						?>
 
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
