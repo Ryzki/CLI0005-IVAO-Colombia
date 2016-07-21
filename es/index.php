@@ -199,11 +199,15 @@ $vass = 0;
      
        <div class="collapse navbar-collapse">
 	   <ul class="nav navbar-nav navbar-right">  
-	 
-                        
-               <li class="scroll active"><a href="./#home">Inicio</a></li>
-            <li class="scroll"><a href="./#services">IVAO COL</a></li> 
-			<li class="scroll"><a>Pilotos</a>
+	 <li class="scroll active"><a href="./">Inicio</a></li>
+			<li class="scroll"><a>IVAO COL &dArr;</a>
+							<ul>
+								<li class="scroll"><a href="./?page=division">División</a></li>
+								<li class="scroll"><a href="./?page=staff">Staff</a></li>
+								
+							</ul>
+		    </li>
+			<li class="scroll"><a>Pilotos &dArr;</a>
 							<ul nav navbar-nav navbar-right>
 								<li class="scroll"><a href="./?page=registrar">Registrarse</a></li>
 								<li class="scroll"><a href="./?page=rankpca">Rangos</a></li>
@@ -213,7 +217,7 @@ $vass = 0;
 								<li class="scroll"><a href="https://www.ivao.aero/softdev/ivap.asp">IvAp Software</a></li>
 							</ul>
 		    </li>
-			<li class="scroll"><a>Controladores</a>
+			<li class="scroll"><a>Controladores &dArr;</a>
 							<ul>
 								<li class="scroll"><a href="./?page=registrar">Registrarse</a></li>
 								<li class="scroll"><a href="./?page=rankatc">Rangos</a></li>
@@ -1355,8 +1359,15 @@ $i++;
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav navbar-right">                 
             <li class="scroll active"><a href="./">Inicio</a></li>
-            <li class="scroll"><a href="./#services">IVAO COL</a></li> 
-            	<li class="scroll"><a>Pilotos</a>
+           
+			<li class="scroll"><a>IVAO COL &dArr;</a>
+							<ul>
+								<li class="scroll"><a href="./?page=division">División</a></li>
+								<li class="scroll"><a href="./?page=staff">Staff</a></li>
+								
+							</ul>
+		    </li>
+            	<li class="scroll"><a>Pilotos &dArr;</a>
 							<ul>
 								<li class="scroll"><a href="./?page=registrar">Registrarse</a></li>
 								<li class="scroll"><a href="./?page=rankpca">Rangos</a></li>
@@ -1366,7 +1377,7 @@ $i++;
 								<li class="scroll"><a href="https://www.ivao.aero/softdev/ivap.asp">IvAp Software</a></li>
 							</ul>
 		    </li>
-			<li class="scroll"><a>Controladores</a>
+			<li class="scroll"><a>Controladores &dArr;</a>
 							<ul>
 								<li class="scroll"><a href="./?page=registrar">Registrarse</a></li>
 								<li class="scroll"><a href="./?page=rankatc">Rangos</a></li>
