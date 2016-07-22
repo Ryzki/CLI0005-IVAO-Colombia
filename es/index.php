@@ -72,10 +72,10 @@
 						 <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Acerca de Nosotros <i class="fa fa-angle-down"></i></a>
                             <ul class="dropdown-menu">
-                                <li><a href="blog-item.html">División</a></li>
-                                <li><a href="pricing.html">Staff</a></li>
-                                <li><a href="404.html">Reglamento</a></li>
-                                <li><a href="shortcodes.html">HQ Awards</a></li>
+                                <li><a href="./?page=division">División</a></li>
+                                <li><a href="./?page=staff">Staff</a></li>
+                                <li><a href="#">Reglamento</a></li>
+                                <li><a href="#">HQ Awards</a></li>
                             </ul>
                         </li>
 						 <li class="dropdown">
@@ -105,10 +105,10 @@
                             </ul>
                         </li>
                        
-                        <li><a href="services.html">Eventos</a></li>
-                        <li><a href="portfolio.html">Aerolíneas VA</a></li>
-                        <li><a href="contact-us.html">Contactenos</a></li>     
-<li><a href="contact-us.html">LOGIN</a></li>    						
+                        <li><a href="./?page=eventosdeivao">Eventos</a></li>
+                        <li><a href="./?page=nuestrasaerolineas">Aerolíneas VA</a></li>
+                        <li><a href="./?page=contactenosivao">Contactenos</a></li>     
+<li><a href="http://login.ivao.aero/index.php?url=http://www.ivaocol.com.co/usuarios/login.php">LOGIN</a></li>    						
                     </ul>
                 </div>
             </div><!--/.container-->
