@@ -68,19 +68,14 @@ include('./db_login.php');
 		
 
 	?>
-	<div class="container">
-	 <div id="page-wrapper" >
-            <div id="page-inner">
-                 <!-- /. ROW  -->
-                 <hr />
-               <div class="row">
-                <div class="col-md-12">
-                    <!-- Form Elements -->
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            Información Aerolínea
-                        </div>
-                        <div class="panel-body">
+
+                  <div class="container">
+                           <h1><font color="red"> Información Aerolínea</font></h1>
+						   <hr>
+						   <br>
+                       
+                     
+					 
                             <div class="row">
 							
 								<center><img src="https://www.ivao.aero/data/images/airline/<?php echo $numeros; ?><?php echo $iaa; ?>"/></center>
@@ -382,21 +377,7 @@ $totalpe= $horaspe.' h '.$minutospe.' m ';
                                
  </div>							   
                             </div>
-                        </div>
-                    </div>
-                     <!-- End Form Elements -->
-					 
-				
-					
-					
-					
-					
-                </div>
-            </div>
-                <!-- /. ROW  -->
-               
-                <!-- /. ROW  -->
-    </div>
-             <!-- /. PAGE INNER  -->
- </div>     
- </div>        
+                      
+                       </div>
+                      
+                    

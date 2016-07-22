@@ -156,7 +156,7 @@ $i++;
               <span><i class="fa fa-plane"></i> <?php echo $tipo_aerolinea; ?></span> 
             </div>
             <div class="entry-content">
-              <span><i class="fa fa-globe"></i> Web: <a target="_blanck" href="<?php echo $web; ?>"><?php echo $web; ?></a></span>
+              <span><i class="fa fa-globe"></i> Web: <a target="_blanck" href="<?php echo $web; ?>">Ver Web</a></span>
             </div>
 			 <div class="social-icons">
                 <ul>
