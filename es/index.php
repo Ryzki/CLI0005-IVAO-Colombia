@@ -8,22 +8,24 @@
     <title>IVAO Colombia</title>
 	
 	<!-- core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/font-awesome.min.css" rel="stylesheet">
-    <link href="css/animate.min.css" rel="stylesheet">
-    <link href="css/prettyPhoto.css" rel="stylesheet">
-    <link href="css/main.css" rel="stylesheet">
-    <link href="css/responsive.css" rel="stylesheet">
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/font-awesome.min.css" rel="stylesheet">
+    <link href="./css/animate.min.css" rel="stylesheet">
+    <link href="./css/prettyPhoto.css" rel="stylesheet">
+    <link href="./css/main.css" rel="stylesheet">
+    <link href="./css/responsive.css" rel="stylesheet">
     <!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
     <![endif]-->       
-    <link rel="shortcut icon" href="images/ico/favicon.png">
+    <link rel="shortcut icon" href="./images/ico/favicon.png">
 </head><!--/head-->
 
 <body class="homepage">
 
-
+	<?php
+	if (!isset($_GET["page"]) || trim($_GET["page"]) == "") {
+		?>
 
 		
     <header id="header">
@@ -42,12 +44,7 @@
                                 <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
                                 <li><a href="#"><i class="fa fa-skype"></i></a></li>
                             </ul>
-                            <div class="search">
-                                <form role="form">
-                                    <input type="text" class="search-form" autocomplete="off" placeholder="Search">
-                                    <i class="fa fa-search"></i>
-                                </form>
-                           </div>
+                            
                        </div>
                     </div>
                 </div>
@@ -63,12 +60,12 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="logo"></a>
+                    <a class="navbar-brand" href="./"><img src="images/logo.png" alt="logo"></a>
                 </div>
 				
                 <div class="collapse navbar-collapse navbar-right">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="index.html">Inicio</a></li>
+                        <li class="active"><a href="./">Inicio</a></li>
 						 <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Acerca de Nosotros <i class="fa fa-angle-down"></i></a>
                             <ul class="dropdown-menu">
@@ -81,25 +78,24 @@
 						 <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Pilotos <i class="fa fa-angle-down"></i></a>
                             <ul class="dropdown-menu">
-                                <li><a href="blog-item.html">Registrarse</a></li>
-                                <li><a href="pricing.html">Primeros Pasos</a></li>
-                                <li><a href="404.html">Rangos</a></li>
-                                <li><a href="shortcodes.html">Formación</a></li>
-								<li><a href="shortcodes.html">Cartas</a></li>
-								<li><a href="shortcodes.html">IvAp Software</a></li>
+                                <li><a href="./?page=registrar">Registrarse</a></li>
+                                <li><a href="./?page=pcastep">Primeros Pasos</a></li>
+                                <li><a href="./?page=rankpca">Rangos</a></li>
+                                <li><a href="./?page=forma">Formación</a></li>
+								<li><a href="http://www.aerocivil.gov.co/AIS/AIP/Paginas/Inicio.aspx">Cartas</a></li>
+								<li><a href="https://www.ivao.aero/softdev/ivap.asp">IvAp Software</a></li>
                             </ul>
                         </li>
 						<li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Controladores <i class="fa fa-angle-down"></i></a>
                             <ul class="dropdown-menu">
-                                <li><a href="blog-item.html">Registrarse</a></li>
-								  <li><a href="404.html">Primeros Pasos</a></li>
-								    <li><a href="404.html">Rangos</a></li>
-									 <li><a href="404.html">Formación</a></li>
-									  <li><a href="404.html">Lista FRA</a></li>
-									   <li><a href="404.html">Sector Files</a></li>
-									   <li><a href="404.html">IvAc Software</a></li>
-                                <li><a href="pricing.html">Reservar Posición</a></li>
+                                <li><a href="./?page=registrar">Registrarse</a></li>
+								  <li><a href="./?page=atcstep">Primeros Pasos</a></li>
+								    <li><a href="./?page=rankatc">Rangos</a></li>
+									 <li><a href="./?page=formatc">Formación</a></li>
+									  <li><a href="./?page=fra">Lista FRA</a></li>
+									   <li><a href="https://mega.nz/#F!mZYzxIAB!M5hD_lr_6tyj4_2yIaiJvg">Sector Files</a></li>
+									   <li><a href="https://www.ivao.aero/softdev/ivac.asp">IvAc Software</a></li>
                               
                                 
                             </ul>
@@ -117,9 +113,7 @@
     </header><!--/header-->
 	
 	
-	<?php
-	if (!isset($_GET["page"]) || trim($_GET["page"]) == "") {
-		?>
+	
 
     <section id="main-slider" class="no-margin">
         <div class="carousel slide">
@@ -213,6 +207,8 @@
             <i class="fa fa-chevron-right"></i>
         </a>
     </section><!--/#main-slider-->
+	
+
 
     <section id="feature" >
         <div class="container">
@@ -287,7 +283,7 @@ document.write(f.getDate() + " de " + meses[f.getMonth()] + " de " + f.getFullYe
             </div>
 
             <div class="row">
-              
+                <?php include('onlines.php'); ?>
             </div><!--/.row-->
         </div><!--/.container-->
     </section><!--/#recent-works-->
@@ -383,12 +379,78 @@ document.write(f.getDate() + " de " + meses[f.getMonth()] + " de " + f.getFullYe
                     <div class="skill">
                         <h2>Información</h2>
                         <p>Acá nosotros disponemos una corta información, de las estadísticas recolectadas de la división.</p>
+  <?
+		 
+		 include('./db_login.php');
+		  
+		  	$db = new mysqli($db_host , $db_username , $db_password , $db_database);
 
+	$db->set_charset("utf8");
+
+	if ($db->connect_errno > 0) {
+
+		die('Unable to connect to database [' . $db->connect_error . ']');
+
+	}
+		  
+	$infodivision = "SELECT * FROM infodivision";
+
+	if (!$resultinfodivision = $db->query($infodivision)) {
+
+		die('There was an error running the query  [' . $db->error . ']');
+
+	}
+	
+$vass = 0;
+
+	while ($rowinfodivision = $resultinfodivision->fetch_assoc()) {
+	
+	
+
+$membersact = $rowinfodivision['members'];
+ $pcas = $rowinfodivision['pilots'];
+ $atcs = $rowinfodivision['atc'];
+  $posos = $rowinfodivision['puesto'];
+  
+  $porcentaje = round((100*$pcas)/$membersact);
+  
+  $porcentajedos = round((100*$atcs)/$membersact);
+	}
+	
+	if ($posos == 1) {
+		$porc = 100;
+	} else if ($posos == 2) {
+		$porc = 95;
+	} else if ($posos == 3) {
+		$porc = 90;
+	} else if ($posos == 4) {
+		$porc = 85;
+	} else if ($posos == 5) {
+		$porc = 80;
+	} else if ($posos == 6) {
+		$porc = 75;
+	} else if ($posos == 7) {
+		$porc = 70;
+	} else if ($posos == 8) {
+		$porc = 65;
+	} else if ($posos == 9) {
+		$porc = 60;
+	} else if ($posos == 10) {
+		$porc = 55;
+	} else if ($posos == 11) {
+		$porc = 50;
+	} else {
+		$porc = 45;
+	}
+
+
+	
+	?>
                         <div class="progress-wrap">
                             <h3>Miembros Activos</h3>
                             <div class="progress">
-                              <div class="progress-bar  color1" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 85%">
-                                <span class="bar-width">85%</span>
+                              <div class="progress-bar  color1" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+                                <span class="bar-width">+<?php echo $membersact; ?></span>
                               </div>
 
                             </div>
@@ -397,8 +459,8 @@ document.write(f.getDate() + " de " + meses[f.getMonth()] + " de " + f.getFullYe
                         <div class="progress-wrap">
                             <h3>Pilotos</h3>
                             <div class="progress">
-                              <div class="progress-bar color2" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 95%">
-                               <span class="bar-width">95%</span>
+                              <div class="progress-bar color2" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: <?php echo $porcentaje; ?>%">
+                               <span class="bar-width">+<?php echo  $pcas; ?></span>
                               </div>
                             </div>
                         </div>
@@ -406,8 +468,8 @@ document.write(f.getDate() + " de " + meses[f.getMonth()] + " de " + f.getFullYe
                         <div class="progress-wrap">
                             <h3>Controladores</h3>
                             <div class="progress">
-                              <div class="progress-bar color3" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
-                                <span class="bar-width">80%</span>
+                              <div class="progress-bar color3" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: <?php echo $porcentajedos; ?>%">
+                                <span class="bar-width">+<?php echo  $atcs; ?></span>
                               </div>
                             </div>
                         </div>
@@ -415,8 +477,8 @@ document.write(f.getDate() + " de " + meses[f.getMonth()] + " de " + f.getFullYe
                         <div class="progress-wrap">
                             <h3>Puesto de la División</h3>
                             <div class="progress">
-                              <div class="progress-bar color4" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 90%">
-                                <span class="bar-width">90%</span>
+                              <div class="progress-bar color4" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: <?php echo $porc; ?>%">
+                                <span class="bar-width">+<?php echo $posos; ?></span>
                               </div>
                             </div>
                         </div>
@@ -652,7 +714,116 @@ El piloto de IVAO cliente , conocido como IvAp , es un plug-in que permite a los
         </div><!--/.container-->    
     </section><!--/#conatcat-info-->
 
-    <section id="bottom">
+   
+	
+	
+	  <?php
+		
+	} else {
+		
+		?>
+		
+		
+		
+		<header id="header">
+        <div class="top-bar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-xs-4">
+                        <div class="top-number"><p><i class="fa fa-plane-square"></i>  La mejor división!</p></div>
+                    </div>
+                    <div class="col-sm-6 col-xs-8">
+                       <div class="social">
+                            <ul class="social-share">
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li> 
+                                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                                <li><a href="#"><i class="fa fa-skype"></i></a></li>
+                            </ul>
+                       </div>
+                    </div>
+                </div>
+            </div><!--/.container-->
+        </div><!--/.top-bar-->
+
+        <nav class="navbar navbar-inverse" role="banner">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="./"><img src="images/logo.png" alt="logo"></a>
+                </div>
+				
+                <div class="collapse navbar-collapse navbar-right">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="./">Inicio</a></li>
+						 <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Acerca de Nosotros <i class="fa fa-angle-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="./?page=division">División</a></li>
+                                <li><a href="./?page=staff">Staff</a></li>
+                                <li><a href="#">Reglamento</a></li>
+                                <li><a href="#">HQ Awards</a></li>
+                            </ul>
+                        </li>
+						 <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Pilotos <i class="fa fa-angle-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="./?page=registrar">Registrarse</a></li>
+                                <li><a href="./?page=pcastep">Primeros Pasos</a></li>
+                                <li><a href="./?page=rankpca">Rangos</a></li>
+                                <li><a href="./?page=forma">Formación</a></li>
+								<li><a href="http://www.aerocivil.gov.co/AIS/AIP/Paginas/Inicio.aspx">Cartas</a></li>
+								<li><a href="https://www.ivao.aero/softdev/ivap.asp">IvAp Software</a></li>
+                            </ul>
+                        </li>
+						<li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Controladores <i class="fa fa-angle-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="./?page=registrar">Registrarse</a></li>
+								  <li><a href="./?page=atcstep">Primeros Pasos</a></li>
+								    <li><a href="./?page=rankatc">Rangos</a></li>
+									 <li><a href="./?page=formatc">Formación</a></li>
+									  <li><a href="./?page=fra">Lista FRA</a></li>
+									   <li><a href="https://mega.nz/#F!mZYzxIAB!M5hD_lr_6tyj4_2yIaiJvg">Sector Files</a></li>
+									   <li><a href="https://www.ivao.aero/softdev/ivac.asp">IvAc Software</a></li>
+                              
+                                
+                            </ul>
+                        </li>
+                       
+                        <li><a href="./?page=eventosdeivao">Eventos</a></li>
+                        <li><a href="./?page=nuestrasaerolineas">Aerolíneas VA</a></li>
+                        <li><a href="./?page=contactenosivao">Contactenos</a></li>     
+<li><a href="http://login.ivao.aero/index.php?url=http://www.ivaocol.com.co/usuarios/login.php">LOGIN</a></li>    						
+                    </ul>
+                </div>
+            </div><!--/.container-->
+        </nav><!--/nav-->
+		
+    </header><!--/header-->
+	<?php
+		
+	}
+	if (!isset($_GET["page"]) || trim($_GET["page"]) == "") {
+	} else {
+		$Existe = file_exists($_GET["page"] . ".php");
+		if ($Existe == true) {
+			include($_GET["page"] . ".php");
+		} else {
+			echo "Page Not Found";
+		}
+	}
+	
+	
+
+?>
+ <section id="bottom">
         <div class="container wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
             <div class="row">
                 <div class="col-md-3 col-sm-6">
@@ -693,25 +864,6 @@ El piloto de IVAO cliente , conocido como IvAp , es un plug-in que permite a los
             </div>
         </div>
     </section><!--/#bottom-->
-	
-	
-	  <?php
-		
-	}
-	if (!isset($_GET["page"]) || trim($_GET["page"]) == "") {
-	} else {
-		$Existe = file_exists($_GET["page"] . ".php");
-		if ($Existe == true) {
-			include($_GET["page"] . ".php");
-		} else {
-			echo "Page Not Found";
-		}
-	}
-	
-	
-
-?>
-
     <footer id="footer" class="midnight-blue">
         <div class="container">
             <div class="row">
@@ -729,11 +881,11 @@ El piloto de IVAO cliente , conocido como IvAp , es un plug-in que permite a los
         </div>
     </footer><!--/#footer-->
 
-    <script src="js/jquery.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.prettyPhoto.js"></script>
-    <script src="js/jquery.isotope.min.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/wow.min.js"></script>
+    <script src="./js/jquery.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/jquery.prettyPhoto.js"></script>
+    <script src="./js/jquery.isotope.min.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/wow.min.js"></script>
 </body>
 </html>
