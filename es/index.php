@@ -41,7 +41,17 @@
 		?>
   <!-- ------------------------- IVAO Colombia --------------------------- -->
   <header id="home">
-    <div id="home-slider" class="carousel slide carousel-fade" data-ride="carousel">
+
+   
+	
+	
+    
+    <!-- ------------------------- Menu --------------------------- -->
+	
+	
+	
+	
+	  <div id="home-slider" class="carousel slide carousel-fade" data-ride="carousel">
       <div class="carousel-inner">
         <div class="item active" style="background-image: url(images/slider/1.jpg)">
           <div class="caption">
@@ -57,7 +67,7 @@
 		 
 		 include('./db_login.php');
 		  
-		  	$db = new mysqli($db_host , $db_username , $db_password , $db_database);
+$db = new mysqli($db_host , $db_username , $db_password , $db_database);
 
 	$db->set_charset("utf8");
 
@@ -69,7 +79,7 @@
 		  
 	$sql2377a = "SELECT * FROM airlines order by id asc";
 
-	if (!$result2377a = $db->query($sql2377a)) {
+if (!$result2377a = $db->query($sql2377a)) {
 
 		die('There was an error running the query  [' . $db->error . ']');
 
@@ -99,7 +109,7 @@ $vass = 0;
           </div>
         </div>
 	
-	<?php } ?>
+	<?php } ?> 
 	
 	
         <div class="item" style="background-image: url(images/slider/3.jpg)">
@@ -119,11 +129,11 @@ $vass = 0;
 
    
    
-    <!-- ------------------------- Menu --------------------------- -->
-   
+    
    
     </div>
-    <div class="main-nav">
+	
+	<div class="main-nav">
     
       <div class="container">
       <div class="navbar-header">
@@ -220,6 +230,7 @@ $vass = 0;
 			<li class="scroll"><a>Controladores &dArr;</a>
 							<ul>
 								<li class="scroll"><a href="./?page=registrar">Registrarse</a></li>
+								<li class="scroll"><a href="./#atc-ss">Reservar Directamente IVAO</a></li>
 								<li class="scroll"><a href="./?page=rankatc">Rangos</a></li>
 								<li class="scroll"><a href="./?page=atcstep">Primeros Pasos</a></li>
 								<li class="scroll"><a href="./?page=formatc">Formación</a></li>
@@ -228,7 +239,7 @@ $vass = 0;
 								<li class="scroll"><a href="https://www.ivao.aero/softdev/ivac.asp">IvAc Software</a></li>
 							</ul>
 		    </li>
-            <li class="scroll"><a href="./#atc-ss">ATC</a></li>
+            
             <li class="scroll"><a href="./#team">Eventos</a></li>
             <li class="scroll"><a href="./#features">Recursos</a></li>
             <li class="scroll"><a href="./#pricing">Online</a></li>
@@ -241,19 +252,11 @@ $vass = 0;
     </div>
 	
 	
-    
-    <!-- ------------------------- Menu --------------------------- -->
-	
-	
-	
-	
-	
-	
-	
-	
-	
   </header><!--/#home-->
   
+   
+	
+	
   <section id="services">
     <div class="container">
       <div class="heading wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
