@@ -1,5 +1,5 @@
 	<div class="container">
-	<h1>Formación para Controladores</h1>
+	<h1><font color="red">Formación para Controladores</font></h1>
 	<hr>
 	
 

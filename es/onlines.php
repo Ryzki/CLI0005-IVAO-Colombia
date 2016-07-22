@@ -374,6 +374,6 @@ if (count($staff) != 0) {
 
 echo '<br><hr>';
 echo 'Hay '; echo count($controllers); echo' controladores, '; echo count($pilots); echo' pilotos, y '; echo count($staff); echo' miembros del Staff en línea en Colombia.';
-echo '<br><hr><br><h1>IVAO World</h1>';
+echo '<br><hr><br><h1><font color="red">IVAO World</font></h1>';
 echo '<div class="trafficlistnettotal">' . sprintf($lng['totalonline'], $controllercount, $pilotcount) . '</div>';
 ?>

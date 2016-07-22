@@ -1,5 +1,5 @@
 	<div class="container">
-	<h1>Rangos para Pilotos</h1>
+	<h1><font color="red">Rangos para Pilotos</font></h1>
 	<hr>
 	
 

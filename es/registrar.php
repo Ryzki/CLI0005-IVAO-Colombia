@@ -1,5 +1,5 @@
 	<div class="container">
-	<h1>Registro para Pilotos y/o ATC</h1>
+	<h1><font color="red">Registro para Pilotos y/o ATC</font></h1>
 	<hr>
 	
 

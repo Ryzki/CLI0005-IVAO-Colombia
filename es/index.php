@@ -38,11 +38,10 @@
                     <div class="col-sm-6 col-xs-8">
                        <div class="social">
                             <ul class="social-share">
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li> 
-                                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                                <li><a href="#"><i class="fa fa-skype"></i></a></li>
+                                <li><a href="https://www.facebook.com/ivaoco/"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="https://www.youtube.com/channel/UCOUr_AMGqcMu2JZwSCzWPQA"><i class="fa fa-youtube"></i></a></li>
+                                <li><a href="https://twitter.com/ivaoco"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="https://www.instagram.com/ivaocolombia/"><i class="fa fa-instagram"></i></a></li>
                             </ul>
                             
                        </div>
@@ -120,7 +119,44 @@
             <ol class="carousel-indicators">
                 <li data-target="#main-slider" data-slide-to="0" class="active"></li>
                 <li data-target="#main-slider" data-slide-to="1"></li>
-                <li data-target="#main-slider" data-slide-to="2"></li>
+					 <?
+		 
+		 include('./db_login.php');
+		  
+$db = new mysqli($db_host , $db_username , $db_password , $db_database);
+
+	$db->set_charset("utf8");
+
+	if ($db->connect_errno > 0) {
+
+		die('Unable to connect to database [' . $db->connect_error . ']');
+
+	}
+		  
+	$sql2377aa = "SELECT * FROM airlines order by id asc";
+
+if (!$result2377aa = $db->query($sql2377aa)) {
+
+		die('There was an error running the query  [' . $db->error . ']');
+
+	}
+	
+$vassa = 2;
+
+	while ($row2377aa = $result2377aa->fetch_assoc()) {
+	
+
+		 
+		 $vassa++;
+
+
+  
+
+	
+	?>
+                <li data-target="#main-slider" data-slide-to="<?php echo $vassa; ?>"></li>
+	<?php } ?>
+				
             </ol>
             <div class="carousel-inner">
 
@@ -131,7 +167,7 @@
                                 <div class="carousel-content">
                                     <h1 class="animation animated-item-1">Deseas ser un controlador aéreo virtual?</h1>
                                     <h2 class="animation animated-item-2">IVAO Colombia, te ofrece la oportunidad de disfrutar la experiencia de ser un Controlador!</h2>
-                                    <a class="btn-slide animation animated-item-3" href="#">Regístrate!</a>
+                                    <a class="btn-slide animation animated-item-3" href="./?page=registrar">Regístrate!</a>
                                 </div>
                             </div>
 
@@ -152,7 +188,7 @@
                                 <div class="carousel-content">
                                     <h1 class="animation animated-item-1">Deseas ser un piloto virtual?</h1>
                                     <h2 class="animation animated-item-2">IVAO Colombia, te ofrece la oportunidad de disfrutar la experiencia de ser un Piloto!</h2>
-                                    <a class="btn-slide animation animated-item-3" href="#">Read More</a>
+                                    <a class="btn-slide animation animated-item-3" href="./?page=registrar">Regístrate!</a>
                                 </div>
                             </div>
 
@@ -171,16 +207,50 @@
 				
 				
 				
-				
+				 <?
+		 
+		 include('./db_login.php');
+		  
+$db = new mysqli($db_host , $db_username , $db_password , $db_database);
+
+	$db->set_charset("utf8");
+
+	if ($db->connect_errno > 0) {
+
+		die('Unable to connect to database [' . $db->connect_error . ']');
+
+	}
+		  
+	$sql2377a = "SELECT * FROM airlines order by id asc";
+
+if (!$result2377a = $db->query($sql2377a)) {
+
+		die('There was an error running the query  [' . $db->error . ']');
+
+	}
+	
+$vass = 0;
+
+	while ($row2377a = $result2377a->fetch_assoc()) {
+	
+
+		 
+		 $vass++;
+
+
+  
+
+	
+	?>
 				<!--- AEROLINEAS VIRTUALES PUBLICIDAD -->
-                <div class="item" style="background-image: url(images/slider/bg3.jpg)">
+                <div class="item" style="background-image: url(../admin/intranet/imagenair/<?php echo $row2377a["imagen_va"]; ?>)">
                     <div class="container">
                         <div class="row slide-margin">
                             <div class="col-sm-6">
                                 <div class="carousel-content">
-                                    <h1 class="animation animated-item-1">Lorem ipsum dolor sit amet consectetur adipisicing elit</h1>
-                                    <h2 class="animation animated-item-2">Accusantium doloremque laudantium totam rem aperiam, eaque ipsa...</h2>
-                                    <a class="btn-slide animation animated-item-3" href="#">Read More</a>
+                                    <h1 class="animation animated-item-1">Aerolínea <span> <?php echo $row2377a["nombre_aerolinea"]; ?></span></h1>
+                                    <h2 class="animation animated-item-2">Certificada por IVAO World</h2>
+                                    <a class="btn-slide animation animated-item-3" href="<?php echo $row2377a["web"]; ?>">Ver</a>
                                 </div>
                             </div>
                             
@@ -189,7 +259,7 @@
                     </div>
                 </div><!--/.item-->
 				
-				
+			<?php } ?> 	
 				
 				
 				
@@ -735,12 +805,12 @@ El piloto de IVAO cliente , conocido como IvAp , es un plug-in que permite a los
                     <div class="col-sm-6 col-xs-8">
                        <div class="social">
                             <ul class="social-share">
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li> 
-                                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                                <li><a href="#"><i class="fa fa-skype"></i></a></li>
+                                <li><a href="https://www.facebook.com/ivaoco/"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="https://www.youtube.com/channel/UCOUr_AMGqcMu2JZwSCzWPQA"><i class="fa fa-youtube"></i></a></li>
+                                <li><a href="https://twitter.com/ivaoco"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="https://www.instagram.com/ivaocolombia/"><i class="fa fa-instagram"></i></a></li>
                             </ul>
+                            
                        </div>
                     </div>
                 </div>
@@ -868,7 +938,7 @@ El piloto de IVAO cliente , conocido como IvAp , es un plug-in que permite a los
         <div class="container">
             <div class="row">
                 <div class="col-sm-6">
-                    &copy; <?php echo date('Y'); ?><a target="_blank" href="http://co.ivao.aero" title="IVAO Colombia">IVAO Colombia</a>. Todos Los Derechos Reservados. Desarrollo y Adaptación: Andres Zapata, Andres Giraldo.
+                    &copy; <?php echo date('Y'); ?>  <a target="_blank" href="http://co.ivao.aero" title="IVAO Colombia">IVAO Colombia</a>. Todos Los Derechos Reservados. Desarrollo y Adaptación: Andres Zapata, Andres Giraldo.
                 </div>
                 <div class="col-sm-6">
                     <ul class="pull-right">

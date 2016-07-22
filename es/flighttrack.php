@@ -87,7 +87,7 @@ if ($spotes=="DEL") {
 
 
 	?>
-<h1>Información de Controlador Aéreo</h1>
+<h1><font color="red">Información de Controlador Aéreo</font></h1>
 <hr>
 <br>
 <h3><b>Controlador</b></h3>

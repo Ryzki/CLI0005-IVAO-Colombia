@@ -98,7 +98,7 @@ $fecha = $fecha1->diff($fecha2);
 
 
 	?>
-<h1>Información de Piloto</h1>
+<h1><font color="red">Información de Piloto</font></h1>
 <hr>
 <br>
 <h3><b>Piloto</b></h3>
