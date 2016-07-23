@@ -78,19 +78,19 @@ include('./db_login.php');
                                         </div>
 										<div class="form-group">
                                             <label>Hora Inicio HLC</label>
-											<input type="time" name="horauno" value="<?php echo $hora_inicio; ?>">
+											<input class="form-control" type="time" name="horauno" value="<?php echo $hora_inicio; ?>">
                                         </div>
 										<div class="form-group">
                                             <label>Hora Inicio UTC</label>
-											<input type="time" name="horados" value="<?php echo $hora_fin; ?>">
+											<input class="form-control" type="text" name="horados" value="<?php echo $hora_fin; ?>">
                                         </div>
                                           <div class="form-group">
                                             <label>Fecha Examen</label>
-											<input type="date" name="fecha" value="<?php echo $fecha; ?>">
+											<input class="form-control" type="date" name="fecha" value="<?php echo $fecha; ?>">
                                         </div>
 										 <div class="form-group">
                                             <label>Información Examen</label>
-											<textarea name="info"><?php echo $informacion; ?></textarea>
+											<textarea class="form-control" name="info"><?php echo $informacion; ?></textarea>
                                         </div>
 										
 										<div class="form-group">

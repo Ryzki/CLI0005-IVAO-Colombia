@@ -34,6 +34,8 @@ include('./db_login.php');
 		$titulos = $row25a['titulo'];
 		$horario_inicio = $row25a['horario_inicio'];
 		$horario_fin = $row25a['horario_fin'];
+		$horario_inicioU = $row25a['inicioutc'];
+		$horario_finU = $row25a['finutc'];
 		$fechas = $row25a['fecha'];
 		$informacions = utf8_decode($row25a['informacion']);
 		
@@ -50,12 +52,20 @@ include('./db_login.php');
                                             <input class="form-control" name="nombre" value="<?php echo $titulos; ?>" readonly="readonly"/>
                                         </div>
 										<div class="form-group">
-                                            <label>Hora Inicio</label>
+                                            <label>Hora Inicio LOCAL</label>
 											<input class="form-control" type="time" name="horauno" value="<?php echo $horario_inicio; ?>" readonly="readonly">
                                         </div>
 										<div class="form-group">
-                                            <label>Hora Finalización</label>
+                                            <label>Hora Finalización LOCAL</label>
 											<input class="form-control" type="time" name="horados" value="<?php echo $horario_fin; ?>" readonly="readonly">
+                                        </div>
+										<div class="form-group">
+                                            <label>Hora Inicio UTC</label>
+											<input class="form-control" type="text" name="horaunou" value="<?php echo $horario_inicioU; ?>" readonly="readonly">
+                                        </div>
+										<div class="form-group">
+                                            <label>Hora Finalización UTC</label>
+											<input class="form-control" type="text" name="horadosu" value="<?php echo $horario_finU; ?>" readonly="readonly">
                                         </div>
                                           <div class="form-group">
                                             <label>Fecha Evento</label>

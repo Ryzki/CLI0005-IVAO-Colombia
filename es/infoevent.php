@@ -22,6 +22,8 @@ include('./db_login.php');
 		$titulo= utf8_decode($row3["nombre"]);
 		$horaunos= $row3["hora_inicio"];
 		$horadoses= $row3["hora_fin"];
+		$horaunosa= $row3["horainicioutc"];
+		$horadosesa= $row3["horafinutc"];
 		$staffa= $row3["staff"];
 		$fecha= $row3["fecha"];
 	    $informacion= utf8_decode($row3["informacion"]);
@@ -91,12 +93,20 @@ include('./db_login.php');
 											<input class="form-control" type="date" name="fecha" value="<?php echo $fecha; ?>" readonly="readonly"/>
                                         </div>
 										<div class="form-group">
-                                            <label>Hora Inicio</label>
-											<input class="form-control"  name="horauno" value="<?php echo $horaunos; ?> Z" readonly="readonly"/>
+                                            <label>Hora Inicio LOCAL</label>
+											<input class="form-control"  name="horauno" value="<?php echo $horaunos; ?>" readonly="readonly"/>
                                         </div>
 										<div class="form-group">
-                                            <label>Hora Finalización</label>
-											<input class="form-control"  name="horados" value="<?php echo $horadoses; ?> Z" readonly="readonly"/>
+                                            <label>Hora Finalización LOCAL</label>
+											<input class="form-control"  name="horados" value="<?php echo $horadoses; ?>" readonly="readonly"/>
+                                        </div>
+										<div class="form-group">
+                                            <label>Hora Inicio UTC</label>
+											<input class="form-control"  name="horaunoU" value="<?php echo $horaunosa; ?>" readonly="readonly"/>
+                                        </div>
+										<div class="form-group">
+                                            <label>Hora Finalización UTC</label>
+											<input class="form-control"  name="horadosU" value="<?php echo $horadosesa; ?>" readonly="readonly"/>
                                         </div>
 										 <div class="form-group">
                                             <label>Información Evento</label>

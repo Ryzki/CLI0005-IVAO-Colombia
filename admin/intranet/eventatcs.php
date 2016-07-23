@@ -26,20 +26,28 @@
                                             <input class="form-control" name="nombre" />
                                         </div>
 										<div class="form-group">
-                                            <label>Hora Inicio</label>
-											<input type="time" name="horauno">
+                                            <label>Hora Inicio LOCAL</label>
+											<input class="form-control" type="time" name="horauno">
                                         </div>
 										<div class="form-group">
-                                            <label>Hora Finalización</label>
-											<input type="time" name="horados">
+                                            <label>Hora Finalización LOCAL</label>
+											<input class="form-control" type="time" name="horados">
+                                        </div>
+										<div class="form-group">
+                                            <label>Hora Inicio UTC</label>
+											<input class="form-control" type="text" placeholder="HH:mm" name="horaunoU">
+                                        </div>
+										<div class="form-group">
+                                            <label>Hora Finalización UTC</label>
+											<input class="form-control" type="text" placeholder="HH:mm" name="horadosU">
                                         </div>
                                           <div class="form-group">
                                             <label>Fecha Evento</label>
-											<input type="date" name="fecha">
+											<input class="form-control" type="date" name="fecha">
                                         </div>
 										 <div class="form-group">
                                             <label>Información Evento (Aeropuertos)</label>
-											<textarea name="info"></textarea>
+											<textarea class="form-control" name="info"></textarea>
                                         </div>
 									
 								
@@ -93,7 +101,7 @@
 			echo' <tr>
 	<td>' . $row2['titulo'] . '</td>
 	<td>' . $row2['fecha'] . '</td>
-	<td>' . $row2['horario_inicio'] . ' a ' . $row2['horario_fin'] . '</td>
+	<td>' . $row2['horario_inicio'] . ' a ' . $row2['horario_fin'] . ' HLC <br>' . $row2['inicioutc'] . ' a ' . $row2['finutc'] . ' UTC</td>
 	<td>' . utf8_decode($row2['informacion']) . '</td>
 	<td><form  action="?page=infoeventoatc&id=' . $identi . '"  method="post"><button class="btn btn-default"><i class="fa fa-refresh"></i> Ver</button></form></td>
 	<td><form  action="?page=infoeventoatcmas&id=' . $identi . '"  method="post"><button class="btn btn-default"><i class="fa fa-refresh"></i> Solicitudes & Aprobaciones</button></form></td>

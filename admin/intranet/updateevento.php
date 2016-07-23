@@ -26,7 +26,8 @@ include('./db_login.php');
 	    $imagen= $row3["imagen"];
 		$staff= $row3["staff"];
 	
-	
+	$hora_inicioa= $row3["horainicioutc"];
+		$hora_fina= $row3["horafinutc"];
 		
 	
 	}
@@ -67,20 +68,28 @@ include('./db_login.php');
                                             <input class="form-control" name="nombre" value="<?php echo $callsign; ?>"/>
                                         </div>
 										<div class="form-group">
-                                            <label>Hora Inicio</label>
-											<input type="time" name="horauno" value="<?php echo $hora_inicio; ?>">
+                                            <label>Hora Inicio LOCAL</label>
+											<input class="form-control" type="time" name="horauno" value="<?php echo $hora_inicio; ?>">
                                         </div>
 										<div class="form-group">
-                                            <label>Hora Finalización</label>
-											<input type="time" name="horados" value="<?php echo $hora_fin; ?>">
+                                            <label>Hora Finalización LOCAL</label>
+											<input class="form-control" type="time" name="horados" value="<?php echo $hora_fin; ?>">
+                                        </div>
+										<div class="form-group">
+                                            <label>Hora Inicio UTC</label>
+											<input class="form-control" type="text" name="horaunoU" value="<?php echo $hora_inicioa; ?>">
+                                        </div>
+										<div class="form-group">
+                                            <label>Hora Finalización UTC</label>
+											<input class="form-control" type="text" name="horadosU" value="<?php echo $hora_fina; ?>">
                                         </div>
                                           <div class="form-group">
                                             <label>Fecha Evento</label>
-											<input type="date" name="fecha" value="<?php echo $fecha; ?>">
+											<input class="form-control" type="date" name="fecha" value="<?php echo $fecha; ?>">
                                         </div>
 										 <div class="form-group">
                                             <label>Información Evento</label>
-											<textarea name="info"><?php echo utf8_decode($informacion); ?></textarea>
+											<textarea class="form-control" name="info"><?php echo utf8_decode($informacion); ?></textarea>
                                         </div>
 										
 										<div class="form-group">

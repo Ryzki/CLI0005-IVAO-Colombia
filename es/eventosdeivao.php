@@ -45,7 +45,7 @@
                         <div class="overlay">
                             <div class="recent-work-inner">
                                 <h4><a href="#"><font color="white"><?php echo $row2['nombre']; ?></font></a> </h4>
-                                <p><?php echo $row2['fecha']; ?> (<?php echo $row2['hora_inicio']; ?> Z - <?php echo $row2['hora_fin']; ?> Z)</p>
+                                <p><?php echo $row2['fecha']; ?></p>
                                 <a class="preview" href="./?page=infoevent&id=<?php echo $row2['id']; ?>" ><i class="fa fa-eye"></i> Ver Más</a>
                             </div> 
                         </div>

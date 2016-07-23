@@ -113,7 +113,7 @@ $miss = utf8_decode($row2['informacion']);
 			echo' <tr>
 	<td>' . $row2['nombre'] . '</td>
 	<td>' . $row2['fecha'] . '</td>
-	<td>' . $row2['hora_inicio'] . ' a ' . $row2['hora_fin'] . '</td>
+	<td>' . $row2['hora_inicio'] . ' a ' . $row2['hora_fin'] . ' HLC <br>' . $row2['horainicioutc'] . ' a ' . $row2['horafinutc'] . ' UTC</td>
 	<td>' . $miss . '</td>
 	<td><img src="./uploads/' . $row2['imagen'] . '"  width="60%" height="20%"></td>
 	<td><form  action="?page=updateevento&id=' . $identi . '"  method="post"><button class="btn btn-default"><i class="fa fa-refresh"></i> Actualizar</button></form></td>

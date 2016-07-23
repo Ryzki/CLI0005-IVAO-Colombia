@@ -12,7 +12,8 @@
 			$horados = $_POST['horados'];
 			$fecha = $_POST['fecha'];
 			$info = $_POST['info'];
-	
+	$horaunoU = $_POST['horaunoU'];
+			$horadosU = $_POST['horadosU'];
 			
 				
 
@@ -48,7 +49,7 @@ $target_path = $target_path . basename($_FILES['image_file']['name']);
 echo "El archivo ". basename($_FILES['image_file']['name']). " ha sido subido";
 $nombressse = $_FILES['image_file']['name'];
 
-$sql112 = "UPDATE eventos set nombre='$callsign', hora_inicio='$horauno', hora_fin='$horados', fecha='$fecha', informacion='$info', imagen='$nombressse' where id='$ides'";
+$sql112 = "UPDATE eventos set nombre='$callsign', hora_inicio='$horauno', hora_fin='$horados', horainicioutc='$horaunoU', horafinutc='$horadosU', fecha='$fecha', informacion='$info', imagen='$nombressse' where id='$ides'";
 
 		if (!$result112 = $db->query($sql112)) {
 			die('There was an error running the query [' . $db->error . ']');
@@ -66,7 +67,7 @@ echo "Ha ocurrido un error, trate de nuevo!";
 	
 	
 
-	$sql11 = "UPDATE eventos set nombre='$callsign', hora_inicio='$horauno', hora_fin='$horados', fecha='$fecha', informacion='$info' where id='$ides'";
+	$sql11 = "UPDATE eventos set nombre='$callsign', hora_inicio='$horauno', hora_fin='$horados', horainicioutc='$horaunoU', horafinutc='$horadosU', fecha='$fecha', informacion='$info' where id='$ides'";
 
 		if (!$result11 = $db->query($sql11)) {
 			die('There was an error running the query [' . $db->error . ']');
