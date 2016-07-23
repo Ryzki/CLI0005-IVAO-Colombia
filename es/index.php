@@ -20,8 +20,22 @@
     <![endif]-->       
     <link rel="shortcut icon" href="./images/ico/favicon.png">
 </head><!--/head-->
+  <script type="text/javascript"> 
+  
+  function display_c(){
+var refresh=1000; // Refresh rate in milli seconds
+mytime=setTimeout('display_ct()',refresh)
+}
 
-<body class="homepage">
+					   function display_ct() {
+var strcount
+var x = new Date()
+var x1=x.toUTCString();// changing the display to UTC string
+document.getElementById('ct').innerHTML = x1;
+tt=display_c();
+}
+</script>
+<body class="homepage" onload=display_ct();>
 
 	<?php
 	if (!isset($_GET["page"]) || trim($_GET["page"]) == "") {
@@ -37,6 +51,9 @@
                     </div>
                     <div class="col-sm-6 col-xs-8">
                        <div class="social">
+					 
+
+<font color="white"><span id='ct' ></span></font>
                             <ul class="social-share">
                                 <li><a href="https://www.facebook.com/ivaoco/"><i class="fa fa-facebook"></i></a></li>
                                 <li><a href="https://www.youtube.com/channel/UCOUr_AMGqcMu2JZwSCzWPQA"><i class="fa fa-youtube"></i></a></li>
@@ -803,7 +820,9 @@ El piloto de IVAO cliente , conocido como IvAp , es un plug-in que permite a los
                         <div class="top-number"><p><i class="fa fa-plane-square"></i>  La mejor división!</p></div>
                     </div>
                     <div class="col-sm-6 col-xs-8">
+					
                        <div class="social">
+					   <font color="white"><span id='ct' ></span></font>
                             <ul class="social-share">
                                 <li><a href="https://www.facebook.com/ivaoco/"><i class="fa fa-facebook"></i></a></li>
                                 <li><a href="https://www.youtube.com/channel/UCOUr_AMGqcMu2JZwSCzWPQA"><i class="fa fa-youtube"></i></a></li>
