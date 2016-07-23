@@ -27,20 +27,28 @@
                                             <input class="form-control" name="nombre" />
                                         </div>
 										<div class="form-group">
-                                            <label>Hora Inicio</label>
-											<input type="time" name="horauno">
+                                            <label>Hora Inicio LOCAL</label>
+											<input class="form-control" type="time" name="horauno">
                                         </div>
 										<div class="form-group">
-                                            <label>Hora Finalización</label>
-											<input type="time" name="horados">
+                                            <label>Hora Finalización LOCAL</label>
+											<input class="form-control" type="time" name="horados">
+                                        </div>
+										<div class="form-group">
+                                            <label>Hora Inicio UTC</label>
+											<input class="form-control" type="text" placeholder="HH:mm" name="horaunos">
+                                        </div>
+										<div class="form-group">
+                                            <label>Hora Finalización UTC</label>
+											<input class="form-control" type="text" placeholder="HH:mm" name="horadoss">
                                         </div>
                                           <div class="form-group">
                                             <label>Fecha Evento</label>
-											<input type="date" name="fecha">
+											<input class="form-control" type="date" name="fecha">
                                         </div>
 										 <div class="form-group">
                                             <label>Información Evento</label>
-											<textarea name="info"></textarea>
+											<textarea class="form-control" name="info"></textarea>
                                         </div>
 										<div class="form-group">
                                             <label>Imagen Evento</label>

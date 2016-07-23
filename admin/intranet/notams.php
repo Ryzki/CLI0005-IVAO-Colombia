@@ -27,7 +27,7 @@
                                         </div>
 										 <div class="form-group">
                                             <label>Información NOTAM</label>
-											<textarea name="persona"></textarea>
+											<textarea class="form-control"  name="persona"></textarea>
                                         </div>
 										
 											<div class="form-group">
