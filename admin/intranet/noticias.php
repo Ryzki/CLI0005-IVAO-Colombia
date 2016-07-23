@@ -31,15 +31,15 @@
                                         </div>
 										 <div class="form-group">
                                             <label>Fecha Examen</label>
-											<input type="date" name="fecha">
+											<input class="form-control" type="date" name="fecha">
                                         </div>
 										<div class="form-group">
                                             <label>Hora Inicio Local</label>
-											<input type="time" name="horauno">
+											<input class="form-control" type="time" name="horauno">
                                         </div>
 										<div class="form-group">
                                             <label>Hora Inicio UTC</label>
-											<input type="time" name="horados">
+											<input class="form-control" type="text" placeholder="HH:mm" name="horados">
                                         </div>
 										<div class="form-group">
                                             <label>Lugar</label>
@@ -47,7 +47,7 @@
                                         </div>
 										 <div class="form-group">
                                             <label>Información Examen</label>
-											<textarea name="info"></textarea>
+											<textarea class="form-control" name="info"></textarea>
                                         </div>
 										<div class="form-group">
                                             <label>Imagen Examen</label>
