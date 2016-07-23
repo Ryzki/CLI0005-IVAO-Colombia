@@ -928,7 +928,7 @@ El piloto de IVAO cliente , conocido como IvAp , es un plug-in que permite a los
                     <div class="widget">
                         <h3>Soporte</h3>
                         <ul>
-                            <li><a href="#">Contactenos</a></li>
+                            <li><a href="./?page=contactenosivao">Contactenos</a></li>
                         </ul>
                     </div>    
                 </div><!--/.col-md-3-->
@@ -937,7 +937,7 @@ El piloto de IVAO cliente , conocido como IvAp , es un plug-in que permite a los
                     <div class="widget">
                         <h3>Nosotros</h3>
                         <ul>
-                            <li><a href="#">Staff</a></li>
+                            <li><a href="./?page=staff">Staff</a></li>
                         </ul>
                     </div>    
                 </div><!--/.col-md-3-->
@@ -946,7 +946,7 @@ El piloto de IVAO cliente , conocido como IvAp , es un plug-in que permite a los
                     <div class="widget">
                         <h3>Oficial</h3>
                         <ul>
-                            <li><a href="#">IVAO World</a></li>
+                            <li><a href="https://www.ivao.aero/">IVAO World</a></li>
                         </ul>
                     </div>    
                 </div><!--/.col-md-3-->
@@ -962,8 +962,8 @@ El piloto de IVAO cliente , conocido como IvAp , es un plug-in que permite a los
                 <div class="col-sm-6">
                     <ul class="pull-right">
                         <li><a href="./">Inicio</a></li>
-                        <li><a href="./">Acerca de Nosotros</a></li>
-                        <li><a href="./">Contactenos</a></li>
+                        <li><a href="./?page=division">Acerca de Nosotros</a></li>
+                        <li><a href="./?page=contactenosivao">Contactenos</a></li>
                     </ul>
                 </div>
             </div>

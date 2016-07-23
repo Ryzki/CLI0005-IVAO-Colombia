@@ -1,4 +1,4 @@
-
+<div class="container">
 <?php
 include('./db_login.php');
 	$idaa = $_GET['id'];
@@ -68,19 +68,9 @@ include('./db_login.php');
 		
 
 	?>
-	<div class="container">
-	 <div id="page-wrapper" >
-            <div id="page-inner">
-                 <!-- /. ROW  -->
-                 <hr />
-               <div class="row">
-                <div class="col-md-12">
-                    <!-- Form Elements -->
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            Información Evento
-                        </div>
-                        <div class="panel-body">
+	
+                            <h1><font color="red">Información Evento</font></h1>
+                    
                             <div class="row">
 							
 								
@@ -131,21 +121,6 @@ include('./db_login.php');
 								
 													   
                             </div>
-                        </div>
-                    </div>
-                     <!-- End Form Elements -->
-					 
-				
-					
-					
-					
-					
-                </div>
-            </div>
-                <!-- /. ROW  -->
-               
-                <!-- /. ROW  -->
-    </div>
-             <!-- /. PAGE INNER  -->
- </div>     
- </div>        
+							
+							 </div>
+                       

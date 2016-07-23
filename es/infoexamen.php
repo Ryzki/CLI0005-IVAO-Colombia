@@ -1,4 +1,4 @@
-
+	<div class="container">
 <?php
 include('./db_login.php');
 	$idaa = $_GET['id'];
@@ -69,19 +69,9 @@ $fecha= $row3["fecha"];
 		
 
 	?>
-	<div class="container">
-	 <div id="page-wrapper" >
-            <div id="page-inner">
-                 <!-- /. ROW  -->
-                 <hr />
-               <div class="row">
-                <div class="col-md-12">
-                    <!-- Form Elements -->
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            Información Examen
-                        </div>
-                        <div class="panel-body">
+
+	 <h2> Información Examen</h2>
+                       
                             <div class="row">
 							
 								
@@ -142,21 +132,6 @@ $fecha= $row3["fecha"];
 								
 													   
                             </div>
-                        </div>
-                    </div>
-                     <!-- End Form Elements -->
-					 
-				
-					
-					
-					
-					
-                </div>
-            </div>
-                <!-- /. ROW  -->
-               
-                <!-- /. ROW  -->
-    </div>
-             <!-- /. PAGE INNER  -->
- </div>     
- </div>        
+							
+							  </div>
+                    
