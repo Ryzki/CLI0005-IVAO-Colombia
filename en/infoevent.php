@@ -1,4 +1,4 @@
-
+<div class="container">
 <?php
 include('./db_login.php');
 	$idaa = $_GET['id'];
@@ -22,6 +22,8 @@ include('./db_login.php');
 		$titulo= utf8_decode($row3["nombre"]);
 		$horaunos= $row3["hora_inicio"];
 		$horadoses= $row3["hora_fin"];
+		$horaunosa= $row3["horainicioutc"];
+		$horadosesa= $row3["horafinutc"];
 		$staffa= $row3["staff"];
 		$fecha= $row3["fecha"];
 	    $informacion= utf8_decode($row3["informacion"]);
@@ -68,19 +70,9 @@ include('./db_login.php');
 		
 
 	?>
-	<div class="container">
-	 <div id="page-wrapper" >
-            <div id="page-inner">
-                 <!-- /. ROW  -->
-                 <hr />
-               <div class="row">
-                <div class="col-md-12">
-                    <!-- Form Elements -->
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            Event Information
-                        </div>
-                        <div class="panel-body">
+	
+                            <h1><font color="red">Information Event</font></h1>
+                    
                             <div class="row">
 							
 								
@@ -101,12 +93,20 @@ include('./db_login.php');
 											<input class="form-control" type="date" name="fecha" value="<?php echo $fecha; ?>" readonly="readonly"/>
                                         </div>
 										<div class="form-group">
-                                            <label>Start Hour</label>
-											<input class="form-control"  name="horauno" value="<?php echo $horaunos; ?> Z" readonly="readonly"/>
+                                            <label>Start Time LOCAL</label>
+											<input class="form-control"  name="horauno" value="<?php echo $horaunos; ?>" readonly="readonly"/>
                                         </div>
 										<div class="form-group">
-                                            <label>Finish Hour</label>
-											<input class="form-control"  name="horados" value="<?php echo $horadoses; ?> Z" readonly="readonly"/>
+                                            <label>End Time LOCAL</label>
+											<input class="form-control"  name="horados" value="<?php echo $horadoses; ?>" readonly="readonly"/>
+                                        </div>
+										<div class="form-group">
+                                            <label>Start Time UTC</label>
+											<input class="form-control"  name="horaunoU" value="<?php echo $horaunosa; ?>" readonly="readonly"/>
+                                        </div>
+										<div class="form-group">
+                                            <label>End Time UTC</label>
+											<input class="form-control"  name="horadosU" value="<?php echo $horadosesa; ?>" readonly="readonly"/>
                                         </div>
 										 <div class="form-group">
                                             <label>Event Information</label>
@@ -131,21 +131,6 @@ include('./db_login.php');
 								
 													   
                             </div>
-                        </div>
-                    </div>
-                     <!-- End Form Elements -->
-					 
-				
-					
-					
-					
-					
-                </div>
-            </div>
-                <!-- /. ROW  -->
-               
-                <!-- /. ROW  -->
-    </div>
-             <!-- /. PAGE INNER  -->
- </div>     
- </div>        
+							
+							 </div>
+                       

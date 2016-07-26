@@ -1,5 +1,5 @@
 	<div class="container">
-	<h1>Formation for Controllers</h1>
+	<h1><font color="red">Controller Training</font></h1>
 	<hr>
 	
 

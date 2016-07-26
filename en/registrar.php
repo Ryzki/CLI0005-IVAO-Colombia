@@ -1,5 +1,5 @@
 	<div class="container">
-	<h1>Form Register for Pilots and/or ATC</h1>
+	<h1><font color="red">Registration for Pilot and/or ATC</font></h1>
 	<hr>
 	
 

@@ -14,10 +14,10 @@ margin-right:auto;
 </style>
 </head>
 <body>
- <table class="table table-striped" width="100%" bgcolor="#FFFFFF">
+ <table class="table table-striped"  width="100%" bgcolor="#FFFFFF">
 <thead>
   <tr>
-    <th>DEPENDENCIA</th><th>CONTROLADOR</th><th>FECHA Y HORA INICIO</th><th>FECHA Y HORA FINALIZACIÓN</th><th>EVENTO</th>
+    <th>POSITION</th><th>CONTROLLER</th><th>DATE AND HOUR OF STARTING</th><th>DATE AND HOUR OF FINISHING</th><th>EVENT</th>
   </tr>
 </thead>
 <tbody>
@@ -56,10 +56,10 @@ $fechasecundaria = substr($fechados, 0, 4) . '-' . substr($fechados, 4, 2) . '-'
 	
 	if ($infosp=="h") {
 		
-		$infor = '<span class="label label-success"><a href="' . $eventa . '">Ver Evento</a></span>';
+		$infor = '<span class="label label-success"><a href="' . $eventa . '">See the Event</a></span>';
 		
 	} else {
-	$infor='<span class="label label-warning">No hay evento.</span>';
+	$infor='<span class="label label-warning">There is not any event.</span>';
 	
 	}
 	
@@ -109,7 +109,7 @@ echo '</tbody>
 </table>';
 
 if ($var == 0) {
-	echo '<div class="alert alert-danger" role="alert">No hay reservas de dependencias ATC en el espacio aereo Colombiano</div>';
+	echo '<div class="alert alert-danger" role="alert">There are not schedules for the ATC positions in the Colombian Airspace.</div>';
 	
 }
 

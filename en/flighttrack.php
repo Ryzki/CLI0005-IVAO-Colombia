@@ -63,31 +63,31 @@ $fecha = $fecha1->diff($fecha2);
 
 if ($spotes=="DEL") {
 	
-	$infors = "Controlador de Autorizaciones";
+	$infors = "Delivery Controller";
 } else if ($spotes=="GND") {
 	
-	$infors = "Controlador de Superficie";
+	$infors = "Ground Controller";
 } else if ($spotes=="TWR") {
 	
-	$infors = "Controlador de Torre";
+	$infors = "Tower Controller";
 } else if ($spotes=="DEP") {
 	
-	$infors = "Controlador de Salidas";
+	$infors = "Departures Controller";
 } else if ($spotes=="APP") {
 	
-	$infors = "Controlador de Aproximaciones";
+	$infors = "Approach Controller";
 } else if ($spotes=="CTR") {
 	
-	$infors = "Controlador de Centro";
+	$infors = "Center Controller";
 } else if ($spotes=="FSS") {
 	
-	$infors = "Controlador de Información";
+	$infors = "Flight Service Controller";
 } 
 
 
 
 	?>
-<h1>Information of Air Controller</h1>
+<h1><font color="red">Air Controller's Information</font></h1>
 <hr>
 <br>
 <h3><b>Controller</b></h3>
@@ -100,7 +100,7 @@ if ($spotes=="DEL") {
           <input class="form-control" name="2" value="<?php echo $vid; ?>" readonly="readonly"/>
  </div>
   <div class="form-group">
-          <label>Rank IVAO</label>
+          <label>IVAO Rank</label>
           <input class="form-control" name="3" value="<?php echo $level; ?>" readonly="readonly"/>
  </div>
  <br>
@@ -124,12 +124,12 @@ if ($spotes=="DEL") {
 										
 									
   <div class="form-group">
-          <label>Time online</label>
+          <label>Time Online</label>
           <input class="form-control" name="34" value="<?php printf('%d h  %d minutos', $fecha->h, $fecha->i); ?>" readonly="readonly"/>
  </div>
  
   <div class="form-group">
-          <label>Location of Control</label>
+          <label>ATC's Location</label>
          
 		 <td ><iframe src="./mapatc.php?ubicacion=<?php echo $posicionuna; ?>&ubicaciondos=<?php echo $posiciondos; ?>&icaos=<?php echo $dependencia; ?>&freq=<?php echo $frecuencia; ?>&spot=<?php echo $infors; ?>&rank=<?php echo $level; ?>&vid=<?php echo $vid; ?>&name=<?php echo $nombres; ?>" width="100%" height="600px"></iframe></td>
 		 

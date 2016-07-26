@@ -68,19 +68,14 @@ include('./db_login.php');
 		
 
 	?>
-	<div class="container">
-	 <div id="page-wrapper" >
-            <div id="page-inner">
-                 <!-- /. ROW  -->
-                 <hr />
-               <div class="row">
-                <div class="col-md-12">
-                    <!-- Form Elements -->
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            Airline Information
-                        </div>
-                        <div class="panel-body">
+
+                  <div class="container">
+                           <h1><font color="red"> Airline Information</font></h1>
+						   <hr>
+						   <br>
+                       
+                     
+					 
                             <div class="row">
 							
 								<center><img src="https://www.ivao.aero/data/images/airline/<?php echo $numeros; ?><?php echo $iaa; ?>"/></center>
@@ -142,7 +137,7 @@ include('./db_login.php');
 								<br>
 								<br>
 								<hr>
-								<h1><?php echo $nombre_aerolinea; ?>'s Pilots</h1>
+								<h1><font color="red">Pilots of <?php echo $nombre_aerolinea; ?></font></h1>
 								
 								
 										<?php 
@@ -151,7 +146,7 @@ include('./db_login.php');
 								
 $filecontentsa = file_get_contents($url_pilotos);
 //$filecontents = file_get_contents('whazzup.txt'); //Testing file
-$rows = split(PHP_EOL, $filecontentsa);
+$rows = split("\n", $filecontentsa);
 
 
 echo '<table id="table_list"  class="table table-hover" width="100%">
@@ -176,7 +171,9 @@ foreach ($rows as $row) {
 
 	$fieldsa = split(":", $row);
 	
-if($fieldsa[0]!=""){
+
+	if (empty($fieldsa[0])) {
+	} else {
 $horariosa = $fieldsa[2];
 
 $sumasa= round($horariosa  , 2);
@@ -207,7 +204,7 @@ $totalaa= $horasa.' h '.$minutosa.' m ';
 				</table>';
 							} else {
 								
-								    echo '<div class="alert alert-danger" role="alert">There is not information available.</div>';      
+								    echo '<div class="alert alert-danger" role="alert">There is not any available information.</div>';      
 							}
 
 ?>	
@@ -218,7 +215,7 @@ $totalaa= $horasa.' h '.$minutosa.' m ';
 								
 								
 								<br>
-								<h1><?php echo $nombre_aerolinea; ?>'s Statistics</h1>
+								<h1><font color="red">Statistics of <?php echo $nombre_aerolinea; ?></font></h1>
 								
 								
 								<?php 
@@ -256,7 +253,7 @@ $total= $horas.' h '.$minutos.' m ';
 				  <tr>
 					<td><strong>Hours:</strong></td>
 					<td>' . $total . '</td>
-					<td><strong>Fuel Burned:</strong></td>
+					<td><strong>Burn Fuel:</strong></td>
 					<td>' . $fields[3] . '</td>
 				  </tr>
 				  <tr>
@@ -268,7 +265,7 @@ $total= $horas.' h '.$minutos.' m ';
 				  <tr>
 					<td><strong>Distance:</strong></td>
 					 <td>' . $fields[5] . '</td>
-					<td><strong>Aircrafts:</strong></td>
+					<td><strong>Airplanes:</strong></td>
 					<td>+' . $fields[6] . '</td>   
 				  </tr>
 				</tbody>
@@ -277,7 +274,7 @@ $total= $horas.' h '.$minutos.' m ';
 
 } else {
 								
-								    echo '<div class="alert alert-danger" role="alert">There is not information available.</div>';      
+								    echo '<div class="alert alert-danger" role="alert">There is not any available information.</div>';      
 							}
 
 
@@ -287,7 +284,7 @@ $total= $horas.' h '.$minutos.' m ';
 								
 								
 								<br>
-								<h1>Vuelos de <?php echo $nombre_aerolinea; ?></h1>
+								<h1><font color="red">Flights of <?php echo $nombre_aerolinea; ?></font></h1>
 								
 								
 								<?php 
@@ -371,7 +368,7 @@ $totalpe= $horaspe.' h '.$minutospe.' m ';
 				</table>';
 							} else {
 								
-								    echo '<div class="alert alert-danger" role="alert">There is not information available.</div>';      
+								    echo '<div class="alert alert-danger" role="alert">There is not any available information.</div>';      
 							}
 
 ?>	
@@ -380,21 +377,7 @@ $totalpe= $horaspe.' h '.$minutospe.' m ';
                                
  </div>							   
                             </div>
-                        </div>
-                    </div>
-                     <!-- End Form Elements -->
-					 
-				
-					
-					
-					
-					
-                </div>
-            </div>
-                <!-- /. ROW  -->
-               
-                <!-- /. ROW  -->
-    </div>
-             <!-- /. PAGE INNER  -->
- </div>     
- </div>        
+                      
+                       </div>
+                      
+                    

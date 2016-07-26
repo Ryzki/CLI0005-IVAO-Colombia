@@ -239,12 +239,7 @@ $conts++;
 				<?php } ?>  
 
 				
-				<?php if ($idaa==1 || $idaa== 7 || $idaa== 2) { ?>
-                    <li>
-                        <a  href="#"><i class="fa fa-qrcode fa-3x"></i> Horas Aerolíneas</a>
-                    	
-                     </li>
-				<?php } ?>  
+			
 					
 					<?php if ($idaa==1 || $idaa== 7 || $idaa== 3) { ?>
 					 <li>

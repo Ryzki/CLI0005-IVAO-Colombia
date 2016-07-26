@@ -98,12 +98,12 @@ $fecha = $fecha1->diff($fecha2);
 
 
 	?>
-<h1>Pilot Information</h1>
+<h1><font color="red">Pilot's Information</font></h1>
 <hr>
 <br>
 <h3><b>Pilot</b></h3>
  <div class="form-group">
-          <label>Pilot's Name</label>
+          <label>Pilot Name</label>
           <input class="form-control" name="1" value="<?php echo $nombres; ?>" readonly="readonly"/>
  </div>
   <div class="form-group">
@@ -125,7 +125,7 @@ $fecha = $fecha1->diff($fecha2);
           <input class="form-control" name="24" value="<?php echo $arrival; ?>" readonly="readonly"/>
  </div>
   <div class="form-group">
-          <label>Flight Level</label>
+          <label>Flight Altitude</label>
           <input class="form-control" name="34" value="<?php echo $altitud; ?> ft AMSL" readonly="readonly"/>
  </div>
   <div class="form-group">
@@ -152,7 +152,7 @@ $fecha = $fecha1->diff($fecha2);
 										
 									
   <div class="form-group">
-          <label>Online for</label>
+          <label>Time Online</label>
           <input class="form-control" name="34" value="<?php printf('%d h  %d minutos', $fecha->h, $fecha->i); ?>" readonly="readonly"/>
  </div>
  

@@ -3,3 +3,12 @@
 [09-Jun-2016 19:49:56 UTC] PHP Fatal error:  Call to a member function query() on a non-object in /home/newsoftcomputer/public_html/ivaocol.com.co/admin/intranet/cargos_staff.php on line 68
 [09-Jun-2016 20:05:00 UTC] PHP Fatal error:  Call to a member function query() on a non-object in /home/newsoftcomputer/public_html/ivaocol.com.co/admin/intranet/cargos_staff.php on line 68
 [09-Jun-2016 22:20:10 UTC] PHP Fatal error:  Call to a member function query() on a non-object in /home/newsoftcomputer/public_html/ivaocol.com.co/admin/intranet/cargos_staff.php on line 68
+[11-Jun-2016 20:20:25 UTC] PHP Fatal error:  Call to undefined function phpheader() in /home/newsoftcomputer/public_html/ivaocol.com.co/admin/intranet/addevento.php on line 1
+[12-Jun-2016 19:16:56 UTC] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/newsoftcomputer/public_html/ivaocol.com.co/admin/intranet/notams.php on line 90
+[12-Jun-2016 19:55:56 UTC] PHP Fatal error:  Call to undefined function remove_accents() in /home/newsoftcomputer/public_html/ivaocol.com.co/admin/intranet/index.php on line 374
+[12-Jun-2016 19:57:40 UTC] PHP Fatal error:  Call to undefined function remove_accents() in /home/newsoftcomputer/public_html/ivaocol.com.co/admin/intranet/index.php on line 385
+[13-Jun-2016 18:54:24 UTC] PHP Fatal error:  Call to undefined function phpinclude() in /home/newsoftcomputer/public_html/ivaocol.com.co/admin/intranet/pilotos.php on line 1
+[18-Jun-2016 18:58:08 UTC] PHP Fatal error:  Call to a member function query() on a non-object in /home/newsoftcomputer/public_html/ivaocol.com.co/admin/intranet/cargos_staff.php on line 68
+[20-Jun-2016 23:47:51 UTC] PHP Fatal error:  Call to a member function query() on a non-object in /home/newsoftcomputer/public_html/ivaocol.com.co/admin/intranet/cargos_staff.php on line 68
+[02-Jul-2016 19:50:52 UTC] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/newsoftcomputer/public_html/ivaocol.com.co/admin/intranet/infoeventoatc.php on line 14
+[02-Jul-2016 21:45:31 UTC] PHP Fatal error:  Call to a member function query() on a non-object in /home/newsoftcomputer/public_html/ivaocol.com.co/admin/intranet/cargos_staff.php on line 68

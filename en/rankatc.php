@@ -1,5 +1,5 @@
 	<div class="container">
-	<h1>Ranks for Controllers</h1>
+	<h1><font color="red">Ranks for Controllers</font></h1>
 	<hr>
 	
 

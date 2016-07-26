@@ -1,5 +1,5 @@
 	<div class="container">
-	<h1>Ranks for Pilots</h1>
+	<h1><font color="red">Ranks for Pilots</font></h1>
 	<hr>
 	
 

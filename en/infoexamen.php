@@ -1,4 +1,4 @@
-
+	<div class="container">
 <?php
 include('./db_login.php');
 	$idaa = $_GET['id'];
@@ -69,19 +69,9 @@ $fecha= $row3["fecha"];
 		
 
 	?>
-	<div class="container">
-	 <div id="page-wrapper" >
-            <div id="page-inner">
-                 <!-- /. ROW  -->
-                 <hr />
-               <div class="row">
-                <div class="col-md-12">
-                    <!-- Form Elements -->
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            Test Information
-                        </div>
-                        <div class="panel-body">
+
+	 <h2> Information Examen</h2>
+                       
                             <div class="row">
 							
 								
@@ -93,34 +83,34 @@ $fecha= $row3["fecha"];
 								<hr>
 								
                                         <div class="form-group">
-                                            <label>Test Name</label>
+                                            <label>Examen Name</label>
                                             <input class="form-control" name="nombre" value="<?php echo $nombre_examen; ?>" readonly="readonly"/>
 										
                                         </div>
 										<div class="form-group">
-                                            <label>User</label>
+                                            <label>Examined</label>
                                             <input class="form-control" name="nombre" value="<?php echo $usuario; ?>" readonly="readonly"/>
 										
                                         </div>
 										 <div class="form-group">
-                                            <label>Test Date</label>
+                                            <label>Examen Date</label>
 											<input class="form-control" type="date" name="fecha" value="<?php echo $fecha; ?>" readonly="readonly"/>
                                         </div>
 										<div class="form-group">
-                                            <label>Hour HLC</label>
+                                            <label>Time HLC</label>
 											<input class="form-control"  name="horauno" value="<?php echo $hora_inicio; ?> HLC" readonly="readonly"/>
                                         </div>
 										<div class="form-group">
-                                            <label>Hour UTC</label>
+                                            <label>Time UTC</label>
 											<input class="form-control"  name="horados" value="<?php echo $hora_utcinicio; ?> UTC" readonly="readonly"/>
                                         </div>
 										<div class="form-group">
-                                            <label>Test Location</label>
+                                            <label>Test's Place</label>
                                             <input class="form-control" name="nombre" value="<?php echo $lugar; ?>" readonly="readonly"/>
 										
                                         </div>
 										 <div class="form-group">
-                                            <label>Event Information</label>
+                                            <label>Information Event</label>
 											<textarea class="form-control" name="info" readonly="readonly" ><?php echo $informacion; ?></textarea>
                                         </div>
 										
@@ -142,21 +132,6 @@ $fecha= $row3["fecha"];
 								
 													   
                             </div>
-                        </div>
-                    </div>
-                     <!-- End Form Elements -->
-					 
-				
-					
-					
-					
-					
-                </div>
-            </div>
-                <!-- /. ROW  -->
-               
-                <!-- /. ROW  -->
-    </div>
-             <!-- /. PAGE INNER  -->
- </div>     
- </div>        
+							
+							  </div>
+                    
