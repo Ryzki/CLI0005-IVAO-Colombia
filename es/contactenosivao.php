@@ -40,8 +40,8 @@
                 <p class="lead">El Staff de IVAO Colombia hará todo lo posible para responderle lo más pronto que se pueda.</p>
             </div> 
             <div class="row contact-wrap"> 
-                <div class="status alert alert-success" style="display: none"></div>
-                <form id="main-contact-form" class="contact-form" name="contact-form" method="post" action="sendemail.php">
+                
+                <form class="contact-form"  method="post" action="sendemail.php">
                     <div class="col-sm-5 col-sm-offset-1">
                         <div class="form-group">
                             <label>Nombre *</label>

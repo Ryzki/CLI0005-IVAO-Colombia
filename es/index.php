@@ -110,6 +110,7 @@ tt=display_c();
 								    <li><a href="./?page=rankatc">Rangos</a></li>
 									 <li><a href="./?page=formatc">Formación</a></li>
 									  <li><a href="./?page=fra">Lista FRA</a></li>
+									  <li><a href="./?page=gca">GCA</a></li>
 									   <li><a href="https://mega.nz/#F!mZYzxIAB!M5hD_lr_6tyj4_2yIaiJvg">Sector Files</a></li>
 									   <li><a href="https://www.ivao.aero/softdev/ivac.asp">IvAc Software</a></li>
                               
@@ -119,7 +120,7 @@ tt=display_c();
                        
                         <li><a href="./?page=eventosdeivao">Eventos</a></li>
                         <li><a href="./?page=nuestrasaerolineas">Aerolíneas VA</a></li>
-                        <li><a href="./?page=contactenosivao">Contactenos</a></li>     
+                    <li><a href="./?page=contactenosivao">Contactenos</a></li>
 <li><a href="http://login.ivao.aero/index.php?url=http://www.ivaocol.com.co/usuarios/login.php">LOGIN</a></li>    						
                     </ul>
                 </div>
@@ -426,7 +427,7 @@ document.write(f.getDate() + " de " + meses[f.getMonth()] + " de " + f.getFullYe
                             <img class="img-responsive" src="images/services/services4.png">
                         </div>
                         <div class="media-body">
-                            <h3 class="media-heading">Ideas Inovativas</h3>
+                            <h3 class="media-heading">Ideas Innovativas</h3>
                             <p>Todos los departamentos trabajando en conjunto.</p>
                         </div>
                     </div>
@@ -879,6 +880,7 @@ El piloto de IVAO cliente , conocido como IvAp , es un plug-in que permite a los
 								    <li><a href="./?page=rankatc">Rangos</a></li>
 									 <li><a href="./?page=formatc">Formación</a></li>
 									  <li><a href="./?page=fra">Lista FRA</a></li>
+									  <li><a href="./?page=gca">GCA</a></li>
 									   <li><a href="https://mega.nz/#F!mZYzxIAB!M5hD_lr_6tyj4_2yIaiJvg">Sector Files</a></li>
 									   <li><a href="https://www.ivao.aero/softdev/ivac.asp">IvAc Software</a></li>
                               
@@ -888,7 +890,7 @@ El piloto de IVAO cliente , conocido como IvAp , es un plug-in que permite a los
                        
                         <li><a href="./?page=eventosdeivao">Eventos</a></li>
                         <li><a href="./?page=nuestrasaerolineas">Aerolíneas VA</a></li>
-                        <li><a href="./?page=contactenosivao">Contactenos</a></li>     
+                      <li><a href="./?page=contactenosivao">Contactenos</a></li>     
 <li><a href="http://login.ivao.aero/index.php?url=http://www.ivaocol.com.co/usuarios/login.php">LOGIN</a></li>    						
                     </ul>
                 </div>
@@ -963,7 +965,7 @@ El piloto de IVAO cliente , conocido como IvAp , es un plug-in que permite a los
                     <ul class="pull-right">
                         <li><a href="./">Inicio</a></li>
                         <li><a href="./?page=division">Acerca de Nosotros</a></li>
-                        <li><a href="./?page=contactenosivao">Contactenos</a></li>
+                      <li><a href="./?page=contactenosivao">Contactenos</a></li> 
                     </ul>
                 </div>
             </div>

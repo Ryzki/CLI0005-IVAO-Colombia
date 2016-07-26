@@ -11,7 +11,7 @@
 
         <!-- ================= Favicon ================== -->
         <!-- Standard -->
-        <link rel="shortcut icon" href="img/favicon.png">
+        <link rel="shortcut icon" href="img/co.svg">
      
 
         <!-- ============== Resources style ============== -->
@@ -98,7 +98,7 @@
 			<div class="item-title text-center animated-quick">
 
 				<!-- Your logo -->
-				<img src="./img/ivaoco.png" alt="" class="brand-logo"/>
+				<img src="./img/co.svg" alt="" class="brand-logo"/>
 				
 				<h1 class="cd-headline letters rotate-2">
 					NOSOTROS SOMOS

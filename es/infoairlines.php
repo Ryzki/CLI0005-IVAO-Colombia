@@ -137,7 +137,7 @@ include('./db_login.php');
 								<br>
 								<br>
 								<hr>
-								<h1>Pilotos de <?php echo $nombre_aerolinea; ?></h1>
+								<h1><font color="red">Pilotos de <?php echo $nombre_aerolinea; ?></font></h1>
 								
 								
 										<?php 
@@ -215,7 +215,7 @@ $totalaa= $horasa.' h '.$minutosa.' m ';
 								
 								
 								<br>
-								<h1>Estadísticas de <?php echo $nombre_aerolinea; ?></h1>
+								<h1><font color="red">Estadísticas de <?php echo $nombre_aerolinea; ?></font></h1>
 								
 								
 								<?php 
@@ -284,7 +284,7 @@ $total= $horas.' h '.$minutos.' m ';
 								
 								
 								<br>
-								<h1>Vuelos de <?php echo $nombre_aerolinea; ?></h1>
+								<h1><font color="red">Vuelos de <?php echo $nombre_aerolinea; ?></font></h1>
 								
 								
 								<?php 

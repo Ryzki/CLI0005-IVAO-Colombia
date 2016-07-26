@@ -1,5 +1,76 @@
 ﻿<div class="container">
+<style type="text/css">
+.trafficlistnettotal {
+	background-color: #D9EDF7;
+	color: #3A87AD;
+	padding-top: 10px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	border: 1px solid #96CDE9;
+	border-radius: 1px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
 
+tr.trafico {
+	width: 1024px;
+	border-bottom: 5px solid #EFEFEF;
+}
+tr.trafico > td {
+	width: 256px;
+	border-bottom: 1px solid #D8D8D8;
+	text-align: center;
+}
+tr.princ{
+	background-color: #2a4982;
+	color: #FFFFFF;
+	text-align: center;
+	height: 35px;
+	}
+	
+	div.boton {
+	background-color: #2F5E9F;
+	width: 200px;
+	height: 50px;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	border: 1px solid #15356F;
+	border-radius: 13px;
+	margin-top: 20px;
+}
+div.boton:hover {
+	background-color: #437BC7;
+}
+
+input.boton {
+	color: #FFFFFF;
+	background-color: #2a4982;
+	padding-top: 7px;
+	padding-right: 15px;
+	padding-bottom: 7px;
+	padding-left: 15px;
+	border: 1px solid #2a4982;
+	font-family:'Open Sans', sans-serif;
+	font-size: 16px;
+}
+input.boton:disabled {
+	color: #FFFFFF;
+	background-color: #7E7F7F;
+	padding-top: 7px;
+	padding-right: 15px;
+	padding-bottom: 7px;
+	padding-left: 15px;
+	border: 1px solid #838486;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+}
+
+input.boton:hover {
+	background-color: #416EC1;
+}
+</style>
             <div id="page-inner">
              
            
@@ -14,7 +85,7 @@
     <tr>
       <td>
       <table class="table table-condensed" width="100%">
-        <tr class="bg-primary">
+        <tr class="princ">
           
           <td rowspan="2">Aeropuerto</td>
           <td rowspan="2">Posición</td>
@@ -23,7 +94,7 @@
           <td colspan="3" align="center">Rango</td>
           <td rowspan="2">Idioma</td>
         </tr>
-        <tr class="bg-primary">
+        <tr class="princ">
           <td>Inicio</td>
           <td>Fin</td>
           

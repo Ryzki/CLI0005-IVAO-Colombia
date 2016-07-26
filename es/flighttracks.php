@@ -157,7 +157,7 @@ $fecha = $fecha1->diff($fecha2);
  </div>
  
   <div class="form-group">
-          <label>Ubicación del Control</label>
+          <label>Ubicación del Piloto</label>
          
 		 <td ><iframe src="./mappca.php?ubicacion=<?php echo $posicionuna; ?>&ubicaciondos=<?php echo $posiciondos; ?>&icaos=<?php echo $cs; ?>&freq=<?php echo $departure . ' - ' . $arrival ; ?>&rank=<?php echo $aeronave; ?>&vid=<?php echo $vid; ?>&name=<?php echo $nombres; ?>&hdg=<?php echo $rumbo; ?>&altura=<?php echo $altitud; ?>&speed=<?php echo $groundspeed; ?>" width="100%" height="600px"></iframe></td>
 		 

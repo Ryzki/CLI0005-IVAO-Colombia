@@ -512,7 +512,11 @@ $iip=0;
 		
 		
 	}
+  $iso_countryaa = "";
+  $callsignesaa = "";
   
+  $iso_countryaaa="";
+  $callsignesaaa = "";
   $sql3991a ="select * from airports where ident='$salida'";
 
 	if (!$result3991a = $db->query($sql3991a)) {

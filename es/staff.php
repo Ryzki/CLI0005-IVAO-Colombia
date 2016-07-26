@@ -71,10 +71,10 @@ $db = new mysqli($db_host , $db_username , $db_password , $db_database);
 		
 	
     if(getimagesize($ruta_img)){
-     $imagenes = '<img src="https://www.ivao.aero/data/images/staff/' . $row2aa['vid_ivao'] . '.jpg" alt=""  width="45%"/>';
+     $imagenes = '<img src="https://www.ivao.aero/data/images/staff/' . $row2aa['vid_ivao'] . '.jpg" alt=""  width="45%" />';
 
     } else {
-		$imagenes = '<img src="https://www.ivao.aero/data/images/staff/000000.gif" alt=""  width="45%"/>';
+		$imagenes = '<img src="https://www.ivao.aero/data/images/staff/000000.gif" alt=""  width="45%" />';
 		
 	}
 		?>

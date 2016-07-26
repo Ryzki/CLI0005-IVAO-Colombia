@@ -272,7 +272,25 @@ $sql3457a ="select * from usuariosivao where vid=$vids";
                                 <p class="description text-center">
 								<b>Rango PCA &nbsp;&nbsp;</b>  <img  src="https://www.ivao.aero/data/images/ratings/pilot/<?php echo $user_array->ratingpilot; ?>.gif" alt="..."/><br>
                                 <b>Rango ATC &nbsp;&nbsp;</b> <img  src="https://www.ivao.aero/data/images/ratings/atc/<?php echo $user_array->ratingatc; ?>.gif" alt="..."/><br>
-                                                   
+<center><h4><b>ESTADO:</b>  <?php
+
+$rango = $user_array->rating;
+
+if ($rango==0) {
+echo "Suspendido";
+} else if ($rango==1) {
+	echo "Inactivo";
+}  else if ($rango==2) {
+	echo "Activo";
+}  else if ($rango==3) {
+	echo "En Memoria";
+}  else if ($rango==11) {
+	echo "Supervisor";
+}  else if ($rango==12) {
+	echo "Administrador";
+} 
+
+?>	</h4></center>
                                 </p>
                             </div>
                             <hr>
